@@ -6,9 +6,9 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Courses',
+  title: 'Research',
   tagline: 'Learning together with Muhammad Syafrudin',
-  url: 'https://courses.muhammadsyafrudin.com',
+  url: 'https://research.muhammadsyafrudin.com',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -53,9 +53,9 @@ const config = {
       navbar: {
         title: '',
         logo: {
-          alt: 'Learning together with Muhammad Syafrudin',
-          src: '/img/courses.svg',
-          srcDark: '/img/courses-dark.svg',
+          alt: 'Research together with Muhammad Syafrudin',
+          src: '/img/research.svg',
+          srcDark: '/img/research-dark.svg',
         },
         items: [
           {
