@@ -7,7 +7,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Research',
-  tagline: 'Learning together with Muhammad Syafrudin',
+  tagline: 'Research together with Muhammad Syafrudin',
   url: 'https://research.muhammadsyafrudin.com',
   baseUrl: '/',
   onBrokenLinks: 'throw',
@@ -38,7 +38,7 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/justudin/courses-site/blob/main/',
+            'https://github.com/diiflab/research-site/blob/main/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -62,7 +62,7 @@ const config = {
             type: 'doc',
             docId: 'index',
             position: 'left',
-            label: 'All Courses',
+            label: 'All Research',
           },
           {
             to: 'reviews',
@@ -75,17 +75,12 @@ const config = {
             label: 'About',
           },
           {
-            href: 'https://muhammadsyafrudin.com/learning',
+            href: 'https://courses.muhammadsyafrudin.com',
             position: 'right',
-            label: 'Learning Hub',
+            label: 'Courses',
           },
           {
-            href: 'https://muhammadsyafrudin.com/research',
-            position: 'right',
-            label: 'Research',
-          },
-          {
-            href: 'https://github.com/justudin/courses-site',
+            href: 'https://github.com/diiflab/research-site',
             label: 'GitHub',
             position: 'right',
           },
@@ -93,7 +88,7 @@ const config = {
       },
       footer: {
         style: 'dark',
-        copyright: `Copyright © ${new Date().getFullYear()} Courses by <a href="https://muhammadsyafrudin.com/" style="color:white"target="_blank">Muhammad Syafrudin</a>. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Research by <a href="https://muhammadsyafrudin.com/" style="color:white"target="_blank">Muhammad Syafrudin</a>. Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,
