@@ -4,7 +4,7 @@ import styles from './styles.module.css';
 
 const FeatureList = [
   {
-    title: 'Data Source',
+    title: 'Data',
     Svg: require('@site/static/img/undraw_mountain_learning.svg').default,
     description: (
       <>
@@ -13,7 +13,7 @@ const FeatureList = [
     ),
   },
   {
-    title: 'Data Analytics',
+    title: 'Intelligence',
     Svg: require('@site/static/img/undraw_react_learning.svg').default,
     description: (
       <>
@@ -22,11 +22,11 @@ const FeatureList = [
     ),
   },
   {
-    title: 'Application',
+    title: 'Informatics',
     Svg: require('@site/static/img/undraw_tree_learning.svg').default,
     description: (
       <>
-       Healthcare, manufacturing, retail, e-commerce, supply chain, etc.
+       Application in many areas, such as healthcare, manufacturing, retail, e-commerce, supply chain, etc.
       </>
     ),
   },
