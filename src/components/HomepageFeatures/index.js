@@ -4,32 +4,33 @@ import styles from './styles.module.css';
 
 const FeatureList = [
   {
-    title: 'User-centered',
+    title: 'Data Source',
     Svg: require('@site/static/img/undraw_mountain_learning.svg').default,
     description: (
       <>
-        Designed with respect to students' and current industry needs.
+        Internet of things, Radio-frequency identification (RFID), sensors, big data, etc.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_tree_learning.svg').default,
-    description: (
-      <>
-       Weekly outlines are provided in detail.
-      </>
-    ),
-  },
-  {
-    title: 'Learning by doing',
+    title: 'Data Analytics',
     Svg: require('@site/static/img/undraw_react_learning.svg').default,
     description: (
       <>
-        Practical assignments to experience the scenario in real life.
+        Artificial Intelligence, Machine Learning, Data Mining, Forecasting, Diagnosis, Prognosis, Traceability, etc.
       </>
     ),
   },
+  {
+    title: 'Application',
+    Svg: require('@site/static/img/undraw_tree_learning.svg').default,
+    description: (
+      <>
+       Healthcare, manufacturing, retail, e-commerce, supply chain, etc.
+      </>
+    ),
+  },
+  
 ];
 
 function Feature({Svg, title, description}) {

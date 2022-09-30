@@ -17,13 +17,13 @@ function HomepageHeader() {
         <div className={styles.buttons}>
           <Link
             className="button button--secondary"
-            to="learn">
-            All Courses
+            to="publications">
+            Publications
           </Link>
           <Link
             className="button button--md"
-            to="reviews">
-            Read the reviews
+            to="updates">
+            Recent updates
           </Link>
         </div>
       </div>
@@ -35,8 +35,8 @@ export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`Learning together with Muhammad Syafrudin`}
-      description="Learning together with Muhammad Syafrudin">
+      title={`Research together with Muhammad Syafrudin`}
+      description="Research together with Muhammad Syafrudin">
       <HomepageHeader />
       <main>
         <HomepageFeatures />
