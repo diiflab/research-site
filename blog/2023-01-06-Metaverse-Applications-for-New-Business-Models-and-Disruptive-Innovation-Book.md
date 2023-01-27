@@ -11,7 +11,7 @@ Dear Colleagues,
 
 We are pleased to inform you that our edited <a href="https://doi.org/10.4018/978-1-6684-6097-9" target="_blank">"Metaverse Applications for New Business Models and Disruptive Innovation" book is now available online</a>!
 
-It is expected that the metaverse will be the next generation of the internet and its online activities and will serve as the foundation for a massive online business platform. Furthermore, it will alter people's behavior, which will have an impact on businesses' decisions to choose the metaverse as their primary business platform.
+It is expected that the metaverse will be the next generation of the internet and its online activities and will serve as the foundation for a massive online business platform. Furthermore, it will alter people's behavior, which will have an impact on businesses' decisions to choose the metaverse as their primary business platform. <!--truncate-->
 
 **Metaverse Applications for New Business Models and Disruptive Innovation** showcases the most recent developments in the metaverse and their implications for business and considers the challenges and best practices of implementing this technology in business. Covering topics such as augmented reality, economics, security, and business models, this reference work is ideal for business owners, managers, computer scientists, researchers, scholars, academicians, practitioners, educators, and students.
 
