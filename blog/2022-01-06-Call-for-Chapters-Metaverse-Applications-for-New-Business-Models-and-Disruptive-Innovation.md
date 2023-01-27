@@ -1,6 +1,6 @@
 ---
 title: Call for Chapters Metaverse Applications for New Business Models and Disruptive Innovation
-date: '2022-03-06'
+date: '2022-01-06'
 tags: ['book', 'chapter', 'metaverse']
 published: true
 ---
