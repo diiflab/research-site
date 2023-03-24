@@ -9,8 +9,8 @@ published: true
 
 Dear Colleagues,
 
-We are pleased to inform you that story about Oracle Academy has been published online.
-Please kindly check in the following links:
+We are pleased to inform you that our story about Oracle Academy has been published online.
+Please kindly check in the following links: <!--truncate-->
 
 - English: https://academy.oracle.com/en/about-success-spotlight-syafrudin.html 
 - Korean: https://academy.oracle.com/ko/about-success-spotlight-syafrudin.html
