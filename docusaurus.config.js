@@ -43,7 +43,7 @@ const config = {
           showReadingTime: true,
           feedOptions: {
             type: 'all',
-            copyright: `Copyright © ${new Date().getFullYear()} Muhammad Syafrudin.`,
+            copyright: `Copyright © 2019-${new Date().getFullYear()} Muhammad Syafrudin.`,
           },
         },
         theme: {
@@ -72,6 +72,11 @@ const config = {
             label: 'All Research',
           },
           **/
+          {
+            to: 'team',
+            position: 'left',
+            label: 'Team',
+          },
           {
             to: 'projects',
             position: 'left',
@@ -107,7 +112,7 @@ const config = {
       },
       footer: {
         style: 'dark',
-        copyright: `Copyright © ${new Date().getFullYear()} Applied Intelligence of Things Lab by <a href="https://muhammadsyafrudin.com/" style="color:white"target="_blank">Muhammad Syafrudin</a>. Built with Docusaurus.`,
+        copyright: `Copyright © 2019-${new Date().getFullYear()} Applied Intelligence of Things Lab by <a href="https://muhammadsyafrudin.com/" style="color:white"target="_blank">Muhammad Syafrudin</a>. Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,

@@ -54,12 +54,32 @@
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
+.row{
+  margin-bottom: 15px;
+}
+
 .map-responsive{
 overflow:hidden;
 padding-bottom:56.25%;
 position:relative;
 height:0;
 }
+
+.team-left-col{
+  float: left;
+  align-items: center;
+  padding: 1rem 0;
+  width: 30%;
+}
+
+.team-right-col{
+  float: right;
+  align-items: left;
+  padding: 1rem 0;
+  width: 70%;
+}
+
+.circular--square { border-top-left-radius: 50% 50%; border-top-right-radius: 50% 50%; border-bottom-right-radius: 50% 50%; border-bottom-left-radius: 50% 50%; }
 
 .map-responsive iframe{
 left:0;
