@@ -75,7 +75,7 @@ const config = {
           {
             to: 'team',
             position: 'left',
-            label: 'Team',
+            label: 'Our Team',
           },
           {
             to: 'projects',
@@ -102,12 +102,7 @@ const config = {
             href: 'https://courses.muhammadsyafrudin.com',
             position: 'right',
             label: 'Courses',
-          },
-          {
-            href: 'https://github.com/diiflab/research-site',
-            label: 'GitHub',
-            position: 'right',
-          },
+          }
         ],
       },
       footer: {
