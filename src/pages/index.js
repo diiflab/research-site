@@ -18,7 +18,7 @@ function HomepageHeader() {
           <Link
             className="button button--secondary"
             to="team">
-            See our team
+            Meet the team
           </Link>
           <Link
             className="button button--md"
