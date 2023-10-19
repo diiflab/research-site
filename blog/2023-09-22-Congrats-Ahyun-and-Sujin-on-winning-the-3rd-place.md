@@ -1,5 +1,5 @@
 ---
-title: Ahyun and Sujin have won the 3rd place of the Intelligent Mechanism x Artificial Intelligence Joint Academic Festival Award 2023
+title: Congrats Ahyun and Sujin on winning the 3rd place
 date: '2023-09-22'
 tags: ['team', 'accomplishment', 'award', 'competition', 'artificial intelligence']
 published: true
@@ -9,7 +9,7 @@ published: true
 
 Dear All,
 
-I am pleased to share that Ms. Ahyun and Ms. Sujin have won the 3rd place of the Intelligent Mechanism x Artificial Intelligence Joint Academic Festival Award.
+I am pleased to share that Ms. Ahyun and Ms. Sujin have won the 3rd place of the Intelligent Mechanism x Artificial Intelligence Joint Academic Festival Award.  <!--truncate-->
 
 Congratulations on this remarkable achievement! Your hard work, dedication, and talent have paid off, and I am proud of your accomplishment.
 
