@@ -5,10 +5,11 @@ title: Projects
 # Projects
 
 ### Current
-- Digital system design and sustainable supply chain performance optimization for rice commodity in eastern Indonesia (BINUS University - International Research, 2023, *Foreign Principal Investigator*)
+- TBD
 
 
 ### Past 
+- Digital system design and sustainable supply chain performance optimization for rice commodity in eastern Indonesia (BINUS University - International Research, 2023, *Foreign Principal Investigator*)
 - AI for improving diabetic care (Sejong University, 2022-2023, *Principal Investigator*)
 - Development of Information and Monitoring System based on RFID, IoT sensors and QR-Code for Goguma and Ginseng products (Private Company Funding, 2020, *Co-Principal Investigator*)
 - Development of Big Data System (Rural Development Administration Korea, 2018-2020,
