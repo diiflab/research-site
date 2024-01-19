@@ -1,5 +1,5 @@
 ---
-title: (Indonesian) Beasiswa LPDP tujuan Sejong University-Korea Selatan
+title: (Indonesian) Beasiswa LPDP tujuan AI-DS Sejong University-Korea Selatan
 date: '2024-01-15'
 tags: ['team', 'beasiswa', 'LPDP', 'Indonesia']
 published: true
@@ -16,7 +16,7 @@ Menurut laman berikut LPDP (<a target='_blank' alt='link' rel='noopener noreferr
 
 Sejong University masuk di Ranking Dunia, QS=436th (<a target='_blank' alt='link' rel='noopener noreferrer' href='https://www.topuniversities.com/universities/sejong-university'>https://www.topuniversities.com/universities/sejong-university</a>), THE=251–300th (<a target='_blank' alt='link' rel='noopener noreferrer' href='https://www.timeshighereducation.com/world-university-rankings/sejong-university'>https://www.timeshighereducation.com/world-university-rankings/sejong-university</a>) 
 
-Saya bersedia “mengusahakan untuk mendapatkan LoA Unconditional” dari Sejong University, Department of Artificial Intelligence and Data Science, bagi calon pendaftar yang memenuhi semua persyaratan berikut: 
+Saya bersedia “mengusahakan untuk mendapatkan <b>LoA Unconditional</b>” dari Sejong University, Department of Artificial Intelligence (AI) and Data Science (DS), <b>bagi calon pendaftar yang memenuhi semua persyaratan berikut</b>: 
 
 1. Pilih “Department of Artificial Intelligence and Data Science” dan “Muhammad Syafrudin”(<a target='_blank' alt='link' rel='noopener noreferrer' href='https://muhammadsyafrudin.com/id'>https://muhammadsyafrudin.com/id</a>) sebagai dosen pembimbing.<br/>
 2. Syarat sertifikat bahasa inggris >= TOEFL IBT: 71 / NEW TEPS: 327 / IELTS: 5.5<br/>
@@ -28,7 +28,12 @@ Boleh dishare dan disebarluaskan~!!
 
 Terimakasih dan salam sehat dan sukses selalu!!
 
-Pendaftaran LPDP 2024 tahap 1: 11 Januari – 12 Februari 2024, <a target='_blank' alt='link' rel='noopener noreferrer' href='https://lpdp.kemenkeu.go.id/beasiswa/kebijakan-umum/'>https://lpdp.kemenkeu.go.id/beasiswa/kebijakan-umum/</a>
-
 Best regards,<br/>
 Syafrudin
+
+
+Pendaftaran LPDP 2024 
+- Tahap 1: 11 Januari – 12 Februari 2024 <br/>
+- Tahap 2: 19 Juni – 18 Juli 2024
+
+Sumber: <a target='_blank' alt='link' rel='noopener noreferrer' href='https://lpdp.kemenkeu.go.id/beasiswa/kebijakan-umum/'>https://lpdp.kemenkeu.go.id/beasiswa/kebijakan-umum/</a>
