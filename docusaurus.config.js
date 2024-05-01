@@ -88,11 +88,15 @@ const config = {
             label: 'Publications',
           },
           {
+            to: 'books',
+            position: 'left',
+            label: 'Books',
+          },
+          {
             to: 'updates',
             position: 'left',
             label: 'Updates',
           },
-          
           {
             to: 'contact',
             position: 'left',
