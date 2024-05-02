@@ -31,6 +31,6 @@ Thank you very much for your consideration of this invitation, and I hope to hea
 
 Best wishes,<br/>
 Dr. Muhammad Syafrudin, Sejong University, korea (udin@sejong.ac.kr)<br/>
-Dr. Norma Latif Fitriyani, Sejong University, korea (norma@sejong.ac.kr))<br/>
+Dr. Norma Latif Fitriyani, Sejong University, korea (norma@sejong.ac.kr)<br/>
 Dr. Muhammad Anshari, Universiti Brunei Darussalam, bruneidarussalam (anshari.ali@ubd.edu.bn)<br/>
 Book Editors
