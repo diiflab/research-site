@@ -1,5 +1,5 @@
 ---
-title: Call for Chapters: Artificial Intelligence and Data Science for Sustainability: Applications and Methods
+title: Call for Chapters-Artificial Intelligence and Data Science for Sustainability-Applications and Methods
 date: '2024-05-02'
 tags: ['book', 'chapter', 'AI', 'DS', 'Sustainability']
 published: true
