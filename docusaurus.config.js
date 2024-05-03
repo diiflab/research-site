@@ -35,7 +35,6 @@ const config = {
         docs: false,
         blog: {
           routeBasePath: '/updates',
-          editUrl: 'https://github.com/diiflab/research-site/blob/main/',
           blogTitle: 'Recent updates',
           blogSidebarCount: 0,
           postsPerPage: 7,
