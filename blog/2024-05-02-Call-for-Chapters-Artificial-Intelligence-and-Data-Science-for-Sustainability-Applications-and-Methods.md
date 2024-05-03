@@ -26,6 +26,10 @@ Please visit https://www.igi-global.com/publish/call-for-papers/call-details/758
 You may kindly use the following link to submit your proposed chapter:
 https://www.igi-global.com/publish/call-for-papers/submit/7584
 
+
+**Note: There are no submission or acceptance fees for chapters submitted to this book publication**. 
+
+
 If you have any questions or concerns, please do not hesitate to contact us. 
 Thank you very much for your consideration of this invitation, and I hope to hear from you soon.
 
