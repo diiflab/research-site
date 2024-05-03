@@ -37,9 +37,8 @@ const config = {
           routeBasePath: '/updates',
           editUrl: 'https://github.com/diiflab/research-site/blob/main/',
           blogTitle: 'Recent updates',
-          blogSidebarTitle: 'All updates',
-          blogSidebarCount: 'ALL',
-          postsPerPage: 3,
+          blogSidebarCount: 0,
+          postsPerPage: 7,
           showReadingTime: true,
           feedOptions: {
             type: 'all',
