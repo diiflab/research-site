@@ -41,7 +41,7 @@ const config = {
           showReadingTime: true,
           feedOptions: {
             type: 'all',
-            copyright: `Copyright © 2019-${new Date().getFullYear()} Muhammad Syafrudin.`,
+            copyright: `Copyright © 2019-${new Date().getFullYear()} Applied INTelligence (AINT) Lab by Muhammad Syafrudin.`,
           },
         },
         theme: {
