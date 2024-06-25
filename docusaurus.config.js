@@ -6,7 +6,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Applied INTelligence (AINT) Lab',
+  title: 'Applied INTelligence Lab (AINTLab)',
   tagline: '"AINTLab" is not only a laboratory but also a playground to learn and explore things related to applied intelligence and the internet of things.',
   url: 'https://research.muhammadsyafrudin.com',
   baseUrl: '/',
@@ -41,7 +41,7 @@ const config = {
           showReadingTime: true,
           feedOptions: {
             type: 'all',
-            copyright: `Copyright © 2019-${new Date().getFullYear()} Applied INTelligence (AINT) Lab by Muhammad Syafrudin.`,
+            copyright: `Copyright © 2019-${new Date().getFullYear()} Applied INTelligence Lab (AINTLab) by Muhammad Syafrudin.`,
           },
         },
         theme: {
@@ -109,7 +109,7 @@ const config = {
       },
       footer: {
         style: 'dark',
-        copyright: `Copyright © 2019-${new Date().getFullYear()} Applied INTelligence (AINT) Lab by <a href="https://muhammadsyafrudin.com/" style="color:white"target="_blank">Muhammad Syafrudin</a>. Built with Docusaurus.`,
+        copyright: `Copyright © 2019-${new Date().getFullYear()} Applied INTelligence Lab (AINTLab) by <a href="https://muhammadsyafrudin.com/" style="color:white"target="_blank">Muhammad Syafrudin</a>. Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,
