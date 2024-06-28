@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'Applied INTelligence Lab (AINTLab)',
   tagline: '"AINTLab" is not only a laboratory but also a playground to learn and explore things related to applied intelligence and the internet of things.',
-  url: 'https://research.muhammadsyafrudin.com',
+  url: 'https://aintlab.com',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -16,8 +16,8 @@ const config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'justudin', // Usually your GitHub org/user name.
-  projectName: 'research-site', // Usually your repo name.
+  //organizationName: 'justudin', // Usually your GitHub org/user name.
+  //projectName: 'research-site', // Usually your repo name.
 
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
