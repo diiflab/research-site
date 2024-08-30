@@ -5,11 +5,11 @@ title: Projects
 # Projects
 
 ### Current
-- TBD
+- Development of 3D Printed based Partial Finger Prosthesis Adjusted to Patient Skin Colour (Bina Nusantara University’s BINUS International Research—Applied, 2024, *Foreign Collaborator*)
 
 
 ### Past 
-- Digital system design and sustainable supply chain performance optimization for rice commodity in eastern Indonesia (BINUS University - International Research, 2023, *Foreign Principal Investigator*)
+- Digital system design and sustainable supply chain performance optimization for rice commodity in eastern Indonesia (Bina Nusantara University’s BINUS International Research—Applied, 2023, *Foreign Collaborator*)
 - AI for improving diabetic care (Sejong University, 2022-2023, *Principal Investigator*)
 - Development of Information and Monitoring System based on RFID, IoT sensors and QR-Code for Goguma and Ginseng products (Private Company Funding, 2020, *Co-Principal Investigator*)
 - Development of Big Data System (Rural Development Administration Korea, 2018-2020,
