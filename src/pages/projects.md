@@ -5,6 +5,7 @@ title: Projects
 # Projects
 
 ### Current
+- A Prediction and Optimization Model of Sugarcane Yield for Improving the Productivity of Sugar Industry in Indonesia (Bina Nusantara University’s BINUS International Research—Applied, 2024, *Foreign Collaborator*)
 - Development of 3D Printed based Partial Finger Prosthesis Adjusted to Patient Skin Colour (Bina Nusantara University’s BINUS International Research—Applied, 2024, *Foreign Collaborator*)
 
 
