@@ -83,6 +83,9 @@ const config = {
               'https://orcid.org/0000-0002-5640-4413',
               'https://www.webofscience.com/wos/author/record/1733012',
               'https://scholar.google.co.kr/citations?user=WLTzkOMAAAAJ&hl=en',
+              'https://muhammadsyafrudin.com/',
+              'https://www.scopus.com/authid/detail.uri?authorId=57197741727',
+              'https://www.researchgate.net/profile/Muhammad-Syafrudin',
             ]
           },
           address: {
@@ -104,7 +107,7 @@ const config = {
       },
     ],
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
-    ({
+    {
       navbar: {
         title: '',
         logo: {
@@ -166,7 +169,7 @@ const config = {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
       },
-    })
+    },
   },
 };
 
