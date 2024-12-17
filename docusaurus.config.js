@@ -107,7 +107,7 @@ const config = {
       },
     ],
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
-    {
+    ({
       navbar: {
         title: '',
         logo: {
@@ -169,7 +169,7 @@ const config = {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
       },
-    },
+    }),
   },
 };
 
