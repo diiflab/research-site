@@ -35,8 +35,8 @@ export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`Research together with Muhammad Syafrudin`}
-      description="Research together with Muhammad Syafrudin">
+      title={`Applied INTelligence Lab (AINTLab) - Research together with Muhammad Syafrudin - AINTLab.com`}
+      description="Applied INTelligence Lab (AINTLab) - Research together with Muhammad Syafrudin - AINTLab.com - "AINTLab" is not only a laboratory but also a playground to learn and explore things related to applied intelligence and the internet of things. - Applied INTelligence Lab (AINTLab), Department of Artificial Intelligence and Data Science, Sejong University, Seoul 05006, Republic of Korea; Lead by Muhammad Syafrudin.">
       <HomepageHeader />
       <main>
         <HomepageFeatures />
