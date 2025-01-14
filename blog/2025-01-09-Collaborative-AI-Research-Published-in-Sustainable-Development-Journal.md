@@ -16,7 +16,7 @@ published: true
 
 Dr. Muhammad Syafrudin's team from the Department of Artificial Intelligence and Data Science, in collaboration with Professor Muhammad Rifqi Maarif's team from Universitas Tidar, Indonesia, has published a groundbreaking paper in *Sustainable Development*, a journal ranked in the top 0.8% globally.
 
-The paper, titled *“Tweeting Circular Economy: Unveiling Current Discourse Through Natural Language Processing”* ([DOI link](https://doi.org/10.1002/sd.3323)), analyzes 389,575 circular economy (CE)-related tweets (2012–2022) using advanced NLP techniques. Key findings include public focus on waste management, recycling, and resource efficiency, along with opportunities for integrating emerging technologies like blockchain and IoT in CE strategies.
+The paper, titled *“Tweeting Circular Economy: Unveiling Current Discourse Through Natural Language Processing”* ([DOI link](https://doi.org/10.1002/sd.3323)), <!--truncate--> analyzes 389,575 circular economy (CE)-related tweets (2012–2022) using advanced NLP techniques. Key findings include public focus on waste management, recycling, and resource efficiency, along with opportunities for integrating emerging technologies like blockchain and IoT in CE strategies.
 
 This collaboration stems from the 2023 Visiting Researcher Program at Tidar University. Dr. Syafrudin expressed gratitude to Professor Maarif’s team, emphasizing the importance of continued collaboration for impactful research.
 

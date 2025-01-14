@@ -13,7 +13,7 @@ published: true
 
 <br/>
 
-The AINTLab research team, led by Dr. Syafrudin, has published a groundbreaking study in the prestigious journal *Computers and Electronics in Agriculture* (impact factor: 7.7, top 1.7% in its field). The paper introduces FLTrans-Net (Transformer-based Feature Learning Network), an innovative algorithm for accurately detecting wheat ears in challenging agricultural environments. <!--truncate--> 
+The AINTLab research team, led by Dr. Syafrudin, has published a groundbreaking study in the prestigious journal *Computers and Electronics in Agriculture* (impact factor: 7.7, top 1.7% in its field). The paper introduces FLTrans-Net <!--truncate--> (Transformer-based Feature Learning Network), an innovative algorithm for accurately detecting wheat ears in challenging agricultural environments. 
 
 Traditional convolutional neural networks (CNNs) struggle with small or overlapping wheat ears, but FLTrans-Net addresses this with a multi-scale fusion block, transformer encoder, spatial attention block, and a lightweight RetinaNet detection block. The algorithm enhances detection accuracy and is optimized for resource-constrained devices, promising to improve agricultural efficiency significantly.  
 
