@@ -9,7 +9,7 @@ published: true
 
 <br/>
 
-한국어로 읽기: https://pr.sejong.ac.kr/sejongnewspaperview.do?boardType=6&pkid=68697
+한국어로 읽기: http://pr.sejong.ac.kr/sejongnewspaperview.do?boardType=6&pkid=68697
 <br/>
 
 Dr. Muhammad Syafrudin's team from Sejong University, in collaboration with Professor Muhammad Rifqi Maarif's team from Universitas Tidar, Indonesia, has published a groundbreaking paper in *Sustainable Development*, a journal ranked in the top 0.8% globally.
