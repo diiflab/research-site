@@ -10,7 +10,6 @@ published: true
 <br/>
 
 한국어로 읽기: https://pr.sejong.ac.kr/sejongnewspaperview.do?boardType=6&pkid=67698
-
 <br/>
 
 The AINTLab research team, led by Dr. Syafrudin, has published a groundbreaking study in the prestigious journal *Computers and Electronics in Agriculture* (impact factor: 7.7, top 1.7% in its field). The paper introduces FLTrans-Net <!--truncate--> (Transformer-based Feature Learning Network), an innovative algorithm for accurately detecting wheat ears in challenging agricultural environments. 
