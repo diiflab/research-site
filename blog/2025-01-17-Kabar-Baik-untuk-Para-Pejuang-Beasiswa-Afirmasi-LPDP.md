@@ -20,7 +20,7 @@ Sejong University adalah universitas berkelas dunia dengan pencapaian luar biasa
 
 Saya siap membantu **mengusahakan LoA Unconditional** dari **Sejong University, Department of Artificial Intelligence (AI) and Data Science (DS)** untuk calon pendaftar yang memenuhi **seluruh persyaratan berikut:** 
 
-###🔹 Syarat Pendaftaran:
+### **🔹 Syarat Pendaftaran:**
 1. **Pilih program studi:** *Department of Artificial Intelligence and Data Science* serta mencantumkan saya sebagai dosen pembimbing.  
 2. **Sertifikat bahasa Inggris yang berlaku:**  (Sumber: https://sos.sejong.ac.kr/eng/admission/guide/grad1.do)
    - TOEFL IBT ≥ 71  
@@ -46,7 +46,7 @@ Saya siap membantu **mengusahakan LoA Unconditional** dari **Sejong University, 
 
 ---  
 
-### 💡 Tertarik mengetahui lebih lanjut tentang tim riset kami?
+### **💡 Tertarik mengetahui lebih lanjut tentang tim riset kami?**
 Silakan kunjungi: **[s.aintlab.com/1](https://s.aintlab.com/1)**  
 
 ---  
