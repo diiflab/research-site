@@ -1,5 +1,5 @@
 ---
-title: Call for Chapters-Artificial Intelligence and Data Science for Sustainability-Applications and Methods
+title: CLOSED-Call for Chapters-Artificial Intelligence and Data Science for Sustainability-Applications and Methods
 date: '2024-05-02'
 tags: ['book', 'chapter', 'AI', 'DS', 'Sustainability']
 published: true
@@ -28,8 +28,6 @@ https://www.igi-global.com/publish/call-for-papers/submit/7584
 
 
 **Note: There are no submission or acceptance fees for chapters submitted to this book publication**. 
-
-If you are interested in becoming a reviewer, please kindly fill out the following form: https://forms.gle/BoE6e5CMwoECUNE17
 
 If you have any questions or concerns, please do not hesitate to contact us. 
 Thank you very much for your consideration of this invitation, and I hope to hear from you soon.
