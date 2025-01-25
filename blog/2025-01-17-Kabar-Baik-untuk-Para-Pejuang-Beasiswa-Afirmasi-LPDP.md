@@ -47,7 +47,7 @@ Saya siap membantu **mengusahakan LoA Unconditional** dari **Sejong University, 
 ---  
 
 **💡 Tertarik mengetahui lebih lanjut tentang tim riset kami?**  
-Silakan kunjungi: **[s.aintlab.com/1](http://s.aintlab.com/1)**  
+Silakan kunjungi: **[s.aintlab.com/1](https://s.aintlab.com/1)**  
 
 ---  
 
