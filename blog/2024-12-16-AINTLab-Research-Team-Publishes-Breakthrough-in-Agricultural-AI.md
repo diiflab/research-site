@@ -1,7 +1,7 @@
 ---
 title: AINTLab Research Team Publishes Breakthrough in Agricultural AI
 date: '2024-12-16'
-tags: ['research', 'journal', 'AI', 'DS', 'paper', 'Sustainability', 'AINTLab', 'Agricultural AI']
+tags: ['Research', 'journal', 'AI', 'DS', 'paper', 'Sustainability', 'AINTLab', 'Agricultural AI']
 published: true
 ---
 

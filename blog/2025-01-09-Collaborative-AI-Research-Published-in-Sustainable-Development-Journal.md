@@ -1,7 +1,7 @@
 ---
 title: Collaborative AI Research Published in Sustainable Development Journal
 date: '2025-01-09'
-tags: ['research', 'journal', 'AI', 'DS', 'paper', 'Sustainability', 'NLP', 'Circular Economy']
+tags: ['Research', 'journal', 'AI', 'DS', 'paper', 'Sustainability', 'NLP', 'Circular Economy']
 published: true
 ---
 
