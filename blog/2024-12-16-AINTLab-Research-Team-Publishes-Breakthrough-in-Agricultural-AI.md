@@ -1,7 +1,7 @@
 ---
 title: AINTLab Research Team Publishes Breakthrough in Agricultural AI
 date: '2024-12-16'
-tags: ['researh', 'journal', 'AI', 'DS', 'paper', 'Sustainability', 'AINTLab', 'Agricultural AI']
+tags: ['research', 'journal', 'AI', 'DS', 'paper', 'Sustainability', 'AINTLab', 'Agricultural AI']
 published: true
 ---
 
@@ -18,6 +18,6 @@ Traditional convolutional neural networks (CNNs) struggle with small or overlapp
 
 Dr. Syafrudin, a faculty member at Sejong University since 2022 and recognized in the 2024 Global Top 2% Scientists list (Stanford/Elsevier), expressed gratitude to collaborators from AINTLab, HITEC University, and Kaunas University of Technology. He stated, “FLTrans-Net represents a significant step forward in applying AI to real-world agricultural challenges. We will continue to innovate in this area.”  
 
-Read the full study here: [DOI: 10.1016/j.compag.2024.109706](https://doi.org/10.1016/j.compag.2024.109706).  
+Read the full study here: [10.1016/j.compag.2024.109706](https://doi.org/10.1016/j.compag.2024.109706).  
 
 You may request the full text for personal use via https://www.researchgate.net/publication/386742803_FLTrans-Net_Transformer-based_feature_learning_network_for_wheat_head_detection
