@@ -1,7 +1,7 @@
 ---
 title: Panel Speaker at World Scientific Forum of Indonesia (WSFI) 2023
 date: '2023-11-15'
-tags: ['team', 'accomplishment', 'award', 'competition', 'artificial intelligence']
+tags: ['gallery', 'team', 'accomplishment', 'award', 'competition', 'artificial intelligence']
 published: true
 ---
 

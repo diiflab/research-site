@@ -1,7 +1,7 @@
 ---
 title: Congrats Ahyun and Sujin on winning the 3rd place
 date: '2023-09-22'
-tags: ['team', 'accomplishment', 'award', 'competition', 'artificial intelligence']
+tags: ['gallery', 'team', 'accomplishment', 'award', 'competition', 'artificial intelligence']
 published: true
 ---
 
