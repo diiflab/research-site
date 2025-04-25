@@ -7,7 +7,7 @@ published: true
 
 <img src="/updates/9798369368299.webp"/><img src="/updates/9798337325309.webp"/><br/>
 
-We are excited to announce the publication of two new edited books from IGI Global that explore the intersection of artificial intelligence, data science, and sustainability:
+We are excited to announce the publication of two new edited books from IGI Global that explore the intersection of artificial intelligence, data science, and sustainability: <!--truncate--> 
 
 1. **Achieving Sustainability in Multi-Industry Settings With AI**  
    This book explores the application of AI across various industries to promote sustainable practices. Topics include consumer protection, energy distribution, and smart cities, making it a valuable resource for professionals and researchers in computer science, engineering, and urban planning.
@@ -24,16 +24,15 @@ We extend our heartfelt thanks to all authors, reviewers, and the publisher for 
 Both books are now available through 
 - IGI Global's platform.
 🔗 Artificial Intelligence and Data Science for Sustainability: Applications and Methods: https://www.igi-global.com/gateway/book/345966
-🔗 Achieving Sustainability in Multi-Industry Settings With AI: https://www.igi-global.com/gateway/book/368650)  
-
+🔗 Achieving Sustainability in Multi-Industry Settings With AI: https://www.igi-global.com/gateway/book/368650
 
 - Google Books
 🔗 Artificial Intelligence and Data Science for Sustainability: Applications and Methods: https://books.google.co.kr/books?id=C7xGEQAAQBAJ
 🔗 Achieving Sustainability in Multi-Industry Settings With AI: https://books.google.co.kr/books?id=IrBTEQAAQBAJ
 
 
-Best wishes,<br/>
-Muhammad Syafrudin (Sejong University, South Korea)<br/>
-Norma Latif Fitriyani (Sejong University, South Korea)<br/>
-Prof. Muhammad Anshari (Universiti Brunei Darussalam, Brunei<br/>
+Best wishes,
+Muhammad Syafrudin (Sejong University, South Korea)
+Norma Latif Fitriyani (Sejong University, South Korea)
+Prof. Muhammad Anshari (Universiti Brunei Darussalam, Brunei
 Book Editors
