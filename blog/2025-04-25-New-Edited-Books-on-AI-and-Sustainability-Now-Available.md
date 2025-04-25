@@ -7,7 +7,7 @@ published: true
 
 <img src="/updates/9798369368299.webp"/><img src="/updates/9798337325309.webp"/><br/>
 
-We are excited to announce the publication of two new edited books from IGI Global that explore the intersection of artificial intelligence, data science, and sustainability: <!--truncate--> 
+We are excited to announce the publication of two new edited books from IGI Global that explore the intersection of artificial intelligence, data science, and sustainability: 
 
 1. **Achieving Sustainability in Multi-Industry Settings With AI**  
    This book explores the application of AI across various industries to promote sustainable practices. Topics include consumer protection, energy distribution, and smart cities, making it a valuable resource for professionals and researchers in computer science, engineering, and urban planning.
