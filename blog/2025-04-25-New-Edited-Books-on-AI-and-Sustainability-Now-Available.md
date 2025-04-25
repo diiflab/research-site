@@ -15,7 +15,6 @@ We are excited to announce the publication of two new edited books from IGI Glob
 2. **Artificial Intelligence and Data Science for Sustainability: Applications and Methods**  
    This book presents cutting-edge research on leveraging AI and data science to address sustainability challenges. It covers areas such as structural optimization, drone imagery, and development financing, offering insights for scholars, policymakers, and practitioners.
 
-<!--truncate--> 
 We are pleased to share that the **Artificial Intelligence and Data Science for Sustainability: Applications and Methods** book has been indexed by Scopus (https://www.scopus.com/record/display.uri?eid=2-s2.0-85218110350&origin=recordpage), enhancing its visibility and accessibility to the global research community.
 
 We extend our heartfelt thanks to all authors, reviewers, and the publisher for their invaluable support throughout the publication and editing process.
