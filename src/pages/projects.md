@@ -5,7 +5,8 @@ title: Projects
 # Projects
 
 ### Current
-TBD.
+- Development Simulation Model in Industry Using Hybrid Approaches (Bina Nusantara University’s BINUS International Research/PIB, 2025, *Foreign Collaborator*)
+- Rock Cutting Detection System Based on Artificial Intelligence in Oil and Gas Drilling Activities (Gadjah Mada University's Academic Excellence Improvement Program, 2025, *Foreign Collaborator*)
 
 ### Past 
 - A Prediction and Optimization Model of Sugarcane Yield for Improving the Productivity of Sugar Industry in Indonesia (Bina Nusantara University’s BINUS International Research—Applied, 2024, *Foreign Collaborator*)
