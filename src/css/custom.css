@@ -89,3 +89,8 @@ width:100%;
 position:absolute;
 }
 
+
+thead th:empty {
+    border: thin solid red !important;
+    display: none;
+}
