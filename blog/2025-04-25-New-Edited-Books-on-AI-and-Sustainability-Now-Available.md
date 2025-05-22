@@ -15,7 +15,7 @@ We are excited to announce the publication of two new edited books from IGI Glob
 2. **Achieving Sustainability in Multi-Industry Settings With AI**
    This book explores the application of AI across various industries to promote sustainable practices. Topics include consumer protection, energy distribution, and smart cities, making it a valuable resource for professionals and researchers in computer science, engineering, and urban planning.
 
-We are pleased to share that **both edited books have been indexed by Scopus**:<!--truncate--> **Artificial Intelligence and Data Science for Sustainability: Applications and Methods** (https://www.scopus.com/record/display.uri?eid=2-s2.0-85218110350&origin=recordpage) and **Achieving Sustainability in Multi-Industry Settings With AI** (https://www.scopus.com/record/display.uri?eid=2-s2.0-105004508213&origin=recordpage), enhancing its visibility and accessibility to the global research community.
+We are pleased to share that **both edited books have been indexed by Scopus**:<!--truncate--> **Artificial Intelligence and Data Science for Sustainability: Applications and Methods** (http://www.scopus.com/inward/record.url?eid=2-s2.0-85218110350&partnerID=MN8TOARS) and **Achieving Sustainability in Multi-Industry Settings With AI** (http://www.scopus.com/inward/record.url?eid=2-s2.0-105004508213&partnerID=MN8TOARS), enhancing its visibility and accessibility to the global research community.
 
 We extend our heartfelt thanks to all authors, reviewers, and the publisher for their invaluable support throughout the publication and editing process.
 
