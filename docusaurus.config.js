@@ -6,8 +6,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Applied INTelligence Lab (AINTLab)',
-  tagline: '"AINTLab" is not only a laboratory but also a playground to learn and explore things related to applied intelligence.',
+  title: 'Applied INTelligence Lab (AINTLab) - 아인트랩',
+  tagline: '"AINTLab - 아인트랩" is not only a laboratory but also a playground to learn and explore things related to applied intelligence.',
   url: 'https://aintlab.com',
   baseUrl: '/',
   onBrokenLinks: 'throw',
@@ -41,7 +41,7 @@ const config = {
           showReadingTime: true,
           feedOptions: {
             type: 'all',
-            copyright: `Copyright © 2019-${new Date().getFullYear()} Applied INTelligence Lab (AINTLab); Lead by Muhammad Syafrudin.`,
+            copyright: `Copyright © 2019-${new Date().getFullYear()} Applied INTelligence Lab (AINTLab) - 아인트랩; Lead by Muhammad Syafrudin.`,
           },
         },
         theme: {
@@ -70,7 +70,7 @@ const config = {
           '@type': 'Organization',
           name: 'Applied INTelligence Lab (AINTLab)',
           url: 'https://aintlab.com/',
-          description: 'Applied INTelligence Lab (AINTLab) - AINTLab.com is not only a laboratory but also a playground to learn and explore things related to applied intelligence. AINTLab is a hub for learning and innovation in applied intelligence and IoT. Pioneering Artificial Intelligence research, AINTLab focuses on machine learning, deep learning, IoT, and self-supervised learning. Our expertise drives agricultural innovation, vessel detection, human action recognition, and predictive analytics, promoting sustainable agriculture and global food security. Explore our extensive collection of research publications on AI, machine learning, IoT, and sustainable agriculture, featuring groundbreaking work on transformer models, predictive analytics, and more.',
+          description: 'Applied INTelligence Lab (AINTLab) - 아인트랩 - AINTLab.com is not only a laboratory but also a playground to learn and explore things related to applied intelligence. AINTLab is a hub for learning and innovation in applied intelligence and IoT. Pioneering Artificial Intelligence research, AINTLab focuses on machine learning, deep learning, IoT, and self-supervised learning. Our expertise drives agricultural innovation, vessel detection, human action recognition, and predictive analytics, promoting sustainable agriculture and global food security. Explore our extensive collection of research publications on AI, machine learning, IoT, and sustainable agriculture, featuring groundbreaking work on transformer models, predictive analytics, and more.',
           foundingDate: '2019',
           founder: {
             '@type': 'Person',
@@ -162,7 +162,7 @@ const config = {
       },
       footer: {
         style: 'dark',
-        copyright: `Copyright © 2019-${new Date().getFullYear()} <a href="https://aintlab.com/" style="color:white"target="_blank">Applied INTelligence Lab (AINTLab)</a>; Lead by <a href="https://muhammadsyafrudin.com/" style="color:white"target="_blank">Muhammad Syafrudin</a>. Built with Docusaurus.`,
+        copyright: `Copyright © 2019-${new Date().getFullYear()} <a href="https://aintlab.com/" style="color:white"target="_blank">Applied INTelligence Lab (AINTLab) - 아인트랩</a>; Lead by <a href="https://muhammadsyafrudin.com/" style="color:white"target="_blank">Muhammad Syafrudin</a>. Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,
