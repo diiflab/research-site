@@ -1,5 +1,5 @@
 ---
-title: 🎉 Kabar Baik untuk Para Pejuang Beasiswa Afirmasi LPDP! 🎉
+title: (🇮🇩) 🎉 Kabar Baik untuk Para Pejuang Beasiswa Afirmasi LPDP! 🎉
 date: '2025-01-17'
 tags: ['Research', 'AINTLab', 'AI', 'DS', 'Beasiswa', 'LPDP']
 published: true
@@ -9,7 +9,7 @@ published: true
 
 <br/>
 
-Sekarang **Sejong University**, Seoul, Korea Selatan, **resmi masuk dalam daftar Perguruan Tinggi Tujuan Luar Negeri (PTLN) untuk program Magister dan Doktor Beasiswa Afirmasi LPDP Tahun 2025** di **SEMUA bidang studi (all subjects).** 🏫✨ (Sumber: https://lpdp.kemenkeu.go.id/beasiswa/kebijakan-umum/)
+(🇮🇩) Sekarang **Sejong University**, Seoul, Korea Selatan, **resmi masuk dalam daftar Perguruan Tinggi Tujuan Luar Negeri (PTLN) untuk program Magister dan Doktor Beasiswa Afirmasi LPDP Tahun 2025** di **SEMUA bidang studi (all subjects).** 🏫✨ (Sumber: https://lpdp.kemenkeu.go.id/beasiswa/kebijakan-umum/)
 
 Sejong University adalah universitas berkelas dunia dengan pencapaian luar biasa:  <!--truncate--> 
 - **Peringkat Dunia:**  

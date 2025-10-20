@@ -58,6 +58,33 @@
   margin-bottom: 15px;
 }
 
+.hero {
+    align-items: center;
+    background-image: url('/img/background.png') !important;;
+    color: var(--ifm-hero-text-color);
+    min-height: 500px !important;
+    background-size: cover;
+    position: relative;
+    color: white;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.65);
+  z-index: 1;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 2;
+  padding: 20px;
+}
+
 .map-responsive{
 overflow:hidden;
 padding-bottom:56.25%;
@@ -97,4 +124,36 @@ thead th:empty {
 
 .ndfHFb-c4YZDc-Wrql6b{
   display:none !important;
+}
+
+
+.fade-divider {
+  /* Reset default HR styling */
+  border: none;
+  height: 2px; /* Sets the thickness of the line */
+  
+  /* Apply the color and fade effect */
+  background: linear-gradient(
+    to right, 
+    /* 1. Fully transparent on the far left */
+    transparent 0%, 
+    /* 2. Target color starts fading in here (e.g., 10% from the left) */
+    #0e59a9 10%, 
+    /* 3. Solid color across the middle section */
+    #0e59a9 90%, 
+    /* 4. Target color fades out on the far right (e.g., 90% to 100%) */
+    transparent 100%
+  );
+  
+  /* Optional: Set a width to control the total length */
+  width: 85%; 
+  /* Centers the HR if a width is set */
+  margin: auto; 
+}
+
+.footer .link svg{
+  max-width: 25px;
+  padding-left: 10px;
+  color:white;
+  fill: white;
 }
