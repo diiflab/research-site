@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { XMLParser } from 'fast-xml-parser';
 import clsx from 'clsx';
 import styles from './styles.module.css';
+import Link from '@docusaurus/Link'
 
 
 // The target RSS feed URL
@@ -50,24 +51,29 @@ function RecentUpdates() {
       <div className="container">
         <h1 className="text--center">Latest Updates</h1>
         <div className="row">
-        <div class="col col--12">
-        <p className="text--center"><em>Latest five updates from AINTLab below — <a href="/updates" target="_blank" rel="noopener noreferrer">view the full list here.</a></em></p>
+        <div class="col col--8">
+        <p className="text--center"><em>Latest five updates from AINTLab below — <Link to="/updates">view the full list here.</Link></em></p>
         
           {posts.length === 0 ? (
-            <p>No recent posts found.</p>
+            <p className="text--left">No recent posts found.</p>
           ) : (
             <ul>
               {posts.map((item, index) => (
                 <li key={index}>
-                  <a href={item.link} target="_blank" rel="noopener noreferrer">
+                  <Link to={item.link} >
                     {item.title}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
 
           )}
           
+        </div>
+        <div class="col col--4">
+        <p className="text--right">
+          <img loading="lazy" className={styles.featureSvg} role="img" src="/img/background.png"/>
+        </p>          
         </div>
         </div>
         

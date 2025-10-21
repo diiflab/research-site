@@ -1,6 +1,8 @@
 import React from 'react';
 import clsx from 'clsx';
 import styles from './styles.module.css';
+import Link from '@docusaurus/Link';
+
 
 const FeatureList = [
   {
@@ -27,8 +29,8 @@ const FeatureList = [
       <>
         <ul>
           <li><strong>Data:</strong> EIS measurements from Li-ion cells across multiple temperatures and operating states.</li>
-          <li><strong>Intelligence:</strong> AE-BPNN with SCG/RBP optimization for feature reduction and SOH estimation.</li>
-          <li><strong>Applications:</strong> Accurate battery State-of-Health prediction for energy storage systems.</li>
+          <li><strong>Intelligence:</strong> AE-BPNN with SCG/RBP optimization for feature reduction and State-of-Health (SOH) estimation.</li>
+          <li><strong>Applications:</strong> Accurate battery SOH prediction for energy storage systems.</li>
         </ul>
 
       </>
@@ -56,12 +58,11 @@ function Feature({img_url, doi, title, outlet, description}) {
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">
-        <img className={styles.featureSvg} role="img" src={img_url}/>
+        <img loading="lazy" className={styles.featureSvg} role="img" src={img_url}/>
       </div>
       <div className="padding-horiz--md">
-        <h3 className="text--center"><a href={doi} target="_blank" rel="noopener noreferrer">
-        {title}
-        </a>
+        <h3 className="text--center">
+        <Link to={doi}>{title}</Link>
         </h3>
         <p>{description}<em>{outlet}</em></p>
       </div>
@@ -74,7 +75,7 @@ export default function HomepageFeatures() {
     <section className={styles.features}>
       <div className="container">
         <h1 className="text--center">Featured Research</h1>
-        <p className="text--center"><em>Our work has been published in reputable peer-reviewed journals. Featured publications are shown below — <a href="/publications" target="_blank" rel="noopener noreferrer">view the full list here.</a></em></p>
+        <p className="text--center"><em>Our work has been published in reputable peer-reviewed journals. Featured publications are shown below — <Link to="/publications">view the full list here.</Link></em></p>
         <div className="row">
           {FeatureList.map((props, idx) => (
             <Feature key={idx} {...props} />
