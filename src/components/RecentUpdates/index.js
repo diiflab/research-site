@@ -3,7 +3,8 @@ import { XMLParser } from 'fast-xml-parser';
 import clsx from 'clsx';
 import styles from './styles.module.css';
 import Link from '@docusaurus/Link'
-
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import backgroundVideo from '../../assets/background.mp4';
 
 // The target RSS feed URL
 const XML_URL = 'https://aintlab.com/updates/rss.xml';
@@ -12,6 +13,7 @@ function RecentUpdates() {
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const {siteConfig} = useDocusaurusContext();
 
   useEffect(() => {
     fetch(XML_URL)
@@ -47,11 +49,11 @@ function RecentUpdates() {
   if (error) return <p style={{color: 'red'}}>Error: {error}</p>;
 
   return (
-    <section className={styles.features}>
+    <section className={styles.features} id="recentupdated">
       <div className="container">
         <h1 className="text--center">Latest Updates</h1>
         <div className="row">
-        <div class="col col--8">
+        <div class="col col--7">
         <p className="text--center"><em>Latest five updates from AINTLab below — <Link to="/updates">view the full list here.</Link></em></p>
         
           {posts.length === 0 ? (
@@ -70,10 +72,8 @@ function RecentUpdates() {
           )}
           
         </div>
-        <div class="col col--4">
-        <p className="text--right">
-          <img loading="lazy" className={styles.featureSvg} role="img" src="/img/background.png"/>
-        </p>          
+        <div class="col col--5">
+        <video src={backgroundVideo} autoPlay loop muted plays-inline loading="lazy" className={styles.featureSvg}/>
         </div>
         </div>
         

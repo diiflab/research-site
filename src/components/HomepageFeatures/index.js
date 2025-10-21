@@ -2,6 +2,7 @@ import React from 'react';
 import clsx from 'clsx';
 import styles from './styles.module.css';
 
+
 const FeatureList = [
   {
     title: 'Data',
@@ -49,7 +50,7 @@ function Feature({Svg, title, description}) {
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">
-        <Svg loading="lazy" className={styles.featureSvg} role="img" />
+        <Svg loading="lazy" className={styles.featureSvg} alt="AINTLab - Research Area" role="img" />
       </div>
       <div className="padding-horiz--md">
         <h3 className="text--center">{title}</h3>
@@ -61,7 +62,7 @@ function Feature({Svg, title, description}) {
 
 export default function HomepageFeatures() {
   return (
-    <section className={styles.features}>
+    <section className={styles.features} id="ResearchArea">
       <div className="container">
         <h1 className="text--center">Research Area</h1>
         <p className="text--center"><em>AINTLab — applied ML, AI & DS for real-world decision support across data, intelligence, and applications.</em></p>

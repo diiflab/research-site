@@ -5,10 +5,16 @@
   width: 100%;
 }
 
+[data-theme='dark'] li > a{
+  color: #2991ff;
+}
+
+
 .mission{
   padding: 1rem;
 }
 
 .featureSvg {
   height: 200px;
+  align-items: center;
 }

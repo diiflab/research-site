@@ -7,9 +7,9 @@ import Link from '@docusaurus/Link';
 const FeatureList = [
   {
     title: 'FLTrans-Net: Transformer-based feature learning network for wheat head detection',
-    img_url: "img/wheat.jpg",
+    img_url: "img/wheat.webp",
     doi: "https://doi.org/10.1016/j.compag.2024.109706",
-    outlet: "Published in Computers and Electronics in Agriculture (2025) - SCIE (Q1); IF=8.9; Rank=2/94; IF(%)=1.6%.",
+    outlet: "Published in Computers and Electronics in Agriculture (Elsevier, 2025) - SCIE (Q1); IF=8.9; Rank=2/94; IF(%)=1.6%.",
     description: (
       <>
       <ul>
@@ -22,9 +22,9 @@ const FeatureList = [
   },
   {
     title: 'AE-BPNN: autoencoder and backpropagation neural network-based model for lithium-ion battery state of health estimation',
-    img_url: "img/battery.png",
+    img_url: "img/battery.webp",
     doi: "https://doi.org/10.1038/s41598-025-12771-4",
-    outlet: "Published in Scientific Reports (2025) - SCIE (Q1); IF=3.9; Rank=25/136; IF(%)=18.0%.",
+    outlet: "Published in Scientific Reports (Nature Portfolio, 2025) - SCIE (Q1); IF=3.9; Rank=25/136; IF(%)=18.0%.",
     description: (
       <>
         <ul>
@@ -38,9 +38,9 @@ const FeatureList = [
   },
   {
     title: 'Tweeting Circular Economy: Unveiling Current Discourse Through Natural Language Processing',
-    img_url: "img/circulareconomy.jpg",
+    img_url: "img/circulareconomy.webp",
     doi: "https://doi.org/10.1002/sd.3323",
-    outlet: "Published in Sustainable Development (2025) - SSCI (Q1); IF=9.9; Rank=1/63; IF(%)=0.8%.",
+    outlet: "Published in Sustainable Development (Wiley, 2025) - SSCI (Q1); IF=9.9; Rank=1/63; IF(%)=0.8%.",
     description: (
       <>       
       <ul>
@@ -58,7 +58,7 @@ function Feature({img_url, doi, title, outlet, description}) {
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">
-        <img loading="lazy" className={styles.featureSvg} role="img" src={img_url}/>
+        <img loading="lazy" alt={title} className={styles.featureSvg} role="img" src={img_url}/>
       </div>
       <div className="padding-horiz--md">
         <h3 className="text--center">
@@ -72,7 +72,7 @@ function Feature({img_url, doi, title, outlet, description}) {
 
 export default function HomepageFeatures() {
   return (
-    <section className={styles.features}>
+    <section className={styles.features} id="FeaturedResearch">
       <div className="container">
         <h1 className="text--center">Featured Research</h1>
         <p className="text--center"><em>Our work has been published in reputable peer-reviewed journals. Featured publications are shown below — <Link to="/publications">view the full list here.</Link></em></p>

@@ -5,6 +5,11 @@
   width: 100%;
 }
 
+[data-theme='dark'] .padding-horiz--md > a{
+  color: #2991ff;
+}
+
+
 .mission{
   padding: 1rem;
 }

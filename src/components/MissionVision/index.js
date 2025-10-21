@@ -41,8 +41,7 @@ function Feature({Svg, title, description}) {
   return (
     <div className={clsx('col col--6')}>
       <div className="padding-horiz--md">
-        <h3 className="text--center">{title}</h3>
-        <p>{description}</p>
+        <p><strong>{title}:</strong><br/>{description}</p>
       </div>
     </div>
   );
@@ -50,7 +49,7 @@ function Feature({Svg, title, description}) {
 
 export default function MissionVision() {
   return (
-    <section className={styles.features}>
+    <section className={styles.features} id="mission">
       <div className="container">
         <h1 className="text--center">Our Mission & Vision</h1>
         <div className="row">

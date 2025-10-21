@@ -8,6 +8,8 @@ import MissionVision from '@site/src/components/MissionVision';
 import RecentUpdates from '@site/src/components/RecentUpdates';
 import FeaturedPapers from '@site/src/components/FeaturedPapers';
 import CollaborateWithUs from '@site/src/components/CollaborateWithUs';
+import backgroundVideo from '../assets/background.mp4';
+import backgroundImg from '../assets/background.webp';
 
 import styles from './index.module.css';
 
@@ -15,6 +17,16 @@ function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
+    <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="background-video" 
+      >
+        <source src={backgroundVideo} type="video/mp4" alt={siteConfig.tagline}/>
+        <img src={backgroundImg} alt={siteConfig.tagline} /> 
+      </video>
       <div className="container">
         <h1 className="hero__title">{siteConfig.title}</h1>
         <p className="hero__subtitle">{siteConfig.tagline}</p>
@@ -25,9 +37,9 @@ function HomepageHeader() {
             Meet the Team 
           </Link>
           <Link
-            className="button button--md"
-            to="publications">
-            | Discover Our Research
+            className="button white-btn"
+            to="#CollaborateWithUs">
+            | Collaborate with Us
           </Link>
         </div>
       </div>

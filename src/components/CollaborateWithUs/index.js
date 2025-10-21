@@ -19,7 +19,7 @@ const MissionVisionList = [
         <li><b>Industry partners</b> seeking AI expertise in data analytics, and intelligent systems.</li>
         <li><b><Link to="/alumni">Students and visiting researchers</Link></b> looking to learn, contribute, and grow in an innovative environment.</li>
         </ul>
-        <em>If you are interested in collaborating with us, please <Link to="/contact">contact us.</Link></em>
+        
 </>
     ),
   },
@@ -27,9 +27,10 @@ const MissionVisionList = [
     title: 'Collaborator Network Map',
     description: (
       <>
-        <em>Our collaboration map from the past five years.</em>
+      <em>Our collaboration map from the past five years.</em>
       <br/>
-      <Link to="https://sejong.elsevierpure.com/en/persons/muhammad-syafrudin/network-map#network-map-container"><img loading="lazy" src="/team/collaboration_map.png" class="img_ev3q"/></Link>
+      <Link to="https://sejong.elsevierpure.com/en/persons/muhammad-syafrudin/network-map#network-map-container"><img loading="lazy" alt="Our collaboration map from the past five years" src="/team/collaboration_map.webp" class="img_ev3q"/></Link>
+      <p class="text--right"><em>If you are interested in collaborating with us, please <Link to="/contact">contact us.</Link></em></p>
       </>
     ),
   },
@@ -40,7 +41,6 @@ function Feature({Svg, title, description}) {
   return (
     <div className={clsx('col col--6')}>
       <div className="padding-horiz--md">
-        <h3 className="text--center">{title}</h3>
         <p>{description}</p>
       </div>
     </div>
@@ -49,7 +49,7 @@ function Feature({Svg, title, description}) {
 
 export default function MissionVision() {
   return (
-    <section className={styles.features}>
+    <section className={styles.features} id="CollaborateWithUs">
       <div className="container">
         <h1 className="text--center">Collaborate With Us</h1>
         <div className="row">
