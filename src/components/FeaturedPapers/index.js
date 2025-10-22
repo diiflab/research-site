@@ -75,7 +75,7 @@ export default function HomepageFeatures() {
     <section className={styles.features} id="FeaturedResearch">
       <div className="container">
         <h1 className="text--center">Featured Research</h1>
-        <p className="text--center"><em>Our work has been published in reputable peer-reviewed journals. Featured publications are shown below — <Link to="/publications">view the full list here.</Link></em></p>
+        <p className="text--center"><em>Our work has been published in reputable peer-reviewed journals. Featured publications are shown below — <Link to="/publications">view all publications here.</Link></em></p>
         <div className="row">
           {FeatureList.map((props, idx) => (
             <Feature key={idx} {...props} />

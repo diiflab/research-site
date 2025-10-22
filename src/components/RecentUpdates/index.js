@@ -54,7 +54,7 @@ function RecentUpdates() {
         <h1 className="text--center">Latest Updates</h1>
         <div className="row">
         <div class="col col--7">
-        <p className="text--center"><em>Latest five updates from AINTLab below — <Link to="/updates">view the full list here.</Link></em></p>
+        <p className="text--center"><em>Latest five updates from AINTLab below — <Link to="/updates">view all updates here.</Link></em></p>
         
           {posts.length === 0 ? (
             <p className="text--left">No recent posts found.</p>
