@@ -53,7 +53,7 @@ function Feature({Svg, title, description}) {
         <Svg loading="lazy" className={styles.featureSvg} alt="AINTLab - Research Area" role="img" />
       </div>
       <div className="padding-horiz--md">
-        <h3 className="text--center">{title}</h3>
+        <h2 className="text--center">{title}</h2>
         <p>{description}</p>
       </div>
     </div>

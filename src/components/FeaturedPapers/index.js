@@ -61,9 +61,9 @@ function Feature({img_url, doi, title, outlet, description}) {
         <img loading="lazy" alt={title} className={styles.featureSvg} role="img" src={img_url}/>
       </div>
       <div className="padding-horiz--md">
-        <h3 className="text--center">
+        <h2 className="text--center">
         <Link to={doi}>{title}</Link>
-        </h3>
+        </h2>
         <p>{description}<em>{outlet}</em></p>
       </div>
     </div>
