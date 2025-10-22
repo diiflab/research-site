@@ -190,3 +190,12 @@ thead th:empty {
   color:white;
   fill: white;
 }
+
+@media (max-width: 767px) {
+  h1 {
+    font-size: 25pt !important;
+  }
+  h1.text--center{
+    font-size: 15pt !important;
+  }
+}

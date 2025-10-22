@@ -7,7 +7,7 @@ const MissionVisionList = [
     title: 'Our Mission',
     description: (
       <>
-      At AINTLab , our mission is to advance the science and application of artificial intelligence (AI), machine learning (ML), and data science (DS) to create intelligent, sustainable, and interconnected systems for the future.
+      At AINTLab, our mission is to advance the science and application of artificial intelligence (AI), machine learning (ML), and data science (DS) to create intelligent, sustainable, and interconnected systems for the future.
 
       <br/><br/>We explore the intersection of <b>AI, DS, and intelligent systems</b>, developing systems that empower people, improve efficiency, and address pressing global challenges — from smart cities and IoT to green computing and advanced AI.
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import { useState, useEffect } from 'react';
 import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
@@ -12,6 +13,7 @@ import backgroundVideo from '../assets/background.mp4';
 import backgroundImg from '../assets/background.webp';
 
 import styles from './index.module.css';
+
 
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
@@ -47,14 +49,35 @@ function HomepageHeader() {
   );
 }
 
+function AcademicGenealogy() {
+  const {siteConfig} = useDocusaurusContext();
+  const Svg = require('../assets/directortree_desktop.svg').default
+   return (
+    <section className={styles.academic} id="AcademicGenealogy">
+      <div className="container">
+        <h1 className="text--center">Academic Genealogy</h1>
+        <div className="row">
+          <div className={clsx('col col--12')}>
+            <div className="text--center">
+              <Svg loading="lazy" className={styles.featureSvg} alt="AINTLab - Research Area" role="img" />
+            </div>
+          </div>
+        </div>
+        <hr className="fade-divider"/>
+      </div>
+    </section>
+  );
+}
+
 export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`Applied INTelligence Lab (AINTLab) - Research together with Muhammad Syafrudin - AINTLab.com`}
-      description="Applied INTelligence Lab (AINTLab) - 아인트랩 is not only a laboratory but also a playground to learn and explore the frontier of artificial intelligence, data science, and intelligent networks. We design AI-driven solutions that connect systems, enhance communication, and promote sustainability. Through collaboration across academia and industry, we aim to build technologies that shape a smarter, more connected world. AINTLab is a hub for learning and innovation in applied intelligence and IoT. Pioneering Artificial Intelligence research, AINTLab focuses on machine learning, deep learning, IoT, and self-supervised learning. Our expertise drives agricultural innovation, vessel detection, human action recognition, and predictive analytics, promoting sustainable agriculture and global food security. Explore our extensive collection of research publications on AI, machine learning, IoT, and sustainable agriculture, featuring groundbreaking work on transformer models, predictive analytics, and more. Applied INTelligence Lab (AINTLab), Department of Artificial Intelligence and Data Science, Sejong University, Seoul 05006, Republic of Korea, Lead by Muhammad Syafrudin.">
+      title={siteConfig.title}
+      description={siteConfig.tagline}>
       <HomepageHeader />
       <main>
+        <AcademicGenealogy />
         <MissionVision />
         <HomepageFeatures />
         <CollaborateWithUs/>

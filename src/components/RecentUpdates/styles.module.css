@@ -1,14 +1,19 @@
+
 .features {
   display: flex;
   align-items: center;
   padding: 1rem 0;
   width: 100%;
+  background-color: #f5f6f7;
 }
 
-[data-theme='dark'] li > a{
+[data-theme='dark'] .features {
+    background-color: #444950;
+}
+
+[data-theme='dark'] h3 > a{
   color: #2991ff;
 }
-
 
 .mission{
   padding: 1rem;
