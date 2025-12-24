@@ -1,0 +1,63 @@
+/* src/components/LogoSlider/styles.module.css */
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.logos {
+  overflow: hidden;
+  padding: 40px 0;
+  position: relative;
+  background: white;
+  /* Use flex to keep the two slides perfectly side-by-side */
+  display: flex; 
+}
+
+/* White Fades */
+.logos::before,
+.logos::after {
+  position: absolute;
+  top: 0;
+  width: 150px;
+  height: 100%;
+  content: "";
+  z-index: 2;
+}
+
+.logos::before {
+  left: 0;
+  background: linear-gradient(to right, white, transparent);
+}
+
+.logos::after {
+  right: 0;
+  background: linear-gradient(to left, white, transparent);
+}
+
+.logosSlide {
+  display: flex; /* Use flex instead of inline-block */
+  align-items: center;
+  /* This is the secret: it prevents the slide from shrinking */
+  flex-shrink: 0; 
+  animation: 45s slide infinite linear;
+}
+
+.logosSlide img {
+  height: 50px;
+  width: auto;
+  margin: 0 40px;
+  /* Prevent individual logos from overlapping or squishing */
+  flex-shrink: 0; 
+}
+
+.logos:hover .logosSlide {
+  animation-play-state: paused;
+}
+
+@keyframes slide {
+  from { transform: translateX(0); }
+  /* Because there are two identical flex-items, -100% is a perfect loop */
+  to { transform: translateX(-100%); }
+}

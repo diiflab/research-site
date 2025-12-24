@@ -11,6 +11,7 @@ import FeaturedPapers from '@site/src/components/FeaturedPapers';
 import CollaborateWithUs from '@site/src/components/CollaborateWithUs';
 import backgroundVideo from '../assets/background.mp4';
 import backgroundImg from '../assets/background.webp';
+import LogoSlider from '@site/src/components/LogoSlider';
 
 import styles from './index.module.css';
 
@@ -81,6 +82,7 @@ export default function Home() {
         <MissionVision />
         <HomepageFeatures />
         <CollaborateWithUs/>
+        <LogoSlider />
         <FeaturedPapers/>
         <RecentUpdates />
       </main>
