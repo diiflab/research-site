@@ -83,7 +83,7 @@
 .hero {
     align-items: center;
     color: var(--ifm-hero-text-color);
-    min-height: 600px !important;
+    min-height: 780px !important;
     position: relative;
     color: white;
     overflow: hidden;
