@@ -28,6 +28,7 @@ export default function LogoSlider() {
   return (
     <div className={styles.wrapper}>
      <h1 className="text--center">Our Collaborators</h1>
+             <p className="text--center"><em>Collaborated on: joint publications, projects, visiting programs, etc.</em></p>
       <div className={styles.logos}>
         {/* First set of logos */}
         <div className={styles.logosSlide}>
