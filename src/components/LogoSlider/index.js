@@ -14,18 +14,18 @@ const LOGOS = [
   { src: '/img/logos/curtin.png', alt: 'Curtin' },
   { src: '/img/logos/ubd.png', alt: 'UBD' },
   { src: '/img/logos/undip.png', alt: 'UNDIP' },
-  { src: '/img/logos/dongguk.jpg', alt: 'Dongguk' },
+  { src: '/img/logos/dongguk.png', alt: 'Dongguk' },
   { src: '/img/logos/karabuk.png', alt: 'Karabuk' },
   { src: '/img/logos/itu.png', alt: 'ITU' },
   { src: '/img/logos/isu.png', alt: 'ISU' },
   { src: '/img/logos/gscwu.png', alt: 'GSCWU' },
-  { src: '/img/logos/hitec.jpg', alt: 'HITEC' },
+  { src: '/img/logos/hitec.png', alt: 'HITEC' },
   { src: '/img/logos/uinsuka.png', alt: 'UINSUKA' },
   { src: '/img/logos/bnu.png', alt: 'BNU' },
   { src: '/img/logos/ntust.png', alt: 'NTUST' },
-  { src: '/img/logos/kfueit.jpg', alt: 'kfueit' },
+  { src: '/img/logos/kfueit.png', alt: 'kfueit' },
   { src: '/img/logos/brin.png', alt: 'BRIN' },
-  { src: '/img/logos/aintlab.jpg', alt: 'AINTLab' },
+  { src: '/img/logos/aintlab.png', alt: 'AINTLab' },
 ];
 
 

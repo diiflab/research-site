@@ -29,7 +29,7 @@ const MissionVisionList = [
       <>
       <em>Our collaboration map from the past five years.</em>
       <br/>
-      <Link to="https://sejong.elsevierpure.com/en/persons/muhammad-syafrudin/network-map#network-map-container"><img loading="lazy" alt="Our collaboration map from the past five years" src="/team/collaboration_map.webp" class="img_ev3q"/></Link>
+      <Link to="https://sejong.elsevierpure.com/en/persons/muhammad-syafrudin/network-map#network-map-container"><img loading="lazy" alt="Our collaboration map from the past five years" src="/team/collaboration_map.png" class="img_ev3q"/></Link>
       <p class="text--right"><em>If you are interested in collaborating with us, please <Link to="/contact">contact us.</Link></em></p>
       </>
     ),

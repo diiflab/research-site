@@ -1,1 +1,23 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:bx="https://boxy-svg.com" viewBox="2.99 -22.87 491.96 122.67">   <g style="" transform="matrix(1.242923, 0, 0, 1.242923, -49.927038, -34.892869)">     <g id="g-7" featurekey="textGroupContainer" transform="matrix(1, 0, 0, 1, 346.794597, 33.411237)" fill="#ffffff">       <rect xmlns="http://www.w3.org/2000/svg" y="0" height="1" width="1" opacity="0" style="fill: rgb(14, 89, 169);"/>       <rect xmlns="http://www.w3.org/2000/svg" y="0" x="-235" width="3" height="62" style="fill: rgb(14, 89, 169);"/>     </g>     <g transform="matrix(1, 0, 0, 1, -26.402871, -134.465122)" id="object-0">       <circle cx="100.749" cy="199.132" r="31.371" style="stroke: rgb(14, 89, 169); fill: rgb(14, 89, 169); stroke-width: 1;"/>       <g fill="#fff" style="" transform="matrix(1.091433, 0, 0, 1.091433, 46.178132, 144.561757)">         <polygon points="44 24.289 30 70 42 70 48 54.001 52 54.001 58 70 70 70 56 24.289" style=""/>         <path d="M 49.675 27.784 C 37.02 43.272 51.63 37.334 49.311 53.49 C 59.299 40.166 55.68 36.488 49.675 27.784 Z" style="" fill="#0e59a9"/>       </g>     </g>     <text style="fill: rgb(14, 89, 169); font-family: &quot;Segoe UI&quot;; font-size: 74px; font-weight: 900; white-space: pre;" x="120.847" y="89.59" id="object-1">AINTLab</text>   </g>   <defs>     <bx:export>       <bx:file format="svg" href="#g-7"/>       <bx:file format="svg" href="#object-0" path="Untitled 2.svg"/>       <bx:file format="svg" href="#object-1" path="Untitled 3.svg"/>     </bx:export>   </defs> </svg>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:bx="https://boxy-svg.com" viewBox="2.99 -22.87 491.96 122.67">
+  <g style="" transform="matrix(1.242923, 0, 0, 1.242923, -49.927038, -34.892869)">
+    <g id="g-7" featurekey="textGroupContainer" transform="matrix(1, 0, 0, 1, 346.794597, 33.411237)" fill="#ffffff">
+      <rect xmlns="http://www.w3.org/2000/svg" y="0" height="1" width="1" opacity="0" style="fill: rgb(14, 89, 169);"/>
+      <rect xmlns="http://www.w3.org/2000/svg" y="0" x="-235" width="3" height="62" style="fill: rgb(14, 89, 169);"/>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, -26.402871, -134.465122)" id="object-0">
+      <circle cx="100.749" cy="199.132" r="31.371" style="stroke: rgb(14, 89, 169); fill: rgb(14, 89, 169); stroke-width: 1;"/>
+      <g fill="#fff" style="" transform="matrix(1.091433, 0, 0, 1.091433, 46.178132, 144.561757)">
+        <polygon points="44 24.289 30 70 42 70 48 54.001 52 54.001 58 70 70 70 56 24.289" style=""/>
+        <path d="M 49.675 27.784 C 37.02 43.272 51.63 37.334 49.311 53.49 C 59.299 40.166 55.68 36.488 49.675 27.784 Z" style="" fill="#0e59a9"/>
+      </g>
+    </g>
+    <text style="fill: rgb(14, 89, 169); font-family: &quot;Segoe UI&quot;; font-size: 74px; font-weight: 900; white-space: pre;" x="120.847" y="89.59" id="object-1">AINTLab</text>
+  </g>
+  <defs>
+    <bx:export>
+      <bx:file format="svg" href="#g-7"/>
+      <bx:file format="svg" href="#object-0" path="Untitled 2.svg"/>
+      <bx:file format="svg" href="#object-1" path="Untitled 3.svg"/>
+    </bx:export>
+  </defs>
+</svg>

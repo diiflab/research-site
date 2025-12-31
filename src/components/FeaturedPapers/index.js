@@ -7,7 +7,7 @@ import Link from '@docusaurus/Link';
 const FeatureList = [
   {
     title: 'FLTrans-Net: Transformer-based feature learning network for wheat head detection',
-    img_url: "img/wheat.webp",
+    img_url: "img/wheat.png",
     doi: "https://doi.org/10.1016/j.compag.2024.109706",
     outlet: "Published in Computers and Electronics in Agriculture (Elsevier, 2025) - SCIE (Q1); IF=8.9; Rank=2/94; IF(%)=1.6%.",
     description: (
@@ -22,7 +22,7 @@ const FeatureList = [
   },
   {
     title: 'AE-BPNN: autoencoder and backpropagation neural network-based model for lithium-ion battery state of health estimation',
-    img_url: "img/battery.webp",
+    img_url: "img/battery.png",
     doi: "https://doi.org/10.1038/s41598-025-12771-4",
     outlet: "Published in Scientific Reports (Nature Portfolio, 2025) - SCIE (Q1); IF=3.9; Rank=25/136; IF(%)=18.0%.",
     description: (
@@ -38,7 +38,7 @@ const FeatureList = [
   },
   {
     title: 'Tweeting Circular Economy: Unveiling Current Discourse Through Natural Language Processing',
-    img_url: "img/circulareconomy.webp",
+    img_url: "img/circulareconomy.png",
     doi: "https://doi.org/10.1002/sd.3323",
     outlet: "Published in Sustainable Development (Wiley, 2025) - SSCI (Q1); IF=9.9; Rank=1/63; IF(%)=0.8%.",
     description: (
