@@ -10,13 +10,13 @@
   overflow: hidden;
   padding: 40px 0;
   position: relative;
-  background: white;
+  /*background: white;
   /* Use flex to keep the two slides perfectly side-by-side */
   display: flex; 
 }
 
 [data-theme='dark'] .logos {
-    background: #1b1b1d;
+    /*background: #1b1b1d; */
 }
 
 /* White Fades */
