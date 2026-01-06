@@ -150,9 +150,7 @@ const config = {
       },
       footer: {
         style: 'dark',
-        copyright: `(🇰🇷) Applied INTelligence Lab (AINTLab), Seoul 05006, Republic of Korea | (🇮🇩) Applied INTelligence Lab (AINTLab), Yogyakarta 55187, Indonesia.
-        <br/>
-        E-mail: hello [at] aintlab.com | Phone: 02-3408-1879<br/>
+        copyright: `<div class="navbar__logo"><img src="/img/research-dark.png" alt="Applied INTelligence Lab (AINTLab)"></div>
         <a href="/" style="color:white">Home</a> / <a href="/team" style="color:white">The Team</a> / <a href="/projects" style="color:white">Projects</a> / <a href="/publications" style="color:white">Publications</a> / <a href="/updates" style="color:white">Updates</a> / <a href="/contact" style="color:white">Contact</a> | Follow us on <a class="link" href="https://www.linkedin.com/company/aintlab" target="_blank" data-tippy-content="LinkedIn">
             <svg class="svgfooter" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <title>AINTLab (Applied INTelligence Lab) @ LinkedIn</title>
@@ -160,7 +158,7 @@ const config = {
             </svg>
           </a><br/> 
         Copyright © 2019-${new Date().getFullYear()} <a href="/" style="color:white">Applied INTelligence Lab (AINTLab)</a>; Lead by <a href="https://muhammadsyafrudin.com/" style="color:white"target="_blank">Muhammad Syafrudin</a>. Built with Docusaurus.
-        <div class="navbar__logo"><img src="/img/research-dark.png" alt="Applied INTelligence Lab (AINTLab)"></div>`,
+        `,
       },
       prism: {
         theme: lightCodeTheme,
