@@ -36,8 +36,8 @@ function HomepageHeader() {
         <div className={styles.buttons}>
           <Link
             className="button button--secondary"
-            to="team">
-            Meet the Team 
+            to="#mission">
+            Read Our Mission 
           </Link>
           <Link
             className="button white-btn"

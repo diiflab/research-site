@@ -62,6 +62,10 @@
   color:#2991ff;
 }
 
+[data-theme='dark'] #__docusaurus_skipToContent_fallback > header > div > div > a.button.white-btn {
+    color: #ffffff !important;
+}
+
 [data-theme='dark'] .row a {
   color:#2991ff;
   text-decoration: none !important;

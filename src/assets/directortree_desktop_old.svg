@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0.00 0.00 1456.00 114.00">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 110.35)">
+<polygon fill="white" stroke="none" points="-4,4 -4,-110.35 1451.72,-110.35 1451.72,4 -4,4"/>
+<!-- 65163 -->
+<g id="node1" class="node">
+<title>65163</title>
+<g id="a_node1"><a xlink:href="https://www.mathgenealogy.org/id.php?id=65163" target="_blank" xlink:title="Hans W. Liepmann (1938)\nETH Zürich\nMajor: Fluid Dynamics\nMGP ID: 65163">
+<ellipse fill="white" stroke="black" cx="126.86" cy="-53.17" rx="126.86" ry="53.17"/>
+<text xml:space="preserve" text-anchor="middle" x="126.86" y="-74.17" font-family="Helvetica,sans-Serif" font-size="14.00">Hans W. Liepmann (1938)</text>
+<text xml:space="preserve" text-anchor="middle" x="126.86" y="-57.37" font-family="Helvetica,sans-Serif" font-size="14.00">ETH Zürich</text>
+<text xml:space="preserve" text-anchor="middle" x="126.86" y="-40.57" font-family="Helvetica,sans-Serif" font-size="14.00">Major: Fluid Dynamics</text>
+<text xml:space="preserve" text-anchor="middle" x="126.86" y="-23.77" font-family="Helvetica,sans-Serif" font-size="14.00">MGP ID: 65163</text>
+</a>
+</g>
+</g>
+<!-- 13300 -->
+<g id="node2" class="node">
+<title>13300</title>
+<g id="a_node2"><a xlink:href="https://www.mathgenealogy.org/id.php?id=13300" target="_blank" xlink:title="Arthur E. Bryson Jr. (1951)\nCaltech\nMajor: Optimal Control\nMGP ID: 13300">
+<ellipse fill="white" stroke="black" cx="418.78" cy="-53.17" rx="129.05" ry="53.17"/>
+<text xml:space="preserve" text-anchor="middle" x="418.78" y="-74.17" font-family="Helvetica,sans-Serif" font-size="14.00">Arthur E. Bryson Jr. (1951)</text>
+<text xml:space="preserve" text-anchor="middle" x="418.78" y="-57.37" font-family="Helvetica,sans-Serif" font-size="14.00">Caltech</text>
+<text xml:space="preserve" text-anchor="middle" x="418.78" y="-40.57" font-family="Helvetica,sans-Serif" font-size="14.00">Major: Optimal Control</text>
+<text xml:space="preserve" text-anchor="middle" x="418.78" y="-23.77" font-family="Helvetica,sans-Serif" font-size="14.00">MGP ID: 13300</text>
+</a>
+</g>
+</g>
+<!-- 65163&#45;&gt;13300 -->
+<g id="edge1" class="edge">
+<title>65163-&gt;13300</title>
+<path fill="none" stroke="black" stroke-width="2" d="M254.18,-53.17C262.17,-53.17 270.23,-53.17 278.27,-53.17"/>
+<polygon fill="black" stroke="black" stroke-width="2" points="276.58,-56.67 286.58,-53.17 276.58,-49.67 276.58,-56.67"/>
+</g>
+<!-- 13317 -->
+<g id="node3" class="node">
+<title>13317</title>
+<g id="a_node3"><a xlink:href="https://www.mathgenealogy.org/id.php?id=13317" target="_blank" xlink:title="Stuart E. Dreyfus (1964)\nHarvard University\nMajor: Dynamic Programming\nMGP ID: 13317">
+<ellipse fill="white" stroke="black" cx="726.07" cy="-53.17" rx="142.24" ry="53.17"/>
+<text xml:space="preserve" text-anchor="middle" x="726.07" y="-74.17" font-family="Helvetica,sans-Serif" font-size="14.00">Stuart E. Dreyfus (1964)</text>
+<text xml:space="preserve" text-anchor="middle" x="726.07" y="-57.37" font-family="Helvetica,sans-Serif" font-size="14.00">Harvard University</text>
+<text xml:space="preserve" text-anchor="middle" x="726.07" y="-40.57" font-family="Helvetica,sans-Serif" font-size="14.00">Major: Dynamic Programming</text>
+<text xml:space="preserve" text-anchor="middle" x="726.07" y="-23.77" font-family="Helvetica,sans-Serif" font-size="14.00">MGP ID: 13317</text>
+</a>
+</g>
+</g>
+<!-- 13300&#45;&gt;13317 -->
+<g id="edge2" class="edge">
+<title>13300-&gt;13317</title>
+<path fill="none" stroke="black" stroke-width="2" d="M547.92,-53.17C555.91,-53.17 563.98,-53.17 572.06,-53.17"/>
+<polygon fill="black" stroke="black" stroke-width="2" points="570.45,-56.67 580.45,-53.17 570.45,-49.67 570.45,-56.67"/>
+</g>
+<!-- 250462 -->
+<g id="node4" class="node">
+<title>250462</title>
+<g id="a_node4"><a xlink:href="https://www.mathgenealogy.org/id.php?id=250462" target="_blank" xlink:title="Jongtae Rhee (1990)\nUC Berkeley\nMajor: Control Systems\nMGP ID: 250462">
+<ellipse fill="white" stroke="black" cx="1018.49" cy="-53.17" rx="114.19" ry="53.17"/>
+<text xml:space="preserve" text-anchor="middle" x="1018.49" y="-74.17" font-family="Helvetica,sans-Serif" font-size="14.00">Jongtae Rhee (1990)</text>
+<text xml:space="preserve" text-anchor="middle" x="1018.49" y="-57.37" font-family="Helvetica,sans-Serif" font-size="14.00">UC Berkeley</text>
+<text xml:space="preserve" text-anchor="middle" x="1018.49" y="-40.57" font-family="Helvetica,sans-Serif" font-size="14.00">Major: Control Systems</text>
+<text xml:space="preserve" text-anchor="middle" x="1018.49" y="-23.77" font-family="Helvetica,sans-Serif" font-size="14.00">MGP ID: 250462</text>
+</a>
+</g>
+</g>
+<!-- 13317&#45;&gt;250462 -->
+<g id="edge3" class="edge">
+<title>13317-&gt;250462</title>
+<path fill="none" stroke="black" stroke-width="2" d="M868.45,-53.17C876.59,-53.17 884.74,-53.17 892.81,-53.17"/>
+<polygon fill="black" stroke="black" stroke-width="2" points="891.12,-56.67 901.12,-53.17 891.12,-49.67 891.12,-56.67"/>
+</g>
+<!-- 297235 -->
+<g id="node5" class="node">
+<title>297235</title>
+<g id="a_node5"><a xlink:href="https://www.mathgenealogy.org/id.php?id=297235" target="_blank" xlink:title="Muhammad Syafrudin (2019)\nDongguk University\nMajor: AI Applications\nMGP ID: 297235">
+<ellipse fill="lightblue" stroke="black" cx="1308.2" cy="-53.17" rx="139.52" ry="53.17"/>
+<text xml:space="preserve" text-anchor="middle" x="1308.2" y="-74.17" font-family="Helvetica,sans-Serif" font-size="14.00">Muhammad Syafrudin (2019)</text>
+<text xml:space="preserve" text-anchor="middle" x="1308.2" y="-57.37" font-family="Helvetica,sans-Serif" font-size="14.00">Dongguk University</text>
+<text xml:space="preserve" text-anchor="middle" x="1308.2" y="-40.57" font-family="Helvetica,sans-Serif" font-size="14.00">Major: AI Applications</text>
+<text xml:space="preserve" text-anchor="middle" x="1308.2" y="-23.77" font-family="Helvetica,sans-Serif" font-size="14.00">MGP ID: 297235</text>
+</a>
+</g>
+</g>
+<!-- 250462&#45;&gt;297235 -->
+<g id="edge4" class="edge">
+<title>250462-&gt;297235</title>
+<path fill="none" stroke="black" stroke-width="2" d="M1132.79,-53.17C1140.7,-53.17 1148.74,-53.17 1156.8,-53.17"/>
+<polygon fill="black" stroke="black" stroke-width="2" points="1155.18,-56.67 1165.18,-53.17 1155.18,-49.67 1155.18,-56.67"/>
+</g>
+</g>
+</svg>

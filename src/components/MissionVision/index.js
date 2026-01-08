@@ -1,6 +1,7 @@
 import React from 'react';
 import clsx from 'clsx';
 import styles from './styles.module.css';
+import Link from '@docusaurus/Link'
 
 const MissionVisionList = [
   {
@@ -13,7 +14,7 @@ const MissionVisionList = [
 
       <br/><br/>Our research bridges theory and <b>real-world impact, combining academic excellence with practical innovation.</b>
       <br/><br/>
-      <em>“AINTLab is not just a lab — it’s a playground for ideas, collaboration, and discovery.” (– Director, AINTLab)</em>
+      <em>"AINTLab is not just a lab — it's a playground for ideas, collaboration, and discovery." (–Director, AINTLab)</em>
       </>
     ),
   },
@@ -22,7 +23,7 @@ const MissionVisionList = [
     description: (
       <>
         We envision a world where <b>intelligent systems enhance human life responsibly and sustainably</b>.
-AINTLab aims to be a hub of interdisciplinary research and collaboration — where curiosity meets purpose, and where ideas grow into systems that shape tomorrow’s connected society.
+AINTLab aims to be a hub of interdisciplinary research and collaboration — where curiosity meets purpose, and where ideas grow into systems that shape tomorrow’s connected society. 
 <br/><br/>
 We are committed to:
 <br/>

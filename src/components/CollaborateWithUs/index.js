@@ -17,9 +17,9 @@ const MissionVisionList = [
         <ul>
         <li><b>Universities and research institutes</b> on <Link to="/projects">joint projects</Link> and <Link to="/publications">publications.</Link></li>
         <li><b>Industry partners</b> seeking AI expertise in data analytics, and intelligent systems.</li>
-        <li><b><Link to="/prospective">Students </Link>and <Link to="/alumni">visiting researchers</Link></b> looking to learn, contribute, and grow in an innovative environment.</li>
+        <li><b><Link to="/prospective">Students </Link>and <Link to="/alumni/#visiting-professorsresearchers">visiting researchers</Link></b> looking to learn, contribute, and grow in an innovative environment.</li>
         </ul>
-        
+        Meet <b><Link to="/team">Our Team</Link></b> or if you are interested in joining us, please read the <b><Link to="/prospective">Guidelines for Prospective Students.</Link></b>
 </>
     ),
   },
