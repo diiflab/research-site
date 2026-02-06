@@ -150,7 +150,7 @@ const config = {
       },
       footer: {
         style: 'dark',
-        copyright: `<div class="navbar__logo"><img src="/img/research-dark.png" alt="Applied INTelligence Lab (AINTLab)"></div>
+        copyright: `<div class="navbar__logo"><img src="/img/aintlab-logo-footer.png" alt="Applied INTelligence Lab (AINTLab)"></div>
         <a href="/" style="color:white">Home</a> / <a href="/team" style="color:white">The Team</a> / <a href="/projects" style="color:white">Projects</a> / <a href="/publications" style="color:white">Publications</a> / <a href="/updates" style="color:white">Updates</a> / <a href="/contact" style="color:white">Contact</a> | Follow us on <a class="link" href="https://www.linkedin.com/company/aintlab" target="_blank" data-tippy-content="LinkedIn">
             <svg class="svgfooter" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <title>AINTLab (Applied INTelligence Lab) @ LinkedIn</title>
