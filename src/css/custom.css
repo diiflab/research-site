@@ -84,6 +84,11 @@
   margin-bottom: 15px;
 }
 
+.navbar__logo {
+  height: 3rem !important;
+  margin-bottom: .3rem !important;
+}
+
 
 .hero {
     align-items: center;
