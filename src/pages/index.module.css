@@ -4,7 +4,7 @@
  */
 
 .heroBanner {
-  padding: 4rem 0;
+  padding: 2rem 0 1rem;
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -12,29 +12,26 @@
 
 @media screen and (max-width: 996px) {
   .heroBanner {
-    padding: 2rem;
+    padding: 1.25rem 0.75rem;
   }
 }
 
 .buttons {
   display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
   align-items: center;
   justify-content: center;
-  
+  margin-top: 1.55rem;
 }
 
-.academic{
+
+.academic {
   display: flex;
   align-items: center;
-  padding: 1rem 0;
+  padding: 2.25rem 0 1rem;
   width: 100%;
 }
-
-[data-theme='dark'] header > div > div > a.button.white-btn {
-  color:#fff;
-  text-decoration: none !important;
-}
-
 
 @media (max-width: 767px) {
   .featureSvg {
@@ -44,5 +41,313 @@
 
 .featureSvg {
   min-width: 600px;
+  max-width: min(100%, 920px);
+  filter: drop-shadow(0 16px 38px rgba(14, 89, 169, 0.16));
+}
+
+.labStats,
+.whySection {
+  padding: 2.2rem 0 0.7rem;
+}
+
+.statMetrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2.5rem 2rem;
+  padding: 1.5rem 0;
+}
+
+.statMetric {
+  text-align: center;
+  position: relative;
+  padding-bottom: 1.2rem;
+  border-bottom: 3px solid var(--ifm-color-primary);
+  animation: revealUp 0.72s ease both;
+}
+
+.statMetric:nth-child(2) {
+  animation-delay: 0.08s;
+}
+
+.statMetric:nth-child(3) {
+  animation-delay: 0.16s;
+}
+
+.statValue {
+  font-family: var(--ifm-heading-font-family);
+  font-size: clamp(2rem, 3.5vw, 2.75rem);
+  color: var(--ifm-color-primary);
+  line-height: 1;
+  margin-bottom: 0.45rem;
+  font-weight: 700;
+}
+
+.statLabel {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.45rem;
+  color: var(--ifm-font-color-base);
+}
+
+.statDetail {
+  font-size: 0.92rem;
+  color: var(--ifm-font-color-secondary);
+  line-height: 1.5;
+}
+
+.whySection {
+  background: linear-gradient(180deg, transparent, color-mix(in srgb, var(--ifm-color-primary) 5%, transparent));
+}
+
+.pillarList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.8rem;
+  padding: 1.5rem 0;
+}
+
+.pillarItem {
+  padding: 1.4rem;
+  border-left: 4px solid var(--ifm-color-primary);
+  background: var(--ifm-background-surface-color);
+  border-radius: 8px;
+  transition: transform 0.24s ease, box-shadow 0.24s ease;
+  animation: revealUp 0.72s ease both;
+}
+
+.pillarItem:nth-child(2) {
+  animation-delay: 0.08s;
+}
+
+.pillarItem:nth-child(3) {
+  animation-delay: 0.16s;
+}
+
+.pillarItem:hover {
+  transform: translateX(6px);
+  box-shadow: var(--ifm-global-shadow-md);
+}
+
+.pillarItem h2 {
+  font-size: 1.15rem;
+  margin-bottom: 0.65rem;
+  color: var(--ifm-color-primary);
+}
+
+.pillarItem p {
+  color: var(--ifm-font-color-secondary);
+  margin-bottom: 0;
+  font-size: 0.98rem;
+  line-height: 1.6;
+}
+
+.statCard,
+.pillarCard {
+  display: none;
+}
+
+.revealUp {
+  animation: revealUp 0.72s ease both;
+}
+
+.revealUp:nth-child(2) {
+  animation-delay: 0.08s;
+}
+
+.revealUp:nth-child(3) {
+  animation-delay: 0.16s;
+}
+
+.ctaSection {
+  padding: 1.6rem 0 3rem;
+}
+
+.ctaCard {
+  border: 1px solid color-mix(in srgb, var(--ifm-color-primary) 35%, var(--ifm-border-color));
+  border-radius: 22px;
+  padding: clamp(1.2rem, 4vw, 2rem);
+  background: linear-gradient(128deg, color-mix(in srgb, var(--ifm-color-primary-light) 13%, transparent), color-mix(in srgb, var(--ifm-background-surface-color) 95%, transparent));
+  box-shadow: var(--ifm-global-shadow-md);
+}
+
+.ctaCard h1 {
+  margin-bottom: 0.55rem;
+  font-size: clamp(1.45rem, 3vw, 2.35rem);
+}
+
+.ctaCard p {
+  max-width: 760px;
+  color: var(--ifm-font-color-secondary);
+}
+
+.ctaActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 1rem;
+}
+
+[data-theme='dark'] .ctaCard {
+  background: linear-gradient(132deg, color-mix(in srgb, var(--ifm-color-primary-light) 22%, transparent), color-mix(in srgb, var(--ifm-background-surface-color) 92%, transparent));
+}
+
+@keyframes revealUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 1200px) {
+  .statMetrics {
+    gap: 2rem 1.5rem;
+  }
+
+  .pillarItem {
+    padding: 1.2rem;
+  }
+
+  .ctaCard {
+    border-radius: 18px;
+  }
+}
+
+@media (max-width: 996px) {
+  .labStats,
+  .whySection {
+    padding-top: 1.6rem;
+  }
+
+  .statValue {
+    font-size: clamp(1.8rem, 7vw, 2.3rem);
+  }
+
+  .statLabel {
+    font-size: 1rem;
+  }
+
+  .statDetail {
+    font-size: 0.88rem;
+  }
+
+  .pillarItem h2 {
+    font-size: 1.05rem;
+  }
+
+  .ctaSection {
+    padding: 1.2rem 0 2.4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroBanner {
+    padding: 1rem 0.6rem;
+  }
+
+  .academic {
+    padding-top: 1.3rem;
+  }
+
+  .featureSvg {
+    min-width: 0;
+  }
+
+  .statMetrics {
+    gap: 1.8rem 1rem;
+  }
+
+  .statMetric {
+    padding-bottom: 1rem;
+  }
+
+  .statValue {
+    font-size: clamp(1.6rem, 4vw, 2.2rem);
+  }
+
+  .statLabel {
+    font-size: 0.95rem;
+  }
+
+  .statDetail {
+    font-size: 0.85rem;
+  }
+
+  .pillarList {
+    gap: 1.4rem;
+  }
+
+  .pillarItem {
+    padding: 1.1rem;
+    border-left: 3px solid var(--ifm-color-primary);
+  }
+
+  .pillarItem h2 {
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .pillarItem p {
+    font-size: 0.92rem;
+    line-height: 1.55;
+  }
+
+  .ctaActions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .ctaActions :global(.button) {
+    width: 100%;
+  }
+}
+
+@media (max-width: 390px) {
+  .statMetrics {
+    grid-template-columns: 1fr;
+    gap: 1.6rem;
+  }
+
+  .statValue {
+    font-size: clamp(1.5rem, 3.5vw, 1.8rem);
+  }
+
+  .statLabel {
+    font-size: 0.9rem;
+  }
+
+  .statDetail {
+    font-size: 0.82rem;
+  }
+
+  .pillarList {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+
+  .pillarItem {
+    padding: 0.95rem;
+  }
+
+  .pillarItem h2 {
+    font-size: 0.9rem;
+  }
+
+  .pillarItem p {
+    font-size: 0.88rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .revealUp,
+  .statCard,
+  .pillarCard {
+    animation: none;
+    transition: none;
+    transform: none;
+  }
 }
 

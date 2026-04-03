@@ -1,25 +1,121 @@
-
 .features {
   display: flex;
   align-items: center;
-  padding: 1rem 0;
+  padding: 1.5rem 0 1rem;
   width: 100%;
-  background-color: #f5f6f7;
+  background: transparent;
 }
 
-[data-theme='dark'] .features {
-    background-color: #444950;
+.kicker {
+  margin: 0 auto 0.4rem;
+  width: fit-content;
+  font-size: 0.77rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--ifm-color-primary);
+  background: color-mix(in srgb, var(--ifm-color-primary) 14%, transparent);
+  padding: 0.3rem 0.65rem;
+  border-radius: 999px;
 }
 
-[data-theme='dark'] h3 > a{
-  color: #2991ff;
+.cardCol {
+  display: flex;
 }
 
-.mission{
-  padding: 1rem;
+.card {
+  display: none;
 }
 
-.featureSvg {
-  height: 200px;
-  width: 200px;
+.narrativeBlock {
+  padding: 0;
+  border: none;
+  background: transparent;
+  box-shadow: none;
+  border-top: 3px solid var(--ifm-color-primary);
+  padding-top: 1.4rem;
+}
+
+.cardTitle {
+  display: none;
+}
+
+.blockTitle {
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+  color: var(--ifm-color-primary);
+}
+
+.cardContent {
+  display: none;
+}
+
+.blockContent {
+  color: var(--ifm-font-color-secondary);
+  line-height: 1.7;
+  font-size: 0.98rem;
+}
+
+.blockContent ul {
+  margin-top: 0.65rem;
+  margin-bottom: 0.65rem;
+  padding-left: 1.2rem;
+}
+
+.blockContent li {
+  margin-bottom: 0.4rem;
+}
+
+.blockContent em {
+  color: var(--ifm-color-primary);
+  font-style: italic;
+  font-weight: 500;
+}
+
+@media (max-width: 1200px) {
+  .narrativeBlock {
+    padding-top: 1.2rem;
+  }
+}
+
+@media (max-width: 996px) {
+  .blockTitle {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .features {
+    padding-top: 1.2rem;
+  }
+
+  .narrativeBlock {
+    padding-top: 1.1rem;
+    border-top: 2px solid var(--ifm-color-primary);
+  }
+
+  .blockTitle {
+    font-size: 1.12rem;
+    margin-bottom: 0.65rem;
+  }
+
+  .blockContent {
+    font-size: 0.96rem;
+    line-height: 1.65;
+  }
+}
+
+@media (max-width: 390px) {
+  .kicker {
+    font-size: 0.7rem;
+  }
+
+  .blockTitle {
+    font-size: 1.05rem;
+  }
+
+  .blockContent {
+    font-size: 0.92rem;
+  }
 }

@@ -1,7 +1,6 @@
 import React from 'react';
 import clsx from 'clsx';
 import styles from './styles.module.css';
-import Link from '@docusaurus/Link'
 
 const MissionVisionList = [
   {
@@ -38,12 +37,13 @@ We are committed to:
   
 ];
 
-function Feature({Svg, title, description}) {
+function Feature({ title, description }) {
   return (
-    <div className={clsx('col col--6')}>
-      <div className="padding-horiz--md">
-        <p><strong>{title}:</strong><br/>{description}</p>
-      </div>
+    <div className={clsx('col col--6', styles.cardCol)}>
+      <article className={styles.narrativeBlock}>
+        <h2 className={styles.blockTitle}>{title}</h2>
+        <div className={styles.blockContent}>{description}</div>
+      </article>
     </div>
   );
 }
@@ -52,7 +52,9 @@ export default function MissionVision() {
   return (
     <section className={styles.features} id="mission">
       <div className="container">
+        <p className={styles.kicker}>Identity</p>
         <h1 className="text--center">Our Mission & Vision</h1>
+        <p className="text--center"><em>Applied INTelligence Lab as a professional home for rigorous research and creative discovery.</em></p>
         <div className="row">
           {MissionVisionList.map((props, idx) => (
             <Feature key={idx} {...props} />

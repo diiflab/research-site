@@ -3,8 +3,34 @@ title: Projects
 ---
 
 import ProjectsList from './project_list.mdx'
+import styles from './projects.module.css'
 
-# Projects
+<div className="page-shell">
+<div className="page-header">
+<p className="page-kicker">Research Pipeline</p>
+<h1>Projects</h1>
+<p className="page-lead"><em>Current and past projects translating ideas into impactful systems.</em></p>
+</div>
+
+<div className="page-quickfacts">
+	<div className="page-quickfact">
+		<p className="page-quickfact-label">Direction</p>
+		<p className="page-quickfact-value">From practical problems to deployable AI systems</p>
+	</div>
+	<div className="page-quickfact">
+		<p className="page-quickfact-label">Scope</p>
+		<p className="page-quickfact-value">Current initiatives and historical research portfolio</p>
+	</div>
+	<div className="page-quickfact">
+		<p className="page-quickfact-label">Partnership Model</p>
+		<p className="page-quickfact-value">University and industry collaboration programs</p>
+	</div>
+</div>
+
+<div className={styles.projectsPage}>
 
 <ProjectsList />
+
+</div>
+</div>
 

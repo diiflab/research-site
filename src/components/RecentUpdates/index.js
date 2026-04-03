@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { XMLParser } from 'fast-xml-parser';
-import clsx from 'clsx';
 import styles from './styles.module.css';
 import Link from '@docusaurus/Link'
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import backgroundVideo from '../../assets/background.mp4';
 
 // The target RSS feed URL
@@ -13,7 +11,6 @@ function RecentUpdates() {
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const {siteConfig} = useDocusaurusContext();
 
   useEffect(() => {
     fetch(XML_URL)
@@ -45,24 +42,26 @@ function RecentUpdates() {
       });
   }, []);
 
-  if (loading) return <p>Loading latest updates...</p>;
-  if (error) return <p style={{color: 'red'}}>Error: {error}</p>;
+  if (loading) return <p className={styles.feedback}>Loading latest updates...</p>;
+  if (error) return <p className={styles.error}>Error: {error}</p>;
 
   return (
     <section className={styles.features} id="recentupdated">
       <div className="container">
+        <p className={styles.kicker}>Newsroom</p>
         <h1 className="text--center">Latest Updates</h1>
-        <div className="row">
-        <div class="col col--7">
         <p className="text--center"><em>Latest five updates from AINTLab below — <Link to="/updates">view all updates here.</Link></em></p>
+        <div className="row">
+        <div className="col col--7">
+        <div className={styles.updatesPanel}>
         
           {posts.length === 0 ? (
             <p className="text--left">No recent posts found.</p>
           ) : (
-            <ul>
+            <ul className={styles.updatesList}>
               {posts.map((item, index) => (
                 <li key={index}>
-                  <Link to={item.link} >
+                  <Link to={item.link}>
                     {item.title}
                   </Link>
                 </li>
@@ -70,10 +69,12 @@ function RecentUpdates() {
             </ul>
 
           )}
-          
+          </div>
         </div>
-        <div class="col col--5">
-        <video src={backgroundVideo} autoPlay loop muted plays-inline loading="lazy" className={styles.featureSvg}/>
+        <div className="col col--5">
+        <div className={styles.videoPanel}>
+        <video src={backgroundVideo} autoPlay loop muted playsInline preload="metadata" className={styles.featureSvg}/>
+        </div>
         </div>
         </div>
         

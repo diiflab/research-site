@@ -7,55 +7,83 @@ const FeatureList = [
   {
     title: 'Data',
     Svg: require('@site/static/img/undraw_mountain_learning.svg').default,
-    description: (
-      <>
-      <ul>
-        <li><b>Sensor & multimodal inputs:</b> IoT sensors, images/3D scans, biosignals and multimodal fusion. </li>
-        <li><b>Time-series & sequence streams:</b> Forecasting, fusion, sequence modelling pipelines. </li>
-        <li><b>Representation & features:</b> Autoencoders, representation learning, transfer & pixel-level feature engineering. </li>
-      </ul>
-      </>
-    ),
+    items: [
+      {
+        label: 'Sensor & multimodal inputs',
+        detail: 'IoT sensors, images/3D scans, biosignals and multimodal fusion.',
+      },
+      {
+        label: 'Time-series & sequence streams',
+        detail: 'Forecasting, fusion, sequence modelling pipelines.',
+      },
+      {
+        label: 'Representation & features',
+        detail: 'Autoencoders, representation learning, transfer & pixel-level feature engineering.',
+      },
+    ],
   },
   {
     title: 'Intelligence',
     Svg: require('@site/static/img/undraw_react_learning.svg').default,
-    description: (
-      <>
-        <ul>
-        <li><b>Deep & sequence learners + transformers:</b> CNNs, LSTM, hybrids, Tab/domain transformers and LLM methods.</li>
-        <li><b>Ensembles & optimization:</b> Stacking/bagging/meta-ensembles, hyperparameter tuning and meta-heuristics. </li>
-        <li><b>Explainability & structured models:</b> Explainable AI, graph-attention/graph methods, statistical & signal-fusion techniques.</li>
-        </ul>
-      </>
-    ),
+    items: [
+      {
+        label: 'Deep & sequence learners + transformers',
+        detail: 'CNNs, LSTM, hybrids, Tab/domain transformers and LLM methods.',
+      },
+      {
+        label: 'Ensembles & optimization',
+        detail: 'Stacking/bagging/meta-ensembles, hyperparameter tuning and meta-heuristics.',
+      },
+      {
+        label: 'Explainability & structured models',
+        detail: 'Explainable AI, graph-attention/graph methods, statistical & signal-fusion techniques.',
+      },
+    ],
   },
   {
     title: 'Applications',
     Svg: require('@site/static/img/undraw_tree_learning.svg').default,
-    description: (
-      <>
-       <ul>
-        <li><b>Health & human systems:</b> Medical diagnostics, physiological monitoring, pose/physiotherapy analysis.</li>
-        <li><b>Agri / environment / energy:</b> Plant disease detection, crop & AQI forecasting, flood risk, battery SOH and energy forecasting. </li>
-        <li><b>Industry & security:</b> Manufacturing, finance, cybersecurity / fraud detection.</li>
-       </ul>
-      </>
-    ),
+    items: [
+      {
+        label: 'Health & human systems',
+        detail: 'Medical diagnostics, physiological monitoring, pose/physiotherapy analysis.',
+      },
+      {
+        label: 'Agri / environment / energy',
+        detail: 'Plant disease detection, crop & AQI forecasting, flood risk, battery SOH and energy forecasting.',
+      },
+      {
+        label: 'Industry & security',
+        detail: 'Manufacturing, finance, cybersecurity / fraud detection.',
+      },
+    ],
   },
   
 ];
 
-function Feature({Svg, title, description}) {
+function Feature({Svg, title, items}) {
   return (
-    <div className={clsx('col col--4')}>
-      <div className="text--center">
+    <div className={clsx('col col--4', styles.cardCol)}>
+      <article className={styles.card}>
+      <div className={styles.iconWrap}>
         <Svg loading="lazy" className={styles.featureSvg} alt="AINTLab - Research Area" role="img" />
       </div>
-      <div className="padding-horiz--md">
-        <h2 className="text--center">{title}</h2>
-        <p>{description}</p>
+      <div>
+        <h2 className={styles.cardTitle}>{title}</h2>
+        <div className={styles.cardBody}>
+          <ul className={styles.detailList}>
+            {items.map((item) => (
+              <li key={item.label} className={styles.detailItem}>
+                <details className={styles.detailDisclosure}>
+                  <summary>{item.label}</summary>
+                  <p>{item.detail}</p>
+                </details>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
+      </article>
     </div>
   );
 }
@@ -64,6 +92,7 @@ export default function HomepageFeatures() {
   return (
     <section className={styles.features} id="ResearchArea">
       <div className="container">
+        <p className={styles.kicker}>Core Domains</p>
         <h1 className="text--center">Research Area</h1>
         <p className="text--center"><em>AINTLab — applied ML, AI & DS for real-world decision support across data, intelligence, and applications.</em></p>
         <div className="row">

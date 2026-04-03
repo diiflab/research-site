@@ -1,0 +1,96 @@
+.publicationsPage {
+  padding-bottom: 1.5rem;
+}
+
+.publicationsPage :global(h1) {
+  margin-bottom: 0.8rem;
+}
+
+.publicationsPage :global(.theme-admonition) {
+  border-radius: 14px;
+  border: 1px solid var(--ifm-border-color);
+  box-shadow: var(--ifm-global-shadow-lw);
+}
+
+.publicationsPage :global(.theme-admonition p:last-child) {
+  margin-bottom: 0;
+}
+
+.publicationsPage :global(.theme-admonition-title) {
+  font-weight: 700;
+}
+
+@media (max-width: 1440px) {
+  .publicationsPage {
+    padding-bottom: 1.4rem;
+  }
+
+  .publicationsPage :global(h1) {
+    margin-bottom: 0.75rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .publicationsPage :global(.theme-admonition) {
+    margin: 1.2rem 0;
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .publicationsPage :global(.theme-admonition) {
+    margin: 1.1rem 0;
+    padding: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .publicationsPage {
+    padding-bottom: 1.2rem;
+  }
+
+  .publicationsPage :global(h1) {
+    font-size: 1.8rem;
+    margin-bottom: 0.7rem;
+  }
+
+  .publicationsPage :global(.theme-admonition) {
+    margin: 1rem 0;
+    padding: 0.85rem;
+    border-radius: 12px;
+  }
+
+  .publicationsPage :global(.theme-admonition-title) {
+    font-size: 0.95rem;
+  }
+
+  .publicationsPage :global(.theme-admonition p) {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+}
+
+@media (max-width: 390px) {
+  .publicationsPage {
+    padding-bottom: 1rem;
+  }
+
+  .publicationsPage :global(h1) {
+    font-size: 1.65rem;
+    margin-bottom: 0.65rem;
+  }
+
+  .publicationsPage :global(.theme-admonition) {
+    margin: 0.9rem 0;
+    padding: 0.8rem;
+    border-radius: 10px;
+  }
+
+  .publicationsPage :global(.theme-admonition-title) {
+    font-size: 0.92rem;
+  }
+
+  .publicationsPage :global(.theme-admonition p) {
+    font-size: 0.94rem;
+  }
+}

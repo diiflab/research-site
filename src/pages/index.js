@@ -1,5 +1,4 @@
 import React from 'react';
-import { useState, useEffect } from 'react';
 import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
@@ -15,11 +14,35 @@ import LogoSlider from '@site/src/components/LogoSlider';
 
 import styles from './index.module.css';
 
+const LAB_STATS = [
+  { value: '100+', label: 'Research Publications', detail: 'Journals, conferences, and books spanning AI, ML, and DS.' },
+  { value: '20+', label: 'Global Collaborators', detail: 'Universities and research centers across multiple regions.' },
+  { value: '2019-', label: 'Applied AI Journey', detail: 'Consistent output focused on practical and impactful intelligence.' },
+];
+
+const AINTLAB_PILLARS = [
+  {
+    title: 'Applied Intelligence First',
+    description:
+      'We build systems for real environments, translating advanced research into usable and measurable outcomes.',
+  },
+  {
+    title: 'Playground for Discovery',
+    description:
+      'AINTLab is not only a laboratory but also a playground to explore ideas, test hypotheses, and iterate quickly.',
+  },
+  {
+    title: 'Collaboration at the Core',
+    description:
+      'Our team works across disciplines and institutions to create responsible and scalable AI innovation.',
+  },
+];
+
 
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
   return (
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
+    <header id="hero" className={clsx('hero hero--primary', styles.heroBanner)}>
     <video
         autoPlay
         loop
@@ -36,13 +59,13 @@ function HomepageHeader() {
         <div className={styles.buttons}>
           <Link
             className="button button--secondary"
-            to="#mission">
-            Read Our Mission 
+            to="#lab-stats">
+            Learn more about AINTLab
           </Link>
           <Link
             className="button white-btn"
-            to="#CollaborateWithUs">
-            | Collaborate with Us
+            to="/contact">
+            Collaborate with Us
           </Link>
         </div>
       </div>
@@ -50,13 +73,72 @@ function HomepageHeader() {
   );
 }
 
+function LabStats() {
+  return (
+    <section id="lab-stats" className={styles.labStats}>
+      <div className="container">
+        <h1 className="text--center">By The Numbers</h1>
+        <p className="text--center"><em>AINTLab as a living playground for ideas, collaboration, and discovery.</em></p>
+        <div className={styles.statMetrics}>
+          {LAB_STATS.map((item) => (
+            <div key={item.label} className={styles.statMetric}>
+              <div className={styles.statValue}>{item.value}</div>
+              <h2 className={styles.statLabel}>{item.label}</h2>
+              <p className={styles.statDetail}>{item.detail}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function WhyAINTLab() {
+  return (
+    <section id="why-aintlab" className={styles.whySection}>
+      <div className="container">
+        <h1 className="text--center">Why AINTLab</h1>
+        <p className="text--center"><em>The laboratory identity: rigorous research, human-centered design, and impactful deployment.</em></p>
+        <div className={styles.pillarList}>
+          {AINTLAB_PILLARS.map((pillar) => (
+            <div key={pillar.title} className={styles.pillarItem}>
+              <h2>{pillar.title}</h2>
+              <p>{pillar.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function JoinAINTLab() {
+  return (
+    <section id="join-aintlab" className={styles.ctaSection}>
+      <div className="container">
+        <div className={styles.ctaCard}>
+          <h1>Ready To Build The Next Applied Intelligence Breakthrough?</h1>
+          <p>
+            Join our ecosystem of researchers, students, and industry partners shaping AI systems for a smarter and more connected world.
+          </p>
+          <div className={styles.ctaActions}>
+            <Link className="button button--primary button--lg" to="/publications">View Publications</Link>
+            <Link className="button cta-secondary-btn button--lg" to="/prospective">Join AINTLab</Link>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function AcademicGenealogy() {
   const {siteConfig} = useDocusaurusContext();
   const Svg = require('../assets/directortree_desktop.svg').default
    return (
-    <section className={styles.academic} id="AcademicGenealogy">
+    <section className={styles.academic} id="academic-genealogy">
       <div className="container">
         <h1 className="text--center">Academic Genealogy</h1>
+        <p className="text--center"><em>Tracing the scholarly lineage and academic mentorship network connected to AINTLab.</em></p>
         <div className="row">
           <div className={clsx('col col--12')}>
             <div className="text--center">
@@ -78,13 +160,28 @@ export default function Home() {
       description={siteConfig.tagline}>
       <HomepageHeader />
       <main>
+        <LabStats />
         <AcademicGenealogy />
-        <MissionVision />
-        <HomepageFeatures />
-        <CollaborateWithUs/>
-        <LogoSlider />
-        <FeaturedPapers/>
-        <RecentUpdates />
+        <WhyAINTLab />
+        <section id="mission-vision">
+          <MissionVision />
+        </section>
+        <section id="research-areas">
+          <HomepageFeatures />
+        </section>
+        <section id="collaborate">
+          <CollaborateWithUs/>
+        </section>
+        <section id="partners">
+          <LogoSlider />
+        </section>
+        <section id="featured-papers">
+          <FeaturedPapers/>
+        </section>
+        <section id="recent-updates">
+          <RecentUpdates />
+        </section>
+        <JoinAINTLab />
       </main>
     </Layout>
   );

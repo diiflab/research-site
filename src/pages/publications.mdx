@@ -2,34 +2,47 @@
 title: Publications
 ---
 
-import Journals from './pubs/journals.mdx'
-import Conferences from './pubs/conferences.mdx'
-import Books from './pubs/books.mdx'
+import PublicationsList from '@site/src/components/PublicationsList'
+import styles from './publications.module.css'
 
+<div className="page-shell">
+<div className="page-header">
+<p className="page-kicker">Research Output</p>
+<h1>Publications</h1>
+<p className="page-lead"><em>Peer-reviewed publications across journals, conferences, and scholarly books.</em></p>
+</div>
 
+<div className="page-quickfacts">
+	<div className="page-quickfact">
+		<p className="page-quickfact-label">Coverage</p>
+		<p className="page-quickfact-value">Journals, conferences, and scholarly books</p>
+	</div>
+	<div className="page-quickfact">
+		<p className="page-quickfact-label">Indexing</p>
+		<p className="page-quickfact-value">SCIE, SSCI, Scopus and related outlets</p>
+	</div>
+	<div className="page-quickfact">
+		<p className="page-quickfact-label">Navigation</p>
+		<p className="page-quickfact-value">Use search and filters to locate papers quickly</p>
+	</div>
+</div>
 
-# Publications
+<div className={styles.publicationsPage}>
 
 :::info
 
 The output of our research has been presented and published in many outlets, including local and international conferences as well as reputable international peer-reviewed journals. 
-<a href="#j-journal-articles">J = journal</a>, <a href="#c-conference-proceedings">C = conference</a>, <a href="#b-books--chapters">B = book/chapter</a>, <sup>†</sup> = (equal) co-first author, and * = corresponding author.
+
+**Legend:** <sup>†</sup> = (equal) co-first author, and **\*** = corresponding author.
 :::
 
+<PublicationsList />
 
-### [J] Journal Articles
-<Journals />
-
-
-### [C] Conference Proceedings
-<Conferences />
-
-
-### [B] Books / Chapters
-<Books />
-
-
+<br/>
 :::note
 
-*Science Citation Index Expanded (SCIE), Science Citation Index (SCI), Social Sciences Citation Index (SSCI) Impact Factor (IF), Journal Citation Reports (JCR) is trademark of Web of Science Group - Clarivate. *
+*Science Citation Index Expanded (SCIE), Science Citation Index (SCI), Social Sciences Citation Index (SSCI) Impact Factor (IF), Journal Citation Reports (JCR) is trademark of Web of Science Group - Clarivate.*
 :::
+
+</div>
+</div>

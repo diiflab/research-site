@@ -1,8 +1,7 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+const {themes: prismThemes} = require('prism-react-renderer');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -11,12 +10,18 @@ const config = {
   url: 'https://aintlab.com',
   baseUrl: '/',
   onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
   favicon: '/img/favicon.png',
 
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
+  },
+
+  markdown: {
+    format: 'detect',
+    hooks: {
+      onBrokenMarkdownLinks: 'warn',
+    },
   },
 
   plugins: [require.resolve('docusaurus-lunr-search')],
@@ -45,6 +50,55 @@ const config = {
     ],
   ],
 
+  headTags: [
+    // Declare some json-ld structured data
+    {
+      tagName: 'script',
+      attributes: {
+        type: 'application/ld+json',
+      },
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org/',
+        '@type': 'Organization',
+        name: 'Applied INTelligence Lab (AINTLab)',
+        url: 'https://aintlab.com/',
+        description: 'Applied INTelligence Lab (AINTLab) - AINTLab is not only a laboratory but also a playground to learn and explore things related to applied intelligence. We explore the frontier of artificial intelligence, data science, and intelligent systems. We design AI-driven solutions that connect systems, enhance communication, and promote sustainability. Through collaboration across academia and industry, we aim to build systems that shape a smarter, more connected world. AINTLab is a hub for learning and innovation in applied intelligence and IoT. Pioneering Artificial Intelligence research, AINTLab focuses on machine learning, deep learning, IoT, and self-supervised learning. Our expertise drives agricultural innovation, vessel detection, human action recognition, and predictive analytics, promoting sustainable agriculture and global food security. Explore our extensive collection of research publications on AI, machine learning, IoT, and sustainable agriculture, featuring groundbreaking work on transformer models, predictive analytics, and more.',
+        foundingDate: '2019',
+        founder: {
+          '@type': 'Person',
+          name: 'Muhammad Syafrudin',
+          identifier: [
+            'https://www.wikidata.org/entity/Q61147698',
+            'https://mathgenealogy.org/id.php?id=297235',
+            'https://www.google.com/search?kgmid=/g/11fmgyc_gp',
+            'https://dblp.org/pid/216/5849.html',
+            'https://orcid.org/0000-0002-5640-4413',
+            'https://www.webofscience.com/wos/author/record/1733012',
+            'https://scholar.google.co.kr/citations?user=WLTzkOMAAAAJ&hl=en',
+            'https://muhammadsyafrudin.com/',
+            'https://www.scopus.com/authid/detail.uri?authorId=57197741727',
+            'https://www.researchgate.net/profile/Muhammad-Syafrudin',
+          ]
+        },
+        address: {
+          '@type': 'PostalAddress',
+          addressLocality: 'Seoul',
+          addressCountry: 'KR'
+        },
+        contactPoint: {
+          '@type': 'ContactPoint',
+          'contactType': 'Contact Support',
+          'email': 'udin@aintlab.com',
+          'telephone': '+82-2-3408-1879'
+        },
+        sameAs: [
+          'https://www.linkedin.com/company/aintlab',
+        ],
+        logo: 'https://aintlab.com/img/favicon.png',
+      }),
+    },
+  ],
+
   themeConfig:{
     // Declare some <meta> tags
     metadata: [
@@ -53,54 +107,6 @@ const config = {
       {name: 'description', content: 'Applied INTelligence Lab (AINTLab) - AINTLab is not only a laboratory but also a playground to learn and explore things related to applied intelligence. We explore the frontier of artificial intelligence, data science, and intelligent systems. We design AI-driven solutions that connect systems, enhance communication, and promote sustainability. Through collaboration across academia and industry, we aim to build systems that shape a smarter, more connected world. AINTLab is a hub for learning and innovation in applied intelligence and IoT. Pioneering Artificial Intelligence research, AINTLab focuses on machine learning, deep learning, IoT, and self-supervised learning. Our expertise drives agricultural innovation, vessel detection, human action recognition, and predictive analytics, promoting sustainable agriculture and global food security. Explore our extensive collection of research publications on AI, machine learning, IoT, and sustainable agriculture, featuring groundbreaking work on transformer models, predictive analytics, and more.'},
       {name: 'og:image',content: 'https://aintlab.com/img/aintlab-social-media.png'},
     
-    ],
-    headTags: [
-      // Declare some json-ld structured data
-      {
-        tagName: 'script',
-        attributes: {
-          type: 'application/ld+json',
-        },
-        innerHTML: JSON.stringify({
-          '@context': 'https://schema.org/',
-          '@type': 'Organization',
-          name: 'Applied INTelligence Lab (AINTLab)',
-          url: 'https://aintlab.com/',
-          description: 'Applied INTelligence Lab (AINTLab) - AINTLab is not only a laboratory but also a playground to learn and explore things related to applied intelligence. We explore the frontier of artificial intelligence, data science, and intelligent systems. We design AI-driven solutions that connect systems, enhance communication, and promote sustainability. Through collaboration across academia and industry, we aim to build systems that shape a smarter, more connected world. AINTLab is a hub for learning and innovation in applied intelligence and IoT. Pioneering Artificial Intelligence research, AINTLab focuses on machine learning, deep learning, IoT, and self-supervised learning. Our expertise drives agricultural innovation, vessel detection, human action recognition, and predictive analytics, promoting sustainable agriculture and global food security. Explore our extensive collection of research publications on AI, machine learning, IoT, and sustainable agriculture, featuring groundbreaking work on transformer models, predictive analytics, and more.',
-          foundingDate: '2019',
-          founder: {
-            '@type': 'Person',
-            name: 'Muhammad Syafrudin',
-            identifier: [
-              'https://www.wikidata.org/entity/Q61147698',
-              'https://mathgenealogy.org/id.php?id=297235',
-              'https://www.google.com/search?kgmid=/g/11fmgyc_gp',
-              'https://dblp.org/pid/216/5849.html',
-              'https://orcid.org/0000-0002-5640-4413',
-              'https://www.webofscience.com/wos/author/record/1733012',
-              'https://scholar.google.co.kr/citations?user=WLTzkOMAAAAJ&hl=en',
-              'https://muhammadsyafrudin.com/',
-              'https://www.scopus.com/authid/detail.uri?authorId=57197741727',
-              'https://www.researchgate.net/profile/Muhammad-Syafrudin',
-            ]
-          },
-          address: {
-            '@type': 'PostalAddress',
-            addressLocality: 'Seoul',
-            addressCountry: 'KR'
-          },
-          contactPoint: {
-            '@type': 'ContactPoint',
-            'contactType': 'Contact Support',
-            'email': 'udin@aintlab.com',
-            'telephone': '+82-2-3408-1879'
-          },
-          sameAs: [
-            'https://www.linkedin.com/company/aintlab',
-          ],
-          logo: 'https://aintlab.com/img/favicon.png',
-        }),
-      },
     ],
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
       navbar: {
@@ -126,6 +132,11 @@ const config = {
             position: 'left',
             label: 'Publications',
           },
+          {
+            to: 'gallery',
+            position: 'left',
+            label: 'Gallery',
+          },
           /**{
             to: 'books',
             position: 'left',
@@ -150,19 +161,32 @@ const config = {
       },
       footer: {
         style: 'dark',
-        copyright: `<div class="navbar__logo"><img src="/img/aintlab-logo-footer.png" alt="Applied INTelligence Lab (AINTLab)"></div>
-        <a href="/" style="color:white">Home</a> / <a href="/team" style="color:white">The Team</a> / <a href="/projects" style="color:white">Projects</a> / <a href="/publications" style="color:white">Publications</a> / <a href="/updates" style="color:white">Updates</a> / <a href="/contact" style="color:white">Contact</a> | Follow us on <a class="link" href="https://www.linkedin.com/company/aintlab" target="_blank" data-tippy-content="LinkedIn">
-            <svg class="svgfooter" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <title>AINTLab (Applied INTelligence Lab) @ LinkedIn</title>
-              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path>
-            </svg>
-          </a><br/> 
-        Copyright © 2019-${new Date().getFullYear()} <a href="/" style="color:white">Applied INTelligence Lab (AINTLab)</a>; Lead by <a href="https://muhammadsyafrudin.com/" style="color:white"target="_blank">Muhammad Syafrudin</a>. Built with Docusaurus.
-        `,
+        copyright: `<div class="footer-shell">
+          <div class="footer-brand-row">
+            <img class="footer-brand-logo" src="/img/aintlab-logo-footer.png" alt="Applied INTelligence Lab (AINTLab)">
+          </div>
+          <div class="footer-nav-row">
+            <a href="/">Home</a>
+            <a href="/team">The Team</a>
+            <a href="/projects">Projects</a>
+            <a href="/publications">Publications</a>
+            <a href="/gallery">Gallery</a>
+            <a href="/updates">Updates</a>
+            <a href="/contact">Contact</a>
+          </div>
+
+          <p class="footer-copy">Copyright © 2019-${new Date().getFullYear()} Applied INTelligence Lab (AINTLab); Lead by Muhammad Syafrudin. <br/>Built with Docusaurus & assisted with 🤖. <span>Follow us on</span>
+            <a class="footer-social" href="https://www.linkedin.com/company/aintlab" target="_blank" rel="noopener noreferrer" aria-label="AINTLab LinkedIn">
+              <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <title>AINTLab (Applied INTelligence Lab) @ LinkedIn</title>
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path>
+              </svg>
+            </a></p>
+        </div>`,
       },
       prism: {
-        theme: lightCodeTheme,
-        darkTheme: darkCodeTheme,
+        theme: prismThemes.github,
+        darkTheme: prismThemes.dracula,
       },
   },
 };

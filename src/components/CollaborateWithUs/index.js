@@ -29,21 +29,22 @@ const MissionVisionList = [
       <>
       <em>Our collaboration map from the past five years.</em>
       <br/>
-      <Link to="https://sejong.elsevierpure.com/en/persons/muhammad-syafrudin/network-map#network-map-container"><img loading="lazy" alt="Our collaboration map from the past five years" src="/team/collaboration_map.png" class="img_ev3q"/></Link>
-      <p class="text--right"><em>If you are interested in collaborating with us, please <Link to="/contact">contact us.</Link></em></p>
+      <img loading="lazy" alt="Our collaboration map from the past five years" src="/team/collaboration_map.png" className={styles.mapImage}/>
+      <p className={styles.mapCaption}><em>If you are interested in collaborating with us, please <Link to="/contact">contact us.</Link></em></p>
       </>
     ),
   },
   
 ];
 
-function Feature({Svg, title, description}) {
+function Feature({ title, description }) {
   return (
-    <div className={clsx('col col--6')}>
-      <div className="padding-horiz--md">
-        <p>{description}</p>
+    <div className={clsx('col col--6', styles.cardCol)}>
+      <article className={styles.narrativeBlock}>
+        <h2>{title}</h2>
+        <div className={styles.narrativeBody}>{description}</div>
+      </article>
       </div>
-    </div>
   );
 }
 
@@ -51,7 +52,9 @@ export default function MissionVision() {
   return (
     <section className={styles.features} id="CollaborateWithUs">
       <div className="container">
+        <p className={styles.kicker}>Partnership</p>
         <h1 className="text--center">Collaborate With Us</h1>
+        <p className="text--center"><em>A trusted collaboration ecosystem for academia, industry, and future researchers.</em></p>
         <div className="row">
           {MissionVisionList.map((props, idx) => (
             <Feature key={idx} {...props} />

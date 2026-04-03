@@ -1,0 +1,36 @@
+[
+  {
+    "title": "Smart Manufacturing Sensor Monitoring",
+    "image": "/img/battery.webp",
+    "category": "Manufacturing",
+    "description": "A visual prototype for real-time machine and sensor health monitoring in smart factory environments.",
+    "date": "March 2026",
+    "year": 2026,
+    "featured": true
+  },
+  {
+    "title": "AI-Powered Agricultural Forecasting",
+    "image": "/img/wheat.webp",
+    "category": "Agriculture",
+    "description": "A dashboard concept for crop forecasting and yield planning using multimodal environmental data.",
+    "date": "January 2026",
+    "year": 2026,
+    "featured": true
+  },
+  {
+    "title": "Circular Economy Intelligence Workflow",
+    "image": "/img/circulareconomy.webp",
+    "category": "Sustainability",
+    "description": "A pipeline visualization for sustainability analytics and circular resource optimization.",
+    "date": "October 2025",
+    "year": 2025
+  },
+  {
+    "title": "Sejong Campus AI Field Visit",
+    "image": "/img/sejong.jpg",
+    "category": "Community",
+    "description": "Field collaboration snapshots around pilot deployment locations and model validation sessions.",
+    "date": "June 2025",
+    "year": 2025
+  }
+]

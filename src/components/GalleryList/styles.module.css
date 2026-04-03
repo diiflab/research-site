@@ -1,0 +1,251 @@
+.galleryShell {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.galleryMetrics {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.55rem;
+}
+
+.metricCard {
+  border: 1px solid color-mix(in srgb, var(--ifm-border-color) 74%, transparent);
+  border-radius: 12px;
+  padding: 0.56rem 0.68rem;
+  background: color-mix(in srgb, var(--ifm-background-surface-color) 90%, transparent);
+}
+
+.metricLabel {
+  margin: 0;
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--ifm-color-primary);
+}
+
+.metricValue {
+  margin: 0.16rem 0 0;
+  font-family: var(--ifm-heading-font-family);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--ifm-font-color-base);
+}
+
+.controls {
+  margin-bottom: 1.2rem;
+  padding: 1rem;
+  background: color-mix(in srgb, var(--ifm-background-surface-color) 94%, transparent);
+  border-radius: 12px;
+  border: 1px solid var(--ifm-border-color);
+  box-shadow: var(--ifm-global-shadow-lw);
+}
+
+.searchBox {
+  margin-bottom: 0.9rem;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 0.66rem 0.86rem;
+  border: 1px solid var(--ifm-border-color);
+  border-radius: 10px;
+  font-size: 0.96rem;
+  background: var(--ifm-background-color);
+  color: var(--ifm-font-color-base);
+  font: inherit;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.searchInput:focus {
+  outline: none;
+  border-color: var(--ifm-color-primary);
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--ifm-color-primary) 18%, transparent);
+}
+
+.filterSort {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.72rem;
+}
+
+@media (max-width: 768px) {
+  .filterSort {
+    grid-template-columns: 1fr;
+  }
+}
+
+.filterGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.38rem;
+}
+
+.filterGroup label {
+  font-weight: 600;
+  font-size: 0.84rem;
+  color: var(--ifm-font-color-base);
+}
+
+.select {
+  padding: 0.58rem 0.75rem;
+  border: 1px solid var(--ifm-border-color);
+  border-radius: 10px;
+  background: var(--ifm-background-color);
+  color: var(--ifm-font-color-base);
+  font-size: 0.92rem;
+  cursor: pointer;
+  font: inherit;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.select:focus {
+  outline: none;
+  border-color: var(--ifm-color-primary);
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--ifm-color-primary) 18%, transparent);
+}
+
+.resultSummary {
+  margin-bottom: 0.95rem;
+  padding: 0.62rem 0.78rem;
+  background: color-mix(in srgb, var(--ifm-color-primary) 8%, var(--ifm-background-surface-color));
+  border-left: 3px solid var(--ifm-color-primary);
+  border-radius: 8px;
+  font-size: 0.91rem;
+  color: var(--ifm-font-color-base);
+  margin: 0;
+}
+
+.galleryGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.85rem;
+}
+
+.galleryCard {
+  border: 1px solid var(--ifm-border-color);
+  border-radius: 14px;
+  overflow: hidden;
+  background: color-mix(in srgb, var(--ifm-background-surface-color) 96%, transparent);
+  box-shadow: var(--ifm-global-shadow-lw);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.galleryCard:hover {
+  transform: translateY(-1px);
+  border-color: color-mix(in srgb, var(--ifm-color-primary) 45%, var(--ifm-border-color));
+  box-shadow: var(--ifm-global-shadow-md);
+}
+
+.imageWrap {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: color-mix(in srgb, var(--ifm-color-primary) 6%, var(--ifm-background-surface-color));
+}
+
+.imageWrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.categoryBadge {
+  position: absolute;
+  right: 0.55rem;
+  top: 0.55rem;
+  display: inline-block;
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ifm-color-primary);
+  background: color-mix(in srgb, var(--ifm-background-surface-color) 94%, transparent);
+  border: 1px solid color-mix(in srgb, var(--ifm-color-primary) 34%, var(--ifm-border-color));
+  padding: 0.18rem 0.48rem;
+  border-radius: 999px;
+}
+
+.yearBadge {
+  position: absolute;
+  right: 0.55rem;
+  bottom: 0.55rem;
+  display: inline-block;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ifm-color-primary-dark);
+  background: color-mix(in srgb, var(--ifm-background-surface-color) 94%, transparent);
+  border: 1px solid color-mix(in srgb, var(--ifm-color-primary) 34%, var(--ifm-border-color));
+  padding: 0.2rem 0.5rem;
+  border-radius: 999px;
+}
+
+.featuredBadge {
+  position: absolute;
+  left: 0.55rem;
+  top: 0.55rem;
+  display: inline-block;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #fff;
+  background: linear-gradient(135deg, var(--ifm-color-primary) 0%, color-mix(in srgb, var(--ifm-color-primary) 80%, #4f46e5) 100%);
+  border: none;
+  padding: 0.24rem 0.52rem;
+  border-radius: 999px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.cardBody {
+  padding: 0.72rem 0.8rem 0.82rem;
+}
+
+.cardBody h3 {
+  margin: 0;
+  font-size: 1.02rem;
+  color: var(--ifm-font-color-base);
+  line-height: 1.35;
+}
+
+.cardBody p {
+  margin: 0.44rem 0 0;
+  color: var(--ifm-font-color-secondary);
+  line-height: 1.58;
+  font-size: 0.93rem;
+}
+
+.dateMeta {
+  margin-top: 0.5rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ifm-color-primary);
+  font-weight: 700;
+}
+
+
+
+@media (max-width: 900px) {
+  .galleryGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .galleryMetrics {
+    grid-template-columns: 1fr;
+  }
+
+  .controls {
+    grid-template-columns: 1fr;
+  }
+
+  .categorySelect,
+  .sortSelect {
+    min-width: 0;
+  }
+}

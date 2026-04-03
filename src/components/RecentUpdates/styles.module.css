@@ -2,24 +2,122 @@
 .features {
   display: flex;
   align-items: center;
-  padding: 1rem 0;
+  padding: 1.5rem 0 1rem;
   width: 100%;
-  background-color: #f5f6f7;
+  background: transparent;
 }
 
-[data-theme='dark'] .features {
-    background-color: #444950;
+.kicker {
+  margin: 0 auto 0.4rem;
+  width: fit-content;
+  font-size: 0.77rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--ifm-color-primary);
+  background: color-mix(in srgb, var(--ifm-color-primary) 14%, transparent);
+  padding: 0.3rem 0.65rem;
+  border-radius: 999px;
 }
 
-[data-theme='dark'] h3 > a{
-  color: #2991ff;
+.feedback {
+  color: var(--ifm-font-color-secondary);
 }
 
-.mission{
-  padding: 1rem;
+.error {
+  color: #dc2626;
+}
+
+.updatesPanel {
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  padding: 0;
+}
+
+.updatesList {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.updatesList li {
+  margin-bottom: 0;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--ifm-border-color);
+  line-height: 1.6;
+  transition: all 0.24s ease;
+}
+
+.updatesList li:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.updatesList li a {
+  color: var(--ifm-color-primary);
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.24s ease;
+}
+
+.updatesList li a:hover {
+  color: var(--ifm-color-primary-dark);
+  text-decoration: underline;
+}
+
+.videoPanel {
+  border: 1px solid var(--ifm-border-color);
+  border-radius: 14px;
+  background: transparent;
+  box-shadow: none;
+  padding: 0;
+  overflow: hidden;
 }
 
 .featureSvg {
-  height: 200px;
-  align-items: center;
+  width: 100%;
+  max-width: 100%;
+  min-height: 280px;
+  border-radius: 14px;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 1200px) {
+  .featureSvg {
+    min-height: 250px;
+  }
+}
+
+@media (max-width: 996px) {
+  .updatesList li {
+    padding: 0.8rem 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .features {
+    padding-top: 1.2rem;
+  }
+
+  .videoPanel {
+    border-radius: 12px;
+  }
+
+  .featureSvg {
+    min-height: 220px;
+  }
+}
+
+@media (max-width: 390px) {
+  .kicker {
+    font-size: 0.7rem;
+  }
+
+  .updatesList li {
+    padding: 0.7rem 0;
+    font-size: 0.95rem;
+  }
 }

@@ -10,62 +10,91 @@ const FeatureList = [
     img_url: "img/wheat.png",
     doi: "https://doi.org/10.1016/j.compag.2024.109706",
     outlet: "Published in Computers and Electronics in Agriculture (Elsevier, 2025) - SCIE (Q1); IF=8.9; Rank=2/94; IF(%)=1.6%.",
-    description: (
-      <>
-      <ul>
-        <li><strong>Data:</strong> Wheat-field images with overlapping small spikes, complex backgrounds; multi-scale visual features for detection.</li>
-        <li><strong>Intelligence:</strong> FLTrans-Net: transformer-based multi-scale fusion, spatial attention, and lightweight RetinaNet for noise-robust feature learning.</li>
-        <li><strong>Applications:</strong> Real-time wheat-head detection for yield assessment and field management on resource-constrained devices.</li>
-      </ul>
-      </>
-    ),
+    details: [
+      {
+        label: 'Data',
+        content: 'Wheat-field images with overlapping small spikes, complex backgrounds; multi-scale visual features for detection.',
+      },
+      {
+        label: 'Intelligence',
+        content: 'FLTrans-Net: transformer-based multi-scale fusion, spatial attention, and lightweight RetinaNet for noise-robust feature learning.',
+      },
+      {
+        label: 'Applications',
+        content: 'Real-time wheat-head detection for yield assessment and field management on resource-constrained devices.',
+      },
+    ],
   },
   {
     title: 'AE-BPNN: autoencoder and backpropagation neural network-based model for lithium-ion battery state of health estimation',
     img_url: "img/battery.png",
     doi: "https://doi.org/10.1038/s41598-025-12771-4",
     outlet: "Published in Scientific Reports (Nature Portfolio, 2025) - SCIE (Q1); IF=3.9; Rank=25/136; IF(%)=18.0%.",
-    description: (
-      <>
-        <ul>
-          <li><strong>Data:</strong> EIS measurements from Li-ion cells across multiple temperatures and operating states.</li>
-          <li><strong>Intelligence:</strong> AE-BPNN with SCG/RBP optimization for feature reduction and State-of-Health (SOH) estimation.</li>
-          <li><strong>Applications:</strong> Accurate battery SOH prediction for energy storage systems.</li>
-        </ul>
-
-      </>
-    ),
+    details: [
+      {
+        label: 'Data',
+        content: 'EIS measurements from Li-ion cells across multiple temperatures and operating states.',
+      },
+      {
+        label: 'Intelligence',
+        content: 'AE-BPNN with SCG/RBP optimization for feature reduction and State-of-Health (SOH) estimation.',
+      },
+      {
+        label: 'Applications',
+        content: 'Accurate battery SOH prediction for energy storage systems.',
+      },
+    ],
   },
   {
     title: 'Tweeting Circular Economy: Unveiling Current Discourse Through Natural Language Processing',
     img_url: "img/circulareconomy.png",
     doi: "https://doi.org/10.1002/sd.3323",
     outlet: "Published in Sustainable Development (Wiley, 2025) - SSCI (Q1); IF=9.9; Rank=1/63; IF(%)=0.8%.",
-    description: (
-      <>       
-      <ul>
-        <li><strong>Data:</strong> 389k Twitter posts on circular economy (CE) (2012–2022).</li>
-        <li><strong>Intelligence:</strong> NLP-based theme extraction and trend analysis.</li>
-        <li><strong>Applications:</strong> Public insight for CE policy and stakeholder engagement.</li>
-      </ul>
-      </>
-    ),
+    details: [
+      {
+        label: 'Data',
+        content: '389k Twitter posts on circular economy (CE) (2012-2022).',
+      },
+      {
+        label: 'Intelligence',
+        content: 'NLP-based theme extraction and trend analysis.',
+      },
+      {
+        label: 'Applications',
+        content: 'Public insight for CE policy and stakeholder engagement.',
+      },
+    ],
   },
   
 ];
 
-function Feature({img_url, doi, title, outlet, description}) {
+function Feature({img_url, doi, title, outlet, details}) {
   return (
-    <div className={clsx('col col--4')}>
-      <div className="text--center">
+    <div className={clsx('col col--4', styles.cardCol)}>
+      <article className={styles.card}>
+      <div className={styles.mediaWrap}>
         <img loading="lazy" alt={title} className={styles.featureSvg} role="img" src={img_url}/>
       </div>
-      <div className="padding-horiz--md">
-        <h2 className="text--center">
+      <div className={styles.contentWrap}>
+        <h2 className={styles.paperTitle}>
         <Link to={doi}>{title}</Link>
         </h2>
-        <p>{description}<em>{outlet}</em></p>
+        <div className={styles.paperBody}>
+          <details className={styles.detailDisclosure}>
+            <summary>Research Summary</summary>
+            <ul className={styles.detailList}>
+              {details.map((item) => (
+                <li key={item.label} className={styles.detailItem}>
+                  <span className={styles.summaryKey}>{item.label}</span>
+                  <span className={styles.summaryValue}>{item.content}</span>
+                </li>
+              ))}
+            </ul>
+          </details>
+        </div>
+        <p className={styles.outlet}>{outlet}</p>
       </div>
+      </article>
     </div>
   );
 }
@@ -74,6 +103,7 @@ export default function HomepageFeatures() {
   return (
     <section className={styles.features} id="FeaturedResearch">
       <div className="container">
+        <p className={styles.kicker}>Selected Works</p>
         <h1 className="text--center">Featured Research</h1>
         <p className="text--center"><em>Our work has been published in reputable peer-reviewed journals. Featured publications are shown below — <Link to="/publications">view all publications here.</Link></em></p>
         <div className="row">

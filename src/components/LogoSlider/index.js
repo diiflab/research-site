@@ -1,5 +1,4 @@
 import React from 'react';
-import clsx from 'clsx';
 import styles from './styles.module.css';
 
 const LOGOS = [
@@ -33,6 +32,7 @@ const LOGOS = [
 export default function LogoSlider() {
   return (
     <div className={styles.wrapper}>
+     <p className={styles.kicker}>Network</p>
      <h1 className="text--center">Our Collaborators</h1>
              <p className="text--center"><em>Collaborated on: joint publications, projects, visiting programs, etc.</em></p>
       <div className={styles.logos}>

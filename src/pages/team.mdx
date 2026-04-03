@@ -2,13 +2,35 @@
 title: Team
 ---
 
-import Colabs from './colabs.mdx'
 import Link from '@docusaurus/Link'
+import styles from './team.module.css'
 
-# Team
+<div className="page-shell">
+<div className="page-header">
+<p className="page-kicker">People</p>
+<h1>Team</h1>
+<p className="page-lead"><em>The researchers and students driving applied AI at AINTLab.</em></p>
+</div>
+
+<div className="page-quickfacts">
+	<div className="page-quickfact">
+		<p className="page-quickfact-label">Core Focus</p>
+		<p className="page-quickfact-value">Applied AI and Data Science</p>
+	</div>
+	<div className="page-quickfact">
+		<p className="page-quickfact-label">Structure</p>
+		<p className="page-quickfact-value">Director, Graduate Students, and Alumni Network</p>
+	</div>
+	<div className="page-quickfact">
+		<p className="page-quickfact-label">Collaboration</p>
+		<p className="page-quickfact-value">Interdisciplinary and international research partnerships</p>
+	</div>
+</div>
+
+<div className={styles.teamPage}>
 
 ### <highlight  color="#04be58">Director</highlight>
-<div class="row">
+<div class="row director-row">
 <div class="col col--2"><img src="/team/Director.png"/></div>
 
 <div class="col col--10">
@@ -16,22 +38,23 @@ import Link from '@docusaurus/Link'
 <i>Assistant Professor</i>
 <br/>Department of Artificial Intelligence and Data Science, Sejong University, Korea
 <br/><a href="/contact">Contact</a> | ORCID: <a href="https://orcid.org/0000-0002-5640-4413" target="_blank">0000-0002-5640-4413</a>
-<br/>
 
-<h4>Professional Experience</h4>
+<details className={styles.profileDisclosure}>
+<summary>Professional Experience</summary>
 <ul>
 <li>Mar 2022 – present: Assistant Professor, Sejong University, Korea</li>
 <li>Mar 2019 – Feb 2022: Assistant Professor, Dongguk University, Korea</li>
 </ul>
+</details>
 </div>
 </div>
 
 ### <highlight  color="#0184c6">Undergraduate</highlight>
 
-
-:::note 연구 학부인턴
-<i>만약 학부 인턴으로 참여에 관심이 있으시면 언제든지 저에게 연락 주십시오. 여러분은 자신만의 연구 프로젝트를 수행할 기회가 있을 것이며, 여러분의 학습 여정 동안 멘토로서 기쁨을 나눌 수 있습니다. 이전에 우리는 다른 학생들이 프로젝트를 기반으로 연구 논문을 발표하는 데 도움을 준 바 있으며, 비슷한 노력에 여러분을 지원하고 싶어 합니다.</i>
-:::
+<details className={styles.profileDisclosure}>
+<summary>연구 학부인턴</summary>
+<p><i>만약 학부 인턴으로 참여에 관심이 있으시면 언제든지 저에게 연락 주십시오. 여러분은 자신만의 연구 프로젝트를 수행할 기회가 있을 것이며, 여러분의 학습 여정 동안 멘토로서 기쁨을 나눌 수 있습니다. 이전에 우리는 다른 학생들이 프로젝트를 기반으로 연구 논문을 발표하는 데 도움을 준 바 있으며, 비슷한 노력에 여러분을 지원하고 싶어 합니다.</i></p>
+</details>
 
 
 ### <highlight  color="#0184c6">Master/PhD</highlight>
@@ -72,3 +95,6 @@ import Link from '@docusaurus/Link'
 :::info Acknowledgment
 *AINTLab's success is due to the critical support of individuals who contributed to innovative research and shared their expertise. Please find them <Link to="/alumni">here.</Link>*
 :::
+
+</div>
+</div>

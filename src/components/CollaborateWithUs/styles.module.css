@@ -1,25 +1,156 @@
 .features {
   display: flex;
   align-items: center;
-  padding: 1rem 0;
+  padding: 1.5rem 0 1rem;
   width: 100%;
-  background-color: #f5f6f7;
+  background: transparent;
 }
 
-[data-theme='dark'] .features {
-    background-color: #444950;
+.kicker {
+  margin: 0 auto 0.4rem;
+  width: fit-content;
+  font-size: 0.77rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--ifm-color-primary);
+  background: color-mix(in srgb, var(--ifm-color-primary) 14%, transparent);
+  padding: 0.3rem 0.65rem;
+  border-radius: 999px;
 }
 
-[data-theme='dark'] h3 > a{
-  color: #2991ff;
+.cardCol {
+  display: flex;
 }
 
-
-.mission{
-  padding: 1rem;
+.card {
+  display: none;
 }
 
-.featureSvg {
-  height: 200px;
-  width: 200px;
+.narrativeBlock {
+  padding: 0;
+  border: none;
+  background: transparent;
+  box-shadow: none;
+  border-top: none;
+}
+
+.cardTitle {
+  display: none;
+}
+
+.cardBody {
+  display: none;
+}
+
+.cardCol:first-child .narrativeBlock {
+  border-bottom: 3px solid var(--ifm-color-primary);
+  padding-bottom: 1.4rem;
+  margin-bottom: 1.5rem;
+}
+
+.narrativeBlock h2 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+  color: var(--ifm-color-primary);
+}
+
+.narrativeBody {
+  color: var(--ifm-font-color-secondary);
+  line-height: 1.7;
+  font-size: 0.98rem;
+}
+
+.narrativeBody ul {
+  margin-top: 0.65rem;
+  margin-bottom: 0.65rem;
+  padding-left: 1.2rem;
+}
+
+.narrativeBody li {
+  margin-bottom: 0.4rem;
+}
+
+.narrativeBody em {
+  color: var(--ifm-font-color-secondary);
+  font-style: italic;
+}
+
+.narrativeBody b {
+  color: var(--ifm-color-primary);
+  font-weight: 600;
+}
+
+.narrativeBody a {
+  color: var(--ifm-color-primary);
+  font-weight: 500;
+}
+
+.mapImage {
+  width: 100%;
+  border: none;
+  border-radius: 14px;
+  box-shadow: var(--ifm-global-shadow-lw);
+  transition: all 0.24s ease;
+}
+
+.mapImage:hover {
+  box-shadow: var(--ifm-global-shadow-md);
+}
+
+@media (max-width: 1200px) {
+  .narrativeBlock {
+    padding-bottom: 1.2rem;
+  }
+}
+
+@media (max-width: 996px) {
+  .narrativeBlock h2 {
+    font-size: 1.2rem;
+  }
+
+  .mapCaption {
+    text-align: left;
+  }
+}
+
+@media (max-width: 768px) {
+  .features {
+    padding-top: 1.2rem;
+  }
+
+  .narrativeBlock {
+    padding-bottom: 1.1rem;
+    border-bottom: 2px solid var(--ifm-color-primary);
+    margin-bottom: 1.2rem;
+  }
+
+  .narrativeBlock h2 {
+    font-size: 1.12rem;
+    margin-bottom: 0.65rem;
+  }
+
+  .narrativeBody {
+    font-size: 0.96rem;
+    line-height: 1.65;
+  }
+
+  .mapImage {
+    border-radius: 12px;
+  }
+}
+
+@media (max-width: 390px) {
+  .kicker {
+    font-size: 0.7rem;
+  }
+
+  .narrativeBlock h2 {
+    font-size: 1.05rem;
+  }
+
+  .narrativeBody {
+    font-size: 0.92rem;
+  }
 }

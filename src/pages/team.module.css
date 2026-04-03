@@ -1,0 +1,168 @@
+.teamPage {
+  padding-bottom: 1.1rem;
+}
+
+.teamPage :global(h1) {
+  margin-bottom: 0.9rem;
+}
+
+.teamPage :global(h3) {
+  margin-top: 0.2rem;
+  margin-bottom: 0.35rem;
+}
+
+.teamPage :global(.row) {
+  margin: 0.6rem 0 0.75rem;
+  padding: 0.6rem 0 0.75rem;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  border-bottom: 1px solid color-mix(in srgb, var(--ifm-border-color) 76%, transparent);
+}
+
+.teamPage :global(.row.director-row) {
+  margin-top: 0.45rem;
+  padding-top: 0.55rem;
+  border-bottom-color: color-mix(in srgb, var(--ifm-color-primary) 42%, var(--ifm-border-color));
+}
+
+.teamPage :global(.row.director-row h3) {
+  font-size: 1.24rem;
+  margin-bottom: 0.28rem;
+}
+
+.teamPage :global(.row.director-row .col--10 > i) {
+  color: var(--ifm-color-primary);
+  font-weight: 600;
+}
+
+.teamPage :global(.row.director-row .col--10 > h4) {
+  margin-top: 0.55rem;
+  margin-bottom: 0.35rem;
+  font-size: 1rem;
+}
+
+.profileDisclosure {
+  margin-top: 0.55rem;
+  border: 1px solid color-mix(in srgb, var(--ifm-border-color) 78%, transparent);
+  border-radius: 10px;
+  padding: 0.42rem 0.58rem;
+  background: color-mix(in srgb, var(--ifm-background-surface-color) 82%, transparent);
+}
+
+.profileDisclosure summary {
+  cursor: pointer;
+  font-weight: 700;
+  color: var(--ifm-font-color-base);
+}
+
+.profileDisclosure ul {
+  margin: 0.45rem 0 0.1rem;
+}
+
+.profileDisclosure p {
+  margin: 0.45rem 0 0.1rem;
+}
+
+.teamPage :global(.row img) {
+  width: 100%;
+  max-width: 126px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 12px;
+  border: none;
+  box-shadow: var(--ifm-global-shadow-lw);
+}
+
+.teamPage :global(.theme-admonition) {
+  border-radius: 12px;
+  border: 1px solid color-mix(in srgb, var(--ifm-border-color) 82%, transparent);
+  box-shadow: none;
+}
+
+.teamPage :global(i) {
+  color: var(--ifm-font-color-secondary);
+}
+
+@media (max-width: 1440px) {
+  .teamPage :global(.row) {
+    margin: 0.55rem 0 0.7rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .teamPage :global(.row) {
+    padding: 0.55rem 0 0.7rem;
+  }
+
+  .teamPage :global(.row img) {
+    max-width: 116px;
+  }
+
+  .teamPage :global(h3) {
+    font-size: 1.1rem;
+  }
+
+  .teamPage :global(.row.director-row h3) {
+    font-size: 1.18rem;
+  }
+}
+
+@media (max-width: 996px) {
+  .teamPage :global(.row) {
+    padding: 0.52rem 0 0.68rem;
+  }
+
+  .teamPage :global(.row img) {
+    max-width: 104px;
+  }
+}
+
+@media (max-width: 768px) {
+  .teamPage :global(.row) {
+    padding: 0.48rem 0 0.62rem;
+    margin: 0.55rem 0 0.7rem;
+  }
+
+  .teamPage :global(.row img) {
+    max-width: 92px;
+  }
+
+  .teamPage :global(h3) {
+    font-size: 1.05rem;
+  }
+
+  .teamPage :global(.row.director-row h3) {
+    font-size: 1.1rem;
+  }
+
+  .teamPage :global(i) {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 390px) {
+  .teamPage :global(.row) {
+    padding: 0.44rem 0 0.56rem;
+    margin: 0.5rem 0 0.62rem;
+  }
+
+  .teamPage :global(.row img) {
+    max-width: 84px;
+  }
+
+  .teamPage :global(h3) {
+    font-size: 1rem;
+    margin-top: 0.85rem;
+  }
+
+  .teamPage :global(.row.director-row h3) {
+    font-size: 1.04rem;
+    margin-top: 0.2rem;
+  }
+
+  .teamPage :global(h1) {
+    font-size: 1.8rem;
+  }
+}
