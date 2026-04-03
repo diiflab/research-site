@@ -173,6 +173,7 @@ const config = {
             <a href="/gallery">Gallery</a>
             <a href="/updates">Updates</a>
             <a href="/contact">Contact</a>
+            <a href="/email-policy">Email Policy</a>
           </div>
 
           <p class="footer-copy">Copyright © 2019-${new Date().getFullYear()} Applied INTelligence Lab (AINTLab); Lead by Muhammad Syafrudin. <br/>Built with Docusaurus & assisted with 🤖. <span>Follow us on</span>
