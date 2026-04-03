@@ -14,7 +14,7 @@ pinned: false
 
 *Purpose*
 
-The purpose of this paper is to propose customer behavior analysis based on real-time data processing and association rule for digital signage-based online store (DSOS). The real-time data processing based on big data technology (such as NoSQL MongoDB and Apache Kafka) is utilized to handle the vast amount of customer behavior data.
+The purpose of this paper is to propose customer behavior analysis based on real-time data processing and association rule for digital signage-based online store (DSOS). <!--truncate-->The real-time data processing based on big data technology (such as NoSQL MongoDB and Apache Kafka) is utilized to handle the vast amount of customer behavior data.
 
 *Design/methodology/approach* 
 

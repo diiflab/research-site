@@ -9,7 +9,7 @@ pinned: true
 ---
 <i>Dear Colleagues,</i>
 <br/><br/>
-We are pleased to invite you to submit your works to our Special Issue. In this Special Issue, we aim to cover recent advances in artificial intelligence (AI) for healthcare with a sustainability perspective in mind, from both academic researchers and industry developers. Any type of article aligned with the journal (original research, case study, technical report, short communication, and reviews) is welcome for this Special Issue. Topics of interests include, but are not limited to, the following:
+We are pleased to invite you to submit your works to our Special Issue. <!--truncate-->In this Special Issue, we aim to cover recent advances in artificial intelligence (AI) for healthcare with a sustainability perspective in mind, from both academic researchers and industry developers. Any type of article aligned with the journal (original research, case study, technical report, short communication, and reviews) is welcome for this Special Issue. Topics of interests include, but are not limited to, the following:
 <br/>
 <li>Health informatics</li>
 <li>Artificial intelligence in healthcare</li>

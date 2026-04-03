@@ -10,7 +10,7 @@ published: true
 Dear Colleagues,
 
 Currently, we are in the process of editing a forthcoming book entitled 
-"Metaverse Applications for New Business Models and Disruptive Innovation", to be published by IGI Global, an international publisher of progressive academic research. 
+"Metaverse Applications for New Business Models and Disruptive Innovation", to be published by IGI Global, an international publisher of progressive academic research. <!--truncate-->
 
 We would like to take this opportunity to cordially invite you all to submit your work for consideration in this book. We are certain that your contribution on this topic and/or other related research areas would make an excellent addition to this book.
 Please visit https://www.igi-global.com/publish/call-for-papers/call-details/5848 

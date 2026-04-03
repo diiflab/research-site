@@ -23,7 +23,7 @@ export default function Root({children}) {
 
         if (!hasToc) {
           contentCol.classList.remove('col--8', 'col--9', 'col--12');
-          contentCol.classList.add('col--10');
+          contentCol.classList.add('col--12');
         } else {
           contentCol.classList.remove('col--12');
           if (!contentCol.classList.contains('col--10') && !contentCol.classList.contains('col--9')) {
