@@ -419,18 +419,20 @@ section .container > p.text--center {
 }
 
 .map-responsive {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  min-height: 320px;
+  border-radius: 18px;
   overflow: hidden;
-  padding-bottom: 56.25%;
-  position: relative;
-  height: 0;
+  background: color-mix(in srgb, var(--ifm-background-surface-color) 92%, #d7dee8);
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
 }
 
 .map-responsive iframe {
-  left: 0;
-  top: 0;
+  display: block;
   height: 100%;
   width: 100%;
-  position: absolute;
+  border: 0;
 }
 
 .team-left-col {

@@ -84,7 +84,7 @@
 
 @media (max-width: 768px) {
   .metricsPanel {
-    grid-template-columns: 1fr;
+    display: none;
   }
 
   .filterSort {
