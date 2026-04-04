@@ -33,16 +33,56 @@
   width: 100%;
 }
 
-@media (max-width: 767px) {
-  .featureSvg {
-    min-width: 200px !important;
-  }
+.genealogyFrame {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  padding: 0;
 }
 
-.featureSvg {
-  min-width: 600px;
-  max-width: min(100%, 920px);
-  filter: drop-shadow(0 16px 38px rgba(14, 89, 169, 0.16));
+.genealogySvg {
+  display: block;
+  min-width: 980px;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.genealogySvg ellipse {
+  fill: color-mix(in srgb, var(--ifm-background-surface-color) 96%, white);
+  stroke: color-mix(in srgb, var(--ifm-font-color-base) 65%, var(--ifm-color-primary));
+}
+
+.genealogySvg text {
+  fill: var(--ifm-font-color-base);
+}
+
+.genealogySvg #node5 ellipse {
+  fill: #bfe6ff;
+}
+
+.genealogySvg a:hover ellipse,
+.genealogySvg a:focus-visible ellipse {
+  stroke: var(--ifm-color-primary);
+  stroke-width: 2.2;
+}
+
+[data-theme='dark'] .genealogyFrame {
+  background: transparent;
+}
+
+[data-theme='dark'] .genealogySvg g[id^='edge'] path,
+[data-theme='dark'] .genealogySvg g[id^='edge'] polygon {
+  stroke: #ffffff;
+  fill: #ffffff;
+}
+
+[data-theme='dark'] .genealogySvg #node5 ellipse {
+  fill: #2a5f88;
 }
 
 .labStats,
@@ -252,8 +292,13 @@
     padding-top: 1.3rem;
   }
 
-  .featureSvg {
-    min-width: 0;
+  .genealogyFrame {
+    padding: 0;
+    border-radius: 0;
+  }
+
+  .genealogySvg {
+    min-width: 760px;
   }
 
   .statMetrics {

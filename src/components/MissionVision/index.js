@@ -60,7 +60,7 @@ export default function MissionVision() {
             <Feature key={idx} {...props} />
           ))}
         </div>
-        <hr className="fade-divider"/>
+        
       </div>
     </section>
   );

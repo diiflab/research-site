@@ -50,7 +50,6 @@ export default function LogoSlider() {
           ))}
         </div>
       </div>
-      <hr className="fade-divider"/>
     </div>
   );
 }

@@ -111,7 +111,7 @@ export default function HomepageFeatures() {
             <Feature key={idx} {...props} />
           ))}
         </div>
-        <hr className="fade-divider"/>
+      
       </div>
     </section>
   );

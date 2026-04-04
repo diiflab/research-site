@@ -132,8 +132,7 @@ function JoinAINTLab() {
 }
 
 function AcademicGenealogy() {
-  const {siteConfig} = useDocusaurusContext();
-  const Svg = require('../assets/directortree_desktop.svg').default
+  const Svg = require('../assets/academic-genealogy.svg').default;
    return (
     <section className={styles.academic} id="academic-genealogy">
       <div className="container">
@@ -141,12 +140,11 @@ function AcademicGenealogy() {
         <p className="text--center"><em>Tracing the scholarly lineage and academic mentorship network connected to AINTLab.</em></p>
         <div className="row">
           <div className={clsx('col col--12')}>
-            <div className="text--center">
-              <Svg loading="lazy" className={styles.featureSvg} alt="AINTLab - Research Area" role="img" />
+            <div className={styles.genealogyFrame}>
+              <Svg loading="lazy" className={styles.genealogySvg} aria-label="AINTLab academic genealogy" role="img" />
             </div>
           </div>
         </div>
-        <hr className="fade-divider"/>
       </div>
     </section>
   );
