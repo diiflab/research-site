@@ -75,7 +75,7 @@ function HomepageHeader() {
 
 function LabStats() {
   return (
-    <section id="lab-stats" className={styles.labStats}>
+    <section id="lab-stats" className={`${styles.labStats} section-with-bg-text bg-text--discovery`}>
       <div className="container">
         <h1 className="text--center">By The Numbers</h1>
         <p className="text--center"><em>AINTLab as a living playground for ideas, collaboration, and discovery.</em></p>
@@ -95,7 +95,7 @@ function LabStats() {
 
 function WhyAINTLab() {
   return (
-    <section id="why-aintlab" className={styles.whySection}>
+    <section id="why-aintlab" className={`${styles.whySection} section-with-bg-text bg-text--collaboration`}>
       <div className="container">
         <h1 className="text--center">Why AINTLab</h1>
         <p className="text--center"><em>The laboratory identity: rigorous research, human-centered design, and impactful deployment.</em></p>
@@ -114,7 +114,7 @@ function WhyAINTLab() {
 
 function JoinAINTLab() {
   return (
-    <section id="join-aintlab" className={styles.ctaSection}>
+    <section id="join-aintlab" className={`${styles.ctaSection} section-with-bg-text bg-text--future`}>
       <div className="container">
         <div className={styles.ctaCard}>
           <h1>Ready To Build The Next Applied Intelligence Breakthrough?</h1>
@@ -134,7 +134,7 @@ function JoinAINTLab() {
 function AcademicGenealogy() {
   const Svg = require('../assets/academic-genealogy.svg').default;
    return (
-    <section className={styles.academic} id="academic-genealogy">
+    <section className={`${styles.academic} section-with-bg-text bg-text--research`} id="academic-genealogy">
       <div className="container">
         <h1 className="text--center">Academic Genealogy</h1>
         <p className="text--center"><em>Tracing the scholarly lineage and academic mentorship network connected to AINTLab.</em></p>
@@ -164,10 +164,10 @@ export default function Home() {
         <section id="mission-vision">
           <MissionVision />
         </section>
-        <section id="research-areas">
+        <section id="research-areas" className="section-with-bg-text bg-text--innovation">
           <HomepageFeatures />
         </section>
-        <section id="collaborate">
+        <section id="collaborate" className="section-with-bg-text bg-text--aintlab">
           <CollaborateWithUs/>
         </section>
         <section id="partners">

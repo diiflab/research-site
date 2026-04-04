@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
 :root {
-  --ifm-font-family-base: 'Manrope', 'Segoe UI', Tahoma, sans-serif;
-  --ifm-heading-font-family: 'Source Serif 4', Georgia, serif;
+  --ifm-font-family-base: 'Inter', 'Segoe UI', Tahoma, sans-serif;
+  --ifm-heading-font-family: 'Inter', 'Segoe UI', Tahoma, sans-serif;
 
   --ifm-color-primary: #0e59a9;
   --ifm-color-primary-dark: #0b4e94;
@@ -496,6 +496,197 @@ thead th:empty {
 
 .page-header h1 {
   margin: 0;
+}
+
+/* Background Text Overlay Styles */
+.section-with-bg-text {
+  position: relative;
+  overflow: hidden;
+}
+
+.section-with-bg-text::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: clamp(3rem, 12vw, 8rem);
+  font-weight: 700;
+  white-space: nowrap;
+  color: var(--ifm-color-primary);
+  opacity: 0.08;
+  z-index: -1;
+  pointer-events: none;
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+/* Alternate animations for multiple sections on same page */
+.section-with-bg-text:nth-of-type(odd)::before {
+  animation: slideTextRight 60s linear infinite;
+}
+
+.section-with-bg-text:nth-of-type(even)::before {
+  animation: slideTextLeft 60s linear infinite;
+}
+
+/* Pause animations on hover */
+.section-with-bg-text:hover::before {
+  animation-play-state: paused;
+}
+
+/* Right-moving animation */
+@keyframes slideTextRight {
+  0% {
+    transform: translate(-50%, -50%) translateX(-150px);
+  }
+  50% {
+    transform: translate(-50%, -50%) translateX(150px);
+  }
+  100% {
+    transform: translate(-50%, -50%) translateX(-150px);
+  }
+}
+
+/* Left-moving animation */
+@keyframes slideTextLeft {
+  0% {
+    transform: translate(-50%, -50%) translateX(150px);
+  }
+  50% {
+    transform: translate(-50%, -50%) translateX(-150px);
+  }
+  100% {
+    transform: translate(-50%, -50%) translateX(150px);
+  }
+}
+
+.section-with-bg-text .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Ensure images and media are above background text */
+.section-with-bg-text img,
+.section-with-bg-text video,
+.section-with-bg-text iframe,
+.section-with-bg-text figure {
+  position: relative;
+  z-index: 2;
+}
+
+/* Variant 1: Applied INTelligence Lab */
+.bg-text--aintlab::before {
+  content: 'Applied INTelligence Lab';
+}
+
+/* Variant 2: Playground for Discovery */
+.bg-text--discovery::before {
+  content: 'Playground for Discovery';
+}
+
+/* Variant 3: Collaboration at the Core */
+.bg-text--collaboration::before {
+  content: 'Collaboration at the Core';
+}
+
+/* Variant 4: Innovation & Excellence */
+.bg-text--innovation::before {
+  content: 'Innovation & Excellence';
+}
+
+/* Variant 5: Research & Impact */
+.bg-text--research::before {
+  content: 'Research & Impact';
+}
+
+/* Variant 6: Shaping the Future */
+.bg-text--future::before {
+  content: 'Shaping the Future';
+}
+
+/* Adjust opacity for dark theme */
+[data-theme='dark'] .section-with-bg-text::before {
+  opacity: 0.06;
+}
+
+/* Logo Background for Non-Index Pages */
+.section-with-bg-logo {
+  position: relative;
+  overflow: hidden;
+}
+
+.section-with-bg-logo::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: clamp(150px, 35vw, 600px);
+  height: clamp(150px, 35vw, 600px);
+  background-image: url('/img/favicon.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.05;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Heartbeat pulse with alternating phase for neighboring sections */
+.section-with-bg-logo:nth-of-type(odd)::before {
+  animation: logoHeartbeat 4.2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+.section-with-bg-logo:nth-of-type(even)::before {
+  animation: logoHeartbeat 4.2s cubic-bezier(0.4, 0, 0.2, 1) -2.1s infinite;
+}
+
+/* Pause animations on hover */
+.section-with-bg-logo:hover::before {
+  animation-play-state: paused;
+}
+
+/* Heartbeat: two quick pulses followed by a rest */
+@keyframes logoHeartbeat {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  8% {
+    transform: translate(-50%, -50%) scale(1.07);
+  }
+  14% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  22% {
+    transform: translate(-50%, -50%) scale(1.12);
+  }
+  30% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+.section-with-bg-logo .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Ensure images and media are above background logo */
+.section-with-bg-logo img,
+.section-with-bg-logo video,
+.section-with-bg-logo iframe,
+.section-with-bg-logo figure {
+  position: relative;
+  z-index: 2;
+}
+
+/* Adjust opacity for dark theme */
+[data-theme='dark'] .section-with-bg-logo::before {
+  background-image: url('/img/favicon-dark.svg');
+  opacity: 0.04;
 }
 
 .page-lead {
