@@ -4,6 +4,49 @@
   margin: 1.15rem 0 0;
 }
 
+.metricsPanel {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.7rem;
+  margin-bottom: 1rem;
+}
+
+.metricCard {
+  border: 1px solid color-mix(in srgb, var(--ifm-color-primary) 24%, var(--ifm-border-color));
+  border-radius: 12px;
+  padding: 0.7rem 0.8rem;
+  background: linear-gradient(
+    148deg,
+    color-mix(in srgb, var(--ifm-color-primary) 8%, var(--ifm-background-surface-color)),
+    color-mix(in srgb, var(--ifm-background-surface-color) 96%, transparent)
+  );
+  box-shadow: var(--ifm-global-shadow-lw);
+}
+
+.metricLabel {
+  margin: 0;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--ifm-color-primary-dark);
+}
+
+.metricValue {
+  margin: 0.32rem 0 0;
+  font-size: 1.28rem;
+  font-weight: 700;
+  color: var(--ifm-font-color-base);
+  line-height: 1.15;
+}
+
+.metricMeta {
+  margin: 0.28rem 0 0;
+  font-size: 0.8rem;
+  color: var(--ifm-font-color-secondary);
+  line-height: 1.45;
+}
+
 .controls {
   margin-bottom: 1.2rem;
   padding: 1rem;
@@ -40,6 +83,10 @@
 }
 
 @media (max-width: 768px) {
+  .metricsPanel {
+    grid-template-columns: 1fr;
+  }
+
   .filterSort {
     grid-template-columns: 1fr;
   }
@@ -107,6 +154,30 @@
   transition: border-color 0.2s ease, transform 0.2s ease;
 }
 
+.publicationFeatured {
+  position: relative;
+  border-color: color-mix(in srgb, var(--ifm-color-primary) 48%, var(--ifm-border-color));
+  background: linear-gradient(
+    132deg,
+    color-mix(in srgb, var(--ifm-color-primary) 10%, var(--ifm-background-surface-color)),
+    color-mix(in srgb, var(--ifm-background-surface-color) 96%, transparent)
+  );
+  box-shadow:
+    inset 0 0 0 1px color-mix(in srgb, var(--ifm-color-primary) 20%, transparent),
+    var(--ifm-global-shadow-md);
+}
+
+.publicationFeatured::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 12px;
+  bottom: 12px;
+  width: 4px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, var(--ifm-color-primary-light), var(--ifm-color-primary));
+}
+
 .publicationItem:hover {
   border-color: color-mix(in srgb, var(--ifm-color-primary) 45%, var(--ifm-border-color));
   transform: translateY(-1px);
@@ -114,10 +185,14 @@
 
 .itemHeader {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: 0.4rem;
   align-items: center;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
   margin-bottom: 0.55rem;
+  padding-bottom: 0.1rem;
 }
 
 .itemNumber {
@@ -202,6 +277,18 @@
   border: 1px solid color-mix(in srgb, var(--ifm-color-primary) 42%, var(--ifm-border-color));
   text-transform: uppercase;
   letter-spacing: 0.4px;
+}
+
+.metricBadge {
+  display: inline-block;
+  padding: 0.24rem 0.56rem;
+  border-radius: 999px;
+  font-size: 0.69rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  background: color-mix(in srgb, var(--ifm-color-primary) 16%, var(--ifm-background-surface-color));
+  color: var(--ifm-color-primary-dark);
+  border: 1px solid color-mix(in srgb, var(--ifm-color-primary) 40%, var(--ifm-border-color));
 }
 
 .year {
@@ -299,6 +386,15 @@
   background: color-mix(in srgb, var(--ifm-background-surface-color) 90%, transparent);
 }
 
+[data-theme='dark'] .publicationFeatured {
+  border-color: color-mix(in srgb, var(--ifm-color-primary-light) 56%, var(--ifm-border-color));
+  background: linear-gradient(
+    132deg,
+    color-mix(in srgb, var(--ifm-color-primary) 18%, var(--ifm-background-surface-color)),
+    color-mix(in srgb, var(--ifm-background-surface-color) 92%, transparent)
+  );
+}
+
 [data-theme='dark'] .badge.journal {
   color: #a7d3ff;
 }
@@ -317,6 +413,10 @@
 
 [data-theme='dark'] .badgeCoFirst {
   color: #d8bbff;
+}
+
+[data-theme='dark'] .metricBadge {
+  color: #b9dcff;
 }
 
 [data-theme='dark'] .badgeSCIE {

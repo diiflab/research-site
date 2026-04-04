@@ -1279,15 +1279,31 @@ nav[class*='blogPostNav_'],
   margin: 0;
 }
 
-/* Post detail page: constrain and centre images */
-[class*='blogPostPage'] article img,
-[class*='blogPostPage'] .markdown img {
-  display: block;
-  max-width: min(640px, 100%);
-  height: auto;
+/* Post detail page: fit-to-page image styling */
+[class*='blogPostPage'] .blog-post-main article .markdown img,
+[class*='blogPostPage'] .blog-post-main article img {
+  display: block !important;
+  width: auto;
+  max-width: min(100%, 720px) !important;
+  height: auto !important;
+  margin: 1rem auto 1.25rem !important;
   border-radius: 10px;
-  margin: 1rem auto 1.25rem;
   box-shadow: var(--ifm-global-shadow-lw);
+}
+
+[class*='blogPostPage'] .blog-post-main article .markdown p > a,
+[class*='blogPostPage'] .blog-post-main article .markdown figure > a {
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+[class*='blogPostPage'] .blog-post-main article .markdown p > img,
+[class*='blogPostPage'] .blog-post-main article .markdown p > a > img,
+[class*='blogPostPage'] .blog-post-main article .markdown figure > img,
+[class*='blogPostPage'] .blog-post-main article .markdown figure > a > img {
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
 
 @media (max-width: 900px) {

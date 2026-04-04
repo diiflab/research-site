@@ -23,7 +23,7 @@ function BlogPostPageContent({sidebar, children}) {
       <div className="container margin-vert--lg">
         <div className="row">
           <BlogSidebar sidebar={sidebar} />
-          <main className={clsx('col', hasSidebar ? 'col--10' : 'col--12')}>
+          <main className={clsx('col', hasSidebar ? 'col--10' : 'col--12', 'blog-post-main')}>
             <nav className="page-breadcrumb" aria-label="Breadcrumb">
               <ol>
                 <li>

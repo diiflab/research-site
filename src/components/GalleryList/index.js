@@ -1,4 +1,6 @@
 import React, {useMemo, useState} from 'react';
+import {PhotoProvider, PhotoView} from 'react-photo-view';
+import 'react-photo-view/dist/react-photo-view.css';
 import galleryData from '@site/src/data/gallery.json';
 import styles from './styles.module.css';
 
@@ -150,23 +152,55 @@ export default function GalleryList() {
         {stats.total !== 1 ? 's' : ''}.
       </p>
 
-      <div className={styles.galleryGrid}>
-        {displayedItems.map((item) => (
-          <article key={item.id} className={styles.galleryCard}>
-            <div className={styles.imageWrap}>
-              <img src={item.image} alt={item.title} loading="lazy" />
-              {item.featured && <span className={styles.featuredBadge}>Featured</span>}
-              <span className={styles.categoryBadge}>{item.category || 'General'}</span>
-              <span className={styles.yearBadge}>{item.year}</span>
+      <PhotoProvider
+        overlayRender={({index}) => {
+          const currentItem = displayedItems[index ?? 0];
+          if (!currentItem) {
+            return null;
+          }
+
+          return (
+            <div className={styles.lightboxCaption}>
+              <h3>{currentItem.title}</h3>
+              <p>{currentItem.description}</p>
+              <p className={styles.lightboxMeta}>
+                {currentItem.category || 'General'} - {currentItem.year} - {currentItem.date}
+                {currentItem.featured ? ' - Featured' : ''}
+              </p>
             </div>
-            <div className={styles.cardBody}>
-              <h3>{item.title}</h3>
-              <p>{item.description}</p>
-              <p className={styles.dateMeta}>{item.date}</p>
-            </div>
-          </article>
-        ))}
-      </div>
+          );
+        }}
+      >
+        <div className={styles.galleryGrid}>
+          {displayedItems.map((item) => (
+            <article
+              key={item.id}
+              className={`${styles.galleryCard} ${item.featured ? styles.featuredCard : ''}`}
+            >
+              <PhotoView src={item.image}>
+                <button
+                  type="button"
+                  className={styles.imageButton}
+                  aria-label={`Open image: ${item.title}`}
+                >
+                  <div className={styles.imageWrap}>
+                    <img src={item.image} alt={item.title} loading="lazy" />
+                  </div>
+
+                  <div className={styles.cardOverlay}>
+                    <h3>{item.title}</h3>
+                    <p>{item.description}</p>
+                    <p className={styles.overlayMeta}>
+                      {item.category || 'General'} · {item.year} · {item.date}
+                      {item.featured ? ' · Featured' : ''}
+                    </p>
+                  </div>
+                </button>
+              </PhotoView>
+            </article>
+          ))}
+        </div>
+      </PhotoProvider>
     </div>
   );
 }

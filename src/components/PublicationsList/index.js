@@ -4,6 +4,93 @@ import conferencesData from '@site/src/data/conferences.json';
 import booksData from '@site/src/data/books.json';
 import styles from './styles.module.css';
 
+const INDEX_GROUP_WITH_ESCI = ['SCIE', 'SSCI', 'ESCI'];
+const INDEX_GROUP_WITHOUT_ESCI = ['SCIE', 'SSCI'];
+const INDEXING_ORDER = ['SCIE', 'SSCI', 'ESCI', 'Scopus'];
+
+function parseNumericMetricFromText(text, patterns) {
+  if (!text || typeof text !== 'string') {
+    return null;
+  }
+
+  for (const pattern of patterns) {
+    const match = text.match(pattern);
+    if (match && match[1]) {
+      const value = Number.parseFloat(match[1]);
+      if (Number.isFinite(value)) {
+        return value;
+      }
+    }
+  }
+
+  return null;
+}
+
+function readCiteScore(pub) {
+  const direct = [pub.citeScore, pub.citescore, pub.cite_score, pub.scopusCiteScore, pub.scopus_citescore]
+    .map((value) => Number.parseFloat(value))
+    .find((value) => Number.isFinite(value));
+
+  if (Number.isFinite(direct)) {
+    return direct;
+  }
+
+  return (
+    parseNumericMetricFromText(pub.note, [/(?:Cite\s*Score|CiteScore)\s*[:=]?\s*([0-9]+(?:\.[0-9]+)?)/i]) ??
+    parseNumericMetricFromText(pub.venue, [/(?:Cite\s*Score|CiteScore)\s*[:=]?\s*([0-9]+(?:\.[0-9]+)?)/i])
+  );
+}
+
+function readImpactFactor(pub) {
+  const direct = [pub.impactFactor, pub.impact_factor, pub.jif, pub.if, pub.IF]
+    .map((value) => Number.parseFloat(value))
+    .find((value) => Number.isFinite(value));
+
+  if (Number.isFinite(direct)) {
+    return direct;
+  }
+
+  return (
+    parseNumericMetricFromText(pub.note, [
+      /(?:Impact\s*Factor)\s*[:=]?\s*([0-9]+(?:\.[0-9]+)?)/i,
+      /\bIF\b\s*[:=]\s*([0-9]+(?:\.[0-9]+)?)/i,
+    ]) ??
+    parseNumericMetricFromText(pub.venue, [
+      /(?:Impact\s*Factor)\s*[:=]?\s*([0-9]+(?:\.[0-9]+)?)/i,
+      /\bIF\b\s*[:=]\s*([0-9]+(?:\.[0-9]+)?)/i,
+    ])
+  );
+}
+
+function hasAnyIndexing(pub, allowedIndexing) {
+  return Array.isArray(pub.indexing) && pub.indexing.some((idx) => allowedIndexing.includes(idx));
+}
+
+function formatMetricValue(value) {
+  return Number.isFinite(value) ? value.toFixed(2) : 'N/A';
+}
+
+function computeMetricStats(publications, readMetric) {
+  const values = publications
+    .map(readMetric)
+    .filter((value) => Number.isFinite(value));
+
+  if (!values.length) {
+    return {
+      total: null,
+      average: null,
+      countWithMetric: 0,
+    };
+  }
+
+  const total = values.reduce((sum, value) => sum + value, 0);
+  return {
+    total,
+    average: total / values.length,
+    countWithMetric: values.length,
+  };
+}
+
 // Helper function to highlight Syafrudin, M. in authors string
 function HighlightedAuthors({ authorsString }) {
   // Split by comma and process each author
@@ -50,7 +137,7 @@ export default function PublicationsList() {
     if (['all', 'journal', 'conference', 'book'].includes(type)) {
       setFilter(type);
     }
-    if (['all', 'SCIE', 'SSCI', 'Scopus'].includes(indexing)) {
+    if (['all', 'SCIE', 'SSCI', 'ESCI', 'Scopus'].includes(indexing)) {
       setIndexingFilter(indexing);
     }
     if (['year-desc', 'year-asc', 'title', 'featured'].includes(sort)) {
@@ -168,11 +255,45 @@ export default function PublicationsList() {
 
   const indexingStats = useMemo(() => {
     const count = (label) => allPublications.filter(p => Array.isArray(p.indexing) && p.indexing.includes(label)).length;
-    return { SCIE: count('SCIE'), SSCI: count('SSCI'), Scopus: count('Scopus') };
+    return { SCIE: count('SCIE'), SSCI: count('SSCI'), ESCI: count('ESCI'), Scopus: count('Scopus') };
+  }, [allPublications]);
+
+  const metricStats = useMemo(() => {
+    const journalsOnly = allPublications.filter((pub) => pub.type === 'journal');
+
+    const journalsScopus = journalsOnly.filter((pub) => hasAnyIndexing(pub, ['Scopus']));
+    const journalsWithESCI = journalsOnly.filter((pub) => hasAnyIndexing(pub, INDEX_GROUP_WITH_ESCI));
+    const journalsWithoutESCI = journalsOnly.filter((pub) => hasAnyIndexing(pub, INDEX_GROUP_WITHOUT_ESCI));
+
+    return {
+      citeScoreScopus: computeMetricStats(journalsScopus, readCiteScore),
+      impactFactorAll: computeMetricStats(journalsWithESCI, readImpactFactor),
+      impactFactorWithoutESCI: computeMetricStats(journalsWithoutESCI, readImpactFactor),
+    };
   }, [allPublications]);
 
   return (
     <div className={styles.publicationsContainer}>
+      <div className={styles.metricsPanel}>
+        <div className={styles.metricCard}>
+          <p className={styles.metricLabel}>CiteScore Total (Scopus)</p>
+          <p className={styles.metricValue}>{formatMetricValue(metricStats.citeScoreScopus.total)}</p>
+          <p className={styles.metricMeta}>Average: {formatMetricValue(metricStats.citeScoreScopus.average)} | Data points: {metricStats.citeScoreScopus.countWithMetric}</p>
+        </div>
+
+        <div className={styles.metricCard}>
+          <p className={styles.metricLabel}>Impact Factor Total (SCIE/SSCI/ESCI)</p>
+          <p className={styles.metricValue}>{formatMetricValue(metricStats.impactFactorAll.total)}</p>
+          <p className={styles.metricMeta}>Average: {formatMetricValue(metricStats.impactFactorAll.average)} | Data points: {metricStats.impactFactorAll.countWithMetric}</p>
+        </div>
+
+        <div className={styles.metricCard}>
+          <p className={styles.metricLabel}>Impact Factor Total (Without ESCI)</p>
+          <p className={styles.metricValue}>{formatMetricValue(metricStats.impactFactorWithoutESCI.total)}</p>
+          <p className={styles.metricMeta}>Average: {formatMetricValue(metricStats.impactFactorWithoutESCI.average)} | Data points: {metricStats.impactFactorWithoutESCI.countWithMetric}</p>
+        </div>
+      </div>
+
       <div className={styles.controls}>
         {/* Search */}
         <div className={styles.searchBox}>
@@ -203,6 +324,7 @@ export default function PublicationsList() {
               <option value="all">All Indexing</option>
               <option value="SCIE">SCIE ({indexingStats.SCIE})</option>
               <option value="SSCI">SSCI ({indexingStats.SSCI})</option>
+              <option value="ESCI">ESCI ({indexingStats.ESCI})</option>
               <option value="Scopus">Scopus ({indexingStats.Scopus})</option>
             </select>
           </div>
@@ -250,19 +372,30 @@ function PublicationItem({ publication }) {
 
   const isCorresponding = role === 'corresponding';
   const isCoFirst = role === 'co-first';
+  const citeScore = readCiteScore(publication);
+  const impactFactor = readImpactFactor(publication);
+  const orderedIndexing = Array.isArray(indexing)
+    ? [...indexing].sort((a, b) => INDEXING_ORDER.indexOf(a) - INDEXING_ORDER.indexOf(b))
+    : [];
 
   return (
-    <div className={styles.publicationItem}>
+    <div className={`${styles.publicationItem} ${publication.featured ? styles.publicationFeatured : ''}`}>
       <div className={styles.itemHeader}>
         <span className={styles.itemNumber}>{number}</span>
-        {publication.featured && <span className={styles.badgeFeatured}>Featured</span>}
         <span className={`${styles.badge} ${styles[publication.type]}`}>
           {typeLabel}
         </span>
+        {publication.featured && <span className={styles.badgeFeatured}>Featured</span>}
         {year && <span className={styles.year}>{year}</span>}
+        {Number.isFinite(citeScore) && (
+          <span className={styles.metricBadge}>CiteScore: {citeScore.toFixed(2)}</span>
+        )}
+        {Number.isFinite(impactFactor) && (
+          <span className={styles.metricBadge}>IF: {impactFactor.toFixed(2)}</span>
+        )}
         {isCorresponding && <span className={styles.badgeCorresponding}>*Corresponding Author</span>}
         {isCoFirst && <span className={styles.badgeCoFirst}>†Co-First Author</span>}
-        {Array.isArray(indexing) && indexing.map(idx => (
+        {orderedIndexing.map((idx) => (
           <span key={idx} className={`${styles.indexingBadge} ${INDEXING_STYLE[idx] || ''}`}>{idx}</span>
         ))}
       </div>
