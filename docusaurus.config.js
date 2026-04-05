@@ -73,11 +73,10 @@ const config = {
             'https://www.google.com/search?kgmid=/g/11fmgyc_gp',
             'https://dblp.org/pid/216/5849.html',
             'https://orcid.org/0000-0002-5640-4413',
-            'https://www.webofscience.com/wos/author/record/1733012',
             'https://scholar.google.co.kr/citations?user=WLTzkOMAAAAJ&hl=en',
             'https://muhammadsyafrudin.com/',
-            'https://www.scopus.com/authid/detail.uri?authorId=57197741727',
-            'https://www.researchgate.net/profile/Muhammad-Syafrudin',
+            'https://courses.muhammadsyafrudin.com/',
+            'https://research.muhammadsyafrudin.com/',
           ]
         },
         address: {
@@ -137,11 +136,6 @@ const config = {
             position: 'left',
             label: 'Gallery',
           },
-          /**{
-            to: 'books',
-            position: 'left',
-            label: 'Books',
-          },**/
           {
             to: 'updates',
             position: 'left',
@@ -176,7 +170,7 @@ const config = {
             <a href="/email-policy">Email Policy</a>
           </div>
 
-          <p class="footer-copy">Copyright © 2019-${new Date().getFullYear()} Applied INTelligence Lab (AINTLab); Lead by Muhammad Syafrudin. <br/>Built with Docusaurus & assisted with 🤖. <span>Follow us on</span>
+          <p class="footer-copy">Copyright © 2019-${new Date().getFullYear()} Applied INTelligence Lab (AINTLab); Lead by Muhammad Syafrudin. <br/>Built with <a href="/credits">Docusaurus & others.</a> Assisted with 🤖. <span>Follow us on</span>
             <a class="footer-social" href="https://www.linkedin.com/company/aintlab" target="_blank" rel="noopener noreferrer" aria-label="AINTLab LinkedIn">
               <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <title>AINTLab (Applied INTelligence Lab) @ LinkedIn</title>
