@@ -14,8 +14,7 @@
     "indexing": [
       "SCIE",
       "Scopus"
-    ],
-    "featured": true
+    ]
   },
   {
     "citation": "Alfian, G., Saputra, Y. M., Ramadhani, W. D., Atmaji, F. T. D., Farooq, U., Benes, F., Fitriyani, N. L., & Syafrudin, M.* (2026). Multi-step-ahead forecasting of bike-sharing demand using multilayer perceptron model with additional timestamp features. PeerJ Computer Science, 12, e3472. https://doi.org/10.7717/peerj-cs.3472",
@@ -143,7 +142,8 @@
     "indexing": [
       "SCIE",
       "Scopus"
-    ]
+    ],
+    "featured": true
   },
   {
     "citation": "Fatima, N., Yousafzai, S.N., Nemri, N., Alsolai, H., Ebad, S.A., Sorour, S., Gu, Y., Syafrudin, M.*, Fitriyani, N.L. (2025) Time Series AQI Forecasting Using Kalman-Integrated Bi-GRU and Chi-Square Divergence Optimization. Scientific Reports 2025, 15, 29157, doi:10.1038/s41598-025-12422-8",
@@ -188,7 +188,8 @@
     "indexing": [
       "SCIE",
       "Scopus"
-    ]
+    ],
+    "featured": true
   },
   {
     "citation": "Susanty, A., Puspitasari, N.B., Siahaan, G.S., Setiawan, S., Syafrudin, M. (2025) Factors Influencing the Intention of Textile and Garment SMEs to Adopt Digital Technologies and Its Impact on Performance. Sci Rep 2025, 15, 20807, https://doi.org/10.1038/s41598-025-94625-7",
@@ -382,7 +383,8 @@
     "indexing": [
       "SSCI",
       "Scopus"
-    ]
+    ],
+    "featured": true
   },
   {
     "citation": "Yousafzai, S.N., Nasir, I.M., Tehsin, S., Fitriyani, N.L., Syafrudin, M.* (2025) FLTrans-Net: Transformer-Based Feature Learning Network for Wheat Head Detection. Computers and Electronics in Agriculture, 229, 109706, https://doi.org/10.1016/j.compag.2024.109706",
@@ -397,7 +399,8 @@
     "indexing": [
       "SCIE",
       "Scopus"
-    ]
+    ],
+    "featured": true
   },
   {
     "citation": "Ipa, A.S., Roy, P.N., Rony, M.A.T., Raza, A., Fitriyani, N.L., Gu, Y., Syafrudin, M.* (2024) BdSentiLLM: A Novel LLM Approach to Sentiment Analysis of Product Reviews. IEEE Access, 1–1, doi:10.1109/ACCESS.2024.3516826",
@@ -749,7 +752,8 @@
     "indexing": [
       "SCIE",
       "Scopus"
-    ]
+    ],
+    "featured": true
   },
   {
     "citation": "Ramaha, N.T.A., Mahmood, R.M., Hameed, A.A., Fitriyani, N.L., Alfian, G., Syafrudin, M.* (2023) Brain Pathology Classification of MR Images Using Machine Learning Techniques. Computers, 12, 167, doi:10.3390/computers12080167",
@@ -958,9 +962,9 @@
   {
     "citation": "Anshari, M., Syafrudin, M.*, Fitriyani, N.L. Fourth Industrial Revolution between Knowledge Management and Digital Humanities. Information 2022, 13, 292, doi:10.3390/info13060292",
     "year": 2022,
-    "authors": "",
-    "title": "Anshari, M., Syafrudin, M.*, Fitriyani, N.L. Fourth Industrial Revolution between Knowledge Management and Digital Humanities. Information 2022, 13, 292, doi:10.3390/info13060292",
-    "venue": "",
+    "authors": "Anshari, M., Syafrudin, M.*, Fitriyani, N.L.",
+    "title": "Fourth Industrial Revolution between Knowledge Management and Digital Humanities",
+    "venue": "Information 2022, 13, 292, doi:10.3390/info13060292",
     "doi": "https://doi.org/10.3390/info13060292",
     "scholar": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=WLTzkOMAAAAJ&cstart=20&pagesize=80&sortby=pubdate&citation_for_view=WLTzkOMAAAAJ:9ZlFYXVOiuMC",
     "note": null,
@@ -972,9 +976,9 @@
   {
     "citation": "Kristanti, R.A., Hadibarata, T., Syafrudin, M., Yılmaz, M., Abdullah, S. Microbiological Contaminants in Drinking Water: Current Status and Challenges. Water Air Soil Pollut 2022, 233, 299",
     "year": 2022,
-    "authors": "",
-    "title": "Kristanti, R.A., Hadibarata, T., Syafrudin, M., Yılmaz, M., Abdullah, S. Microbiological Contaminants in Drinking Water: Current Status and Challenges. Water Air Soil Pollut 2022, 233, 299",
-    "venue": "",
+    "authors": "Kristanti, R.A., Hadibarata, T., Syafrudin, M., Yılmaz, M., Abdullah, S.",
+    "title": "Microbiological Contaminants in Drinking Water: Current Status and Challenges",
+    "venue": "Water Air Soil Pollut 2022, 233, 299",
     "doi": "https://doi.org/10.1007/s11270-022-05698-3",
     "scholar": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=WLTzkOMAAAAJ&pagesize=80&sortby=pubdate&citation_for_view=WLTzkOMAAAAJ:isC4tDSrTZIC",
     "note": null,
@@ -1017,7 +1021,7 @@
     "doi": "https://doi.org/10.3390/ijerph18020468",
     "scholar": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=WLTzkOMAAAAJ&pagesize=80&sortby=pubdate&citation_for_view=WLTzkOMAAAAJ:k_IJM867U9cC",
     "note": null,
-    "role": "member",
+    "role": "first",
     "indexing": [
       "Scopus"
     ]
@@ -1061,7 +1065,7 @@
     "doi": "https://doi.org/10.3390/math8091590",
     "scholar": null,
     "note": "(SCIE, IF Top 8.488% (28/324) in MATHEMATICS, based on JCR 2019)",
-    "role": "member",
+    "role": "first",
     "indexing": [
       "SCIE",
       "Scopus"
@@ -1100,9 +1104,9 @@
   {
     "citation": "Anuar, F.I., Hadibarata, T., Syafrudin, M., Fona, Z. Removal of Procion Red MX- 5B from aqueous solution by adsorption on Parkia speciosa (stink bean) peel powder. Biointerface Res Appl Chem 2020, 10, 4774–4779",
     "year": 2020,
-    "authors": "",
-    "title": "Anuar, F.I., Hadibarata, T., Syafrudin, M., Fona, Z. Removal of Procion Red MX- 5B from aqueous solution by adsorption on Parkia speciosa (stink bean) peel powder. Biointerface Res Appl Chem 2020, 10, 4774–4779",
-    "venue": "",
+    "authors": "Anuar, F.I., Hadibarata, T., Syafrudin, M., Fona, Z.",
+    "title": "Removal of Procion Red MX- 5B from aqueous solution by adsorption on Parkia speciosa (stink bean) peel powder",
+    "venue": "Biointerface Res Appl Chem 2020, 10, 4774–4779",
     "doi": "https://doi.org/10.33263/BRIAC101.774779",
     "scholar": null,
     "note": null,
@@ -1148,7 +1152,7 @@
     "doi": "https://doi.org/10.3390/app9010084",
     "scholar": null,
     "note": "(SCIE, IF Top 44.932% (67/148) in PHYSICS, APPLIED, based on JCR 2018)",
-    "role": "corresponding",
+    "role": "first",
     "indexing": [
       "SCIE",
       "Scopus"
@@ -1159,11 +1163,13 @@
     "year": 2019,
     "authors": "Alfian, G., Ijaz, M.F., Syafrudin, M., Syaekhoni, M.A., Fitriyani, N.L., Rhee, J.",
     "title": "Customer Behavior Analysis using Real-time Data Processing: A Case Study of Digital Signage-based Online Stores",
-    "venue": "Asia Pacific Journal of Marketing and Logistics 2019, 31, 265–290. (SSCI, IF Top 79.252% (117/147) in BUSINESS, based on JCR 2018)",
+    "venue": "Asia Pacific Journal of Marketing and Logistics 2019, 31, 265–290. ",
     "doi": "https://doi.org/10.1108/APJML-03-2018-0088",
-    "scholar": null,
-    "note": null,
+    "scholar": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=WLTzkOMAAAAJ&cstart=100&pagesize=100&sortby=pubdate&citation_for_view=WLTzkOMAAAAJ:ufrVoPGSRksC",
+    "note": "(SSCI, IF Top 79.252% (117/147) in BUSINESS, based on JCR 2018)",
     "role": "member",
+    "citeScore": 3.5,
+    "impactFactor": 2.511,
     "indexing": [
       "SSCI",
       "Scopus"
@@ -1176,9 +1182,11 @@
     "title": "Performance Analysis of IoT-Based Sensor, Big Data Processing, and Machine Learning Model for Real-Time Monitoring System in Automotive Manufacturing",
     "venue": "Sensors 2018, 18, 2946",
     "doi": "https://doi.org/10.3390/s18092946",
-    "scholar": null,
+    "scholar": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=WLTzkOMAAAAJ&cstart=100&pagesize=100&sortby=pubdate&citation_for_view=WLTzkOMAAAAJ:YsMSGLbcyi4C",
     "note": "(SCIE, IF Top 23.770% (15/61) in INSTRUMENTS & INSTRUMENTATION, based on JCR 2018)",
-    "role": "member",
+    "role": "first",
+    "citeScore": 4.3,
+    "impactFactor": 3.031,
     "indexing": [
       "SCIE",
       "Scopus"
@@ -1188,12 +1196,14 @@
     "citation": "Ijaz, M.F., Alfian, G., Syafrudin, M., Rhee, J. Hybrid Prediction Model for Type 2 Diabetes and Hypertension Using DBSCAN-Based Outlier Detection, Synthetic Minority Over Sampling Technique (SMOTE, and Random Forest. Appl. Sci. 2018, 8, 1325",
     "year": 2018,
     "authors": "Ijaz, M.F., Alfian, G., Syafrudin, M., Rhee, J.",
-    "title": "Hybrid Prediction Model for Type 2 Diabetes and Hypertension Using DBSCAN-Based Outlier Detection, Synthetic Minority Over Sampling Technique (SMOTE, and Random Forest",
+    "title": "Hybrid Prediction Model for Type 2 Diabetes and Hypertension Using DBSCAN-Based Outlier Detection, Synthetic Minority Over Sampling Technique (SMOTE), and Random Forest",
     "venue": "Appl. Sci. 2018, 8, 1325",
     "doi": "https://doi.org/10.3390/app8081325",
-    "scholar": null,
+    "scholar": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=WLTzkOMAAAAJ&cstart=100&pagesize=100&sortby=pubdate&citation_for_view=WLTzkOMAAAAJ:Tyk-4Ss8FVUC",
     "note": "(SCIE, IF Top 44.932% (67/148) in PHYSICS, APPLIED, based on JCR 2018)",
     "role": "member",
+    "citeScore": 1.8,
+    "impactFactor": 2.217,
     "indexing": [
       "SCIE",
       "Scopus"
@@ -1206,9 +1216,11 @@
     "title": "A Personalized Healthcare Monitoring System for Diabetic Patients by Utilizing BLE-Based Sensors and Real-Time Data Processing",
     "venue": "Sensors 2018, 18, 2183",
     "doi": "https://doi.org/10.3390/s18072183",
-    "scholar": null,
+    "scholar": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=WLTzkOMAAAAJ&cstart=100&pagesize=100&sortby=pubdate&citation_for_view=WLTzkOMAAAAJ:zYLM7Y9cAGgC",
     "note": "(SCIE, IF Top 25.410% (16/61) in INSTRUMENTS & INSTRUMENTATION, based on JCR 2017)",
     "role": "member",
+    "citeScore": 4.3,
+    "impactFactor": 3.031,
     "indexing": [
       "SCIE",
       "Scopus"
@@ -1217,15 +1229,18 @@
   {
     "citation": "Syafrudin, M., Fitriyani, N.L., Li, D., Alfian, G., Rhee, J., Kang, Y.-S. An Open Source-Based Real-Time Data Processing Architecture Framework for Manufacturing Sustainability. Sustainability 2017, 9, 2139. (SSCI, IF Top 41.667% (3/6) in GREEN & SUSTAINABLE SCIENCE & TECHNOLOGY, based on JCR 2017)",
     "year": 2017,
-    "authors": "",
-    "title": "Syafrudin, M., Fitriyani, N.L., Li, D., Alfian, G., Rhee, J., Kang, Y.-S. An Open Source-Based Real-Time Data Processing Architecture Framework for Manufacturing Sustainability. Sustainability 2017, 9, 2139. (SSCI, IF Top 41.667% (3/6) in GREEN & SUSTAINABLE SCIENCE & TECHNOLOGY, based on JCR 2017)",
-    "venue": "",
+    "authors": "Syafrudin, M., Fitriyani, N.L., Li, D., Alfian, G., Rhee, J., Kang, Y.-S.",
+    "title": "An Open Source-Based Real-Time Data Processing Architecture Framework for Manufacturing Sustainability",
+    "venue": "Sustainability 2017, 9, 2139.",
     "doi": "http://dx.doi.org/10.3390/su9112139",
-    "scholar": null,
-    "note": null,
-    "role": "member",
+    "scholar": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=WLTzkOMAAAAJ&cstart=100&pagesize=100&sortby=pubdate&citation_for_view=WLTzkOMAAAAJ:UeHWp8X0CEIC",
+    "note": "(SSCI, IF Top 41.667% (3/6) in GREEN & SUSTAINABLE SCIENCE & TECHNOLOGY, based on JCR 2017)",
+    "role": "first",
+    "citeScore": 2.5,
+    "impactFactor": 2.075,
     "indexing": [
       "SCIE",
+      "SSCI",
       "Scopus"
     ]
   },
@@ -1234,26 +1249,31 @@
     "year": 2017,
     "authors": "Alfian, G., Syafrudin, M., Rhee, J.",
     "title": "Real-Time Monitoring System Using Smartphone-Based Sensors and NoSQL Database for Perishable Supply Chain",
-    "venue": "Sustainability 2017, 9, 2073. (SSCI, IF Top 41.667% (3/6) in GREEN & SUSTAINABLE SCIENCE & TECHNOLOGY, based on JCR 2017)",
+    "venue": "Sustainability 2017, 9, 2073.",
     "doi": "http://dx.doi.org/10.3390/su9112073",
-    "scholar": null,
-    "note": null,
+    "scholar": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=WLTzkOMAAAAJ&cstart=100&pagesize=100&sortby=pubdate&citation_for_view=WLTzkOMAAAAJ:qjMakFHDy7sC",
+    "note": "(SSCI, IF Top 41.667% (3/6) in GREEN & SUSTAINABLE SCIENCE & TECHNOLOGY, based on JCR 2017)",
     "role": "member",
+    "citeScore": 2.5,
+    "impactFactor": 2.075,
     "indexing": [
       "SCIE",
+      "SSCI",
       "Scopus"
     ]
   },
   {
     "citation": "Alfian, G., Rhee, J., Ijaz, M.F., Syafrudin, M., Fitriyani, N.L. Performance Analysis of a Forecasting Relocation Model for One-Way Carsharing. Appl. Sci. 2017, 7, 598",
     "year": 2017,
-    "authors": "",
-    "title": "Alfian, G., Rhee, J., Ijaz, M.F., Syafrudin, M., Fitriyani, N.L. Performance Analysis of a Forecasting Relocation Model for One-Way Carsharing. Appl. Sci. 2017, 7, 598",
-    "venue": "",
+    "authors": "Alfian, G., Rhee, J., Ijaz, M.F., Syafrudin, M., Fitriyani, N.L.",
+    "title": "Performance Analysis of a Forecasting Relocation Model for One-Way Carsharing",
+    "venue": "Appl. Sci. 2017, 7, 598",
     "doi": "http://dx.doi.org/10.3390/app7060598",
-    "scholar": null,
+    "scholar": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=WLTzkOMAAAAJ&cstart=100&pagesize=100&sortby=pubdate&citation_for_view=WLTzkOMAAAAJ:9yKSN-GCB0IC",
     "note": "(SCIE, IF Top 50.338% (75/148) in PHYSICS, APPLIED, based on JCR 2016)",
     "role": "member",
+    "citeScore": 0.7,
+    "impactFactor": 1.679,
     "indexing": [
       "SCIE",
       "Scopus"
