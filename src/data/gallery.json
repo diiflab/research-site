@@ -1,36 +1,62 @@
 [
   {
-    "title": "Smart Manufacturing Sensor Monitoring",
-    "image": "/img/battery.webp",
-    "category": "Manufacturing",
-    "description": "A visual prototype for real-time machine and sensor health monitoring in smart factory environments.",
-    "date": "March 2026",
-    "year": 2026,
-    "featured": true
-  },
-  {
-    "title": "AI-Powered Agricultural Forecasting",
-    "image": "/img/wheat.webp",
-    "category": "Agriculture",
-    "description": "A dashboard concept for crop forecasting and yield planning using multimodal environmental data.",
-    "date": "January 2026",
-    "year": 2026,
-    "featured": true
-  },
-  {
-    "title": "Circular Economy Intelligence Workflow",
-    "image": "/img/circulareconomy.webp",
-    "category": "Sustainability",
-    "description": "A pipeline visualization for sustainability analytics and circular resource optimization.",
-    "date": "October 2025",
+    "title": "Awarded the MDPI 2024 Top 1000 Reviewers",
+    "image": "/gallery/Top1000Reviewer2025.jpg",
+    "category": "community",
+    "description": "The MDPI 2024 Top 1000 Reviewers certificate honors exceptional dedication and expertise in academic peer review, presented with sincere gratitude for invaluable contributions that uphold the quality and integrity of scholarly publishing.",
+    "date": "September 2025",
     "year": 2025
   },
   {
-    "title": "Sejong Campus AI Field Visit",
-    "image": "/img/sejong.jpg",
-    "category": "Community",
-    "description": "Field collaboration snapshots around pilot deployment locations and model validation sessions.",
-    "date": "June 2025",
+    "title": "AI & Sustainability Books Indexed in Scopus",
+    "image": "/gallery/AIDSBooks2025.jpg",
+    "category": "book",
+    "description": "Two edited volumes—Artificial Intelligence and Data Science for Sustainability and Achieving Sustainability in Multi-Industry Settings With AI—are now indexed in Scopus, increasing their global visibility and accessibility.",
+    "date": "April 2025",
     "year": 2025
+  },
+  {
+    "title": "Visiting Research Published in Top 0.8% SSCI Journal",
+    "image": "/gallery/RifqiVisitingResearch.jpg",
+    "category": "research",
+    "description": "A joint study with Universitas Tidar, Indonesia, was published in Sustainable Development, a top 0.8% SSCI journal, following collaboration through the 2023 Visiting Researcher Program.",
+    "date": "January 2025",
+    "year": 2025,
+    "featured": true
+  },
+  {
+    "title": "Panel Speaker at World Scientific Forum of Indonesia (WSFI) 2023",
+    "image": "/gallery/WSFI2023.jpg",
+    "category": "community",
+    "description": "Invited as a panel speaker on digital technology at WSFI 2023, sharing ongoing research projects and engaging with the global community in Bali.",
+    "date": "November 2023",
+    "year": 2023,
+    "featured": true
+  },
+  {
+    "title": "Ahyun & Sujin Win 3rd Place Award",
+    "image": "/gallery/AhyunSujin.jpg",
+    "category": "award",
+    "description": "Congratulations to Ahyun and Sujin for securing 3rd place at the Intelligent Mechanism × Artificial Intelligence Joint Academic Festival.",
+    "date": "September 2023",
+    "year": 2023,
+    "featured": true
+  },
+  {
+    "title": "Featured in Oracle Academy Success Story",
+    "image": "/updates/success-story-academy.png",
+    "category": "community",
+    "description": "Our use of the Oracle Academy Cloud Program in teaching big data has been highlighted in an official online success story.",
+    "date": "March 2023",
+    "year": 2023
+  },
+  {
+    "title": "Metaverse Business Innovation Book Released",
+    "image": "/updates/metaverse-book.jpg",
+    "category": "book",
+    "description": "A new book on metaverse-driven business models explores emerging trends, challenges, and best practices for implementation.",
+    "date": "January 2023",
+    "year": 2023
   }
+
 ]
