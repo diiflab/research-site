@@ -45,10 +45,11 @@
 
 .profileDisclosure {
   margin-top: 0.55rem;
-  border: 1px solid color-mix(in srgb, var(--ifm-border-color) 78%, transparent);
-  border-radius: 10px;
-  padding: 0.42rem 0.58rem;
-  background: color-mix(in srgb, var(--ifm-background-surface-color) 82%, transparent);
+  border: none;
+  border-radius: 0;
+  padding: 0.42rem 0;
+  background: transparent;
+  border-top: 1px solid color-mix(in srgb, var(--ifm-border-color) 60%, transparent);
 }
 
 .profileDisclosure summary {
@@ -70,13 +71,13 @@
   max-width: 126px;
   aspect-ratio: 1 / 1;
   object-fit: cover;
-  border-radius: 12px;
-  border: none;
-  box-shadow: var(--ifm-global-shadow-lw);
+  border-radius: 10px;
+  border: 1px solid color-mix(in srgb, var(--ifm-border-color) 60%, transparent);
+  box-shadow: none;
 }
 
 .teamPage :global(.theme-admonition) {
-  border-radius: 12px;
+  border-radius: 10px;
   border: 1px solid color-mix(in srgb, var(--ifm-border-color) 82%, transparent);
   box-shadow: none;
 }

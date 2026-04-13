@@ -89,14 +89,14 @@
 
 .mapImage {
   width: 100%;
-  border: none;
-  border-radius: 14px;
-  box-shadow: var(--ifm-global-shadow-lw);
-  transition: all 0.24s ease;
+  border: 1px solid color-mix(in srgb, var(--ifm-border-color) 60%, transparent);
+  border-radius: 10px;
+  box-shadow: none;
+  transition: none;
 }
 
 .mapImage:hover {
-  box-shadow: var(--ifm-global-shadow-md);
+  box-shadow: none;
 }
 
 @media (max-width: 1200px) {

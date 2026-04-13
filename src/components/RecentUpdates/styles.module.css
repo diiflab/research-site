@@ -68,8 +68,8 @@
 }
 
 .videoPanel {
-  border: 1px solid var(--ifm-border-color);
-  border-radius: 14px;
+  border: 1px solid color-mix(in srgb, var(--ifm-border-color) 60%, transparent);
+  border-radius: 10px;
   background: transparent;
   box-shadow: none;
   padding: 0;
@@ -80,7 +80,7 @@
   width: 100%;
   max-width: 100%;
   min-height: 280px;
-  border-radius: 14px;
+  border-radius: 10px;
   object-fit: cover;
   display: block;
 }

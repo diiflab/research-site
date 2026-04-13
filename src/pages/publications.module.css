@@ -7,9 +7,9 @@
 }
 
 .publicationsPage :global(.theme-admonition) {
-  border-radius: 14px;
+  border-radius: 10px;
   border: 1px solid var(--ifm-border-color);
-  box-shadow: var(--ifm-global-shadow-lw);
+  box-shadow: none;
 }
 
 .publicationsPage :global(.theme-admonition p:last-child) {
@@ -57,7 +57,7 @@
   .publicationsPage :global(.theme-admonition) {
     margin: 1rem 0;
     padding: 0.85rem;
-    border-radius: 12px;
+    border-radius: 10px;
   }
 
   .publicationsPage :global(.theme-admonition-title) {

@@ -149,9 +149,9 @@
 .pillarItem {
   padding: 1.4rem;
   border-left: 4px solid var(--ifm-color-primary);
-  background: var(--ifm-background-surface-color);
-  border-radius: 8px;
-  transition: transform 0.24s ease, box-shadow 0.24s ease;
+  background: transparent;
+  border-radius: 0;
+  transition: none;
   animation: revealUp 0.72s ease both;
 }
 
@@ -164,8 +164,8 @@
 }
 
 .pillarItem:hover {
-  transform: translateX(6px);
-  box-shadow: var(--ifm-global-shadow-md);
+  transform: none;
+  box-shadow: none;
 }
 
 .pillarItem h2 {
@@ -203,11 +203,12 @@
 }
 
 .ctaCard {
-  border: 1px solid color-mix(in srgb, var(--ifm-color-primary) 35%, var(--ifm-border-color));
-  border-radius: 22px;
+  border: none;
+  border-radius: 0;
   padding: clamp(1.2rem, 4vw, 2rem);
-  background: linear-gradient(128deg, color-mix(in srgb, var(--ifm-color-primary-light) 13%, transparent), color-mix(in srgb, var(--ifm-background-surface-color) 95%, transparent));
-  box-shadow: var(--ifm-global-shadow-md);
+  background: transparent;
+  box-shadow: none;
+  border-top: 2px solid var(--ifm-color-primary);
 }
 
 .ctaCard h1 {
@@ -228,7 +229,7 @@
 }
 
 [data-theme='dark'] .ctaCard {
-  background: linear-gradient(132deg, color-mix(in srgb, var(--ifm-color-primary-light) 22%, transparent), color-mix(in srgb, var(--ifm-background-surface-color) 92%, transparent));
+  background: transparent;
 }
 
 @keyframes revealUp {
@@ -252,7 +253,7 @@
   }
 
   .ctaCard {
-    border-radius: 18px;
+    border-radius: 0;
   }
 }
 

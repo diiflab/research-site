@@ -10,10 +10,9 @@
 }
 
 .metricCard {
-  border: 1px solid color-mix(in srgb, var(--ifm-border-color) 74%, transparent);
-  border-radius: 12px;
-  padding: 0.56rem 0.68rem;
-  background: color-mix(in srgb, var(--ifm-background-surface-color) 90%, transparent);
+  padding: 0.45rem 0.7rem;
+  border-left: 2px solid color-mix(in srgb, var(--ifm-color-primary) 40%, transparent);
+  background: color-mix(in srgb, var(--ifm-color-primary) 3%, transparent);
 }
 
 .metricLabel {
@@ -35,11 +34,10 @@
 
 .controls {
   margin-bottom: 1.2rem;
-  padding: 1rem;
-  background: color-mix(in srgb, var(--ifm-background-surface-color) 94%, transparent);
-  border-radius: 12px;
-  border: 1px solid var(--ifm-border-color);
-  box-shadow: var(--ifm-global-shadow-lw);
+  padding: 0;
+  background: transparent;
+  border-radius: 0;
+  border: none;
 }
 
 .searchBox {
@@ -129,18 +127,17 @@
   display: inline-block;
   width: 100%;
   margin: 0 0 1rem;
-  border-radius: 14px;
+  border-radius: 10px;
   overflow: hidden;
   break-inside: avoid;
   background: transparent;
-  box-shadow: var(--ifm-global-shadow-lw);
-  transition: transform 0.22s ease, box-shadow 0.22s ease;
+  border: 1px solid color-mix(in srgb, var(--ifm-border-color) 60%, transparent);
+  transition: border-color 0.22s ease;
 }
 
 .galleryCard:hover,
 .galleryCard:focus-within {
-  transform: translateY(-2px);
-  box-shadow: var(--ifm-global-shadow-md);
+  border-color: color-mix(in srgb, var(--ifm-color-primary) 40%, var(--ifm-border-color));
 }
 
 .featuredCard .imageWrap {
@@ -159,7 +156,7 @@
 .imageWrap {
   position: relative;
   overflow: hidden;
-  border-radius: 14px;
+  border-radius: 0;
   background: color-mix(in srgb, var(--ifm-color-primary) 6%, var(--ifm-background-surface-color));
 }
 

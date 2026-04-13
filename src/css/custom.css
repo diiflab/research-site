@@ -234,18 +234,18 @@ section .container > p.text--center {
 .academic .padding-horiz--md {
   height: 100%;
   padding: 1.15rem 1.15rem 0.9rem;
-  border: 1px solid var(--ifm-border-color);
-  border-radius: 16px;
-  background: color-mix(in srgb, var(--ifm-background-surface-color) 94%, transparent);
-  box-shadow: var(--ifm-global-shadow-lw);
-  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  transition: none;
 }
 
 .features .padding-horiz--md:hover,
 .academic .padding-horiz--md:hover {
-  transform: translateY(-3px);
-  border-color: color-mix(in srgb, var(--ifm-color-primary) 36%, var(--ifm-border-color));
-  box-shadow: var(--ifm-global-shadow-md);
+  transform: none;
+  border-color: transparent;
+  box-shadow: none;
 }
 
 .features .padding-horiz--md p,
@@ -749,10 +749,9 @@ thead th:empty {
 }
 
 .page-quickfact {
-  border: 1px solid color-mix(in srgb, var(--ifm-border-color) 74%, transparent);
-  border-radius: 12px;
-  padding: 0.56rem 0.65rem;
-  background: color-mix(in srgb, var(--ifm-background-surface-color) 88%, transparent);
+  padding: 0.45rem 0.7rem;
+  border-left: 2px solid color-mix(in srgb, var(--ifm-color-primary) 40%, transparent);
+  background: color-mix(in srgb, var(--ifm-color-primary) 3%, transparent);
 }
 
 .page-quickfact-label {
@@ -779,14 +778,14 @@ thead th:empty {
 
 .page-content .theme-admonition {
   border: 1px solid var(--ifm-border-color);
-  border-radius: 14px;
-  box-shadow: var(--ifm-global-shadow-lw);
+  border-radius: 10px;
+  box-shadow: none;
 }
 
 .page-map {
   margin-top: 1rem;
-  border: 1px solid var(--ifm-border-color);
-  border-radius: 14px;
+  border: 1px solid color-mix(in srgb, var(--ifm-border-color) 60%, transparent);
+  border-radius: 10px;
   overflow: hidden;
 }
 
@@ -904,9 +903,9 @@ thead th:empty {
 
 .main-wrapper main > .container table {
   border: 1px solid var(--ifm-border-color);
-  border-radius: 14px;
+  border-radius: 10px;
   overflow: hidden;
-  box-shadow: var(--ifm-global-shadow-lw);
+  box-shadow: none;
 }
 
 @media (max-width: 768px) {
@@ -1071,7 +1070,7 @@ thead th:empty {
   .academic .padding-horiz--md:hover,
   .button:hover {
     transform: none;
-    box-shadow: var(--ifm-global-shadow-lw);
+    box-shadow: none;
   }
 }
 
@@ -1156,19 +1155,20 @@ thead th:empty {
 
 /* ---- Post card ---- */
 [class*='blogPostItem_'] {
-  background: color-mix(in srgb, var(--ifm-background-surface-color) 96%, transparent);
-  border: 1px solid var(--ifm-border-color);
-  border-radius: 14px;
+  background: transparent;
+  border: none;
+  border-radius: 0;
   overflow: hidden;
   padding: 0;
-  box-shadow: var(--ifm-global-shadow-lw);
-  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  box-shadow: none;
+  border-bottom: 1px solid color-mix(in srgb, var(--ifm-border-color) 80%, transparent);
+  transition: none;
 }
 
 [class*='blogPostItem_']:hover {
-  transform: translateY(-1px);
-  border-color: color-mix(in srgb, var(--ifm-color-primary) 45%, var(--ifm-border-color));
-  box-shadow: var(--ifm-global-shadow-md);
+  transform: none;
+  border-color: color-mix(in srgb, var(--ifm-border-color) 80%, transparent);
+  box-shadow: none;
 }
 
 /* Gallery-like card internals for list pages */
@@ -1387,17 +1387,18 @@ nav[class*='blogPostNav_'],
 [class*='blogPostNavItem_'] {
   flex: 1;
   min-width: min(260px, 100%);
-  background: var(--ifm-background-surface-color);
-  border: 1px solid var(--ifm-border-color);
-  border-radius: 14px;
-  padding: 0.85rem 1.05rem;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 0.85rem 0;
+  border-top: 1px solid color-mix(in srgb, var(--ifm-border-color) 80%, transparent);
+  transition: none;
 }
 
 [class*='blogPostNavItem_']:hover {
-  border-color: color-mix(in srgb, var(--ifm-color-primary) 38%, var(--ifm-border-color));
-  box-shadow: var(--ifm-global-shadow-lw);
-  transform: translateY(-1px);
+  border-color: color-mix(in srgb, var(--ifm-border-color) 80%, transparent);
+  box-shadow: none;
+  transform: none;
 }
 
 [class*='blogPostNavItem_'] [class*='blogPostNavTitle_'],
@@ -1481,7 +1482,7 @@ nav[class*='blogPostNav_'],
   height: auto !important;
   margin: 1rem auto 1.25rem !important;
   border-radius: 10px;
-  box-shadow: var(--ifm-global-shadow-lw);
+  box-shadow: none;
 }
 
 [class*='blogPostPage'] .blog-post-main article .markdown p > a,

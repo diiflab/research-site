@@ -50,9 +50,9 @@
   max-width: 320px;
   min-height: 190px;
   object-fit: cover;
-  border-radius: 14px;
-  border: none;
-  box-shadow: var(--ifm-global-shadow-lw);
+  border-radius: 10px;
+  border: 1px solid color-mix(in srgb, var(--ifm-border-color) 60%, transparent);
+  box-shadow: none;
 }
 
 .paperTitle {
@@ -98,10 +98,11 @@
 }
 
 .detailDisclosure {
-  border: 1px solid color-mix(in srgb, var(--ifm-border-color) 74%, transparent);
-  border-radius: 10px;
-  background: color-mix(in srgb, var(--ifm-background-surface-color) 78%, transparent);
-  padding: 0.55rem 0.65rem;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  padding: 0.55rem 0;
+  border-top: 1px solid color-mix(in srgb, var(--ifm-border-color) 60%, transparent);
 }
 
 .detailDisclosure summary {
