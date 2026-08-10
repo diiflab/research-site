@@ -1,6 +1,11 @@
-﻿/* Student Reviews Section - Review-page style */
-/* Flat, like every other section on this page — the watermark supplied by the
-   wrapping .section-with-bg-text is the only background treatment. */
+/**
+ * Student Reviews carousel — flat card language matching the /courses/reviews
+ * and /courses/showcase pages: hairline border, flat surface colour, and the
+ * shared shadow token. No glass or gradient wash, so light and dark come
+ * straight from the Infima tokens the rest of the site uses (no separate dark
+ * palette needed). The watermark from the wrapping .section-with-bg-text is
+ * the only background treatment.
+ */
 .reviewsSection {
   padding: 4rem 0 5rem;
   position: relative;
@@ -26,7 +31,7 @@
   color: var(--ifm-color-primary);
 }
 
-/* Slider Container */
+/* Slider */
 .reviewsSlider {
   position: relative;
   display: flex;
@@ -40,14 +45,10 @@
   width: 100%;
   min-width: 0;
   overflow: hidden;
-  border-radius: 16px;
-  border: 1px solid color-mix(in srgb, var(--ifm-color-primary) 16%, transparent);
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.97), rgba(255, 255, 255, 0.88)),
-    radial-gradient(circle at 100% 0%, color-mix(in srgb, var(--ifm-color-primary) 15%, transparent), transparent 36%);
-  box-shadow:
-    0 8px 18px rgba(15, 45, 82, 0.06),
-    inset 0 1px 0 rgba(255, 255, 255, 0.7);
+  border-radius: 12px;
+  border: 1px solid var(--ifm-border-color);
+  background: var(--ifm-card-background-color);
+  box-shadow: var(--ifm-global-shadow-lw);
   position: relative;
 }
 
@@ -70,24 +71,25 @@
 
 .active {}
 
+/* Flat tinted quote chip — same tint language as the focus/tool tags. */
 .quoteIcon {
   position: absolute;
-  top: 1rem;
-  right: 1.5rem;
-  width: 44px;
-  height: 44px;
-  background: linear-gradient(135deg, var(--ifm-color-primary), var(--ifm-color-primary-light));
-  border-radius: 12px;
+  top: 1.1rem;
+  right: 1.3rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: color-mix(in srgb, var(--ifm-color-primary) 8%, transparent);
+  border: 1px solid color-mix(in srgb, var(--ifm-color-primary) 20%, transparent);
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 12px color-mix(in srgb, var(--ifm-color-primary) 25%, transparent);
 }
 
 .quoteIcon svg {
-  width: 22px;
-  height: 22px;
-  color: white;
+  width: 20px;
+  height: 20px;
+  color: var(--ifm-color-primary);
 }
 
 .reviewContent {
@@ -106,6 +108,7 @@
   overflow-wrap: anywhere;
 }
 
+/* Solid accent bar (flat, no gradient) — matches the pillar border-bars. */
 .reviewText::before {
   content: '';
   position: absolute;
@@ -113,7 +116,7 @@
   top: 0;
   bottom: 0;
   width: 3px;
-  background: linear-gradient(180deg, var(--ifm-color-primary), var(--ifm-color-primary-light));
+  background: var(--ifm-color-primary);
   border-radius: 2px;
 }
 
@@ -144,6 +147,7 @@
   font-weight: 600;
 }
 
+/* Flat tint chip — same as .languageBadge on the reviews page. */
 .studentName {
   font-size: 0.85rem;
   font-weight: 700;
@@ -152,33 +156,38 @@
   border-radius: 999px;
   border: 1px solid color-mix(in srgb, var(--ifm-color-primary) 20%, transparent);
   background: color-mix(in srgb, var(--ifm-color-primary) 8%, transparent);
-  color: var(--ifm-font-color-secondary);
+  color: var(--ifm-color-primary);
 }
 
-/* Navigation Buttons */
+/* Navigation Buttons — flat surface, hairline border, shared shadow; hover
+   lifts to a quiet primary tint rather than a gradient fill. */
 .navButton {
   width: 44px;
   height: 44px;
   border-radius: 12px;
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.97), rgba(255, 255, 255, 0.88));
-  border: 1px solid color-mix(in srgb, var(--ifm-color-primary) 16%, transparent);
+  background: var(--ifm-background-surface-color);
+  border: 1px solid var(--ifm-border-color);
   color: var(--ifm-font-color-base);
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 8px 18px rgba(15, 45, 82, 0.06);
-  transition: all 220ms ease;
+  box-shadow: var(--ifm-global-shadow-lw);
+  transition: transform 220ms ease, background 220ms ease, border-color 220ms ease, color 220ms ease;
   flex-shrink: 0;
 }
 
 .navButton:hover {
   transform: translateY(-2px);
-  box-shadow: 0 12px 24px rgba(15, 45, 82, 0.1);
-  background: linear-gradient(135deg, var(--ifm-color-primary), var(--ifm-color-primary-light));
-  color: white;
-  border-color: transparent;
+  background: color-mix(in srgb, var(--ifm-color-primary) 10%, transparent);
+  border-color: color-mix(in srgb, var(--ifm-color-primary) 40%, transparent);
+  color: var(--ifm-color-primary);
+}
+
+.navButton:focus-visible {
+  outline: none;
+  border-color: var(--ifm-color-primary);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--ifm-color-primary) 25%, transparent);
 }
 
 .navButton svg {
@@ -204,7 +213,7 @@
   border: 2px solid color-mix(in srgb, var(--ifm-color-primary) 30%, transparent);
   background: transparent;
   cursor: pointer;
-  transition: all 280ms ease;
+  transition: background 280ms ease, border-color 280ms ease, width 280ms ease;
   padding: 0;
 }
 
@@ -213,13 +222,19 @@
   background: color-mix(in srgb, var(--ifm-color-primary) 15%, transparent);
 }
 
+.dot:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--ifm-color-primary) 25%, transparent);
+}
+
+/* Solid active dot (flat, no gradient). */
 .activeDot {
   border-color: var(--ifm-color-primary);
-  background: linear-gradient(135deg, var(--ifm-color-primary), var(--ifm-color-primary-light));
+  background: var(--ifm-color-primary);
   width: 26px;
 }
 
-/* Auto Play toggle — a real button so the auto-advance can be stopped. */
+/* Auto-play toggle — a real button so the auto-advance can be stopped. */
 .autoPlayToggle {
   display: flex;
   align-items: center;
@@ -256,21 +271,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 220ms ease;
-}
-
-.playIcon.playing {
-  background: color-mix(in srgb, var(--ifm-color-primary-light) 18%, transparent);
 }
 
 .playIcon svg {
   width: 12px;
   height: 12px;
-  color: var(--ifm-font-color-base);
-}
-
-.playIcon.playing svg {
-  color: var(--ifm-color-primary-light);
+  color: var(--ifm-color-primary);
 }
 
 .autoPlayText {
@@ -278,101 +284,6 @@
   color: var(--ifm-font-color-secondary);
   font-weight: 600;
   letter-spacing: 0.04em;
-}
-
-/* Dark Mode */
-:global([data-theme='dark']) .reviewsSection {
-  background:
-    radial-gradient(circle at 90% 85%, color-mix(in srgb, var(--ifm-color-primary) 20%, transparent), transparent 38%),
-    radial-gradient(circle at 10% 95%, color-mix(in srgb, var(--ifm-color-primary-light) 16%, transparent), transparent 40%),
-    linear-gradient(180deg, var(--ifm-background-color) 0%, var(--ifm-background-color) 100%);
-}
-
-:global([data-theme='dark']) .reviewsEyebrow {
-  background: color-mix(in srgb, var(--ifm-color-primary) 22%, transparent);
-  color: var(--ifm-color-primary);
-}
-
-:global([data-theme='dark']) .reviewsHeader h2 {
-  color: var(--ifm-font-color-base);
-}
-
-:global([data-theme='dark']) .reviewsSubtitle {
-  color: var(--ifm-font-color-secondary);
-}
-
-:global([data-theme='dark']) .reviewsContainer {
-  border-color: color-mix(in srgb, var(--ifm-color-primary) 26%, transparent);
-  background: linear-gradient(180deg, rgba(19, 29, 46, 0.92), rgba(14, 22, 35, 0.9));
-  box-shadow: 0 12px 24px rgba(15, 45, 82, 0.46);
-}
-
-:global([data-theme='dark']) .reviewText {
-  color: var(--ifm-font-color-base);
-}
-
-:global([data-theme='dark']) .courseName {
-  color: var(--ifm-font-color-base);
-}
-
-:global([data-theme='dark']) .semester {
-  color: var(--ifm-font-color-secondary);
-}
-
-:global([data-theme='dark']) .studentName {
-  color: var(--ifm-color-primary);
-  border-color: rgba(120, 196, 186, 0.35);
-  background: color-mix(in srgb, var(--ifm-color-primary-light) 24%, transparent);
-}
-
-:global([data-theme='dark']) .navButton {
-  border-color: color-mix(in srgb, var(--ifm-color-primary) 26%, transparent);
-  background: linear-gradient(180deg, rgba(19, 29, 46, 0.92), rgba(14, 22, 35, 0.9));
-  box-shadow: 0 8px 18px rgba(15, 45, 82, 0.35);
-  color: var(--ifm-font-color-secondary);
-}
-
-:global([data-theme='dark']) .navButton:hover {
-  background: linear-gradient(135deg, var(--ifm-color-primary), var(--ifm-color-primary-light));
-  color: white;
-  border-color: transparent;
-}
-
-:global([data-theme='dark']) .dot {
-  border-color: color-mix(in srgb, var(--ifm-color-primary) 40%, transparent);
-}
-
-:global([data-theme='dark']) .activeDot {
-  border-color: var(--ifm-color-primary);
-  background: linear-gradient(135deg, var(--ifm-color-primary), var(--ifm-color-primary-light));
-}
-
-:global([data-theme='dark']) .autoPlayText {
-  color: var(--ifm-font-color-secondary);
-}
-
-:global([data-theme='dark']) .playIcon {
-  background: color-mix(in srgb, var(--ifm-color-primary) 16%, transparent);
-}
-
-:global([data-theme='dark']) .playIcon svg {
-  color: var(--ifm-font-color-secondary);
-}
-
-:global([data-theme='dark']) .playIcon.playing {
-  background: color-mix(in srgb, var(--ifm-color-primary-light) 28%, transparent);
-}
-
-:global([data-theme='dark']) .playIcon.playing svg {
-  color: var(--ifm-color-primary);
-}
-
-:global([data-theme='dark']) .quoteIcon {
-  box-shadow: 0 4px 12px color-mix(in srgb, var(--ifm-color-primary) 40%, transparent);
-}
-
-:global([data-theme='dark']) .reviewText::before {
-  background: linear-gradient(180deg, var(--ifm-color-primary), var(--ifm-color-primary-light));
 }
 
 /* Responsive */
@@ -400,15 +311,15 @@
   }
 
   .quoteIcon {
-    width: 36px;
-    height: 36px;
-    top: 0.8rem;
+    width: 34px;
+    height: 34px;
+    top: 0.9rem;
     right: 1rem;
   }
 
   .quoteIcon svg {
-    width: 18px;
-    height: 18px;
+    width: 17px;
+    height: 17px;
   }
 
   .reviewMeta {
@@ -435,5 +346,9 @@
 @media (prefers-reduced-motion: reduce) {
   .reviewsTrack {
     transition: none;
+  }
+
+  .navButton:hover {
+    transform: none;
   }
 }
