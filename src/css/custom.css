@@ -326,6 +326,23 @@ html[data-intro-pending] .hero > a {
   }
 }
 
+/* Centred wordmark: lift the brand out of the left item group and pin it to
+   the middle of the bar, so the nav reads symmetrically — Research/Lab on the
+   left, Courses/Contact + search on the right. The brand is a grandchild of
+   .navbar__inner, so absolute positioning resolves against it. Scoped to
+   .navbar__inner so the mobile sidebar's own .navbar__brand is untouched. */
+.navbar__inner {
+  position: relative;
+}
+
+.navbar__inner .navbar__brand {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  z-index: 1;
+}
+
 .navbar__logo {
   height: 2.95rem;
   margin-bottom: 0.12rem;

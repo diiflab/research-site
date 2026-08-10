@@ -15,7 +15,7 @@ const TEACHING_STATS = [
   {
     value: `${stats.yearsExperience}+`,
     label: 'Years teaching',
-    detail: 'Lecturing since 2015, across two universities.',
+    detail: 'Lecturing across universities.',
     to: '/courses/learn',
   },
   {
@@ -27,7 +27,7 @@ const TEACHING_STATS = [
   {
     value: `${stats.totalStudents}+`,
     label: 'Students taught',
-    detail: 'Undergraduate and graduate, in Korean and English.',
+    detail: 'Undergraduate and graduate courses.',
     to: '/courses/showcase',
   },
   {
@@ -60,17 +60,48 @@ const COURSE_PILLARS = [
 ];
 
 function CoursesHero() {
+  const videoRef = React.useRef(null);
+
+  // Respect prefers-reduced-motion: the 6 MB welcome clip should not autoplay
+  // or loop for visitors who opt out of motion. Playback is driven from here
+  // (not the autoPlay attribute) so it never starts for them — they get the
+  // first frame as a still image via preload="metadata".
+  React.useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return undefined;
+    const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+    const apply = () => {
+      if (motionQuery.matches) {
+        video.loop = false;
+        video.pause();
+      } else {
+        video.loop = true;
+        const started = video.play();
+        if (started && typeof started.catch === 'function') {
+          started.catch(() => {});
+        }
+      }
+    };
+
+    apply();
+    motionQuery.addEventListener('change', apply);
+    return () => motionQuery.removeEventListener('change', apply);
+  }, []);
+
   return (
     <header id="hero" className={clsx('hero hero--primary', styles.heroBanner)}>
       {/* Sits where Hero3D sits on the research homepage, so the global .hero
-          scrim and bottom-anchored type treatment apply unchanged. */}
+          scrim and bottom-anchored type treatment apply unchanged. Playback is
+          started in the effect above so prefers-reduced-motion is honoured. */}
       <video
+        ref={videoRef}
         className={styles.heroVideo}
         src="/courses/welcome.mp4"
-        autoPlay
         muted
         loop
         playsInline
+        preload="metadata"
         aria-hidden="true"
       />
       <div className={clsx('container', styles.heroContent)}>

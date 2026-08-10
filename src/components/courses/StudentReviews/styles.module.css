@@ -219,18 +219,33 @@
   width: 26px;
 }
 
-/* Auto Play Indicator */
-.autoPlayIndicator {
+/* Auto Play toggle — a real button so the auto-advance can be stopped. */
+.autoPlayToggle {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  opacity: 0.65;
-  transition: opacity 220ms ease;
+  margin: 0 auto;
+  padding: 0.3rem 0.75rem;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 220ms ease, background 220ms ease, border-color 220ms ease;
 }
 
-.autoPlayIndicator:hover {
+.autoPlayToggle:hover {
   opacity: 1;
+  background: color-mix(in srgb, var(--ifm-color-primary) 8%, transparent);
+}
+
+.autoPlayToggle:focus-visible {
+  opacity: 1;
+  outline: none;
+  border-color: var(--ifm-color-primary);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--ifm-color-primary) 25%, transparent);
 }
 
 .playIcon {

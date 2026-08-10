@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # All Courses
 
-Welcome to the teaching catalog of [Dr. Muhammad Syafrudin](https://muhammadsyafrudin.com/).
+Welcome to the teaching catalog of [Dr. Muhammad Syafrudin](#).
 This page is the fastest way to explore course offerings, credit load, and level across semesters.
 
 :::tip Quick Snapshot

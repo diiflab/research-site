@@ -11,6 +11,9 @@
   text-align: center;
   position: relative;
   overflow: hidden;
+  /* Deep-navy base so the hero still reads as an intentional dark frame when
+     the video is paused (prefers-reduced-motion) or hasn't loaded yet. */
+  background: radial-gradient(120% 140% at 50% 0%, #0a2036 0%, #020c1a 70%);
 }
 
 @media screen and (max-width: 996px) {

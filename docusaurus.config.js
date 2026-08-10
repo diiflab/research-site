@@ -224,34 +224,41 @@ const config = {
         },
         items: [
           {
-            to: 'team',
+            // Research output, grouped so the bar balances around the centred
+            // logo instead of carrying six flat left-aligned links.
+            type: 'dropdown',
             position: 'left',
-            label: 'The Team',
+            label: 'Research',
+            items: [
+              {
+                to: '/projects',
+                label: 'Projects',
+              },
+              {
+                to: '/publications',
+                label: 'Publications',
+              },
+            ],
           },
           {
-            to: 'projects',
+            // Everything about the lab itself — people, life, and news.
+            type: 'dropdown',
             position: 'left',
-            label: 'Projects',
-          },
-          {
-            to: 'publications',
-            position: 'left',
-            label: 'Publications',
-          },
-          {
-            to: 'gallery',
-            position: 'left',
-            label: 'Gallery',
-          },
-          {
-            to: 'updates',
-            position: 'left',
-            label: 'Updates',
-          },
-          {
-            to: 'contact',
-            position: 'left',
-            label: 'Contact',
+            label: 'Lab',
+            items: [
+              {
+                to: '/team',
+                label: 'The Team',
+              },
+              {
+                to: '/gallery',
+                label: 'Gallery',
+              },
+              {
+                to: '/updates',
+                label: 'Updates',
+              },
+            ],
           },
           {
             // Formerly an external link to courses.muhammadsyafrudin.com; the
@@ -286,7 +293,12 @@ const config = {
                 label: 'About',
               },
             ],
-          }
+          },
+          {
+            to: 'contact',
+            position: 'right',
+            label: 'Contact',
+          },
         ],
       },
       footer: {
