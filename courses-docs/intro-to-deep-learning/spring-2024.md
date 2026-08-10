@@ -6,7 +6,7 @@ sidebar_position: 1
 
 ## Introduction to Deep Learning (딥러닝개론) - Graduate Course
 
-Instructor: [Dr. Muhammad Syafrudin](https://muhammadsyafrudin.com/)
+Instructor: [Dr. Muhammad Syafrudin](#)
 
 ### Course information
 

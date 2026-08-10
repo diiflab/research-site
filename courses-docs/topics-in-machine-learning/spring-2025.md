@@ -6,7 +6,7 @@ sidebar_position: 2
 
 ## Topics in Machine Learning (기계학습특론) - Graduate Course
 
-Instructor: [Dr. Muhammad Syafrudin](https://muhammadsyafrudin.com/)
+Instructor: [Dr. Muhammad Syafrudin](#)
 
 ### Course information
 

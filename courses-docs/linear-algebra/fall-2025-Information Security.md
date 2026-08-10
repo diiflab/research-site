@@ -6,7 +6,7 @@ sidebar_position: 2
 
 ## Linear Algebra (선형대수및프로그래밍)
 
-Instructor: [Dr. Muhammad Syafrudin](https://muhammadsyafrudin.com/)
+Instructor: [Dr. Muhammad Syafrudin](#)
 
 ### Course information
 

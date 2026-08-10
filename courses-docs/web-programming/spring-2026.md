@@ -6,7 +6,7 @@ sidebar_position: 4
 
 ## Web Programming (웹프로그래밍)
 
-Instructor: [Dr. Muhammad Syafrudin](https://muhammadsyafrudin.com/)
+Instructor: [Dr. Muhammad Syafrudin](#)
 
 ### Course information
 

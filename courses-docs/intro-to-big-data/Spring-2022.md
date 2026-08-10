@@ -6,7 +6,7 @@ sidebar_position: 1
 
 ## Introduction to Big Data (빅데이터로보는세상)
 
-Instructor: [Dr. Muhammad Syafrudin](https://muhammadsyafrudin.com/)
+Instructor: [Dr. Muhammad Syafrudin](#)
 
 ### Course information
 

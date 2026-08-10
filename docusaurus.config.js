@@ -6,7 +6,7 @@ const {themes: prismThemes} = require('prism-react-renderer');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Applied INtelligence Lab',
-  tagline: 'Applied INtelligence Lab () is not only a laboratory but also a playground to learn and explore things related to applied intelligence.',
+  tagline: 'Applied INtelligence (AIN) Lab is not only a laboratory but also a playground to learn and explore things related to applied intelligence.',
   url: 'https://ain.my.id',
   baseUrl: '/',
   onBrokenLinks: 'throw',
@@ -158,12 +158,10 @@ const config = {
           '@type': 'Person',
           name: 'Muhammad Syafrudin',
           identifier: [
-            'https://www.wikidata.org/entity/Q61147698',
             'https://mathgenealogy.org/id.php?id=297235',
             'https://www.google.com/search?kgmid=/g/11fmgyc_gp',
             'https://orcid.org/0000-0002-5640-4413',
             'https://scholar.google.co.kr/citations?user=WLTzkOMAAAAJ&hl=en',
-            'https://muhammadsyafrudin.com/',
             'https://ain.my.id/courses',
             'https://ain.my.id/',
           ]
@@ -208,7 +206,7 @@ const config = {
     },
     // Declare some <meta> tags
     metadata: [
-      {name: 'keywords', content: 'Applied Intelligence Lab, AI research publications, artificial intelligence papers, machine learning publications, deep learning research, IoT research, RFID in supply chain, sustainable agriculture papers, self-supervised learning, self-organizing maps, vessel detection, human action recognition, transformer models, agricultural technology research, AgriTech publications, predictive analytics papers, AI for agriculture, AI-powered innovation, scientific articles, AI in agriculture, academic publications, AI research, machine learning, deep learning, artificial intelligence lab, IoT, RFID, sustainable agriculture, satellite imagery, AI-powered solutions, food security, agricultural data analysis, AgriTech solutions, AI innovation, Applied INtelligence Lab (AIN Lab), Department of Artificial Intelligence and Data Science, Sejong University, Seoul 05006, Republic of Korea'},
+      {name: 'keywords', content: 'Applied Intelligence Lab, AIN, AI research publications, artificial intelligence papers, machine learning publications, deep learning research, IoT research, RFID in supply chain, sustainable agriculture papers, self-supervised learning, self-organizing maps, vessel detection, human action recognition, transformer models, agricultural technology research, AgriTech publications, predictive analytics papers, AI for agriculture, AI-powered innovation, scientific articles, AI in agriculture, academic publications, AI research, machine learning, deep learning, artificial intelligence lab, IoT, RFID, sustainable agriculture, satellite imagery, AI-powered solutions, food security, agricultural data analysis, AgriTech solutions, AI innovation, Applied INtelligence Lab (AIN Lab), Department of Artificial Intelligence and Data Science, Sejong University, Seoul 05006, Republic of Korea'},
       {name: 'twitter:card', content: 'Applied INtelligence Lab is not only a laboratory but also a playground to learn and explore things related to applied intelligence. We explore the frontier of artificial intelligence, data science, and intelligent systems. We design AI-driven solutions that connect systems, enhance communication, and promote sustainability. Through collaboration across academia and industry, we aim to build systems that shape a smarter, more connected world. AIN Lab is a hub for learning and innovation in applied intelligence and IoT. Pioneering Artificial Intelligence research, AIN Lab focuses on machine learning, deep learning, IoT, and self-supervised learning. Our expertise drives agricultural innovation, vessel detection, human action recognition, and predictive analytics, promoting sustainable agriculture and global food security. Explore our extensive collection of research publications on AI, machine learning, IoT, and sustainable agriculture, featuring groundbreaking work on transformer models, predictive analytics, and more.'},
       {name: 'description', content: 'Applied INtelligence Lab is not only a laboratory but also a playground to learn and explore things related to applied intelligence. We explore the frontier of artificial intelligence, data science, and intelligent systems. We design AI-driven solutions that connect systems, enhance communication, and promote sustainability. Through collaboration across academia and industry, we aim to build systems that shape a smarter, more connected world. AIN Lab is a hub for learning and innovation in applied intelligence and IoT. Pioneering Artificial Intelligence research, AIN Lab focuses on machine learning, deep learning, IoT, and self-supervised learning. Our expertise drives agricultural innovation, vessel detection, human action recognition, and predictive analytics, promoting sustainable agriculture and global food security. Explore our extensive collection of research publications on AI, machine learning, IoT, and sustainable agriculture, featuring groundbreaking work on transformer models, predictive analytics, and more.'},
       {name: 'og:image',content: 'https://ain.my.id/img/aintlab-social-media.png'},
