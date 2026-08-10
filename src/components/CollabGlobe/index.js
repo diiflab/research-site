@@ -355,13 +355,13 @@ export default function CollabGlobe({home, countries, totals}) {
         className={styles.stage}
         tabIndex={0}
         role="application"
-        aria-label="Interactive globe of Applied INtelligence Lab collaborations radiating from Seoul. Use arrow keys to rotate; pick countries from the list below the globe."
+        aria-label="Interactive globe of Applied INtelligence (AIN) Lab collaborations radiating from Seoul. Use arrow keys to rotate; pick countries from the list below the globe."
       >
         {/* Static fallback for no-JS / no-WebGL visitors. */}
         {!ready && (
           <img
             src="/team/collaboration_map.webp"
-            alt="Applied INtelligence Lab collaboration map"
+            alt="Applied INtelligence (AIN) Lab collaboration map"
             className={styles.fallbackMap}
             loading="lazy"
           />

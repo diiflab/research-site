@@ -1,7 +1,7 @@
 /**
  * Cinematic first-visit intro scene: ~20 seconds of GPU particle morphing
  * (data cloud → neural network → data stream → brain → globe with
- * collaboration arcs → pull-back → "Applied INtelligence Lab" wordmark),
+ * collaboration arcs → pull-back → "Applied INtelligence (AIN) Lab" wordmark),
  * timed against the voiceover track and handed off to Hero3D's forge intro
  * by the page when it ends.
  *
@@ -83,7 +83,7 @@ const PHASES = [
 // whole track slightly ahead of the audio so lines never read as late.
 const CAPTION_LEAD = 0.32;
 const CAPTIONS = [
-  { at: 0.12,  text: 'Welcome to Applied INtelligence Lab',                     key: [2, 3, 4] },
+  { at: 0.12,  text: 'Welcome to Applied INtelligence (AIN) Lab',                     key: [2, 3, 4] },
   { at: 2.5,   text: 'Not just a laboratory — a playground for applied intelligence', key: [6, 8, 9] },
   { at: 6.12,  text: 'From data…',                                              key: [1] },
   { at: 7.12,  text: '…to intelligence…',                                       key: [1] },
@@ -954,12 +954,12 @@ function sampleFinalShape(count, logoImg, greeting) {
     const L = 560;
     g.drawImage(logoImg, W / 2 - L / 2, 40, L, L);
     g.font = WORDMARK_FONT;
-    g.fillText('Applied INtelligence Lab', W / 2, 900, W - 96);
+    g.fillText('Applied INtelligence (AIN) Lab', W / 2, 900, W - 96);
     if (greetText) { g.font = GREET_FONT; g.fillText(greetText, W / 2, 1075, W - 220); }
     logoSplit = 700;
   } else {
     g.font = WORDMARK_FONT;
-    g.fillText('Applied INtelligence Lab', W / 2, greetText ? 150 : H / 2, W - 96);
+    g.fillText('Applied INtelligence (AIN) Lab', W / 2, greetText ? 150 : H / 2, W - 96);
     if (greetText) { g.font = GREET_FONT; g.fillText(greetText, W / 2, 320, W - 220); }
   }
   const data = g.getImageData(0, 0, W, H).data;

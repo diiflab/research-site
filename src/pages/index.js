@@ -61,7 +61,7 @@ const AINTLAB_PILLARS = [
 const INTRO_CAPTIONS = {
   forge: 'Every idea begins as a spark.',
   rise: 'We shape it into intelligence.',
-  ignite: 'Introducing Applied INtelligence Lab.',
+  ignite: 'Introducing Applied INtelligence (AIN) Lab.',
 };
 
 const SPIRIT_WORDS = [
@@ -72,7 +72,7 @@ const SPIRIT_WORDS = [
   'Collaboration',
 ];
 
-// Accents the letters that spell the acronym in "Applied INtelligence Lab":
+// Accents the letters that spell the acronym in "Applied INtelligence (AIN) Lab":
 // the leading "A" of "Applied" plus the "IN" of "INtelligence" (A + IN = AIN).
 function AccentedTitle({title}) {
   const idx = title.indexOf('IN');
@@ -267,7 +267,7 @@ function HomepageHeader() {
             )}
             {introPhase === 'spirit' && (
               <div className={styles.introSpiritWrap}>
-                <p className={styles.introEyebrow}>The spirit of Applied INtelligence Lab</p>
+                <p className={styles.introEyebrow}>The spirit of Applied INtelligence (AIN) Lab</p>
                 <ul className={styles.introSpirit}>
                   {SPIRIT_WORDS.map((word, i) => (
                     <li key={word} style={{animationDelay: `${0.15 + i * 0.3}s`}}>
@@ -355,7 +355,7 @@ function WhyAINTLab() {
     <section id="why-aintlab" className={`${styles.whySection} section-with-bg-text bg-text--collaboration`}>
       <div className="container">
         <p className={clsx(styles.kicker, 'text--center')}>Identity</p>
-        <h1 className="text--center">Why Applied INtelligence Lab.</h1>
+        <h1 className="text--center">Why Applied INtelligence (AIN) Lab.</h1>
         <p className="text--center"><em>Rigor, curiosity, and impact — by design.</em></p>
         <div className={styles.pillarList}>
           {AINTLAB_PILLARS.map((pillar) => (
@@ -397,11 +397,11 @@ function AcademicGenealogy() {
       <div className="container">
         <p className={clsx(styles.kicker, 'text--center')}>Lineage</p>
         <h1 className="text--center">Academic genealogy.</h1>
-        <p className="text--center"><em>The scholarly lineage behind Applied INtelligence Lab.</em></p>
+        <p className="text--center"><em>The scholarly lineage behind Applied INtelligence (AIN) Lab.</em></p>
         <div className="row">
           <div className={clsx('col col--12')}>
             <div className={clsx(styles.genealogyFrame, 'reveal')}>
-              <Svg loading="lazy" className={styles.genealogySvg} aria-label="Applied INtelligence Lab academic genealogy" role="img" />
+              <Svg loading="lazy" className={styles.genealogySvg} aria-label="Applied INtelligence (AIN) Lab academic genealogy" role="img" />
             </div>
           </div>
         </div>

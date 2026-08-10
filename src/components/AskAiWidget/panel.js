@@ -108,7 +108,7 @@ export default function AskAiPanel() {
           variant: 'floating',
           translations: {
             buttonText: 'Ask AINBot',
-            buttonAriaLabel: 'Ask AINBot — the Applied INtelligence Lab AI assistant',
+            buttonAriaLabel: 'Ask AINBot — the Applied INtelligence (AIN) Lab AI assistant',
           },
         }}
         // suggestedQuestions stays off: it queries an
@@ -121,7 +121,7 @@ export default function AskAiPanel() {
             },
             newConversationScreen: {
               introductionText:
-                'Ask about our research, publications, projects, or how to collaborate with Applied INtelligence Lab.',
+                'Ask about our research, publications, projects, or how to collaborate with Applied INtelligence (AIN) Lab.',
             },
             promptForm: {
               promptPlaceholderText: 'Ask AINBot about the lab…',

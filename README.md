@@ -1,9 +1,9 @@
-# AINTLab Research Site
+# AIN Lab Research Site
 
-Official website of the **Applied INtelligence Lab (AINTLab)** at Sejong University, Seoul, Republic of Korea.  
+Official website of the **Applied INtelligence (AIN) Lab** at Seoul, Republic of Korea.  
 Live at **[aintlab.com](https://aintlab.com)**.
 
-AINTLab is a research group focused on artificial intelligence, machine learning, deep learning, IoT, and intelligent systems — with applications in smart manufacturing, agriculture, healthcare, and beyond.
+AIN Lab is a research group focused on artificial intelligence, machine learning, deep learning, IoT, and intelligent systems — with applications in smart manufacturing, agriculture, healthcare, and beyond.
 
 ---
 

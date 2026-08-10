@@ -11,7 +11,7 @@ const MissionVisionList = [
 
       <br/><br/>Our research bridges theory and <b>real-world impact</b>, combining academic excellence with practical innovation.
       <br/><br/>
-      <em>"Applied INtelligence Lab is not just a lab — it's a playground for ideas, collaboration, and discovery."–</em>
+      <em>"Applied INtelligence (AIN) Lab is not just a lab — it's a playground for ideas, collaboration, and discovery."–</em>
       </>
     ),
   },

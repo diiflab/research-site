@@ -91,7 +91,7 @@ export default function AboutPage() {
                   <img src="/courses/img/Oracle-Academy-cmyk.png" alt="Oracle Academy logo" />
                 </div>
                 <div className={styles.logoCard}>
-                  <img src="/courses/img/sejong.jpg" alt="Sejong University" />
+                  <img src="/img/favicon_old.png" alt="AIN Lab" />
                 </div>
               </div>
             </div>

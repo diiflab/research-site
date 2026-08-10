@@ -288,6 +288,25 @@ html[data-intro-pending] .hero > a {
   margin-left: 0.25em;
 }
 
+/* Compact navbar search: reduce the trigger to just its magnifier icon by
+   hiding the "Search" placeholder text and the Ctrl+K key hint, then tighten
+   the button to a neat icon square with the icon centred. */
+.navbar .DocSearch-Button-Placeholder,
+.navbar .DocSearch-Button-Keys {
+  display: none;
+}
+
+.navbar .DocSearch-Button {
+  padding: 0;
+  width: 2.4rem;
+  min-width: 0;
+  justify-content: center;
+}
+
+.navbar .DocSearch-Button-Icon {
+  margin: 0;
+}
+
 /* Glide (not pop) when cinema mode releases the navbar. */
 .navbar {
   transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
@@ -874,9 +893,9 @@ thead th:empty {
   z-index: 2;
 }
 
-/* Variant 1: Applied INtelligence Lab */
+/* Variant 1: Applied INtelligence (AIN) Lab */
 .bg-text--aintlab::before {
-  content: 'Applied INtelligence Lab';
+  content: 'Applied INtelligence (AIN) Lab';
 }
 
 /* Variant 2: Playground for Discovery */
