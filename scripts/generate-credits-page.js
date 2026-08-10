@@ -46,15 +46,16 @@ function makeMarkdownTable(rows) {
     return '_No packages found._';
   }
 
-  const header = '| Package | Version | License | Source |';
-  const separator = '| --- | --- | --- | --- |';
+  // Version and npm source columns are deliberately omitted: publishing exact
+  // dependency versions makes it trivial to match the site against known CVEs
+  // for those versions, so the credits page lists only package name + license.
+  const header = '| Package | License |';
+  const separator = '| --- | --- |';
   const body = rows
     .map((row) => {
       const pkg = escapeCell(row.name);
-      const version = escapeCell(row.version || 'Unknown');
       const license = escapeCell(row.license || 'Unknown');
-      const source = `[npm](https://www.npmjs.com/package/${encodeURIComponent(row.name)})`;
-      return `| ${pkg} | ${version} | ${license} | ${source} |`;
+      return `| ${pkg} | ${license} |`;
     })
     .join('\n');
 
