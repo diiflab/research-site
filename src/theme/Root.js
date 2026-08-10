@@ -6,6 +6,62 @@ const BackToTopIcon = require('@site/static/img/favicon.svg').default;
 export default function Root({children}) {
   const [isVisible, setIsVisible] = useState(false);
 
+  // Color-mode corrector.
+  // Docusaurus's pre-paint head script sets html[data-theme] from the stored
+  // choice / OS preference, but react-helmet re-applies <html> attributes
+  // wholesale during hydration on this site (the same behaviour that clobbers
+  // the intro veil's className), resetting data-theme to the SSR default
+  // ("light") a few hundred ms in — so a stored dark choice (or a dark OS
+  // preference) is silently dropped on every load. Re-assert the intended
+  // theme after hydration and pin it: the persisted choice
+  // (html[data-theme-choice], mirrored to localStorage "theme") wins;
+  // otherwise follow the OS preference. data-theme-choice is left to
+  // Docusaurus so the navbar toggle keeps working.
+  useEffect(() => {
+    const root = document.documentElement;
+    const media = window.matchMedia('(prefers-color-scheme: dark)');
+
+    const intendedTheme = () => {
+      let choice = root.getAttribute('data-theme-choice');
+      if (choice !== 'dark' && choice !== 'light') {
+        try {
+          const stored = window.localStorage.getItem('theme');
+          if (stored === 'dark' || stored === 'light') {
+            choice = stored;
+          }
+        } catch (err) {
+          // localStorage unavailable — fall through to the OS preference.
+        }
+      }
+      if (choice === 'dark' || choice === 'light') {
+        return choice;
+      }
+      return media.matches ? 'dark' : 'light';
+    };
+
+    const apply = () => {
+      const want = intendedTheme();
+      if (root.getAttribute('data-theme') !== want) {
+        // Setting it back triggers the observer again, but the next pass finds
+        // the value already correct and stops — no loop.
+        root.setAttribute('data-theme', want);
+      }
+    };
+
+    apply();
+    const observer = new MutationObserver(apply);
+    observer.observe(root, {
+      attributes: true,
+      attributeFilter: ['data-theme', 'data-theme-choice'],
+    });
+    media.addEventListener('change', apply);
+
+    return () => {
+      observer.disconnect();
+      media.removeEventListener('change', apply);
+    };
+  }, []);
+
   useEffect(() => {
     const adjustLayoutColumns = () => {
       const rows = document.querySelectorAll('main .row');
