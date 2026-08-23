@@ -236,7 +236,7 @@ const config = {
             // logo instead of carrying six flat left-aligned links.
             type: 'dropdown',
             position: 'left',
-            label: 'Research',
+            label: 'Our Research',
             items: [
               {
                 to: '/projects',
@@ -252,7 +252,7 @@ const config = {
             // Everything about the lab itself — people, life, and news.
             type: 'dropdown',
             position: 'left',
-            label: 'Lab',
+            label: 'AIN Lab',
             items: [
               {
                 to: '/team',
@@ -288,6 +288,7 @@ const config = {
                 sidebarId: 'coursesSidebar',
                 label: 'All Courses',
               },
+              /*
               {
                 to: '/courses/reviews',
                 label: 'Reviews',
@@ -296,6 +297,7 @@ const config = {
                 to: '/courses/showcase',
                 label: 'Showcase',
               },
+              */
               {
                 to: '/courses/about',
                 label: 'About',
@@ -305,7 +307,7 @@ const config = {
           {
             to: 'contact',
             position: 'right',
-            label: 'Contact',
+            label: 'Contact Us',
           },
         ],
       },

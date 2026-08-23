@@ -28,7 +28,7 @@ const TEACHING_STATS = [
     value: `${stats.totalStudents}+`,
     label: 'Students taught',
     detail: 'Undergraduate and graduate courses.',
-    to: '/courses/showcase',
+    to: '/courses/learn',
   },
   {
     value: `${stats.averageEvaluation}`,
