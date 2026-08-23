@@ -274,7 +274,7 @@ export default function PublicationsList() {
 
   return (
     <div className={styles.publicationsContainer}>
-      <div className={styles.metricsPanel}>
+      <div className={styles.metricsPanel} style={{ display: 'none' }}>
         <div className={`${styles.metricCard} reveal`}>
           <p className={styles.metricLabel}>CiteScore Total (Scopus)</p>
           <p className={styles.metricValue}>{formatMetricValue(metricStats.citeScoreScopus.total)}</p>

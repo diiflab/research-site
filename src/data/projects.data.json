@@ -1,33 +1,6 @@
 {
   "current": [
     {
-      "id": "curr-ckd-detection-ai",
-      "type": "Collaboration",
-      "title": "CKD Detection with AI",
-      "organization": "Airlangga University",
-      "periodLabel": "2025-2026",
-      "role": "Foreign Collaborator",
-      "currency": null
-    },
-    {
-      "id": "curr-ai-research-learning-innovation",
-      "type": "Collaboration",
-      "title": "Utilizing Artificial Intelligence for Research and Learning Innovation in Higher Education",
-      "organization": "Brawijaya University",
-      "periodLabel": "2026",
-      "role": "Foreign Collaborator",
-      "currency": null
-    },
-    {
-      "id": "curr-pharma-analysis",
-      "type": "Collaboration",
-      "title": "Comprehensive analysis of pharmaceutical companies",
-      "organization": "Diponegoro University",
-      "periodLabel": "2025-2026",
-      "role": "Foreign Collaborator",
-      "currency": null
-    },
-    {
       "id": "curr-struck-pipe-prediction",
       "type": "Collaboration",
       "title": "Integration of Internet of Things Sensors and Deep Learning-Based Image Analysis for Struck Pipe Prediction in Geothermal and Oil and Gas Drilling",
@@ -47,6 +20,47 @@
     }
   ],
   "past": [
+    {
+      "id": "a3-dps-2026",
+      "type": "Funded Project",
+      "title": "A3-DPS: Advanced Applied AI for Diagnostic & Predictive Systems",
+      "organization": "세종대학교 산학협력단",
+      "startDate": "2026-01-01",
+      "endDate": "2026-08-31",
+      "funding": 20000000,
+      "role": "공동연구원",
+      "currency": "KRW"
+    },
+    {
+      "id": "curr-ai-research-learning-innovation",
+      "type": "Collaboration",
+      "title": "Utilizing Artificial Intelligence for Research and Learning Innovation in Higher Education",
+      "organization": "Brawijaya University",
+      "periodLabel": "2026",
+      "role": "Foreign Collaborator",
+      "funding": 60000000,
+      "currency": "IDR"
+    },
+    {
+      "id": "curr-pharma-analysis",
+      "type": "Collaboration",
+      "title": "Comprehensive analysis of pharmaceutical companies",
+      "organization": "Diponegoro University",
+      "periodLabel": "2025-2026",
+      "role": "Foreign Collaborator",
+      "funding": 85000000,
+      "currency": "IDR"
+    },
+    {
+      "id": "curr-ckd-detection-ai",
+      "type": "Collaboration",
+      "title": "CKD Detection with AI",
+      "organization": "Airlangga University",
+      "periodLabel": "2025-2026",
+      "role": "Foreign Collaborator",
+      "funding": 75000000,
+      "currency": "IDR"
+    },
     {
       "id": "past-industry-simulation-model",
       "type": "Collaboration",
