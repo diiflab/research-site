@@ -5,6 +5,7 @@ import styles from './styles.module.css';
 // through as img attributes (not just CSS) so the browser can reserve the
 // correct aspect ratio before the image loads, avoiding layout shift.
 const LOGOS = [
+  { src: '/img/logos/kmu.png', alt: 'KMU', width: 100, height: 100 },
   { src: '/img/logos/ms.png', alt: 'MS', width: 136, height: 136 },
   { src: '/img/logos/sejong.png', alt: 'Sejong', width: 101, height: 93 },
   { src: '/img/logos/unair.png', alt: 'UNAIR', width: 400, height: 387 },
