@@ -23,7 +23,7 @@ This page is the fastest way to explore course offerings, credit load, and level
 | AI and ML | [Introduction to Deep Learning](category/intro-to-deep-learning), [Topics in Machine Learning](category/topics-in-machine-learning) |
 | Core Foundations | [Linear Algebra](category/linear-algebra), [Database Design and Analysis](category/database-design-analysis) |
 
-## Sejong University, Korea (2022-Present)
+## Sejong University, Korea (2022-2026)
 
 | Course | Code | Credits | Level |
 | --- | --- | --- | --- |
