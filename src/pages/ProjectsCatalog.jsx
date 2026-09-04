@@ -133,7 +133,7 @@ function ProjectsCatalog() {
 
   return (
     <div className={styles.projectsCatalog}>
-      <section className={styles.overviewPanel}>
+      <section className={styles.overviewPanel} style={{ display: 'none' }}>
     
         <div className={styles.metricsGrid}>
           <div className={`${styles.metricCard} reveal`}>
