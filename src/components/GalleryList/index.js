@@ -82,7 +82,7 @@ export default function GalleryList() {
 
   return (
     <div className={styles.galleryShell}>
-      <div className={styles.galleryMetrics}>
+      <div className={styles.galleryMetrics} style={{ display: 'none' }}>
         <div className={`${styles.metricCard} reveal`}>
           <p className={styles.metricLabel}>Total Items</p>
           <p className={styles.metricValue}>{stats.total}</p>
