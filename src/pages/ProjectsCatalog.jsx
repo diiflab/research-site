@@ -272,7 +272,7 @@ function ProjectsCatalog() {
                       <p className={styles.tableTitle}>{project.title}</p>
                       <div className={styles.tableBadges}>
                         <span className={styles.typeBadge}>{project.type}</span>
-                        {project.funding ? <span className={styles.fundingBadge}>{formatFunding(project.funding, project.currency)}</span> : null}
+                        {/* {project.funding ? <span className={styles.fundingBadge}>{formatFunding(project.funding, project.currency)}</span> : null} */}
                       </div>
                     </div>
                   </td>
