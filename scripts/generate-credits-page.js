@@ -281,7 +281,7 @@ description: Gratitude and open-source acknowledgements for this website.
 <p className="page-lead"><em>With thanks to the open-source community that helps power this website.</em></p>
 </div>
 
-<div className="page-quickfacts" style="display: 'none'">
+<div className="page-quickfacts">
   <div className="page-quickfact">
     <p className="page-quickfact-label">Runtime Packages</p>
     <p className="page-quickfact-value">${deps.length}</p>
