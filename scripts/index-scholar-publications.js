@@ -14,6 +14,7 @@
  * Usage:
  *   node scripts/index-scholar-publications.js
  *   node scripts/index-scholar-publications.js --out path/to/file.json
+ *   node scripts/index-scholar-publications.js --out static/api/publications.json
  */
 
 const fs = require('fs');
