@@ -9,7 +9,7 @@
     "generate:reviews": "node scripts/fetch-orcid-reviews.js",
     "export:scholar": "node scripts/index-scholar-publications.js",
     "prestart": "npm run generate:credits && npm run generate:network && npm run generate:publications && npm run generate:reviews",
-    "prebuild": "npm run generate:credits && npm run generate:network && npm run generate:publications && npm run generate:reviews",
+    "prebuild": "npm run generate:credits",
     "predevelop": "npm run generate:credits && npm run generate:network && npm run generate:publications && npm run generate:reviews",
     "docusaurus": "docusaurus",
     "start": "docusaurus start --host 0.0.0.0",
