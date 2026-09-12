@@ -1,6 +1,15 @@
 {
   "current": [
     {
+      "id": "physic-xai-prediction2026",
+      "type": "Funded Project",
+      "title": "Physics-Informed XAI for Real-Time Urban Flood Lead-Time Optimization and Prediction",
+      "organization": "한국연구재단",
+      "periodLabel": "2026-2031",
+      "role": "연구책임자",
+      "currency": null
+    },
+    {
       "id": "curr-struck-pipe-prediction",
       "type": "Collaboration",
       "title": "Integration of Internet of Things Sensors and Deep Learning-Based Image Analysis for Struck Pipe Prediction in Geothermal and Oil and Gas Drilling",

@@ -277,32 +277,13 @@ description: Gratitude and open-source acknowledgements for this website.
 <div className="page-shell">
 <div className="page-header">
 <p className="page-kicker">Gratitude</p>
-<h1>Credits and Open-Source Acknowledgements</h1>
+<h1>Credits and Acknowledgements</h1>
 <p className="page-lead"><em>With thanks to the open-source community that helps power this website.</em></p>
-</div>
-
-<div className="page-quickfacts">
-  <div className="page-quickfact">
-    <p className="page-quickfact-label">Runtime Packages</p>
-    <p className="page-quickfact-value">${deps.length}</p>
-  </div>
-  <div className="page-quickfact">
-    <p className="page-quickfact-label">Tooling Packages</p>
-    <p className="page-quickfact-value">${devDeps.length}</p>
-  </div>
-  <div className="page-quickfact">
-    <p className="page-quickfact-label">Transitive Packages</p>
-    <p className="page-quickfact-value">${transitiveDeps.length}</p>
-  </div>
 </div>
 
 <div className="page-content">
 
 Thank you to every maintainer, reviewer, and contributor behind the libraries used in this website.
-
-:::info Project License
-This repository is distributed under ${projectLicenseLabel}. Please refer to the LICENSE file in the repository root for full terms.
-:::
 
 ## Gratitude
 
@@ -313,10 +294,6 @@ ${collaboratorsBullets}
 ### Open-source communities
 
 ${communitiesBullets}
-
-## License summary (all dependencies)
-
-${licenseSummaryTable}
 
 ## Runtime dependencies
 
