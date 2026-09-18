@@ -76,22 +76,21 @@ export default function AboutPage() {
               <div className={styles.mottoItem}>Balance in Life</div>
             </div>
 
-            <h2>Community and Partners</h2>
+            <h2>Logos</h2>
             <div className={styles.communityWrap}>
               <p>
-                Muhammad Syafrudin is a member of the Oracle Academy Program, and
-                the Learning Hub platform is hosted and sponsored by Oracle Cloud.
+                Here are the logos of our community and partners.
               </p>
 
               <div className={styles.logoRow}>
                 <div className={styles.logoCard}>
-                  <img src="/courses/img/member-ebadge-2.png" alt="Oracle Academy member badge" />
+                  <img src="/img/logos/ms.png" alt="MS logo" />
                 </div>
                 <div className={styles.logoCard}>
-                  <img src="/courses/img/Oracle-Academy-cmyk.png" alt="Oracle Academy logo" />
+                  <img src="/img/logos/kmu.png" alt="KMU logo" />
                 </div>
                 <div className={styles.logoCard}>
-                  <img src="/img/favicon_old.png" alt="AIN Lab" />
+                  <img src="/img/research.png" alt="AIN Lab" />
                 </div>
               </div>
             </div>
