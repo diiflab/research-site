@@ -76,12 +76,9 @@ export default function AboutPage() {
               <div className={styles.mottoItem}>Balance in Life</div>
             </div>
 
-            <h2>Logos</h2>
+            <h2>Our community and partners</h2>
             <div className={styles.communityWrap}>
-              <p>
-                Here are the logos of our community and partners.
-              </p>
-
+              
               <div className={styles.logoRow}>
                 <div className={styles.logoCard}>
                   <img src="/img/logos/ms.png" alt="MS logo" />
