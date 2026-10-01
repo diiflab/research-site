@@ -188,6 +188,16 @@ const config = {
   ],
 
   themeConfig:{
+    // Site-wide banner above the navbar. Bump `id` when the message changes so
+    // visitors who dismissed the previous one see the new announcement.
+    announcementBar: {
+      id: 'gs2027',
+      content:
+        '📢 We\'re hiring graduate students for Spring 2027! Applications open 8 October, 10:00 KST. <a href="/gs2027">See the call for applications →</a>',
+      backgroundColor: '#0e59a9',
+      textColor: '#ffffff',
+      isCloseable: true,
+    },
     // Colour mode: follow the visitor's OS light/dark preference on first
     // visit, keep the navbar toggle so they can override it, and let Docusaurus
     // persist that choice in localStorage (key: "theme") across sessions.

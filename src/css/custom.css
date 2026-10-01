@@ -1861,3 +1861,10 @@ nav[class*='blogPostNav_'],
     grid-template-columns: 1fr;
   }
 }
+
+/* Announcement bar: keep the link readable on the brand-blue background. */
+div[class*='announcementBar'] a {
+  color: inherit;
+  font-weight: 700;
+  text-decoration: underline;
+}

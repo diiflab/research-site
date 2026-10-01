@@ -1,0 +1,69 @@
+.countdown {
+  margin: 1.2rem 0 0;
+  padding: 1rem 1.2rem;
+  width: fit-content;
+  max-width: 100%;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 12px;
+  background: var(--ifm-background-surface-color);
+}
+
+.label {
+  margin: 0 0 0.6rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--ifm-color-primary);
+}
+
+.units {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.unit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 4.2rem;
+}
+
+.value {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.1;
+  font-variant-numeric: tabular-nums;
+  color: var(--ifm-heading-color);
+}
+
+.unitLabel {
+  font-size: 0.75rem;
+  color: var(--ifm-font-color-secondary);
+}
+
+.open {
+  border-color: var(--ifm-color-success);
+}
+
+.open .label {
+  color: var(--ifm-color-success-darkest);
+}
+
+.closed {
+  border-color: var(--ifm-color-danger);
+  color: var(--ifm-color-danger-darkest);
+}
+
+.message {
+  font-weight: 700;
+}
+
+[data-theme='dark'] .open .label {
+  color: var(--ifm-color-success-lightest);
+}
+
+[data-theme='dark'] .closed {
+  color: var(--ifm-color-danger-lightest);
+}
