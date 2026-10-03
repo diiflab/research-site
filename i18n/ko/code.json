@@ -1,0 +1,1566 @@
+{
+  "home.stats.publications.label": {
+    "message": "논문 및 저서"
+  },
+  "home.stats.publications.detail": {
+    "message": "AI, 머신러닝, 데이터 과학 분야의 저널 논문, 학회 발표, 저서."
+  },
+  "home.stats.collaborators.label": {
+    "message": "글로벌 협력 기관"
+  },
+  "home.stats.collaborators.detail": {
+    "message": "{countries}개국 이상의 파트너 기관."
+  },
+  "home.stats.since.label": {
+    "message": "설립 연도"
+  },
+  "home.stats.since.detail": {
+    "message": "아이디어에서 임팩트까지, 응용 지능."
+  },
+  "home.why.pillar1.title": {
+    "message": "응용 지능 우선"
+  },
+  "home.why.pillar1.description": {
+    "message": "실제 환경을 위한 연구, 활용 가능하고 측정 가능한 성과."
+  },
+  "home.why.pillar2.title": {
+    "message": "발견의 놀이터"
+  },
+  "home.why.pillar2.description": {
+    "message": "아이디어를 탐구하고, 가설을 검증하고, 빠르게 반복하는 곳."
+  },
+  "home.why.pillar3.title": {
+    "message": "협력이 중심"
+  },
+  "home.why.pillar3.description": {
+    "message": "책임 있는 AI를 위해 함께하는 다양한 분야와 기관."
+  },
+  "home.hero.subtitle": {
+    "message": "단순한 연구실이 아닌, 응용 지능을 위한 놀이터."
+  },
+  "home.hero.explore": {
+    "message": "연구실 둘러보기"
+  },
+  "home.hero.collaborate": {
+    "message": "함께 연구하기"
+  },
+  "home.hero.scrollCue": {
+    "message": "스크롤하여 둘러보기"
+  },
+  "home.hero.replayIntro": {
+    "message": "인트로 다시 보기"
+  },
+  "home.stats.kicker": {
+    "message": "성과"
+  },
+  "home.stats.title": {
+    "message": "숫자로 보는 연구실."
+  },
+  "home.why.kicker": {
+    "message": "정체성"
+  },
+  "home.why.title": {
+    "message": "왜 Applied INtelligence (AIN) Lab인가."
+  },
+  "home.why.subtitle": {
+    "message": "엄밀함, 호기심, 그리고 임팩트."
+  },
+  "home.join.kicker": {
+    "message": "참여하기"
+  },
+  "home.join.title": {
+    "message": "다음 혁신의 불꽃을 함께 피울 준비가 되셨나요?"
+  },
+  "home.join.description": {
+    "message": "응용 지능의 미래를 만들어 가는 연구자, 학생, 파트너와 함께하세요."
+  },
+  "home.join.publications": {
+    "message": "논문 보기"
+  },
+  "home.join.joinLab": {
+    "message": "연구실 지원하기"
+  },
+  "home.genealogy.kicker": {
+    "message": "학문적 계보"
+  },
+  "home.genealogy.title": {
+    "message": "학문의 계보."
+  },
+  "home.genealogy.subtitle": {
+    "message": "Applied INtelligence (AIN) Lab의 학문적 뿌리."
+  },
+  "home.meta.description": {
+    "message": "국민대학교 Applied INtelligence (AIN) Lab — 응용 AI, 머신러닝, 딥러닝, IoT, 지속 가능한 농업을 위한 AI를 연구합니다."
+  },
+  "home.map.cta": {
+    "message": "실시간 3D 네트워크 보기 →"
+  },
+  "home.collaborate.kicker": {
+    "message": "파트너십"
+  },
+  "home.collaborate.title": {
+    "message": "함께 연구해요."
+  },
+  "home.collaborate.subtitle": {
+    "message": "학계, 산업계, 그리고 미래의 연구자가 함께."
+  },
+  "countdown.days": {
+    "message": "일"
+  },
+  "countdown.hours": {
+    "message": "시간"
+  },
+  "countdown.minutes": {
+    "message": "분"
+  },
+  "countdown.seconds": {
+    "message": "초"
+  },
+  "countdown.opensIn": {
+    "message": "지원 접수 시작까지"
+  },
+  "countdown.closesIn": {
+    "message": "지원 접수 중 · 마감까지"
+  },
+  "countdown.open": {
+    "message": "지원 접수가 시작되었습니다."
+  },
+  "countdown.closed": {
+    "message": "지원 접수가 마감되었습니다."
+  },
+  "home.papers.summary": {
+    "message": "연구 요약"
+  },
+  "home.papers.kicker": {
+    "message": "대표 연구"
+  },
+  "home.papers.title": {
+    "message": "주요 연구."
+  },
+  "home.papers.subtitle": {
+    "message": "Q1 저널 게재 논문 하이라이트 — {link}."
+  },
+  "home.papers.subtitle.link": {
+    "message": "전체 논문 보기"
+  },
+  "home.partners.kicker": {
+    "message": "네트워크"
+  },
+  "home.partners.title": {
+    "message": "협력 기관."
+  },
+  "home.partners.subtitle": {
+    "message": "전 세계와 함께하는 공동 논문, 프로젝트, 방문 연구 프로그램."
+  },
+  "home.areas.0.title": {
+    "message": "데이터"
+  },
+  "home.areas.0.item0.label": {
+    "message": "센서 및 멀티모달 입력"
+  },
+  "home.areas.0.item0.detail": {
+    "message": "IoT 센서, 이미지·3D 스캔, 생체 신호, 멀티모달 융합."
+  },
+  "home.areas.0.item1.label": {
+    "message": "시계열 및 시퀀스 데이터"
+  },
+  "home.areas.0.item1.detail": {
+    "message": "예측, 융합, 시퀀스 모델링 파이프라인."
+  },
+  "home.areas.0.item2.label": {
+    "message": "표현 학습 및 특징"
+  },
+  "home.areas.0.item2.detail": {
+    "message": "오토인코더, 표현 학습, 전이 학습, 픽셀 수준 특징 공학."
+  },
+  "home.areas.1.title": {
+    "message": "인텔리전스"
+  },
+  "home.areas.1.item0.label": {
+    "message": "딥러닝·시퀀스 모델 및 트랜스포머"
+  },
+  "home.areas.1.item0.detail": {
+    "message": "CNN, LSTM, 하이브리드 모델, 테이블·도메인 트랜스포머, LLM 기법."
+  },
+  "home.areas.1.item1.label": {
+    "message": "앙상블 및 최적화"
+  },
+  "home.areas.1.item1.detail": {
+    "message": "스태킹·배깅·메타 앙상블, 하이퍼파라미터 튜닝, 메타휴리스틱."
+  },
+  "home.areas.1.item2.label": {
+    "message": "설명 가능성 및 구조적 모델"
+  },
+  "home.areas.1.item2.detail": {
+    "message": "설명 가능한 AI, 그래프 어텐션·그래프 기법, 통계 및 신호 융합 기법."
+  },
+  "home.areas.2.title": {
+    "message": "응용 분야"
+  },
+  "home.areas.2.item0.label": {
+    "message": "헬스케어 및 인간 시스템"
+  },
+  "home.areas.2.item0.detail": {
+    "message": "의료 진단, 생리 신호 모니터링, 자세·물리치료 분석."
+  },
+  "home.areas.2.item1.label": {
+    "message": "농업 / 환경 / 에너지"
+  },
+  "home.areas.2.item1.detail": {
+    "message": "식물 병해 탐지, 작물·대기질 예측, 홍수 위험, 배터리 SOH 및 에너지 예측."
+  },
+  "home.areas.2.item2.label": {
+    "message": "산업 및 보안"
+  },
+  "home.areas.2.item2.detail": {
+    "message": "제조, 금융, 사이버 보안 / 이상 거래 탐지."
+  },
+  "home.areas.kicker": {
+    "message": "핵심 분야"
+  },
+  "home.areas.title": {
+    "message": "연구 분야."
+  },
+  "home.areas.subtitle": {
+    "message": "원천 데이터에서 응용 지능까지."
+  },
+  "home.mission.kicker": {
+    "message": "목적"
+  },
+  "home.mission.title": {
+    "message": "미션과 비전."
+  },
+  "home.mission.subtitle": {
+    "message": "호기심이 목적을 만나는 곳."
+  },
+  "pdfViewer.show": {
+    "message": "{name} 보기"
+  },
+  "pdfViewer.hide": {
+    "message": "{name} 숨기기"
+  },
+  "pdfViewer.collapse": {
+    "message": "접기"
+  },
+  "pdfViewer.expand": {
+    "message": "펼치기"
+  },
+  "pdfViewer.fullscreen": {
+    "message": "전체 화면"
+  },
+  "pdfViewer.newTab": {
+    "message": "새 탭에서 열기"
+  },
+  "pdfViewer.downloadLabel": {
+    "message": "\"{label}\" 다운로드"
+  },
+  "pdfViewer.download": {
+    "message": "PDF 다운로드"
+  },
+  "pdfViewer.hint": {
+    "message": "오른쪽 아래 모서리를 드래그하여 뷰어 크기를 조절할 수 있습니다."
+  },
+  "home.updates.kicker": {
+    "message": "뉴스룸"
+  },
+  "home.updates.title": {
+    "message": "최근 소식."
+  },
+  "home.updates.subtitle": {
+    "message": "연구실의 새로운 소식 — {link}."
+  },
+  "home.updates.subtitle.link": {
+    "message": "전체 소식 보기"
+  },
+  "home.updates.empty": {
+    "message": "최근 게시물이 없습니다."
+  },
+  "theme.tags.tagsPageLink": {
+    "message": "모든 태그 보기",
+    "description": "The label of the link targeting the tag list page"
+  },
+  "footer.nav.ariaLabel": {
+    "message": "푸터"
+  },
+  "footer.copyright": {
+    "message": "Copyright © {year} Applied INtelligence (AIN) Lab; 책임자 Muhammad Syafrudin.",
+    "description": "Footer copyright line; {year} is the build year"
+  },
+  "footer.builtWith": {
+    "message": "{credits}로 제작되었습니다. 🤖의 도움을 받았습니다."
+  },
+  "footer.builtWith.link": {
+    "message": "Docusaurus 외 여러 도구"
+  },
+  "footer.followUs": {
+    "message": "팔로우하기"
+  },
+  "theme.docs.breadcrumbs.home": {
+    "message": "홈",
+    "description": "The ARIA label for the home page in the breadcrumbs"
+  },
+  "theme.ErrorPageContent.title": {
+    "message": "페이지에 오류가 발생하였습니다.",
+    "description": "The title of the fallback page when the page crashed"
+  },
+  "theme.BackToTopButton.buttonAriaLabel": {
+    "message": "맨 위로 스크롤하기",
+    "description": "The ARIA label for the back to top button"
+  },
+  "theme.blog.paginator.navAriaLabel": {
+    "message": "블로그 게시물 목록 탐색",
+    "description": "The ARIA label for the blog pagination"
+  },
+  "theme.blog.paginator.newerEntries": {
+    "message": "이전 페이지",
+    "description": "The label used to navigate to the newer blog posts page (previous page)"
+  },
+  "theme.blog.paginator.olderEntries": {
+    "message": "다음 페이지",
+    "description": "The label used to navigate to the older blog posts page (next page)"
+  },
+  "theme.blog.archive.title": {
+    "message": "게시물 목록",
+    "description": "The page & hero title of the blog archive page"
+  },
+  "theme.blog.archive.description": {
+    "message": "게시물 목록",
+    "description": "The page & hero description of the blog archive page"
+  },
+  "theme.blog.post.paginator.navAriaLabel": {
+    "message": "블로그 게시물 탐색",
+    "description": "The ARIA label for the blog posts pagination"
+  },
+  "theme.blog.post.paginator.newerPost": {
+    "message": "이전 게시물",
+    "description": "The blog post button label to navigate to the newer/previous post"
+  },
+  "theme.blog.post.paginator.olderPost": {
+    "message": "다음 게시물",
+    "description": "The blog post button label to navigate to the older/next post"
+  },
+  "theme.colorToggle.ariaLabel.mode.system": {
+    "message": "시스템 모드",
+    "description": "The name for the system color mode"
+  },
+  "theme.colorToggle.ariaLabel.mode.light": {
+    "message": "밝은 모드",
+    "description": "The name for the light color mode"
+  },
+  "theme.colorToggle.ariaLabel.mode.dark": {
+    "message": "어두운 모드",
+    "description": "The name for the dark color mode"
+  },
+  "theme.colorToggle.ariaLabel": {
+    "message": "어두운 모드와 밝은 모드 전환하기 (현재 {mode})",
+    "description": "The ARIA label for the color mode toggle"
+  },
+  "theme.docs.breadcrumbs.navAriaLabel": {
+    "message": "탐색 경로",
+    "description": "The ARIA label for the breadcrumbs"
+  },
+  "theme.docs.paginator.navAriaLabel": {
+    "message": "문서 페이지",
+    "description": "The ARIA label for the docs pagination"
+  },
+  "theme.docs.paginator.previous": {
+    "message": "이전",
+    "description": "The label used to navigate to the previous doc"
+  },
+  "theme.docs.paginator.next": {
+    "message": "다음",
+    "description": "The label used to navigate to the next doc"
+  },
+  "theme.docs.tagDocListPageTitle.nDocsTagged": {
+    "message": "{count}개 문서가",
+    "description": "Pluralized label for \"{count} docs tagged\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
+  },
+  "theme.docs.tagDocListPageTitle": {
+    "message": "{nDocsTagged} \"{tagName}\" 태그에 분류되었습니다",
+    "description": "The title of the page for a docs tag"
+  },
+  "theme.docs.versionBadge.label": {
+    "message": "버전: {versionLabel}"
+  },
+  "theme.docs.versions.unreleasedVersionLabel": {
+    "message": "{siteTitle} {versionLabel} 문서는 아직 정식 공개되지 않았습니다.",
+    "description": "The label used to tell the user that he's browsing an unreleased doc version"
+  },
+  "theme.docs.versions.unmaintainedVersionLabel": {
+    "message": "{siteTitle} {versionLabel} 문서는 더 이상 업데이트되지 않습니다.",
+    "description": "The label used to tell the user that he's browsing an unmaintained doc version"
+  },
+  "theme.docs.versions.latestVersionSuggestionLabel": {
+    "message": "최신 문서는 {latestVersionLink} ({versionLabel})을 확인하세요.",
+    "description": "The label used to tell the user to check the latest version"
+  },
+  "theme.docs.versions.latestVersionLinkLabel": {
+    "message": "최신 버전",
+    "description": "The label used for the latest version suggestion link label"
+  },
+  "theme.common.editThisPage": {
+    "message": "페이지 편집",
+    "description": "The link label to edit the current page"
+  },
+  "theme.common.headingLinkTitle": {
+    "message": "{heading}에 대한 직접 링크",
+    "description": "Title for link to heading"
+  },
+  "theme.lastUpdated.atDate": {
+    "message": " {date}에",
+    "description": "The words used to describe on which date a page has been last updated"
+  },
+  "theme.lastUpdated.byUser": {
+    "message": " {user}가",
+    "description": "The words used to describe by who the page has been last updated"
+  },
+  "theme.lastUpdated.lastUpdatedAtBy": {
+    "message": "최종 수정: {atDate}{byUser}",
+    "description": "The sentence used to display when a page has been last updated, and by who"
+  },
+  "theme.NotFound.title": {
+    "message": "페이지를 찾을 수 없습니다.",
+    "description": "The title of the 404 page"
+  },
+  "theme.navbar.mobileVersionsDropdown.label": {
+    "message": "버전",
+    "description": "The label for the navbar versions dropdown on mobile view"
+  },
+  "theme.tags.tagsListLabel": {
+    "message": "태그:",
+    "description": "The label alongside a tag list"
+  },
+  "theme.admonition.caution": {
+    "message": "주의",
+    "description": "The default label used for the Caution admonition (:::caution)"
+  },
+  "theme.admonition.danger": {
+    "message": "위험",
+    "description": "The default label used for the Danger admonition (:::danger)"
+  },
+  "theme.admonition.info": {
+    "message": "정보",
+    "description": "The default label used for the Info admonition (:::info)"
+  },
+  "theme.admonition.note": {
+    "message": "노트",
+    "description": "The default label used for the Note admonition (:::note)"
+  },
+  "theme.admonition.tip": {
+    "message": "팁",
+    "description": "The default label used for the Tip admonition (:::tip)"
+  },
+  "theme.admonition.warning": {
+    "message": "경고",
+    "description": "The default label used for the Warning admonition (:::warning)"
+  },
+  "theme.AnnouncementBar.closeButtonAriaLabel": {
+    "message": "닫기",
+    "description": "The ARIA label for close button of announcement bar"
+  },
+  "theme.blog.sidebar.navAriaLabel": {
+    "message": "최근 블로그 문서 둘러보기",
+    "description": "The ARIA label for recent posts in the blog sidebar"
+  },
+  "theme.DocSidebarItem.expandCategoryAriaLabel": {
+    "message": "사이드바 분류 '{label}' 펼치기",
+    "description": "The ARIA label to expand the sidebar category"
+  },
+  "theme.DocSidebarItem.collapseCategoryAriaLabel": {
+    "message": "사이드바 분류 '{label}' 접기",
+    "description": "The ARIA label to collapse the sidebar category"
+  },
+  "theme.IconExternalLink.ariaLabel": {
+    "message": "(새 탭에서 열림)",
+    "description": "The ARIA label for the external link icon"
+  },
+  "theme.NavBar.navAriaLabel": {
+    "message": "메인",
+    "description": "The ARIA label for the main navigation"
+  },
+  "theme.NotFound.p1": {
+    "message": "원하는 페이지를 찾을 수 없습니다.",
+    "description": "The first paragraph of the 404 page"
+  },
+  "theme.NotFound.p2": {
+    "message": "사이트 관리자에게 링크가 깨진 것을 알려주세요.",
+    "description": "The 2nd paragraph of the 404 page"
+  },
+  "theme.navbar.mobileLanguageDropdown.label": {
+    "message": "언어",
+    "description": "The label for the mobile language switcher dropdown"
+  },
+  "theme.TOCCollapsible.toggleButtonLabel": {
+    "message": "이 페이지에서",
+    "description": "The label used by the button on the collapsible TOC component"
+  },
+  "theme.blog.post.readMore": {
+    "message": "자세히 보기",
+    "description": "The label used in blog post item excerpts to link to full blog posts"
+  },
+  "theme.blog.post.readMoreLabel": {
+    "message": "{title} 에 대해 더 읽어보기",
+    "description": "The ARIA label for the link to full blog posts from excerpts"
+  },
+  "theme.blog.post.readingTime.plurals": {
+    "message": "약 {readingTime}분",
+    "description": "Pluralized label for \"{readingTime} min read\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
+  },
+  "theme.CodeBlock.copy": {
+    "message": "복사",
+    "description": "The copy button label on code blocks"
+  },
+  "theme.CodeBlock.copied": {
+    "message": "복사했습니다",
+    "description": "The copied button label on code blocks"
+  },
+  "theme.CodeBlock.copyButtonAriaLabel": {
+    "message": "클립보드에 코드 복사",
+    "description": "The ARIA label for copy code blocks button"
+  },
+  "theme.CodeBlock.wordWrapToggle": {
+    "message": "줄 바꿈 전환",
+    "description": "The title attribute for toggle word wrapping button of code block lines"
+  },
+  "theme.docs.sidebar.collapseButtonTitle": {
+    "message": "사이드바 숨기기",
+    "description": "The title attribute for collapse button of doc sidebar"
+  },
+  "theme.docs.sidebar.collapseButtonAriaLabel": {
+    "message": "사이드바 숨기기",
+    "description": "The title attribute for collapse button of doc sidebar"
+  },
+  "theme.docs.sidebar.navAriaLabel": {
+    "message": "문서 사이드바",
+    "description": "The ARIA label for the sidebar navigation"
+  },
+  "theme.docs.sidebar.closeSidebarButtonAriaLabel": {
+    "message": "사이드바 닫기",
+    "description": "The ARIA label for close button of mobile sidebar"
+  },
+  "theme.docs.sidebar.toggleSidebarButtonAriaLabel": {
+    "message": "사이드바 펼치거나 접기",
+    "description": "The ARIA label for hamburger menu button of mobile navigation"
+  },
+  "theme.navbar.mobileSidebarSecondaryMenu.backButtonLabel": {
+    "message": "← 메인 메뉴로 돌아가기",
+    "description": "The label of the back button to return to main menu, inside the mobile navbar sidebar secondary menu (notably used to display the docs sidebar)"
+  },
+  "theme.navbar.mobileDropdown.collapseButton.expandAriaLabel": {
+    "message": "드롭다운 펼치기",
+    "description": "The ARIA label of the button to expand the mobile dropdown navbar item"
+  },
+  "theme.navbar.mobileDropdown.collapseButton.collapseAriaLabel": {
+    "message": "드롭다운 접기",
+    "description": "The ARIA label of the button to collapse the mobile dropdown navbar item"
+  },
+  "theme.docs.sidebar.expandButtonTitle": {
+    "message": "사이드바 열기",
+    "description": "The ARIA label and title attribute for expand button of doc sidebar"
+  },
+  "theme.docs.sidebar.expandButtonAriaLabel": {
+    "message": "사이드바 열기",
+    "description": "The ARIA label and title attribute for expand button of doc sidebar"
+  },
+  "theme.SearchBar.seeAll": {
+    "message": "{count}개의 결과 확인하기"
+  },
+  "theme.SearchBar.label": {
+    "message": "검색",
+    "description": "The ARIA label and placeholder for search button"
+  },
+  "theme.SearchModal.searchBox.resetButtonTitle": {
+    "message": "검색어 초기화",
+    "description": "The label and ARIA label for search box reset button"
+  },
+  "theme.SearchModal.searchBox.cancelButtonText": {
+    "message": "취소",
+    "description": "The label and ARIA label for search box cancel button"
+  },
+  "theme.SearchModal.searchBox.placeholderText": {
+    "message": "문서 검색",
+    "description": "The placeholder text for the main search input field"
+  },
+  "theme.SearchModal.searchBox.placeholderTextAskAi": {
+    "message": "다른 질문하기...",
+    "description": "The placeholder text when in AI question mode"
+  },
+  "theme.SearchModal.searchBox.placeholderTextAskAiStreaming": {
+    "message": "답변 중...",
+    "description": "The placeholder text for search box when AI is streaming an answer"
+  },
+  "theme.SearchModal.searchBox.enterKeyHint": {
+    "message": "검색",
+    "description": "The hint for the search box enter key text"
+  },
+  "theme.SearchModal.searchBox.enterKeyHintAskAi": {
+    "message": "입력",
+    "description": "The hint for the Ask AI search box enter key text"
+  },
+  "theme.SearchModal.searchBox.searchInputLabel": {
+    "message": "검색",
+    "description": "The ARIA label for search input"
+  },
+  "theme.SearchModal.searchBox.backToKeywordSearchButtonText": {
+    "message": "키워드 검색으로 돌아가기",
+    "description": "The text for back to keyword search button"
+  },
+  "theme.SearchModal.searchBox.backToKeywordSearchButtonAriaLabel": {
+    "message": "키워드 검색으로 돌아가기",
+    "description": "The ARIA label for back to keyword search button"
+  },
+  "theme.SearchModal.startScreen.recentSearchesTitle": {
+    "message": "최근",
+    "description": "The title for recent searches"
+  },
+  "theme.SearchModal.startScreen.noRecentSearchesText": {
+    "message": "최근 검색어 없음",
+    "description": "The text when there are no recent searches"
+  },
+  "theme.SearchModal.startScreen.saveRecentSearchButtonTitle": {
+    "message": "이 검색어를 저장",
+    "description": "The title for save recent search button"
+  },
+  "theme.SearchModal.startScreen.removeRecentSearchButtonTitle": {
+    "message": "이 검색어를 최근 검색어에서 삭제",
+    "description": "The title for remove recent search button"
+  },
+  "theme.SearchModal.startScreen.favoriteSearchesTitle": {
+    "message": "즐겨찾기",
+    "description": "The title for favorite searches"
+  },
+  "theme.SearchModal.startScreen.removeFavoriteSearchButtonTitle": {
+    "message": "이 검색어를 즐겨찾기에서 삭제",
+    "description": "The title for remove favorite search button"
+  },
+  "theme.SearchModal.startScreen.recentConversationsTitle": {
+    "message": "최근 대화",
+    "description": "The title for recent conversations"
+  },
+  "theme.SearchModal.startScreen.removeRecentConversationButtonTitle": {
+    "message": "이 대화를 기록에서 삭제",
+    "description": "The title for remove recent conversation button"
+  },
+  "theme.SearchModal.errorScreen.titleText": {
+    "message": "결과를 불러올 수 없음",
+    "description": "The title for error screen"
+  },
+  "theme.SearchModal.errorScreen.helpText": {
+    "message": "인터넷 연결을 다시 확인하시기 바랍니다.",
+    "description": "The help text for error screen"
+  },
+  "theme.SearchModal.resultsScreen.askAiPlaceholder": {
+    "message": "AI에게 질문: ",
+    "description": "The placeholder text for Ask AI input"
+  },
+  "theme.SearchModal.askAiScreen.disclaimerText": {
+    "message": "답변은 AI가 생성하며 오류가 있을 수 있습니다. 응답을 확인해주세요.",
+    "description": "The disclaimer text for AI answers"
+  },
+  "theme.SearchModal.askAiScreen.relatedSourcesText": {
+    "message": "관련 출처",
+    "description": "The text for related sources"
+  },
+  "theme.SearchModal.askAiScreen.thinkingText": {
+    "message": "생각 중...",
+    "description": "The text when AI is thinking"
+  },
+  "theme.SearchModal.askAiScreen.copyButtonText": {
+    "message": "복사",
+    "description": "The text for copy button"
+  },
+  "theme.SearchModal.askAiScreen.copyButtonCopiedText": {
+    "message": "복사됨!",
+    "description": "The text for copy button when copied"
+  },
+  "theme.SearchModal.askAiScreen.copyButtonTitle": {
+    "message": "복사",
+    "description": "The title for copy button"
+  },
+  "theme.SearchModal.askAiScreen.likeButtonTitle": {
+    "message": "좋아요",
+    "description": "The title for like button"
+  },
+  "theme.SearchModal.askAiScreen.dislikeButtonTitle": {
+    "message": "싫어요",
+    "description": "The title for dislike button"
+  },
+  "theme.SearchModal.askAiScreen.thanksForFeedbackText": {
+    "message": "피드백 감사합니다!",
+    "description": "The text for thanks for feedback"
+  },
+  "theme.SearchModal.askAiScreen.preToolCallText": {
+    "message": "검색 중...",
+    "description": "The text before tool call"
+  },
+  "theme.SearchModal.askAiScreen.duringToolCallText": {
+    "message": "검색 중: ",
+    "description": "The text during tool call"
+  },
+  "theme.SearchModal.askAiScreen.afterToolCallText": {
+    "message": "검색 완료: ",
+    "description": "The text after tool call"
+  },
+  "theme.SearchModal.footer.selectText": {
+    "message": "로 선택",
+    "description": "The select text for footer"
+  },
+  "theme.SearchModal.footer.submitQuestionText": {
+    "message": "질문 제출",
+    "description": "The submit question text for footer"
+  },
+  "theme.SearchModal.footer.selectKeyAriaLabel": {
+    "message": "엔터 키",
+    "description": "The ARIA label for select key in footer"
+  },
+  "theme.SearchModal.footer.navigateText": {
+    "message": "로 이동",
+    "description": "The navigate text for footer"
+  },
+  "theme.SearchModal.footer.navigateUpKeyAriaLabel": {
+    "message": "화살표 위 키",
+    "description": "The ARIA label for navigate up key in footer"
+  },
+  "theme.SearchModal.footer.navigateDownKeyAriaLabel": {
+    "message": "화살표 아래 키",
+    "description": "The ARIA label for navigate down key in footer"
+  },
+  "theme.SearchModal.footer.closeText": {
+    "message": "로 종료",
+    "description": "The close text for footer"
+  },
+  "theme.SearchModal.footer.closeKeyAriaLabel": {
+    "message": "Esc 키",
+    "description": "The ARIA label for close key in footer"
+  },
+  "theme.SearchModal.footer.searchByText": {
+    "message": "검색 제공",
+    "description": "The 'Powered by' text for footer"
+  },
+  "theme.SearchModal.footer.backToSearchText": {
+    "message": "검색으로 돌아가기",
+    "description": "The back to search text for footer"
+  },
+  "theme.SearchModal.noResultsScreen.noResultsText": {
+    "message": "검색 결과 없음",
+    "description": "The text when there are no results"
+  },
+  "theme.SearchModal.noResultsScreen.suggestedQueryText": {
+    "message": "다른 추천 검색어",
+    "description": "The text for suggested query"
+  },
+  "theme.SearchModal.noResultsScreen.reportMissingResultsText": {
+    "message": "검색 결과가 없는 것이 오류라고 생각되십니까?",
+    "description": "The text for reporting missing results"
+  },
+  "theme.SearchModal.noResultsScreen.reportMissingResultsLinkText": {
+    "message": "알려주시기 바랍니다.",
+    "description": "The link text for reporting missing results"
+  },
+  "theme.SearchModal.placeholder": {
+    "message": "문서 검색",
+    "description": "The placeholder of the input of the DocSearch pop-up modal"
+  },
+  "theme.SearchPage.documentsFound.plurals": {
+    "message": "{count}개의 문서를 찾았습니다.",
+    "description": "Pluralized label for \"{count} documents found\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
+  },
+  "theme.SearchPage.existingResultsTitle": {
+    "message": "\"{query}\" 검색 결과",
+    "description": "The search page title for non-empty query"
+  },
+  "theme.SearchPage.emptyResultsTitle": {
+    "message": "문서를 검색합니다.",
+    "description": "The search page title for empty query"
+  },
+  "theme.SearchPage.inputPlaceholder": {
+    "message": "검색어를 입력하세요.",
+    "description": "The placeholder for search page input"
+  },
+  "theme.SearchPage.inputLabel": {
+    "message": "검색",
+    "description": "The ARIA label for search page input"
+  },
+  "theme.SearchPage.algoliaLabel": {
+    "message": "Algolia 제공",
+    "description": "The description label for Algolia mention"
+  },
+  "theme.SearchPage.noResultsText": {
+    "message": "검색 결과가 없습니다.",
+    "description": "The paragraph for empty search result"
+  },
+  "theme.SearchPage.fetchingNewResults": {
+    "message": "새로운 검색 결과를 불러오는 중입니다.",
+    "description": "The paragraph for fetching new search results"
+  },
+  "theme.blog.post.plurals": {
+    "message": "{count}개 게시물",
+    "description": "Pluralized label for \"{count} posts\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
+  },
+  "theme.blog.tagTitle": {
+    "message": "\"{tagName}\" 태그로 연결된 {nPosts}개의 게시물이 있습니다.",
+    "description": "The title of the page for a blog tag"
+  },
+  "theme.blog.author.pageTitle": {
+    "message": "{authorName} - 게시물 {nPosts}",
+    "description": "The title of the page for a blog author"
+  },
+  "theme.blog.authorsList.pageTitle": {
+    "message": "저자",
+    "description": "The title of the authors page"
+  },
+  "theme.blog.authorsList.viewAll": {
+    "message": "모든 저자 보기",
+    "description": "The label of the link targeting the blog authors page"
+  },
+  "theme.blog.author.noPosts": {
+    "message": "작성자가 아직 게시글을 작성하지 않았습니다.",
+    "description": "The text for authors with 0 blog post"
+  },
+  "theme.contentVisibility.unlistedBanner.title": {
+    "message": "색인되지 않은 문서",
+    "description": "The unlisted content banner title"
+  },
+  "theme.contentVisibility.unlistedBanner.message": {
+    "message": "이 문서는 색인되지 않습니다. 검색 엔진이 이 문서를 색인하지 않으며, 주소를 알고 있는 사용자만 접근할 수 있습니다.",
+    "description": "The unlisted content banner message"
+  },
+  "theme.contentVisibility.draftBanner.title": {
+    "message": "작성 중인 페이지",
+    "description": "The draft content banner title"
+  },
+  "theme.contentVisibility.draftBanner.message": {
+    "message": "이 페이지는 아직 작성 중입니다. 개발 환경에서만 보이며 프로덕션 빌드에서는 제외됩니다.",
+    "description": "The draft content banner message"
+  },
+  "theme.docs.DocCard.categoryDescription.plurals": {
+    "message": "{count} 항목",
+    "description": "The default description for a category card in the generated index about how many items this category includes"
+  },
+  "theme.ErrorPageContent.tryAgain": {
+    "message": "다시 시도해 보세요",
+    "description": "The label of the button to try again rendering when the React error boundary captures an error"
+  },
+  "theme.common.skipToMainContent": {
+    "message": "본문으로 건너뛰기",
+    "description": "The skip to content label used for accessibility, allowing to rapidly navigate to main content with keyboard tab/enter navigation"
+  },
+  "theme.tags.tagsPageTitle": {
+    "message": "태그",
+    "description": "The title of the tag list page"
+  },
+  "footer.nav.home": {
+    "message": "홈"
+  },
+  "footer.nav.team": {
+    "message": "구성원"
+  },
+  "footer.nav.projects": {
+    "message": "프로젝트"
+  },
+  "footer.nav.publications": {
+    "message": "논문"
+  },
+  "footer.nav.gallery": {
+    "message": "갤러리"
+  },
+  "footer.nav.updates": {
+    "message": "소식"
+  },
+  "footer.nav.courses": {
+    "message": "강의"
+  },
+  "footer.nav.contact": {
+    "message": "연락처"
+  },
+  "footer.nav.emailPolicy": {
+    "message": "이메일 정책"
+  },
+  "networks.stat.countries": {
+    "message": "개국"
+  },
+  "networks.stat.institutions": {
+    "message": "기관"
+  },
+  "networks.stat.works": {
+    "message": "논문"
+  },
+  "globe.work": {
+    "message": "편"
+  },
+  "globe.works": {
+    "message": "편"
+  },
+  "networks.more": {
+    "message": "+{n}곳 더 보기"
+  },
+  "networks.meta.title": {
+    "message": "협력 네트워크"
+  },
+  "networks.meta.description": {
+    "message": "Applied INtelligence (AIN) Lab의 글로벌 협력 네트워크 — 논문 공동 저자의 소속 기관을 서울에서 세계로 시각화했습니다."
+  },
+  "networks.kicker": {
+    "message": "글로벌 네트워크"
+  },
+  "networks.title": {
+    "message": "서울에서 세계로."
+  },
+  "networks.lead": {
+    "message": "{publications}의 모든 공동 저자 소속 기관을 DOI로 확인해 실시간으로 그렸습니다 — {countries}개국, 서울에서 뻗어 나간 하나의 푸른 실."
+  },
+  "networks.lead.publications": {
+    "message": "논문"
+  },
+  "networks.affiliations.title": {
+    "message": "국가별 협력 기관."
+  },
+  "networks.affiliations.lead": {
+    "message": "DOI로 확인된 논문 {works}편을 기준으로 한 공동 성과 상위 {top}개국입니다. 전체 {countries}개국은 위의 지구본과 국가 목록에서 볼 수 있습니다."
+  },
+  "networks.dataNote": {
+    "message": "소속 기관 데이터는 {openalex}를 통해 논문 DOI에서 자동으로 추출되었으며 오류가 있을 수 있습니다."
+  },
+  "projects.type.funded": {
+    "message": "연구 과제"
+  },
+  "projects.type.collaboration": {
+    "message": "공동 연구"
+  },
+  "projects.role.foreignCollaborator": {
+    "message": "해외 공동연구원"
+  },
+  "projects.role.principalInvestigator": {
+    "message": "연구책임자"
+  },
+  "projects.datesNotListed": {
+    "message": "기간 미기재"
+  },
+  "projects.metric.active": {
+    "message": "진행 중"
+  },
+  "projects.metric.archive": {
+    "message": "아카이브"
+  },
+  "projects.metric.institutions": {
+    "message": "기관"
+  },
+  "projects.metric.coverage": {
+    "message": "기간"
+  },
+  "projects.current.kicker": {
+    "message": "진행 중인 연구"
+  },
+  "projects.current.title": {
+    "message": "현재 프로젝트"
+  },
+  "projects.col.period": {
+    "message": "기간"
+  },
+  "projects.col.role": {
+    "message": "역할"
+  },
+  "projects.past.title": {
+    "message": "지난 프로젝트"
+  },
+  "projects.search.label": {
+    "message": "아카이브 검색"
+  },
+  "projects.search.placeholder": {
+    "message": "과제명, 기관, 역할, 사업명으로 검색"
+  },
+  "projects.filter.role": {
+    "message": "역할별 보기"
+  },
+  "projects.filter.allRoles": {
+    "message": "전체 역할"
+  },
+  "projects.filter.type": {
+    "message": "유형별 보기"
+  },
+  "projects.filter.allTypes": {
+    "message": "전체 유형"
+  },
+  "projects.sort.label": {
+    "message": "정렬"
+  },
+  "projects.sort.periodDesc": {
+    "message": "기간: 최신순"
+  },
+  "projects.sort.periodAsc": {
+    "message": "기간: 오래된순"
+  },
+  "projects.sort.roleAsc": {
+    "message": "역할 오름차순"
+  },
+  "projects.sort.roleDesc": {
+    "message": "역할 내림차순"
+  },
+  "projects.sort.orgAsc": {
+    "message": "기관명순"
+  },
+  "projects.sort.titleAsc": {
+    "message": "과제명순"
+  },
+  "projects.reset": {
+    "message": "초기화"
+  },
+  "projects.results": {
+    "message": "지난 프로젝트 {n}건"
+  },
+  "projects.col.project": {
+    "message": "과제"
+  },
+  "projects.col.organization": {
+    "message": "기관"
+  },
+  "projects.col.program": {
+    "message": "사업"
+  },
+  "projects.collaborativeResearch": {
+    "message": "공동 연구"
+  },
+  "projects.empty": {
+    "message": "검색 조건에 맞는 지난 프로젝트가 없습니다."
+  },
+  "askAi.nudge": {
+    "message": "찾는 정보가 있으신가요? 제가 도와드릴게요!"
+  },
+  "askAi.nudge.dismiss": {
+    "message": "안내 닫기"
+  },
+  "askAi.title": {
+    "message": "AINBot에게 물어보기"
+  },
+  "askAi.buttonAriaLabel": {
+    "message": "AINBot에게 물어보기 — Applied INtelligence (AIN) Lab AI 어시스턴트"
+  },
+  "askAi.intro": {
+    "message": "연구, 논문, 프로젝트, 또는 Applied INtelligence (AIN) Lab과의 협력 방법에 대해 물어보세요."
+  },
+  "askAi.placeholder": {
+    "message": "연구실에 대해 AINBot에게 물어보세요…"
+  },
+  "askAi.poweredBy": {
+    "message": "Powered by"
+  },
+  "home.map.ariaLabel": {
+    "message": "협력 지도: 공동 저작 {minWorks}편 이상인 {shown}개국 — 전체 인터랙티브 네트워크 열기"
+  },
+  "globe.stat.countries": {
+    "message": "개국"
+  },
+  "globe.stat.institutions": {
+    "message": "기관"
+  },
+  "globe.stat.works": {
+    "message": "논문"
+  },
+  "globe.ariaLabel": {
+    "message": "서울에서 뻗어 나가는 Applied INtelligence (AIN) Lab 협력 관계를 보여 주는 인터랙티브 지구본. 방향키로 회전하고, 지구본 아래 목록에서 국가를 선택하세요."
+  },
+  "globe.fallbackAlt": {
+    "message": "Applied INtelligence (AIN) Lab 협력 지도"
+  },
+  "globe.tooltipMore": {
+    "message": "+{n}곳 더 — 클릭해서 모두 보기"
+  },
+  "globe.hintTouch": {
+    "message": "옆으로 밀어 회전 · 두 손가락으로 확대 · 점이나 아래 국가를 탭하세요"
+  },
+  "globe.hintPointer": {
+    "message": "드래그해서 회전 · 마우스를 올려 상세 보기 · 점을 클릭해 집중 보기"
+  },
+  "globe.chipsAria": {
+    "message": "협력 국가"
+  },
+  "globe.sheetAria": {
+    "message": "{country} 협력 상세 정보"
+  },
+  "globe.sheetSummary": {
+    "message": "공동 저작 {works}편 · 기관 {institutions}곳"
+  },
+  "globe.institution": {
+    "message": "기관"
+  },
+  "globe.institutions": {
+    "message": "기관"
+  },
+  "globe.close": {
+    "message": "국가 상세 정보 닫기"
+  },
+  "gallery.category.general": {
+    "message": "일반"
+  },
+  "gallery.category.community": {
+    "message": "커뮤니티"
+  },
+  "gallery.category.book": {
+    "message": "저서"
+  },
+  "gallery.category.research": {
+    "message": "연구"
+  },
+  "gallery.category.award": {
+    "message": "수상"
+  },
+  "gallery.metric.total": {
+    "message": "전체 항목"
+  },
+  "gallery.metric.years": {
+    "message": "기간"
+  },
+  "gallery.metric.latest": {
+    "message": "최근 연도"
+  },
+  "gallery.search.placeholder": {
+    "message": "제목, 설명, 연도로 갤러리 검색..."
+  },
+  "gallery.search.ariaLabel": {
+    "message": "갤러리 검색"
+  },
+  "gallery.filter.category": {
+    "message": "분류:"
+  },
+  "gallery.filter.ariaLabel": {
+    "message": "분류별 갤러리 보기"
+  },
+  "gallery.filter.all": {
+    "message": "전체 ({n})"
+  },
+  "gallery.sort.label": {
+    "message": "정렬:"
+  },
+  "gallery.sort.ariaLabel": {
+    "message": "갤러리 정렬"
+  },
+  "gallery.sort.featured": {
+    "message": "추천순"
+  },
+  "gallery.sort.yearDesc": {
+    "message": "연도 (최신순)"
+  },
+  "gallery.sort.yearAsc": {
+    "message": "연도 (오래된순)"
+  },
+  "gallery.sort.titleAsc": {
+    "message": "제목순"
+  },
+  "gallery.results": {
+    "message": "전체 {total}개 중 {shown}개 표시"
+  },
+  "gallery.featured": {
+    "message": "추천"
+  },
+  "gallery.openImage": {
+    "message": "이미지 열기: {title}"
+  },
+  "pubs.type.journal": {
+    "message": "저널"
+  },
+  "pubs.type.conference": {
+    "message": "학회"
+  },
+  "pubs.type.book": {
+    "message": "저서/챕터"
+  },
+  "pubs.search.placeholder": {
+    "message": "제목, 저자, 게재지로 검색..."
+  },
+  "pubs.search.ariaLabel": {
+    "message": "논문 검색"
+  },
+  "pubs.filter.type": {
+    "message": "유형:"
+  },
+  "pubs.filter.all": {
+    "message": "전체 논문 ({n})"
+  },
+  "pubs.filter.journals": {
+    "message": "저널 ({n})"
+  },
+  "pubs.filter.conferences": {
+    "message": "학회 ({n})"
+  },
+  "pubs.filter.books": {
+    "message": "저서/챕터 ({n})"
+  },
+  "pubs.filter.indexing": {
+    "message": "색인:"
+  },
+  "pubs.filter.allIndexing": {
+    "message": "전체 색인"
+  },
+  "pubs.sort.label": {
+    "message": "정렬:"
+  },
+  "pubs.sort.featured": {
+    "message": "추천순"
+  },
+  "pubs.sort.yearDesc": {
+    "message": "연도 (최신순)"
+  },
+  "pubs.sort.yearAsc": {
+    "message": "연도 (오래된순)"
+  },
+  "pubs.sort.title": {
+    "message": "제목순"
+  },
+  "pubs.results.matching": {
+    "message": "\"{query}\" 검색 결과 {n}편"
+  },
+  "pubs.results": {
+    "message": "논문 {n}편"
+  },
+  "pubs.empty": {
+    "message": "조건에 맞는 논문이 없습니다."
+  },
+  "pubs.featured": {
+    "message": "추천"
+  },
+  "pubs.corresponding": {
+    "message": "*교신저자"
+  },
+  "pubs.coFirst": {
+    "message": "†공동 제1저자"
+  },
+  "breadcrumb.ariaLabel": {
+    "message": "경로"
+  },
+  "breadcrumb.home": {
+    "message": "홈"
+  },
+  "breadcrumb.updates": {
+    "message": "소식"
+  },
+  "breadcrumb.page": {
+    "message": "{page}페이지"
+  },
+  "updates.kicker": {
+    "message": "연구실 소식"
+  },
+  "updates.title": {
+    "message": "소식"
+  },
+  "updates.lead": {
+    "message": "연구 성과, 공지, 그리고 연구실의 주요 소식."
+  },
+  "breadcrumb.tags": {
+    "message": "태그"
+  },
+  "courses.about.meta.title": {
+    "message": "소개"
+  },
+  "courses.about.meta.description": {
+    "message": "강의와 교육 철학 소개"
+  },
+  "courses.about.kicker": {
+    "message": "교육 철학"
+  },
+  "courses.about.title": {
+    "message": "소개"
+  },
+  "courses.about.lead": {
+    "message": "학생들이 실제 문제를 함께 해결하며 역량을 키우는, 실용적이고 사람 중심적인 배움을 지향합니다."
+  },
+  "courses.about.believe": {
+    "message": "우리가 믿는 것"
+  },
+  "courses.about.believe.intro": {
+    "message": "고(故) Yong-Han Lee 교수(1965–2017)를 기리며, 모든 강의를 이끄는 가치를 담았습니다."
+  },
+  "courses.about.motto": {
+    "message": "모토"
+  },
+  "courses.about.motto.research": {
+    "message": "연구에 대한 열정"
+  },
+  "courses.about.motto.people": {
+    "message": "사람에 대한 배려"
+  },
+  "courses.about.motto.colleagues": {
+    "message": "동료와의 협력"
+  },
+  "courses.about.motto.balance": {
+    "message": "삶의 균형"
+  },
+  "courses.about.community": {
+    "message": "함께하는 커뮤니티와 파트너"
+  },
+  "courses.about.footnote": {
+    "message": "고(故) Yong-Han Lee 교수(1965–2017)를 기리며"
+  },
+  "courses.stats.years.label": {
+    "message": "강의 경력"
+  },
+  "courses.stats.years.detail": {
+    "message": "여러 대학에서 강의."
+  },
+  "courses.stats.offerings.label": {
+    "message": "개설 강의"
+  },
+  "courses.stats.offerings.detail": {
+    "message": "2019년부터 현재까지, 학기별로."
+  },
+  "courses.stats.students.label": {
+    "message": "수강생"
+  },
+  "courses.stats.students.detail": {
+    "message": "학부 및 대학원 강의."
+  },
+  "courses.stats.rating.label": {
+    "message": "평균 강의 평가"
+  },
+  "courses.stats.rating.detail": {
+    "message": "공식 강의 평가 기준, 5.0 만점."
+  },
+  "courses.why.pillar1.title": {
+    "message": "산업 중심의 배움"
+  },
+  "courses.why.pillar1.description": {
+    "message": "산업 현장을 염두에 두고 설계한 커리큘럼으로, 실제 현업에서 쓰는 도구와 방법을 배웁니다."
+  },
+  "courses.why.pillar2.title": {
+    "message": "프로젝트 기반 학습"
+  },
+  "courses.why.pillar2.description": {
+    "message": "모든 강의는 실제로 무언가를 만드는 데 집중합니다 — 완성된 애플리케이션, 실제 디버깅, 전체 개발 주기까지."
+  },
+  "courses.why.pillar3.title": {
+    "message": "단계적인 성장"
+  },
+  "courses.why.pillar3.description": {
+    "message": "기초부터 심화까지, 명확한 목표 단계를 따라 각 모듈이 앞선 내용 위에 쌓이도록 구성했습니다."
+  },
+  "courses.hero.title": {
+    "message": "배움의 여정을 시작하세요."
+  },
+  "courses.hero.subtitle": {
+    "message": "프로그래밍, 데이터, 머신러닝 강의 — 직접 만들며 배우고, 함께 성장합니다."
+  },
+  "courses.hero.explore": {
+    "message": "강의 둘러보기"
+  },
+  "courses.hero.reviews": {
+    "message": "수강생 후기 보기"
+  },
+  "courses.stats.title": {
+    "message": "숫자로 보는 강의."
+  },
+  "courses.stats.footnote": {
+    "message": "2019년 이후의 공식 강의 평가와 수강 데이터를 바탕으로 계산했습니다."
+  },
+  "courses.why.kicker": {
+    "message": "교육 방식"
+  },
+  "courses.why.title": {
+    "message": "이곳에서 배워야 하는 이유."
+  },
+  "courses.why.subtitle": {
+    "message": "실용적이고, 직접 해 보며, 실제 업무로 이어지는 배움."
+  },
+  "courses.cta.kicker": {
+    "message": "시작하기"
+  },
+  "courses.cta.title": {
+    "message": "배움을 시작할 준비가 되셨나요?"
+  },
+  "courses.cta.description": {
+    "message": "전체 강의 목록을 살펴보거나, 학생들의 결과물을 보거나, 강의 운영 방식을 확인해 보세요."
+  },
+  "courses.cta.catalog": {
+    "message": "강의 목록 보기"
+  },
+  "courses.cta.about": {
+    "message": "강의 운영 방식"
+  },
+  "courses.meta.title": {
+    "message": "강의"
+  },
+  "courses.meta.description": {
+    "message": "Muhammad Syafrudin 교수의 프로그래밍, 데이터, 머신러닝 강의."
+  },
+  "reviews.sort.featured": {
+    "message": "추천순"
+  },
+  "reviews.sort.longest": {
+    "message": "긴 후기순"
+  },
+  "reviews.sort.shortest": {
+    "message": "짧은 후기순"
+  },
+  "reviews.meta.title": {
+    "message": "수강 후기"
+  },
+  "reviews.meta.description": {
+    "message": "Muhammad Syafrudin 교수 강의 수강생 후기"
+  },
+  "reviews.kicker": {
+    "message": "수강생의 목소리"
+  },
+  "reviews.title": {
+    "message": "수강 후기"
+  },
+  "reviews.lead": {
+    "message": "실용적인 배움, 지도의 질, 강의의 영향에 초점을 맞춰 여러 학기의 수강생 피드백을 모았습니다."
+  },
+  "reviews.fact.total": {
+    "message": "전체 후기"
+  },
+  "reviews.fact.languages": {
+    "message": "한국어 / 영어"
+  },
+  "reviews.fact.mentions": {
+    "message": "프로젝트·실습 언급"
+  },
+  "reviews.search.label": {
+    "message": "검색"
+  },
+  "reviews.search.placeholder": {
+    "message": "예: 프로젝트, 실습, 피드백"
+  },
+  "reviews.search.ariaLabel": {
+    "message": "후기 검색"
+  },
+  "reviews.filter.ariaLabel": {
+    "message": "언어별 보기"
+  },
+  "reviews.filter.all": {
+    "message": "전체"
+  },
+  "reviews.lang.ko": {
+    "message": "한국어"
+  },
+  "reviews.lang.en": {
+    "message": "영어"
+  },
+  "reviews.sort.label": {
+    "message": "정렬"
+  },
+  "reviews.results": {
+    "message": "전체 {total}개 중 {shown}개 후기 표시"
+  },
+  "showcase.sort.featured": {
+    "message": "추천순"
+  },
+  "showcase.sort.newest": {
+    "message": "최신순"
+  },
+  "showcase.sort.az": {
+    "message": "가나다순"
+  },
+  "showcase.meta.title": {
+    "message": "프로젝트 쇼케이스"
+  },
+  "showcase.meta.description": {
+    "message": "Muhammad Syafrudin 교수 강의의 학생 프로젝트 쇼케이스"
+  },
+  "showcase.kicker": {
+    "message": "학생 프로젝트"
+  },
+  "showcase.title": {
+    "message": "쇼케이스"
+  },
+  "showcase.lead": {
+    "message": "웹 앱과 대시보드부터 딥러닝 모델과 데이터 파이프라인까지, 여러 학기 동안 학생들이 만든 우수 프로젝트를 둘러보세요."
+  },
+  "showcase.fact.projects": {
+    "message": "전체 프로젝트"
+  },
+  "showcase.fact.courses": {
+    "message": "강의"
+  },
+  "showcase.fact.tools": {
+    "message": "도구 및 기술"
+  },
+  "showcase.search.placeholder": {
+    "message": "예: 대시보드, React, 딥러닝"
+  },
+  "showcase.search.ariaLabel": {
+    "message": "프로젝트 검색"
+  },
+  "showcase.filter.course": {
+    "message": "강의"
+  },
+  "showcase.filter.all": {
+    "message": "전체 강의"
+  },
+  "showcase.results": {
+    "message": "전체 {total}개 중 {shown}개 프로젝트 표시"
+  },
+  "showcase.screenshotAlt": {
+    "message": "{title} 스크린샷"
+  },
+  "showcase.screenshotSoon": {
+    "message": "스크린샷 준비 중"
+  },
+  "showcase.featured": {
+    "message": "추천"
+  },
+  "reviews.carousel.goTo": {
+    "message": "{n}번째 후기로 이동"
+  },
+  "reviews.carousel.kicker": {
+    "message": "수강생의 목소리"
+  },
+  "reviews.carousel.title": {
+    "message": "수강생들의 이야기."
+  },
+  "reviews.carousel.lead": {
+    "message": "여러 학기에 걸친 수강생들의 생생한 피드백."
+  },
+  "reviews.carousel.prev": {
+    "message": "이전 후기"
+  },
+  "reviews.carousel.ariaLabel": {
+    "message": "수강생 후기"
+  },
+  "reviews.carousel.next": {
+    "message": "다음 후기"
+  },
+  "reviews.carousel.pauseAria": {
+    "message": "후기 자동 넘김 일시정지"
+  },
+  "reviews.carousel.resumeAria": {
+    "message": "후기 자동 넘김 다시 시작"
+  },
+  "reviews.carousel.pause": {
+    "message": "일시정지"
+  },
+  "reviews.carousel.play": {
+    "message": "재생"
+  },
+  "notFound.eyebrow": {
+    "message": "404 · 길을 잃었어요"
+  },
+  "notFound.title": {
+    "message": "이 페이지는 지도 밖으로 떠내려갔어요."
+  },
+  "notFound.lead": {
+    "message": "주소가 바뀌었거나, 따라온 불꽃이 다른 곳으로 옮겨 갔을 수 있어요."
+  },
+  "notFound.home": {
+    "message": "홈으로 돌아가기"
+  },
+  "notFound.updates": {
+    "message": "소식 둘러보기"
+  },
+  "intro.gate.eyebrow": {
+    "message": "인트로 영상"
+  },
+  "intro.gate.note": {
+    "message": "약 20초 · 소리를 켜고 보시길 권합니다 — 마우스를 움직여 빛을 만져 보세요. (영어 음성)"
+  },
+  "intro.gate.enter": {
+    "message": "시작하기"
+  },
+  "intro.gate.skip": {
+    "message": "인트로 건너뛰기 →"
+  },
+  "intro.skip": {
+    "message": "인트로 건너뛰기"
+  },
+  "intro.scrub": {
+    "message": "인트로 탐색"
+  }
+}

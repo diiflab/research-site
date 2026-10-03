@@ -1,4 +1,5 @@
 import React, {useEffect, useRef, useState} from 'react';
+import Translate from '@docusaurus/Translate';
 import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import styles from './styles.module.css';
@@ -96,17 +97,19 @@ export default function NotFoundContent({className}) {
           404
         </span>
         <div className={styles.content}>
-          <p className={styles.eyebrow}>404 · Off the map</p>
-          <h1 className={styles.title}>This page drifted off the map.</h1>
+          <p className={styles.eyebrow}><Translate id="notFound.eyebrow">404 · Off the map</Translate></p>
+          <h1 className={styles.title}><Translate id="notFound.title">This page drifted off the map.</Translate></h1>
           <p className={styles.lead}>
-            The address may have changed, or the spark you followed has moved on.
+            <Translate id="notFound.lead">
+              The address may have changed, or the spark you followed has moved on.
+            </Translate>
           </p>
           <div className={styles.actions}>
             <Link className="button button--secondary" to="/">
-              Back to home
+              <Translate id="notFound.home">Back to home</Translate>
             </Link>
             <Link className="button white-btn" to="/updates">
-              Explore updates
+              <Translate id="notFound.updates">Explore updates</Translate>
             </Link>
           </div>
         </div>

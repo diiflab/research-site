@@ -17,6 +17,7 @@ const OUT_FILE = path.join(ROOT, 'src', 'data', 'collaborations.json');
 const MAILTO = 'hello@aintlab.com';
 
 const HOME = { name: 'AINTLab — Seoul, Korea', lat: 37.5503, lng: 126.9971, countryCode: 'KR' };
+const KO_REGION_NAMES = new Intl.DisplayNames(['ko'], { type: 'region' });
 
 // Country centroids (approximate visual anchors, not political statements).
 // Extend this table if the run reports unmapped country codes.
@@ -204,6 +205,9 @@ async function main() {
     .map(([code, entry]) => ({
       code,
       name: COUNTRIES[code].name,
+      // Korean display name for the /ko/ site, baked in at generation time so
+      // server and browser render identical text (no runtime ICU differences).
+      nameKo: KO_REGION_NAMES.of(code),
       lat: COUNTRIES[code].lat,
       lng: COUNTRIES[code].lng,
       works: entry.works.size,

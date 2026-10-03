@@ -5,7 +5,7 @@ tags: ['team', 'beasiswa', 'LPDP', 'Indonesia']
 published: true
 ---
 
-<img src="/updates/aidpt.png"/><br/>
+<img src="/updates/aidpt.webp"/><br/>
 
 Kabar Baik bagi beasiswa LPDP hunters!!!!
 

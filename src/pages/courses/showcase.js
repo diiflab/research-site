@@ -1,13 +1,14 @@
 import React, { useMemo, useState } from 'react';
+import Translate, {translate} from '@docusaurus/Translate';
 import Layout from '@theme/Layout';
 import showcaseProjects from '@site/src/data/courses/showcaseProjects';
 import styles from './showcase.module.css';
 
-const SORT_OPTIONS = {
-  featured: 'Featured',
-  newest: 'Newest First',
-  az: 'A → Z',
-};
+const getSortOptions = () => ({
+  featured: translate({id: 'showcase.sort.featured', message: 'Featured'}),
+  newest: translate({id: 'showcase.sort.newest', message: 'Newest First'}),
+  az: translate({id: 'showcase.sort.az', message: 'A → Z'}),
+});
 
 export default function ShowcasePage() {
   const [courseFilter, setCourseFilter] = useState('all');
@@ -52,35 +53,36 @@ export default function ShowcasePage() {
 
   return (
     <Layout
-      title="Showcase"
-      description="Student project showcase from courses taught by Muhammad Syafrudin">
+      title={translate({id: 'showcase.meta.title', message: 'Showcase'})}
+      description={translate({id: 'showcase.meta.description', message: 'Student project showcase from courses taught by Muhammad Syafrudin'})}>
       {/* container--fluid + page-shell matches the JSX-page pattern used by
           networks.jsx, so the courses pages get the same gutters as MDX pages. */}
       <main className="container container--fluid margin-vert--lg">
         <section className="section-with-bg-logo">
           <div className="page-shell">
           <div className="page-header">
-            <p className="page-kicker">Student Projects</p>
-            <h1>Showcase</h1>
+            <p className="page-kicker"><Translate id="showcase.kicker">Student Projects</Translate></p>
+            <h1><Translate id="showcase.title">Showcase</Translate></h1>
             <p className="page-lead">
               <em>
-                Explore outstanding projects built by students across semesters — from web
-                apps and dashboards to deep learning models and data pipelines.
+                <Translate id="showcase.lead">
+                  Explore outstanding projects built by students across semesters — from web apps and dashboards to deep learning models and data pipelines.
+                </Translate>
               </em>
             </p>
           </div>
 
           <div className="page-quickfacts">
             <div className="page-quickfact reveal">
-              <p className="page-quickfact-label">Total Projects</p>
+              <p className="page-quickfact-label"><Translate id="showcase.fact.projects">Total Projects</Translate></p>
               <p className="page-quickfact-value">{stats.totalProjects}</p>
             </div>
             <div className="page-quickfact reveal">
-              <p className="page-quickfact-label">Courses</p>
+              <p className="page-quickfact-label"><Translate id="showcase.fact.courses">Courses</Translate></p>
               <p className="page-quickfact-value">{stats.totalCourses}</p>
             </div>
             <div className="page-quickfact reveal">
-              <p className="page-quickfact-label">Tools &amp; Technologies</p>
+              <p className="page-quickfact-label"><Translate id="showcase.fact.tools">Tools & Technologies</Translate></p>
               <p className="page-quickfact-value">{stats.totalTools}</p>
             </div>
           </div>
@@ -88,22 +90,22 @@ export default function ShowcasePage() {
           <div className="page-content">
             <div className={styles.controls}>
               <label className={styles.searchWrap}>
-                <span>Search</span>
+                <span><Translate id="reviews.search.label">Search</Translate></span>
                 <input
                   type="search"
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  placeholder="Try: dashboard, React, deep learning"
-                  aria-label="Search projects"
+                  placeholder={translate({id: 'showcase.search.placeholder', message: 'Try: dashboard, React, deep learning'})}
+                  aria-label={translate({id: 'showcase.search.ariaLabel', message: 'Search projects'})}
                 />
               </label>
 
               <label className={styles.courseWrap}>
-                <span>Course</span>
+                <span><Translate id="showcase.filter.course">Course</Translate></span>
                 <select
                   value={courseFilter}
                   onChange={(e) => setCourseFilter(e.target.value)}>
-                  <option value="all">All Courses</option>
+                  <option value="all">{translate({id: 'showcase.filter.all', message: 'All Courses'})}</option>
                   {courses.map((course) => (
                     <option key={course} value={course}>
                       {course}
@@ -113,9 +115,9 @@ export default function ShowcasePage() {
               </label>
 
               <label className={styles.sortWrap}>
-                <span>Sort</span>
+                <span><Translate id="reviews.sort.label">Sort</Translate></span>
                 <select value={sortBy} onChange={(e) => setSortBy(e.target.value)}>
-                  {Object.entries(SORT_OPTIONS).map(([value, label]) => (
+                  {Object.entries(getSortOptions()).map(([value, label]) => (
                     <option key={value} value={value}>
                       {label}
                     </option>
@@ -125,7 +127,7 @@ export default function ShowcasePage() {
             </div>
 
             <p className={styles.resultInfo}>
-              Showing {visibleProjects.length} of {showcaseProjects.length} projects.
+              {translate({id: 'showcase.results', message: 'Showing {shown} of {total} projects.'}, {shown: visibleProjects.length, total: showcaseProjects.length})}
             </p>
 
             <div className={styles.projectGrid}>
@@ -134,7 +136,7 @@ export default function ShowcasePage() {
                   <div className={styles.screenshotWrap}>
                     <img
                       src={project.screenshot}
-                      alt={`${project.title} screenshot`}
+                      alt={translate({id: 'showcase.screenshotAlt', message: '{title} screenshot'}, {title: project.title})}
                       className={styles.screenshot}
                       loading="lazy"
                       onError={(e) => {
@@ -144,10 +146,10 @@ export default function ShowcasePage() {
                     />
                     <div className={styles.screenshotFallback} style={{ display: 'none' }}>
                       <span>📸</span>
-                      <p>Screenshot coming soon</p>
+                      <p><Translate id="showcase.screenshotSoon">Screenshot coming soon</Translate></p>
                     </div>
                     {project.featured && (
-                      <span className={styles.featuredBadge}>★ Featured</span>
+                      <span className={styles.featuredBadge}>★ <Translate id="showcase.featured">Featured</Translate></span>
                     )}
                   </div>
 

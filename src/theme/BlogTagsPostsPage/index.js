@@ -1,6 +1,6 @@
 import React from 'react';
 import clsx from 'clsx';
-import Translate from '@docusaurus/Translate';
+import Translate, {translate} from '@docusaurus/Translate';
 import {
   PageMetadata,
   HtmlClassNameProvider,
@@ -35,16 +35,16 @@ function BlogTagsPostsPageContent({tag, items, sidebar, listMetadata}) {
         <div className="row">
           <BlogSidebar sidebar={sidebar} />
           <main className={clsx('col', hasSidebar ? 'col--10' : 'col--12')}>
-            <nav className="page-breadcrumb" aria-label="Breadcrumb">
+            <nav className="page-breadcrumb" aria-label={translate({id: 'breadcrumb.ariaLabel', message: 'Breadcrumb'})}>
               <ol>
                 <li>
-                  <Link to="/">Home</Link>
+                  <Link to="/"><Translate id="breadcrumb.home">Home</Translate></Link>
                 </li>
                 <li>
-                  <Link to="/updates">Updates</Link>
+                  <Link to="/updates"><Translate id="breadcrumb.updates">Updates</Translate></Link>
                 </li>
                 <li>
-                  <Link to={tag.allTagsPath}>Tags</Link>
+                  <Link to={tag.allTagsPath}><Translate id="breadcrumb.tags">Tags</Translate></Link>
                 </li>
                 <li aria-current="page">{tag.label}</li>
               </ol>

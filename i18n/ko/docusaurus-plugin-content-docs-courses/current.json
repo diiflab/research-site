@@ -1,0 +1,78 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.coursesSidebar.category.Web Programming": {
+    "message": "웹 프로그래밍",
+    "description": "The label for category 'Web Programming' in sidebar 'coursesSidebar'"
+  },
+  "sidebar.coursesSidebar.category.Web Programming.link.generated-index.description": {
+    "message": "웹 프로그래밍(학수번호 006237)은 세종대학교 인공지능학과에서 개설된 3학점 학부 과목입니다.",
+    "description": "The generated-index page description for category 'Web Programming' in sidebar 'coursesSidebar'"
+  },
+  "sidebar.coursesSidebar.category.Linear Algebra": {
+    "message": "선형대수",
+    "description": "The label for category 'Linear Algebra' in sidebar 'coursesSidebar'"
+  },
+  "sidebar.coursesSidebar.category.Linear Algebra.link.generated-index.description": {
+    "message": "선형대수(학수번호 001725)는 세종대학교에서 개설된 3학점 학부 과목입니다.",
+    "description": "The generated-index page description for category 'Linear Algebra' in sidebar 'coursesSidebar'"
+  },
+  "sidebar.coursesSidebar.category.Linear Algebra Programming": {
+    "message": "선형대수 및 프로그래밍",
+    "description": "The label for category 'Linear Algebra Programming' in sidebar 'coursesSidebar'"
+  },
+  "sidebar.coursesSidebar.category.Linear Algebra Programming.link.generated-index.description": {
+    "message": "선형대수 및 프로그래밍(학수번호 009961)은 세종대학교 인공지능학과에서 개설된 3학점 학부 과목입니다.",
+    "description": "The generated-index page description for category 'Linear Algebra Programming' in sidebar 'coursesSidebar'"
+  },
+  "sidebar.coursesSidebar.category.Topics in Machine Learning": {
+    "message": "머신러닝 특론",
+    "description": "The label for category 'Topics in Machine Learning' in sidebar 'coursesSidebar'"
+  },
+  "sidebar.coursesSidebar.category.Topics in Machine Learning.link.generated-index.description": {
+    "message": "머신러닝 특론(학수번호 300195)은 세종대학교 인공지능학과에서 개설된 3학점 대학원 과목입니다.",
+    "description": "The generated-index page description for category 'Topics in Machine Learning' in sidebar 'coursesSidebar'"
+  },
+  "sidebar.coursesSidebar.category.Intro to Deep Learning": {
+    "message": "딥러닝 개론",
+    "description": "The label for category 'Intro to Deep Learning' in sidebar 'coursesSidebar'"
+  },
+  "sidebar.coursesSidebar.category.Intro to Deep Learning.link.generated-index.description": {
+    "message": "딥러닝 개론(학수번호 416695)은 세종대학교 인공지능학과에서 개설된 3학점 대학원 과목입니다.",
+    "description": "The generated-index page description for category 'Intro to Deep Learning' in sidebar 'coursesSidebar'"
+  },
+  "sidebar.coursesSidebar.category.Big Data Processing": {
+    "message": "빅데이터 처리",
+    "description": "The label for category 'Big Data Processing' in sidebar 'coursesSidebar'"
+  },
+  "sidebar.coursesSidebar.category.Big Data Processing.link.generated-index.description": {
+    "message": "빅데이터 처리(학수번호 011176)는 세종대학교에서 개설된 3학점 학부 과목입니다.",
+    "description": "The generated-index page description for category 'Big Data Processing' in sidebar 'coursesSidebar'"
+  },
+  "sidebar.coursesSidebar.category.Intro to Big Data": {
+    "message": "빅데이터 개론",
+    "description": "The label for category 'Intro to Big Data' in sidebar 'coursesSidebar'"
+  },
+  "sidebar.coursesSidebar.category.Intro to Big Data.link.generated-index.description": {
+    "message": "빅데이터 개론(학수번호 011113)은 세종대학교 인공지능학과에서 개설된 3학점 학부 과목입니다.",
+    "description": "The generated-index page description for category 'Intro to Big Data' in sidebar 'coursesSidebar'"
+  },
+  "sidebar.coursesSidebar.category.Industrial Programming": {
+    "message": "산업 프로그래밍",
+    "description": "The label for category 'Industrial Programming' in sidebar 'coursesSidebar'"
+  },
+  "sidebar.coursesSidebar.category.Industrial Programming.link.generated-index.description": {
+    "message": "산업 프로그래밍(학수번호 ISE2012)은 동국대학교 산업시스템공학과에서 개설된 3학점 학부 과목입니다.",
+    "description": "The generated-index page description for category 'Industrial Programming' in sidebar 'coursesSidebar'"
+  },
+  "sidebar.coursesSidebar.category.Database Design Analysis": {
+    "message": "데이터베이스 설계 및 분석",
+    "description": "The label for category 'Database Design Analysis' in sidebar 'coursesSidebar'"
+  },
+  "sidebar.coursesSidebar.category.Database Design Analysis.link.generated-index.description": {
+    "message": "데이터베이스 설계 및 분석(학수번호 ISE4028)은 동국대학교 산업시스템공학과에서 개설된 3학점 학부 과목입니다.",
+    "description": "The generated-index page description for category 'Database Design Analysis' in sidebar 'coursesSidebar'"
+  }
+}

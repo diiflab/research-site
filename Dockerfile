@@ -22,7 +22,8 @@ USER node
 # Expose port 3000
 EXPOSE 3000
 # Start the app in debug mode so we can attach the debugger
-CMD ["npm", "start"]
+# (start:lan binds 0.0.0.0 so the port is reachable from outside the container)
+CMD ["npm", "run", "start:lan"]
 
 ## PRODUCTION isn't working yet...
 ## Production ##################################################################

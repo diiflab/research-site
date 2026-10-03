@@ -1,4 +1,5 @@
 import React from 'react';
+import Translate, {translate} from '@docusaurus/Translate';
 import clsx from 'clsx';
 import {
   HtmlClassNameProvider,
@@ -39,27 +40,30 @@ function BlogListPageContent({metadata, items, sidebar}) {
       <BlogSidebar sidebar={sidebar} />
       <main className={clsx('col', hasSidebar ? 'col--10' : 'col--12')}>
       {isPaginatedListPage && (
-        <nav className="page-breadcrumb" aria-label="Breadcrumb">
+        <nav className="page-breadcrumb" aria-label={translate({id: 'breadcrumb.ariaLabel', message: 'Breadcrumb'})}>
           <ol>
             <li>
-              <Link to="/">Home</Link>
+              <Link to="/"><Translate id="breadcrumb.home">Home</Translate></Link>
             </li>
             <li>
-              <Link to="/updates">Updates</Link>
+              <Link to="/updates"><Translate id="breadcrumb.updates">Updates</Translate></Link>
             </li>
-            <li aria-current="page">Page {metadata.page}</li>
+            <li aria-current="page">
+              <Translate id="breadcrumb.page" values={{page: metadata.page}}>{'Page {page}'}</Translate>
+            </li>
           </ol>
         </nav>
       )}
       {!isPaginatedListPage && (
         <div className="page-shell">
           <div className="page-header">
-            <p className="page-kicker">Lab News</p>
-            <h1>Updates</h1>
+            <p className="page-kicker"><Translate id="updates.kicker">Lab News</Translate></p>
+            <h1><Translate id="updates.title">Updates</Translate></h1>
             <p className="page-lead">
               <em>
-                Research outputs, announcements, and highlights from
-                our team.
+                <Translate id="updates.lead">
+                  Research outputs, announcements, and highlights from our team.
+                </Translate>
               </em>
             </p>
           </div>

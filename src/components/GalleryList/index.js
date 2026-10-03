@@ -1,10 +1,22 @@
 import React, {useMemo, useState} from 'react';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import Translate, {translate} from '@docusaurus/Translate';
 import {PhotoProvider, PhotoView} from 'react-photo-view';
 import 'react-photo-view/dist/react-photo-view.css';
 import galleryData from '@site/src/data/gallery.json';
 import styles from './styles.module.css';
 
+// Display label for a gallery category value; unknown values pass through.
+const categoryLabel = (category) => ({
+  general: translate({id: 'gallery.category.general', message: 'General'}),
+  community: translate({id: 'gallery.category.community', message: 'community'}),
+  book: translate({id: 'gallery.category.book', message: 'book'}),
+  research: translate({id: 'gallery.category.research', message: 'research'}),
+  award: translate({id: 'gallery.category.award', message: 'award'}),
+}[category] || category);
+
 export default function GalleryList() {
+  const {i18n} = useDocusaurusContext();
   const [searchTerm, setSearchTerm] = useState('');
   const [categoryFilter, setCategoryFilter] = useState('all');
   const [sortBy, setSortBy] = useState('featured');
@@ -14,8 +26,10 @@ export default function GalleryList() {
       galleryData.map((item, index) => ({
         id: `${item.year}-${index + 1}`,
         ...item,
+        // Per-locale overrides (gallery.json "ko": {title, description, date}).
+        ...(item[i18n.currentLocale] || {}),
       })),
-    [],
+    [i18n.currentLocale],
   );
 
   const categories = useMemo(() => {
@@ -84,15 +98,15 @@ export default function GalleryList() {
     <div className={styles.galleryShell}>
       <div className={styles.galleryMetrics} style={{ display: 'none' }}>
         <div className={`${styles.metricCard} reveal`}>
-          <p className={styles.metricLabel}>Total Items</p>
+          <p className={styles.metricLabel}><Translate id="gallery.metric.total">Total Items</Translate></p>
           <p className={styles.metricValue}>{stats.total}</p>
         </div>
         <div className={`${styles.metricCard} reveal`}>
-          <p className={styles.metricLabel}>Year Coverage</p>
+          <p className={styles.metricLabel}><Translate id="gallery.metric.years">Year Coverage</Translate></p>
           <p className={styles.metricValue}>{stats.years}</p>
         </div>
         <div className={`${styles.metricCard} reveal`}>
-          <p className={styles.metricLabel}>Latest Year</p>
+          <p className={styles.metricLabel}><Translate id="gallery.metric.latest">Latest Year</Translate></p>
           <p className={styles.metricValue}>{stats.latest}</p>
         </div>
       </div>
@@ -105,51 +119,54 @@ export default function GalleryList() {
             className={styles.searchInput}
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            placeholder="Search gallery by title, description, or year..."
-            aria-label="Search gallery"
+            placeholder={translate({id: 'gallery.search.placeholder', message: 'Search gallery by title, description, or year...'})}
+            aria-label={translate({id: 'gallery.search.ariaLabel', message: 'Search gallery'})}
           />
         </div>
 
         {/* Filter and Sort */}
         <div className={styles.filterSort}>
           <div className={styles.filterGroup}>
-            <label>Category:</label>
+            <label><Translate id="gallery.filter.category">Category:</Translate></label>
             <select
               className={styles.select}
               value={categoryFilter}
               onChange={(e) => setCategoryFilter(e.target.value)}
-              aria-label="Filter gallery by category"
+              aria-label={translate({id: 'gallery.filter.ariaLabel', message: 'Filter gallery by category'})}
             >
               {categories.map((category) => (
                 <option key={category} value={category}>
                   {category === 'all'
-                    ? `All (${categoryStats.all || 0})`
-                    : `${category} (${categoryStats[category] || 0})`}
+                    ? translate({id: 'gallery.filter.all', message: 'All ({n})'}, {n: categoryStats.all || 0})
+                    : `${categoryLabel(category)} (${categoryStats[category] || 0})`}
                 </option>
               ))}
             </select>
           </div>
 
           <div className={styles.filterGroup}>
-            <label>Sort by:</label>
+            <label><Translate id="gallery.sort.label">Sort by:</Translate></label>
             <select
               className={styles.select}
               value={sortBy}
               onChange={(e) => setSortBy(e.target.value)}
-              aria-label="Sort gallery"
+              aria-label={translate({id: 'gallery.sort.ariaLabel', message: 'Sort gallery'})}
             >
-              <option value="featured">Featured First</option>
-              <option value="year-desc">Year (Newest)</option>
-              <option value="year-asc">Year (Oldest)</option>
-              <option value="title-asc">Title (A-Z)</option>
+              <option value="featured">{translate({id: 'gallery.sort.featured', message: 'Featured First'})}</option>
+              <option value="year-desc">{translate({id: 'gallery.sort.yearDesc', message: 'Year (Newest)'})}</option>
+              <option value="year-asc">{translate({id: 'gallery.sort.yearAsc', message: 'Year (Oldest)'})}</option>
+              <option value="title-asc">{translate({id: 'gallery.sort.titleAsc', message: 'Title (A-Z)'})}</option>
             </select>
           </div>
         </div>
       </div>
 
       <p className={styles.resultSummary}>
-        Showing <strong>{displayedItems.length}</strong> of <strong>{stats.total}</strong> item
-        {stats.total !== 1 ? 's' : ''}.
+        <Translate
+          id="gallery.results"
+          values={{shown: <strong>{displayedItems.length}</strong>, total: <strong>{stats.total}</strong>}}>
+          {'Showing {shown} of {total} items.'}
+        </Translate>
       </p>
 
       <PhotoProvider
@@ -164,8 +181,8 @@ export default function GalleryList() {
               <h3>{currentItem.title}</h3>
               <p>{currentItem.description}</p>
               <p className={styles.lightboxMeta}>
-                {currentItem.category || 'General'} - {currentItem.year} - {currentItem.date}
-                {currentItem.featured ? ' - Featured' : ''}
+                {categoryLabel(currentItem.category || 'general')} - {currentItem.year} - {currentItem.date}
+                {currentItem.featured ? ` - ${translate({id: 'gallery.featured', message: 'Featured'})}` : ''}
               </p>
             </div>
           );
@@ -181,7 +198,7 @@ export default function GalleryList() {
                 <button
                   type="button"
                   className={styles.imageButton}
-                  aria-label={`Open image: ${item.title}`}
+                  aria-label={translate({id: 'gallery.openImage', message: 'Open image: {title}'}, {title: item.title})}
                 >
                   <div className={styles.imageWrap}>
                     <img src={item.image} alt={item.title} loading="lazy" />
@@ -191,8 +208,8 @@ export default function GalleryList() {
                     <h3>{item.title}</h3>
                     <p>{item.description}</p>
                     <p className={styles.overlayMeta}>
-                      {item.category || 'General'} · {item.year} · {item.date}
-                      {item.featured ? ' · Featured' : ''}
+                      {categoryLabel(item.category || 'general')} · {item.year} · {item.date}
+                      {item.featured ? ` · ${translate({id: 'gallery.featured', message: 'Featured'})}` : ''}
                     </p>
                   </div>
                 </button>

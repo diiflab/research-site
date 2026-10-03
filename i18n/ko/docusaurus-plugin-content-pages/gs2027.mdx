@@ -1,0 +1,60 @@
+---
+title: AIN Lab 대학원생 모집
+description: 국민대학교 AIN Lab 2027년 봄학기 대학원생 모집 안내 — 지원 일정과 모집 공고.
+# Korean translation of src/pages/gs2027.mdx (keep OPEN/CLOSE in sync)
+---
+
+import Countdown from '@site/src/components/Countdown';
+import PdfViewer from '@site/src/components/PdfViewer';
+import TimeWindow from '@site/src/components/TimeWindow';
+
+export const OPEN = '2026-10-08T10:00:00+09:00';
+export const CLOSE = '2026-10-12T23:59:59+09:00';
+
+<section className="section-with-bg-logo">
+<div className="page-shell">
+<div className="page-header">
+<p className="page-kicker">대학원생 모집 · 2027년 봄학기</p>
+<h1>AIN Lab 대학원생 모집</h1>
+<div className="page-lead">
+📢 국민대학교(서울) AIN Lab에서 대학원생을 모집합니다!
+
+이번 모집은 사전 심사이며, 선발 여부는 지원자와 연구실의 적합도에 따라 결정됩니다. 자세한 내용은 모집 공고를 확인해 주세요.
+
+<em>
+지원서 접수는 10월 8일 오전 10시(KST)에 시작됩니다. 접수 기간이 시작될 때까지 기다려 주세요. 모든 시간은 한국 표준시(KST) 기준입니다.
+</em>
+</div>
+
+<Countdown
+  target={OPEN}
+  end={CLOSE}
+  endLabel="접수 마감까지"
+/>
+</div>
+
+<div className="page-content">
+
+<TimeWindow start={OPEN} end={CLOSE}>
+  <p style={{ textAlign: "center", margin: "1.5rem 0" }}>
+    <a
+      className="button button--primary button--lg"
+      href="https://apply.ain.my.id"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      새 탭에서 지원서 열기 ↗
+    </a>
+  </p>
+</TimeWindow>
+
+<PdfViewer
+  src="/pdfs/Call_for_applications_Graduate positions at AIN Lab Spring 2027.pdf"
+  title="모집 공고: AIN Lab 2027년 봄학기 대학원생 모집"
+  downloadName="Call_for_applications_AIN_Lab_Spring_2027.pdf"
+  label="모집 공고"
+/>
+
+</div>
+</div>
+</section>

@@ -12,6 +12,54 @@ const rootDir = path.join(__dirname, '..');
 const packageJsonPath = path.join(rootDir, 'package.json');
 const packageLockPath = path.join(rootDir, 'package-lock.json');
 const outputPath = path.join(rootDir, 'src', 'pages', 'credits.mdx');
+// Korean copy for the /ko/ site (Docusaurus serves i18n/<locale>/... pages
+// in place of the English ones). Same data, translated chrome.
+const outputPathKo = path.join(rootDir, 'i18n', 'ko', 'docusaurus-plugin-content-pages', 'credits.mdx');
+
+const STRINGS = {
+  en: {
+    title: 'Credits',
+    description: 'Gratitude and open-source acknowledgements for this website.',
+    kicker: 'Gratitude',
+    heading: 'Credits and Acknowledgements',
+    lead: 'With thanks to the open-source community that helps power this website.',
+    intro: 'Thank you to every maintainer, reviewer, and contributor behind the libraries used in this website.',
+    gratitude: 'Gratitude',
+    research: 'Research and collaboration',
+    communities: 'Open-source communities',
+    runtime: 'Runtime dependencies',
+    tooling: 'Build and tooling dependencies',
+    transitive: 'Transitive dependencies (unique packages)',
+    viewTransitive: (n) => `View full transitive dependency list (${n})`,
+    updated: (date) => `Updated as of ${date}.`,
+    packageCol: 'Package',
+    licenseCol: 'License',
+    countCol: 'Package count',
+    noPackages: '_No packages found._',
+    noLicenses: '_No package license data found._',
+  },
+  ko: {
+    title: '크레딧',
+    description: '이 웹사이트를 만든 분들과 오픈소스에 대한 감사의 말.',
+    kicker: '감사의 말',
+    heading: '크레딧 및 감사의 말',
+    lead: '이 웹사이트를 움직이는 오픈소스 커뮤니티에 감사드립니다.',
+    intro: '이 웹사이트에 사용된 라이브러리를 만들고, 검토하고, 기여해 주신 모든 분들께 감사드립니다.',
+    gratitude: '감사의 말',
+    research: '연구 및 협력',
+    communities: '오픈소스 커뮤니티',
+    runtime: '런타임 의존성',
+    tooling: '빌드 및 도구 의존성',
+    transitive: '간접 의존성 (고유 패키지)',
+    viewTransitive: (n) => `전체 간접 의존성 목록 보기 (${n})`,
+    updated: (date) => `${date} 기준으로 업데이트되었습니다.`,
+    packageCol: '패키지',
+    licenseCol: '라이선스',
+    countCol: '패키지 수',
+    noPackages: '_패키지를 찾을 수 없습니다._',
+    noLicenses: '_패키지 라이선스 데이터가 없습니다._',
+  },
+};
 const gratitudeConfigPath = path.join(rootDir, 'src', 'data', 'gratitude.json');
 
 const DEFAULT_GRATITUDE = {
@@ -41,15 +89,15 @@ function escapeCell(value) {
     .trim();
 }
 
-function makeMarkdownTable(rows) {
+function makeMarkdownTable(rows, t = STRINGS.en) {
   if (!rows.length) {
-    return '_No packages found._';
+    return t.noPackages;
   }
 
   // Version and npm source columns are deliberately omitted: publishing exact
   // dependency versions makes it trivial to match the site against known CVEs
   // for those versions, so the credits page lists only package name + license.
-  const header = '| Package | License |';
+  const header = `| ${t.packageCol} | ${t.licenseCol} |`;
   const separator = '| --- | --- |';
   const body = rows
     .map((row) => {
@@ -62,9 +110,9 @@ function makeMarkdownTable(rows) {
   return [header, separator, body].join('\n');
 }
 
-function makeLicenseSummaryTable(rows) {
+function makeLicenseSummaryTable(rows, t = STRINGS.en) {
   if (!rows.length) {
-    return '_No package license data found._';
+    return t.noLicenses;
   }
 
   const grouped = rows.reduce((acc, row) => {
@@ -80,7 +128,7 @@ function makeLicenseSummaryTable(rows) {
     return a[0].localeCompare(b[0]);
   });
 
-  const header = '| License | Package count |';
+  const header = `| ${t.licenseCol} | ${t.countCol} |`;
   const separator = '| --- | ---: |';
   const body = sorted
     .map(([license, count]) => `| ${escapeCell(license)} | ${count} |`)
@@ -239,7 +287,15 @@ function readGratitudeConfig() {
     ? config.communities
     : DEFAULT_GRATITUDE.communities;
 
-  return { collaborators, communities };
+  // Optional per-locale override: { "ko": { collaborators, communities } }.
+  const ko = config.ko && typeof config.ko === 'object'
+    ? {
+      collaborators: Array.isArray(config.ko.collaborators) && config.ko.collaborators.length ? config.ko.collaborators : collaborators,
+      communities: Array.isArray(config.ko.communities) && config.ko.communities.length ? config.ko.communities : communities,
+    }
+    : { collaborators, communities };
+
+  return { collaborators, communities, ko };
 }
 
 function toBullets(items) {
@@ -254,12 +310,12 @@ function buildPage({
   transitiveDeps,
   projectLicense,
   gratitude,
-}) {
-  const runtimeTable = makeMarkdownTable(deps);
-  const toolingTable = makeMarkdownTable(devDeps);
-  const transitiveTable = makeMarkdownTable(transitiveDeps);
+}, t = STRINGS.en) {
+  const runtimeTable = makeMarkdownTable(deps, t);
+  const toolingTable = makeMarkdownTable(devDeps, t);
+  const transitiveTable = makeMarkdownTable(transitiveDeps, t);
   const allPackages = [...deps, ...devDeps, ...transitiveDeps];
-  const licenseSummaryTable = makeLicenseSummaryTable(allPackages);
+  const licenseSummaryTable = makeLicenseSummaryTable(allPackages, t);
   const collaboratorsBullets = toBullets(gratitude.collaborators);
   const communitiesBullets = toBullets(gratitude.communities);
   const projectLicenseLabel = projectLicense
@@ -269,50 +325,50 @@ function buildPage({
     : 'the license described in the repository LICENSE file';
 
   return `---
-title: Credits
-description: Gratitude and open-source acknowledgements for this website.
+title: ${t.title}
+description: ${t.description}
 ---
 
 <section className="section-with-bg-logo">
 <div className="page-shell">
 <div className="page-header">
-<p className="page-kicker">Gratitude</p>
-<h1>Credits and Acknowledgements</h1>
-<p className="page-lead"><em>With thanks to the open-source community that helps power this website.</em></p>
+<p className="page-kicker">${t.kicker}</p>
+<h1>${t.heading}</h1>
+<p className="page-lead"><em>${t.lead}</em></p>
 </div>
 
 <div className="page-content">
 
-Thank you to every maintainer, reviewer, and contributor behind the libraries used in this website.
+${t.intro}
 
-## Gratitude
+## ${t.gratitude}
 
-### Research and collaboration
+### ${t.research}
 
 ${collaboratorsBullets}
 
-### Open-source communities
+### ${t.communities}
 
 ${communitiesBullets}
 
-## Runtime dependencies
+## ${t.runtime}
 
 ${runtimeTable}
 
-## Build and tooling dependencies
+## ${t.tooling}
 
 ${toolingTable}
 
-## Transitive dependencies (unique packages)
+## ${t.transitive}
 
 <details>
-  <summary>View full transitive dependency list (${transitiveDeps.length})</summary>
+  <summary>${t.viewTransitive(transitiveDeps.length)}</summary>
 
 ${transitiveTable}
 
 </details>
 
-Updated as of ${generatedOn}.
+${t.updated(generatedOn)}
 
 </div>
 </div>
@@ -332,7 +388,7 @@ function main() {
   const transitiveDeps = getTransitiveRows(lockData, directPackageNames);
   const gratitude = readGratitudeConfig();
 
-  const content = buildPage({
+  const pageData = {
     projectName: packageJson.name || 'this project',
     generatedOn: new Date().toISOString().slice(0, 10),
     deps,
@@ -340,9 +396,11 @@ function main() {
     transitiveDeps,
     projectLicense: packageJson.license || 'See LICENSE file',
     gratitude,
-  });
+  };
 
-  fs.writeFileSync(outputPath, content, 'utf8');
+  fs.writeFileSync(outputPath, buildPage(pageData, STRINGS.en), 'utf8');
+  fs.mkdirSync(path.dirname(outputPathKo), {recursive: true});
+  fs.writeFileSync(outputPathKo, buildPage({...pageData, gratitude: pageData.gratitude.ko || pageData.gratitude}, STRINGS.ko), 'utf8');
   const total = deps.length + devDeps.length + transitiveDeps.length;
   console.log(`Generated ${path.relative(rootDir, outputPath)} with ${total} package entries.`);
 }

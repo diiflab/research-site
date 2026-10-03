@@ -1,4 +1,5 @@
 import React from 'react';
+import Translate from '@docusaurus/Translate';
 import styles from './styles.module.css';
 
 // width/height are each logo's actual source pixel dimensions — passed
@@ -34,9 +35,15 @@ const LOGOS = [
 export default function LogoSlider() {
   return (
     <div className={styles.wrapper}>
-     <p className={styles.kicker}>Network</p>
-     <h1 className="text--center">Our collaborators.</h1>
-     <p className="text--center"><em>Joint publications, projects, and visiting programs worldwide.</em></p>
+     <p className={styles.kicker}>
+       <Translate id="home.partners.kicker">Network</Translate>
+     </p>
+     <h1 className="text--center">
+       <Translate id="home.partners.title">Our collaborators.</Translate>
+     </h1>
+     <p className="text--center">
+       <em><Translate id="home.partners.subtitle">Joint publications, projects, and visiting programs worldwide.</Translate></em>
+     </p>
       <div className={styles.logos}>
         {/* First set of logos */}
         <div className={styles.logosSlide}>

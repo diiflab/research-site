@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import Translate from '@docusaurus/Translate';
 import { usePluginData } from '@docusaurus/useGlobalData';
 import styles from './styles.module.css';
 import Link from '@docusaurus/Link'
@@ -176,15 +177,33 @@ function RecentUpdates() {
   return (
     <section className={styles.features} id="recentupdated">
       <div className="container">
-        <p className={styles.kicker}>Newsroom</p>
-        <h1 className="text--center">Latest updates.</h1>
-        <p className="text--center"><em>Fresh from the lab — <Link to="/updates">view all updates</Link>.</em></p>
+        <p className={styles.kicker}>
+          <Translate id="home.updates.kicker">Newsroom</Translate>
+        </p>
+        <h1 className="text--center">
+          <Translate id="home.updates.title">Latest updates.</Translate>
+        </h1>
+        <p className="text--center">
+          <em>
+            <Translate
+              id="home.updates.subtitle"
+              values={{
+                link: (
+                  <Link to="/updates">
+                    <Translate id="home.updates.subtitle.link">view all updates</Translate>
+                  </Link>
+                ),
+              }}>
+              {'Fresh from the lab — {link}.'}
+            </Translate>
+          </em>
+        </p>
         <div className="row">
         <div className="col col--7">
         <div className={`${styles.updatesPanel} reveal`}>
 
           {recentPosts.length === 0 ? (
-            <p className="text--left">No recent posts found.</p>
+            <p className="text--left"><Translate id="home.updates.empty">No recent posts found.</Translate></p>
           ) : (
             <ul className={styles.updatesList}>
               {recentPosts.map((post) => (

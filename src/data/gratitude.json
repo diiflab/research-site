@@ -8,5 +8,17 @@
     "Docusaurus maintainers and contributors",
     "React and MDX communities",
     "Open-source maintainers across the JavaScript ecosystem"
-  ]
+  ],
+  "ko": {
+    "collaborators": [
+      "연구실 구성원, 졸업생, 방문 연구자",
+      "공동 프로젝트를 지원해 주신 학계 및 산업계 파트너",
+      "피드백과 테스트에 참여해 주신 학생과 커뮤니티 구성원"
+    ],
+    "communities": [
+      "Docusaurus 메인테이너와 기여자",
+      "React 및 MDX 커뮤니티",
+      "JavaScript 생태계 전반의 오픈소스 메인테이너"
+    ]
+  }
 }

@@ -1,6 +1,7 @@
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 import clsx from 'clsx';
 import Link from '@docusaurus/Link';
+import Translate, {translate} from '@docusaurus/Translate';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
@@ -19,39 +20,44 @@ import styles from './index.module.css';
 
 // Live figures from the DOI-resolved collaboration data
 // (src/data/collaborations.json, refreshed via `npm run generate:network`).
-const LAB_STATS = [
+// Built per render so translate() resolves against the active locale
+// (strings live in i18n/<locale>/code.json).
+const getLabStats = () => [
   {
     value: `${Math.floor(collaborations.totals.publications / 10) * 10}+`,
-    label: 'Publications',
-    detail: 'Journals, conferences, and books across AI, ML, and data science.',
+    label: translate({id: 'home.stats.publications.label', message: 'Publications'}),
+    detail: translate({id: 'home.stats.publications.detail', message: 'Journals, conferences, and books across AI, ML, and data science.'}),
     to: '/publications',
   },
   {
     value: `${Math.floor(collaborations.totals.institutions / 10) * 10}+`,
-    label: 'Global collaborators',
-    detail: `Partner institutions across ${Math.floor(collaborations.totals.countries / 10) * 10}+ countries.`,
+    label: translate({id: 'home.stats.collaborators.label', message: 'Global collaborators'}),
+    detail: translate(
+      {id: 'home.stats.collaborators.detail', message: 'Partner institutions across {countries}+ countries.'},
+      {countries: Math.floor(collaborations.totals.countries / 10) * 10},
+    ),
     to: '/networks',
   },
   {
     value: '2019',
-    label: 'Igniting since',
-    detail: 'Applied intelligence, from idea to impact.',
+    label: translate({id: 'home.stats.since.label', message: 'Igniting since'}),
+    detail: translate({id: 'home.stats.since.detail', message: 'Applied intelligence, from idea to impact.'}),
     to: '/updates',
   },
 ];
 
-const AINTLAB_PILLARS = [
+const getPillars = () => [
   {
-    title: 'Applied intelligence first',
-    description: 'Research built for real environments, with usable and measurable outcomes.',
+    title: translate({id: 'home.why.pillar1.title', message: 'Applied intelligence first'}),
+    description: translate({id: 'home.why.pillar1.description', message: 'Research built for real environments, with usable and measurable outcomes.'}),
   },
   {
-    title: 'A playground for discovery',
-    description: 'A place to explore ideas, test hypotheses, and iterate fast.',
+    title: translate({id: 'home.why.pillar2.title', message: 'A playground for discovery'}),
+    description: translate({id: 'home.why.pillar2.description', message: 'A place to explore ideas, test hypotheses, and iterate fast.'}),
   },
   {
-    title: 'Collaboration at the core',
-    description: 'Disciplines and institutions working together on responsible AI.',
+    title: translate({id: 'home.why.pillar3.title', message: 'Collaboration at the core'}),
+    description: translate({id: 'home.why.pillar3.description', message: 'Disciplines and institutions working together on responsible AI.'}),
   },
 ];
 
@@ -296,21 +302,25 @@ function HomepageHeader() {
           <AccentedTitle title={siteConfig.title} />
         </h1>
         <p className="hero__subtitle">
-          Not just a laboratory — a playground for applied intelligence.
+          <Translate id="home.hero.subtitle">
+            Not just a laboratory — a playground for applied intelligence.
+          </Translate>
         </p>
         <div className={styles.buttons}>
-          <Link className="button button--secondary" to="#lab-stats">
-            Explore the lab
-          </Link>
+          {/* Plain <a> for an in-page anchor: <Link> routes it through the
+              broken-anchor checker, which can't see the section's raw id. */}
+          <a className="button button--secondary" href="#lab-stats">
+            <Translate id="home.hero.explore">Explore the lab</Translate>
+          </a>
           <Link className="button white-btn" to="/contact">
-            Collaborate with us
+            <Translate id="home.hero.collaborate">Collaborate with us</Translate>
           </Link>
         </div>
       </div>
       <a
         className={clsx(styles.scrollCue, introRunning && styles.heroContentHidden)}
         href="#lab-stats"
-        aria-label="Scroll to explore"
+        aria-label={translate({id: 'home.hero.scrollCue', message: 'Scroll to explore'})}
       >
         <span className={styles.scrollCueChevron} aria-hidden="true" />
       </a>
@@ -320,7 +330,7 @@ function HomepageHeader() {
           className={clsx(styles.replayIntro, introRunning && styles.heroContentHidden)}
           onClick={replayIntro}
         >
-          ▶ Replay intro
+          ▶ <Translate id="home.hero.replayIntro">Replay intro</Translate>
         </button>
       )}
     </header>
@@ -331,12 +341,16 @@ function LabStats() {
   return (
     <section id="lab-stats" className={`${styles.labStats} section-with-bg-text bg-text--discovery`}>
       <div className="container">
-        <p className={clsx(styles.kicker, 'text--center')}>Impact</p>
-        <h1 className="text--center">By the numbers.</h1>
+        <p className={clsx(styles.kicker, 'text--center')}>
+          <Translate id="home.stats.kicker">Impact</Translate>
+        </p>
+        <h1 className="text--center">
+          <Translate id="home.stats.title">By the numbers.</Translate>
+        </h1>
         <div className={styles.statMetrics}>
-          {LAB_STATS.map((item) => (
+          {getLabStats().map((item) => (
             <Link
-              key={item.label}
+              key={item.to}
               to={item.to}
               className={clsx(styles.statMetric, styles.statLink, 'reveal')}>
               <div className={styles.statValue}>{item.value}</div>
@@ -354,12 +368,18 @@ function WhyAINTLab() {
   return (
     <section id="why-aintlab" className={`${styles.whySection} section-with-bg-text bg-text--collaboration`}>
       <div className="container">
-        <p className={clsx(styles.kicker, 'text--center')}>Identity</p>
-        <h1 className="text--center">Why Applied INtelligence (AIN) Lab.</h1>
-        <p className="text--center"><em>Rigor, curiosity, and impact — by design.</em></p>
+        <p className={clsx(styles.kicker, 'text--center')}>
+          <Translate id="home.why.kicker">Identity</Translate>
+        </p>
+        <h1 className="text--center">
+          <Translate id="home.why.title">Why Applied INtelligence (AIN) Lab.</Translate>
+        </h1>
+        <p className="text--center">
+          <em><Translate id="home.why.subtitle">Rigor, curiosity, and impact — by design.</Translate></em>
+        </p>
         <div className={styles.pillarList}>
-          {AINTLAB_PILLARS.map((pillar) => (
-            <div key={pillar.title} className={clsx(styles.pillarItem, 'reveal')}>
+          {getPillars().map((pillar, i) => (
+            <div key={i} className={clsx(styles.pillarItem, 'reveal')}>
               <h2>{pillar.title}</h2>
               <p>{pillar.description}</p>
             </div>
@@ -375,14 +395,24 @@ function JoinAINTLab() {
     <section id="join-aintlab" className={`${styles.ctaSection} section-with-bg-text bg-text--future`}>
       <div className="container">
         <div className={clsx(styles.ctaCard, 'reveal')}>
-          <p className={styles.kicker}>Get involved</p>
-          <h1>Ready to ignite the next breakthrough?</h1>
+          <p className={styles.kicker}>
+            <Translate id="home.join.kicker">Get involved</Translate>
+          </p>
+          <h1>
+            <Translate id="home.join.title">Ready to ignite the next breakthrough?</Translate>
+          </h1>
           <p>
-            Join researchers, students, and partners shaping applied intelligence.
+            <Translate id="home.join.description">
+              Join researchers, students, and partners shaping applied intelligence.
+            </Translate>
           </p>
           <div className={styles.ctaActions}>
-            <Link className="button button--primary button--lg" to="/publications">View Publications</Link>
-            <Link className="button cta-secondary-btn button--lg" to="/prospective">Join The Lab</Link>
+            <Link className="button button--primary button--lg" to="/publications">
+              <Translate id="home.join.publications">View Publications</Translate>
+            </Link>
+            <Link className="button cta-secondary-btn button--lg" to="/prospective">
+              <Translate id="home.join.joinLab">Join The Lab</Translate>
+            </Link>
           </div>
         </div>
       </div>
@@ -395,9 +425,15 @@ function AcademicGenealogy() {
    return (
     <section className={`${styles.academic}`} id="academic-genealogy">
       <div className="container">
-        <p className={clsx(styles.kicker, 'text--center')}>Lineage</p>
-        <h1 className="text--center">Academic genealogy.</h1>
-        <p className="text--center"><em>The scholarly lineage behind Applied INtelligence (AIN) Lab.</em></p>
+        <p className={clsx(styles.kicker, 'text--center')}>
+          <Translate id="home.genealogy.kicker">Lineage</Translate>
+        </p>
+        <h1 className="text--center">
+          <Translate id="home.genealogy.title">Academic genealogy.</Translate>
+        </h1>
+        <p className="text--center">
+          <em><Translate id="home.genealogy.subtitle">The scholarly lineage behind Applied INtelligence (AIN) Lab.</Translate></em>
+        </p>
         <div className="row">
           <div className={clsx('col col--12')}>
             <div className={clsx(styles.genealogyFrame, 'reveal')}>
@@ -415,7 +451,10 @@ export default function Home() {
   return (
     <Layout
       title={siteConfig.title}
-      description={siteConfig.tagline}>
+      description={translate({
+        id: 'home.meta.description',
+        message: 'Applied INtelligence (AIN) Lab at Kookmin University, Seoul — research in applied AI, machine learning, deep learning, IoT, and AI for sustainable agriculture.',
+      })}>
       <HomepageHeader />
       <main>
         <LabStats />

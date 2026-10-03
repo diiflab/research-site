@@ -1,4 +1,5 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
+import Translate, {translate} from '@docusaurus/Translate';
 import journalsData from '@site/src/data/journals.json';
 import conferencesData from '@site/src/data/conferences.json';
 import booksData from '@site/src/data/books.json';
@@ -174,9 +175,9 @@ export default function PublicationsList() {
 
   // Combine all data with type labels
   const allPublications = useMemo(() => {
-    const journals = journalsData.map(pub => ({ ...pub, type: 'journal', typeLabel: 'Journal' }));
-    const conferences = conferencesData.map(pub => ({ ...pub, type: 'conference', typeLabel: 'Conference' }));
-    const books = booksData.map(pub => ({ ...pub, type: 'book', typeLabel: 'Book/Chapter' }));
+    const journals = journalsData.map(pub => ({ ...pub, type: 'journal', typeLabel: translate({id: 'pubs.type.journal', message: 'Journal'}) }));
+    const conferences = conferencesData.map(pub => ({ ...pub, type: 'conference', typeLabel: translate({id: 'pubs.type.conference', message: 'Conference'}) }));
+    const books = booksData.map(pub => ({ ...pub, type: 'book', typeLabel: translate({id: 'pubs.type.book', message: 'Book/Chapter'}) }));
     return [...journals, ...conferences, ...books];
   }, []);
 
@@ -299,7 +300,8 @@ export default function PublicationsList() {
         <div className={styles.searchBox}>
           <input
             type="text"
-            placeholder="Search by title, author, or venue..."
+            placeholder={translate({id: 'pubs.search.placeholder', message: 'Search by title, author, or venue...'})}
+            aria-label={translate({id: 'pubs.search.ariaLabel', message: 'Search publications'})}
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
             className={styles.searchInput}
@@ -309,19 +311,19 @@ export default function PublicationsList() {
         {/* Filter and Sort */}
         <div className={styles.filterSort}>
           <div className={styles.filterGroup}>
-            <label>Type:</label>
+            <label><Translate id="pubs.filter.type">Type:</Translate></label>
             <select value={filter} onChange={(e) => setFilter(e.target.value)} className={styles.select}>
-              <option value="all">All Publications ({typeStats.all})</option>
-              <option value="journal">Journals ({typeStats.journal})</option>
-              <option value="conference">Conferences ({typeStats.conference})</option>
-              <option value="book">Books/Chapters ({typeStats.book})</option>
+              <option value="all">{translate({id: 'pubs.filter.all', message: 'All Publications ({n})'}, {n: typeStats.all})}</option>
+              <option value="journal">{translate({id: 'pubs.filter.journals', message: 'Journals ({n})'}, {n: typeStats.journal})}</option>
+              <option value="conference">{translate({id: 'pubs.filter.conferences', message: 'Conferences ({n})'}, {n: typeStats.conference})}</option>
+              <option value="book">{translate({id: 'pubs.filter.books', message: 'Books/Chapters ({n})'}, {n: typeStats.book})}</option>
             </select>
           </div>
 
           <div className={styles.filterGroup}>
-            <label>Indexing:</label>
+            <label><Translate id="pubs.filter.indexing">Indexing:</Translate></label>
             <select value={indexingFilter} onChange={(e) => setIndexingFilter(e.target.value)} className={styles.select}>
-              <option value="all">All Indexing</option>
+              <option value="all">{translate({id: 'pubs.filter.allIndexing', message: 'All Indexing'})}</option>
               <option value="SCIE">SCIE ({indexingStats.SCIE})</option>
               <option value="SSCI">SSCI ({indexingStats.SSCI})</option>
               <option value="ESCI">ESCI ({indexingStats.ESCI})</option>
@@ -330,12 +332,12 @@ export default function PublicationsList() {
           </div>
 
           <div className={styles.filterGroup}>
-            <label>Sort by:</label>
+            <label><Translate id="pubs.sort.label">Sort by:</Translate></label>
             <select value={sortBy} onChange={(e) => setSortBy(e.target.value)} className={styles.select}>
-              <option value="featured">Featured First</option>
-              <option value="year-desc">Year (Newest First)</option>
-              <option value="year-asc">Year (Oldest First)</option>
-              <option value="title">Title (A-Z)</option>
+              <option value="featured">{translate({id: 'pubs.sort.featured', message: 'Featured First'})}</option>
+              <option value="year-desc">{translate({id: 'pubs.sort.yearDesc', message: 'Year (Newest First)'})}</option>
+              <option value="year-asc">{translate({id: 'pubs.sort.yearAsc', message: 'Year (Oldest First)'})}</option>
+              <option value="title">{translate({id: 'pubs.sort.title', message: 'Title (A-Z)'})}</option>
             </select>
           </div>
         </div>
@@ -343,14 +345,23 @@ export default function PublicationsList() {
 
       {/* Results Summary */}
       <div className={styles.summary}>
-        Showing <strong>{sortedPublications.length}</strong> publication{sortedPublications.length !== 1 ? 's' : ''}
-        {searchTerm && ` matching "${searchTerm}"`}
+        {searchTerm ? (
+          <Translate
+            id="pubs.results.matching"
+            values={{n: <strong>{sortedPublications.length}</strong>, query: searchTerm}}>
+            {'Showing {n} publications matching "{query}"'}
+          </Translate>
+        ) : (
+          <Translate id="pubs.results" values={{n: <strong>{sortedPublications.length}</strong>}}>
+            {'Showing {n} publications'}
+          </Translate>
+        )}
       </div>
 
       {/* Publications List */}
       <div className={styles.publicationsList}>
         {numberedPublications.length === 0 ? (
-          <p className={styles.noResults}>No publications found matching your criteria.</p>
+          <p className={styles.noResults}><Translate id="pubs.empty">No publications found matching your criteria.</Translate></p>
         ) : (
           numberedPublications.map((pub, idx) => (
             <PublicationItem key={`${pub.type}-${idx}`} publication={pub} />
@@ -385,7 +396,7 @@ function PublicationItem({ publication }) {
         <span className={`${styles.badge} ${styles[publication.type]}`}>
           {typeLabel}
         </span>
-        {publication.featured && <span className={styles.badgeFeatured}>Featured</span>}
+        {publication.featured && <span className={styles.badgeFeatured}><Translate id="pubs.featured">Featured</Translate></span>}
         {year && <span className={styles.year}>{year}</span>}
         {Number.isFinite(citeScore) && (
           <span className={styles.metricBadge}>CiteScore: {citeScore.toFixed(2)}</span>
@@ -393,8 +404,8 @@ function PublicationItem({ publication }) {
         {Number.isFinite(impactFactor) && (
           <span className={styles.metricBadge}>IF: {impactFactor.toFixed(2)}</span>
         )}
-        {isCorresponding && <span className={styles.badgeCorresponding}>*Corresponding Author</span>}
-        {isCoFirst && <span className={styles.badgeCoFirst}>†Co-First Author</span>}
+        {isCorresponding && <span className={styles.badgeCorresponding}><Translate id="pubs.corresponding">*Corresponding Author</Translate></span>}
+        {isCoFirst && <span className={styles.badgeCoFirst}><Translate id="pubs.coFirst">†Co-First Author</Translate></span>}
         {orderedIndexing.map((idx) => (
           <span key={idx} className={`${styles.indexingBadge} ${INDEXING_STYLE[idx] || ''}`}>{idx}</span>
         ))}

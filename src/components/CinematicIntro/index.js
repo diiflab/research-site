@@ -1,5 +1,6 @@
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 import clsx from 'clsx';
+import Translate, {translate} from '@docusaurus/Translate';
 import styles from './styles.module.css';
 
 const INTRO_SEEN_KEY = 'aintlab.introSeen.v1';
@@ -284,24 +285,26 @@ export default function CinematicIntro({audioSrc, fading, onDone, onSkip}) {
 
       {stage === 'gate' && (
         <div className={styles.gate}>
-          <p className={styles.gateEyebrow}>An intro experience</p>
+          <p className={styles.gateEyebrow}><Translate id="intro.gate.eyebrow">An intro experience</Translate></p>
           <p className={styles.gateTitle}>
             <span className={styles.gateTitleIn}>A</span>pplied{' '}
             <span className={styles.gateTitleIn}>IN</span>telligence Lab
           </p>
-          <p className={styles.gateNote}>Twenty seconds, best with sound on — move to touch the light.</p>
+          <p className={styles.gateNote}>
+            <Translate id="intro.gate.note">Twenty seconds, best with sound on — move to touch the light.</Translate>
+          </p>
           <button type="button" className={styles.enterButton} onClick={begin} autoFocus>
-            Enter
+            <Translate id="intro.gate.enter">Enter</Translate>
           </button>
           <button type="button" className={styles.gateSkip} onClick={skip}>
-            Skip intro →
+            <Translate id="intro.gate.skip">Skip intro →</Translate>
           </button>
         </div>
       )}
 
       {stage === 'running' && !fading && (
         <button type="button" className={styles.skipButton} onClick={skip}>
-          Skip intro
+          <Translate id="intro.skip">Skip intro</Translate>
         </button>
       )}
 
@@ -330,7 +333,7 @@ export default function CinematicIntro({audioSrc, fading, onDone, onSkip}) {
           onPointerDown={onScrubDown}
           onPointerMove={onScrubMove}
           role="slider"
-          aria-label="Scrub intro"
+          aria-label={translate({id: 'intro.scrub', message: 'Scrub intro'})}
           aria-valuemin={0}
           aria-valuemax={100}
           tabIndex={-1}>

@@ -3,6 +3,7 @@ title: Team
 ---
 
 import Link from '@docusaurus/Link'
+import Highlight from '@site/src/components/Highlight'
 import styles from './team.module.css'
 
 <section className="section-with-bg-logo">
@@ -15,12 +16,12 @@ import styles from './team.module.css'
 
 <div className={styles.teamPage}>
 
-### <highlight  color="#04be58">Director</highlight>
-<div class="row director-row reveal">
-<div class="col col--2"><img src="/team/Director.png"/></div>
-
-<div class="col col--10">
+### <Highlight  color="#04be58">Director</Highlight>
+<div className="row director-row reveal">
+<div className="col col--2"><img src="/team/Director.png"/></div>
+<div className="col col--10">
 <h3>Muhammad Syafrudin (샤프루딘 교수)</h3>
+
 <i>Tenure-track Faculty Member</i>
 <br/><a href="/contact">Contact</a> / <a href="https://orcid.org/0000-0002-5640-4413" target="_blank">0000-0002-5640-4413</a>
 
@@ -35,39 +36,43 @@ import styles from './team.module.css'
 </div>
 </div>
 
-### <highlight  color="#0184c6">Graduate Students</highlight>
+### <Highlight  color="#0184c6">Graduate Students</Highlight>
 
-<div class="row reveal">
-<div class="col col--2"><img src="/team/LongchengLi.png"/></div>
-<div class="col col--10">
+<div className="row reveal">
+<div className="col col--2"><img src="/team/LongchengLi.png"/></div>
+<div className="col col--10">
 <h3>Longcheng Li</h3>
+
 <i>Prospective MS@KMU, Spring 2027</i>
 <br/>Research interests: Explainable AI, Deep Learning, Industry AI
 </div>
 </div>
 
-<div class="row reveal">
-<div class="col col--2"><img src="/team/WangXiaodi.png"/></div>
-<div class="col col--10">
+<div className="row reveal">
+<div className="col col--2"><img src="/team/WangXiaodi.png"/></div>
+<div className="col col--10">
 <h3>Wang Xiaodi</h3>
+
 <i>MS@SJU, Fall 2026</i>
 <br/>Research interests: Explainable Artificial Intelligence, Multimodal Data Analysis, Applied AI
 </div>
 </div>
 
-<div class="row reveal">
-<div class="col col--2"><img src="/team/ZhenghaoZhao.png"/></div>
-<div class="col col--10">
+<div className="row reveal">
+<div className="col col--2"><img src="/team/ZhenghaoZhao.png"/></div>
+<div className="col col--10">
 <h3>Zhenghao Zhao</h3>
+
 <i>MS@SJU, Fall 2026</i>
 <br/>Research interests: Industrial IoT, Industrial AI
 </div>
 </div>
 
-<div class="row reveal">
-<div class="col col--2"><img src="/team/member.jpg"/></div>
-<div class="col col--10">
+<div className="row reveal">
+<div className="col col--2"><img src="/team/member.jpg"/></div>
+<div className="col col--10">
 <h3>This could be YOU~!</h3>
+
 <i>Master/Combined/PhD</i>
 <br/>
 </div>
@@ -77,7 +82,7 @@ import styles from './team.module.css'
 <br/>
 <br/>
 
-### <highlight  color="#0184c6">Undergraduate</highlight>
+### <Highlight  color="#0184c6">Undergraduate</Highlight>
 
 <details className={styles.profileDisclosure}>
 <summary>연구 학부인턴</summary>
@@ -85,7 +90,7 @@ import styles from './team.module.css'
 </details>
 
 
-### <highlight  color="#04be58">Alumni</highlight>
+### <Highlight  color="#04be58">Alumni</Highlight>
 
 :::info Acknowledgment
 *Lab's success is due to the critical support of individuals who contributed to innovative research and shared their expertise. Please find them <Link to="/alumni">here.</Link>*

@@ -1,4 +1,6 @@
 import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import Translate, {translate} from '@docusaurus/Translate';
 import styles from './styles.module.css';
 
 /**
@@ -54,6 +56,7 @@ function CountUp({value, duration = 1400, run}) {
 }
 
 export default function CollabGlobe({home, countries, totals}) {
+  const {i18n} = useDocusaurusContext();
   const hostRef = useRef(null);
   const canvasRef = useRef(null);
   const stageRef = useRef(null);
@@ -340,13 +343,19 @@ export default function CollabGlobe({home, countries, totals}) {
     () =>
       totals
         ? [
-            {value: totals.countries, label: 'countries'},
-            {value: totals.institutions, label: 'institutions'},
-            {value: totals.resolved, label: 'works'},
+            {value: totals.countries, label: translate({id: 'globe.stat.countries', message: 'countries'})},
+            {value: totals.institutions, label: translate({id: 'globe.stat.institutions', message: 'institutions'})},
+            {value: totals.resolved, label: translate({id: 'globe.stat.works', message: 'works'})},
           ]
         : [],
     [totals],
   );
+
+  const isKo = i18n.currentLocale === 'ko';
+  const nameOf = (country) => (isKo && country.nameKo) || country.name;
+  const worksLabel = (n) => (n === 1
+    ? translate({id: 'globe.work', message: 'work'})
+    : translate({id: 'globe.works', message: 'works'}));
 
   return (
     <div ref={hostRef} className={styles.globeHost}>
@@ -355,13 +364,13 @@ export default function CollabGlobe({home, countries, totals}) {
         className={styles.stage}
         tabIndex={0}
         role="application"
-        aria-label="Interactive globe of Applied INtelligence (AIN) Lab collaborations radiating from Seoul. Use arrow keys to rotate; pick countries from the list below the globe."
+        aria-label={translate({id: 'globe.ariaLabel', message: 'Interactive globe of Applied INtelligence (AIN) Lab collaborations radiating from Seoul. Use arrow keys to rotate; pick countries from the list below the globe.'})}
       >
         {/* Static fallback for no-JS / no-WebGL visitors. */}
         {!ready && (
           <img
             src="/team/collaboration_map.webp"
-            alt="Applied INtelligence (AIN) Lab collaboration map"
+            alt={translate({id: 'globe.fallbackAlt', message: 'Applied INtelligence (AIN) Lab collaboration map'})}
             className={styles.fallbackMap}
             loading="lazy"
           />
@@ -381,7 +390,7 @@ export default function CollabGlobe({home, countries, totals}) {
               data-on="0"
               className={`${styles.nodeLabel} ${i === selected ? styles.nodeLabelActive : ''}`}
             >
-              {country.name}
+              {nameOf(country)}
             </span>
           ))}
         </div>
@@ -412,9 +421,9 @@ export default function CollabGlobe({home, countries, totals}) {
           >
             <div className={styles.tooltipHead}>
               <span aria-hidden="true">{flagEmoji(hoveredCountry.code)}</span>
-              <strong>{hoveredCountry.name}</strong>
+              <strong>{nameOf(hoveredCountry)}</strong>
               <em>
-                {hoveredCountry.works} {hoveredCountry.works === 1 ? 'work' : 'works'}
+                {hoveredCountry.works} {worksLabel(hoveredCountry.works)}
               </em>
             </div>
             <ul>
@@ -424,7 +433,7 @@ export default function CollabGlobe({home, countries, totals}) {
             </ul>
             {hoveredCountry.institutions.length > 3 && (
               <span className={styles.tooltipMore}>
-                +{hoveredCountry.institutions.length - 3} more — click to see all
+                {translate({id: 'globe.tooltipMore', message: '+{n} more — click to see all'}, {n: hoveredCountry.institutions.length - 3})}
               </span>
             )}
           </div>
@@ -432,14 +441,14 @@ export default function CollabGlobe({home, countries, totals}) {
 
         <p className={styles.hint} aria-hidden="true">
           {isTouch
-            ? 'Swipe sideways to spin · pinch to zoom · tap a dot or a chip below'
-            : 'Drag to rotate · hover for details · click a node to focus'}
+            ? translate({id: 'globe.hintTouch', message: 'Swipe sideways to spin · pinch to zoom · tap a dot or a chip below'})
+            : translate({id: 'globe.hintPointer', message: 'Drag to rotate · hover for details · click a node to focus'})}
         </p>
       </div>
 
       {/* Country chips: swipeable on mobile, tabbable everywhere — the
           primary navigation that never requires aiming at 3D nodes. */}
-      <div className={styles.chipStrip} role="listbox" aria-label="Collaborating countries">
+      <div className={styles.chipStrip} role="listbox" aria-label={translate({id: 'globe.chipsAria', message: 'Collaborating countries'})}>
         {countries.map((country, i) => (
           <button
             key={country.code}
@@ -456,7 +465,7 @@ export default function CollabGlobe({home, countries, totals}) {
             }}
           >
             <span aria-hidden="true">{flagEmoji(country.code)}</span>
-            <span className={styles.chipName}>{country.name}</span>
+            <span className={styles.chipName}>{nameOf(country)}</span>
             <span className={styles.chipWorks}>{country.works}</span>
           </button>
         ))}
@@ -473,7 +482,7 @@ export default function CollabGlobe({home, countries, totals}) {
           <aside
             className={styles.sheet}
             role="dialog"
-            aria-label={`${selectedCountry.name} collaboration details`}
+            aria-label={translate({id: 'globe.sheetAria', message: '{country} collaboration details'}, {country: nameOf(selectedCountry)})}
             onPointerDown={(event) => event.stopPropagation()}
           >
             <div className={styles.sheetGrab} aria-hidden="true" />
@@ -482,12 +491,19 @@ export default function CollabGlobe({home, countries, totals}) {
                 {flagEmoji(selectedCountry.code)}
               </span>
               <div>
-                <h3>{selectedCountry.name}</h3>
+                <h3>{nameOf(selectedCountry)}</h3>
                 <p>
-                  {selectedCountry.works} co-authored{' '}
-                  {selectedCountry.works === 1 ? 'work' : 'works'} ·{' '}
-                  {selectedCountry.institutions.length}{' '}
-                  {selectedCountry.institutions.length === 1 ? 'institution' : 'institutions'}
+                  {translate(
+                    {id: 'globe.sheetSummary', message: '{works} co-authored {worksLabel} · {institutions} {institutionsLabel}'},
+                    {
+                      works: selectedCountry.works,
+                      worksLabel: worksLabel(selectedCountry.works),
+                      institutions: selectedCountry.institutions.length,
+                      institutionsLabel: selectedCountry.institutions.length === 1
+                        ? translate({id: 'globe.institution', message: 'institution'})
+                        : translate({id: 'globe.institutions', message: 'institutions'}),
+                    },
+                  )}
                 </p>
               </div>
               <button
@@ -495,7 +511,7 @@ export default function CollabGlobe({home, countries, totals}) {
                 type="button"
                 className={styles.sheetClose}
                 onClick={dismiss}
-                aria-label="Close country details"
+                aria-label={translate({id: 'globe.close', message: 'Close country details'})}
               >
                 ×
               </button>

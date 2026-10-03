@@ -1,4 +1,5 @@
 import React, {useCallback, useEffect, useRef, useState} from 'react';
+import Translate, {translate} from '@docusaurus/Translate';
 
 /**
  * A one-off nudge pointing at the floating Ask AINBot bubble, for visitors who
@@ -162,13 +163,13 @@ export default function AskAiNudge() {
     <div className="askai-nudge" data-leaving={phase === 'leaving' ? '' : undefined}>
       <span className="askai-nudge-float">
         <button type="button" className="askai-nudge-body" onClick={openChat}>
-          Looking for something? I am here to help!
+          <Translate id="askAi.nudge">Looking for something? I am here to help!</Translate>
         </button>
         <button
           type="button"
           className="askai-nudge-close"
           onClick={() => close(true)}
-          aria-label="Dismiss this tip">
+          aria-label={translate({id: 'askAi.nudge.dismiss', message: 'Dismiss this tip'})}>
           <svg viewBox="0 0 24 24" aria-hidden="true">
             <path
               d="M6 6l12 12M18 6L6 18"

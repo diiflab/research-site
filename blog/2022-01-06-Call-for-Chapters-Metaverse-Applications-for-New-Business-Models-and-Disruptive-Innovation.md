@@ -5,7 +5,7 @@ tags: ['book', 'chapter', 'metaverse']
 published: true
 ---
 
-<img src="/updates/metaverse-call-chapters.png"/><br/>
+<img src="/updates/metaverse-call-chapters.webp"/><br/>
 
 Dear Colleagues,
 

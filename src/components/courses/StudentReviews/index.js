@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
+import Translate, {translate} from '@docusaurus/Translate';
 import clsx from 'clsx';
 import { studentReviews } from '@site/src/data/courses/studentReviews';
 import styles from './styles.module.css';
@@ -38,7 +39,7 @@ function NavigationDots({ currentIndex, totalReviews, onDotClick }) {
           type="button"
           className={clsx(styles.dot, index === currentIndex && styles.activeDot)}
           onClick={() => onDotClick(index)}
-          aria-label={`Go to review ${index + 1}`}
+          aria-label={translate({id: 'reviews.carousel.goTo', message: 'Go to review {n}'}, {n: index + 1})}
           aria-current={index === currentIndex} />
       ))}
     </div>
@@ -120,10 +121,10 @@ export default function StudentReviews() {
         {/* Same kicker / period-terminated h1 / italic lead as every other
             section on this page and on the research homepage. */}
         <div className={styles.reviewsHeader}>
-          <p className={clsx(styles.reviewsEyebrow, 'text--center')}>Student voices</p>
-          <h1 className="text--center">What students say.</h1>
+          <p className={clsx(styles.reviewsEyebrow, 'text--center')}><Translate id="reviews.carousel.kicker">Student voices</Translate></p>
+          <h1 className="text--center"><Translate id="reviews.carousel.title">What students say.</Translate></h1>
           <p className="text--center">
-            <em>Feedback from across semesters, in the students&rsquo; own words.</em>
+            <em><Translate id="reviews.carousel.lead">Feedback from across semesters, in the students’ own words.</Translate></em>
           </p>
         </div>
 
@@ -136,7 +137,7 @@ export default function StudentReviews() {
               type="button"
               className={clsx(styles.navButton, styles.prevButton)}
               onClick={handlePrevClick}
-              aria-label="Previous review">
+              aria-label={translate({id: 'reviews.carousel.prev', message: 'Previous review'})}>
               <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                 <path d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z"/>
               </svg>
@@ -147,7 +148,7 @@ export default function StudentReviews() {
             className={styles.reviewsContainer}
             role="group"
             aria-roledescription="carousel"
-            aria-label="Student reviews">
+            aria-label={translate({id: 'reviews.carousel.ariaLabel', message: 'Student reviews'})}>
             <div
               className={styles.reviewsTrack}
               style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
@@ -165,7 +166,7 @@ export default function StudentReviews() {
               type="button"
               className={clsx(styles.navButton, styles.nextButton)}
               onClick={handleNextClick}
-              aria-label="Next review">
+              aria-label={translate({id: 'reviews.carousel.next', message: 'Next review'})}>
               <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                 <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"/>
               </svg>
@@ -186,7 +187,7 @@ export default function StudentReviews() {
             className={styles.autoPlayToggle}
             onClick={togglePlay}
             aria-pressed={paused}
-            aria-label={autoPlaying ? 'Pause automatic review rotation' : 'Resume automatic review rotation'}>
+            aria-label={autoPlaying ? translate({id: 'reviews.carousel.pauseAria', message: 'Pause automatic review rotation'}) : translate({id: 'reviews.carousel.resumeAria', message: 'Resume automatic review rotation'})}>
             <span className={clsx(styles.playIcon, autoPlaying && styles.playing)}>
               <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                 {autoPlaying ? (
@@ -197,7 +198,7 @@ export default function StudentReviews() {
               </svg>
             </span>
             <span className={styles.autoPlayText}>
-              {autoPlaying ? 'Pause' : 'Play'}
+              {autoPlaying ? translate({id: 'reviews.carousel.pause', message: 'Pause'}) : translate({id: 'reviews.carousel.play', message: 'Play'})}
             </span>
           </button>
         )}

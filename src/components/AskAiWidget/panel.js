@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react';
+import {translate} from '@docusaurus/Translate';
 import {DocSearchSidepanel} from '@docsearch/react/sidepanel';
 import AskAiNudge from './nudge';
 // Import the stylesheets from @docsearch/css directly: @docsearch/react
@@ -74,7 +75,7 @@ function useBrandFixups() {
       // conversation-history screen title is left alone.
       const title = panel.querySelector('.DocSearch-Sidepanel-Title');
       if (title && title.textContent === 'Ask AI') {
-        title.textContent = 'Ask AINBot';
+        title.textContent = translate({id: 'askAi.title', message: 'Ask AINBot'});
       }
       // Powered-by link: attribution text stays, tracking goes — bare origin
       // only (no utm_* params, no referral path).
@@ -107,8 +108,8 @@ export default function AskAiPanel() {
         button={{
           variant: 'floating',
           translations: {
-            buttonText: 'Ask AINBot',
-            buttonAriaLabel: 'Ask AINBot — the Applied INtelligence (AIN) Lab AI assistant',
+            buttonText: translate({id: 'askAi.title', message: 'Ask AINBot'}),
+            buttonAriaLabel: translate({id: 'askAi.buttonAriaLabel', message: 'Ask AINBot — the Applied INtelligence (AIN) Lab AI assistant'}),
           },
         }}
         // suggestedQuestions stays off: it queries an
@@ -117,17 +118,16 @@ export default function AskAiPanel() {
         panel={{
           translations: {
             header: {
-              title: 'Ask AINBot',
+              title: translate({id: 'askAi.title', message: 'Ask AINBot'}),
             },
             newConversationScreen: {
-              introductionText:
-                'Ask about our research, publications, projects, or how to collaborate with Applied INtelligence (AIN) Lab.',
+              introductionText: translate({id: 'askAi.intro', message: 'Ask about our research, publications, projects, or how to collaborate with Applied INtelligence (AIN) Lab.'}),
             },
             promptForm: {
-              promptPlaceholderText: 'Ask AINBot about the lab…',
+              promptPlaceholderText: translate({id: 'askAi.placeholder', message: 'Ask AINBot about the lab…'}),
             },
             logo: {
-              poweredByText: 'Powered by',
+              poweredByText: translate({id: 'askAi.poweredBy', message: 'Powered by'}),
             },
           },
         }}

@@ -1,4 +1,5 @@
 import React, {useEffect, useRef} from 'react';
+import Translate, {translate} from '@docusaurus/Translate';
 import Link from '@docusaurus/Link';
 import collaborations from '@site/src/data/collaborations.json';
 import styles from './styles.module.css';
@@ -237,10 +238,10 @@ export default function CollabMap2D({minWorks = 4}) {
     <Link
       to="/networks"
       className={styles.mapLink}
-      aria-label={`Collaboration map: ${shown} countries with ${minWorks}+ co-authored works — open the full interactive network`}>
+      aria-label={translate({id: 'home.map.ariaLabel', message: 'Collaboration map: {shown} countries with {minWorks}+ co-authored works — open the full interactive network'}, {shown, minWorks})}>
       <span ref={hostRef} className={styles.mapHost}>
         <canvas ref={canvasRef} className={styles.mapCanvas} aria-hidden="true" />
-        <span className={styles.mapCta}>Explore the live 3D network →</span>
+        <span className={styles.mapCta}><Translate id="home.map.cta">Explore the live 3D network →</Translate></span>
       </span>
     </Link>
   );

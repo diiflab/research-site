@@ -17,6 +17,7 @@
   {
    "code": "KR",
    "name": "South Korea",
+   "nameKo": "대한민국",
    "lat": 36.4,
    "lng": 127.9,
    "works": 100,
@@ -36,6 +37,7 @@
   {
    "code": "ID",
    "name": "Indonesia",
+   "nameKo": "인도네시아",
    "lat": -2.5,
    "lng": 118,
    "works": 41,
@@ -67,6 +69,7 @@
   {
    "code": "PK",
    "name": "Pakistan",
+   "nameKo": "파키스탄",
    "lat": 29.9,
    "lng": 69.4,
    "works": 28,
@@ -92,6 +95,7 @@
   {
    "code": "BN",
    "name": "Brunei",
+   "nameKo": "브루나이",
    "lat": 4.5,
    "lng": 114.7,
    "works": 16,
@@ -102,6 +106,7 @@
   {
    "code": "SA",
    "name": "Saudi Arabia",
+   "nameKo": "사우디아라비아",
    "lat": 24.1,
    "lng": 44.5,
    "works": 10,
@@ -121,6 +126,7 @@
   {
    "code": "MY",
    "name": "Malaysia",
+   "nameKo": "말레이시아",
    "lat": 3.8,
    "lng": 109.7,
    "works": 9,
@@ -133,6 +139,7 @@
   {
    "code": "TR",
    "name": "Turkey",
+   "nameKo": "튀르키예",
    "lat": 39,
    "lng": 35.3,
    "works": 9,
@@ -147,6 +154,7 @@
   {
    "code": "IN",
    "name": "India",
+   "nameKo": "인도",
    "lat": 21.1,
    "lng": 78.7,
    "works": 7,
@@ -159,6 +167,7 @@
   {
    "code": "CZ",
    "name": "Czechia",
+   "nameKo": "체코",
    "lat": 49.8,
    "lng": 15.5,
    "works": 6,
@@ -169,6 +178,7 @@
   {
    "code": "JO",
    "name": "Jordan",
+   "nameKo": "요르단",
    "lat": 31.3,
    "lng": 36.8,
    "works": 6,
@@ -183,6 +193,7 @@
   {
    "code": "IQ",
    "name": "Iraq",
+   "nameKo": "이라크",
    "lat": 33,
    "lng": 43.7,
    "works": 4,
@@ -195,6 +206,7 @@
   {
    "code": "LT",
    "name": "Lithuania",
+   "nameKo": "리투아니아",
    "lat": 55.2,
    "lng": 23.9,
    "works": 4,
@@ -205,6 +217,7 @@
   {
    "code": "AE",
    "name": "United Arab Emirates",
+   "nameKo": "아랍에미리트",
    "lat": 23.9,
    "lng": 54.3,
    "works": 4,
@@ -215,6 +228,7 @@
   {
    "code": "GB",
    "name": "United Kingdom",
+   "nameKo": "영국",
    "lat": 54,
    "lng": -2.5,
    "works": 4,
@@ -227,6 +241,7 @@
   {
    "code": "CN",
    "name": "China",
+   "nameKo": "중국",
    "lat": 35.9,
    "lng": 104.2,
    "works": 3,
@@ -240,6 +255,7 @@
   {
    "code": "AU",
    "name": "Australia",
+   "nameKo": "오스트레일리아",
    "lat": -25.7,
    "lng": 134.5,
    "works": 2,
@@ -251,6 +267,7 @@
   {
    "code": "BD",
    "name": "Bangladesh",
+   "nameKo": "방글라데시",
    "lat": 23.7,
    "lng": 90.4,
    "works": 2,
@@ -263,6 +280,7 @@
   {
    "code": "CA",
    "name": "Canada",
+   "nameKo": "캐나다",
    "lat": 56.1,
    "lng": -106.3,
    "works": 2,
@@ -275,6 +293,7 @@
   {
    "code": "FJ",
    "name": "Fiji",
+   "nameKo": "피지",
    "lat": -17.8,
    "lng": 178,
    "works": 2,
@@ -285,6 +304,7 @@
   {
    "code": "KW",
    "name": "Kuwait",
+   "nameKo": "쿠웨이트",
    "lat": 29.3,
    "lng": 47.6,
    "works": 2,
@@ -295,6 +315,7 @@
   {
    "code": "ES",
    "name": "Spain",
+   "nameKo": "스페인",
    "lat": 40.2,
    "lng": -3.6,
    "works": 2,
@@ -305,6 +326,7 @@
   {
    "code": "SE",
    "name": "Sweden",
+   "nameKo": "스웨덴",
    "lat": 62.8,
    "lng": 16.7,
    "works": 2,
@@ -315,6 +337,7 @@
   {
    "code": "TW",
    "name": "Taiwan",
+   "nameKo": "대만",
    "lat": 23.8,
    "lng": 121,
    "works": 2,
@@ -325,6 +348,7 @@
   {
    "code": "TH",
    "name": "Thailand",
+   "nameKo": "태국",
    "lat": 15.1,
    "lng": 101,
    "works": 2,
@@ -335,6 +359,7 @@
   {
    "code": "VN",
    "name": "Vietnam",
+   "nameKo": "베트남",
    "lat": 15.6,
    "lng": 106.3,
    "works": 2,
@@ -346,6 +371,7 @@
   {
    "code": "BA",
    "name": "Bosnia and Herzegovina",
+   "nameKo": "보스니아 헤르체고비나",
    "lat": 44.2,
    "lng": 17.8,
    "works": 1,
@@ -356,6 +382,7 @@
   {
    "code": "FR",
    "name": "France",
+   "nameKo": "프랑스",
    "lat": 46.6,
    "lng": 2.4,
    "works": 1,
@@ -367,6 +394,7 @@
   {
    "code": "DE",
    "name": "Germany",
+   "nameKo": "독일",
    "lat": 51.2,
    "lng": 10.4,
    "works": 1,
@@ -377,6 +405,7 @@
   {
    "code": "IR",
    "name": "Iran",
+   "nameKo": "이란",
    "lat": 32.6,
    "lng": 54.3,
    "works": 1,
@@ -388,6 +417,7 @@
   {
    "code": "OM",
    "name": "Oman",
+   "nameKo": "오만",
    "lat": 20.6,
    "lng": 56.1,
    "works": 1,
@@ -398,6 +428,7 @@
   {
    "code": "TN",
    "name": "Tunisia",
+   "nameKo": "튀니지",
    "lat": 34.1,
    "lng": 9.6,
    "works": 1,
@@ -408,6 +439,7 @@
   {
    "code": "US",
    "name": "United States",
+   "nameKo": "미국",
    "lat": 39.8,
    "lng": -98.6,
    "works": 1,

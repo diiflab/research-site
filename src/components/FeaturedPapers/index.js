@@ -1,4 +1,6 @@
 import React from 'react';
+import Translate, {translate} from '@docusaurus/Translate';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import clsx from 'clsx';
 import styles from './styles.module.css';
 import Link from '@docusaurus/Link';
@@ -74,6 +76,41 @@ const FeatureList = [
   
 ];
 
+// Korean copy for each paper above, by position (titles stay in English).
+const FEATURE_LIST_KO = [
+  {
+    "outlet": "Computers and Electronics in Agriculture (Elsevier, 2025) 게재 - SCIE (Q1); IF=8.9; 순위=2/94; IF(%)=1.6%.",
+    "details": [
+      "작은 이삭이 겹쳐 있고 배경이 복잡한 밀밭 이미지, 탐지를 위한 다중 스케일 시각 특징.",
+      "FLTrans-Net: 노이즈에 강한 특징 학습을 위한 트랜스포머 기반 다중 스케일 융합, 공간 어텐션, 경량 RetinaNet.",
+      "자원이 제한된 기기에서 수확량 평가와 농장 관리를 위한 실시간 밀 이삭 탐지."
+    ]
+  },
+  {
+    "outlet": "Scientific Reports (Nature Portfolio, 2025) 게재 - SCIE (Q1); IF=3.9; 순위=25/136; IF(%)=18.0%.",
+    "details": [
+      "여러 온도와 작동 상태에서 측정한 리튬이온 셀의 EIS 데이터.",
+      "특징 축소와 배터리 건전성(SOH) 추정을 위한 SCG/RBP 최적화 기반 AE-BPNN.",
+      "에너지 저장 시스템을 위한 정확한 배터리 SOH 예측."
+    ]
+  },
+  {
+    "outlet": "Sustainable Development (Wiley, 2025) 게재 - SSCI (Q1); IF=9.9; 순위=1/63; IF(%)=0.8%.",
+    "details": [
+      "순환 경제(CE)에 관한 트위터 게시물 38만 9천 건 (2012–2022).",
+      "NLP 기반 주제 추출 및 트렌드 분석.",
+      "CE 정책과 이해관계자 참여를 위한 대중 인식 분석."
+    ]
+  }
+];
+
+// Summary row labels shared with the research-areas section.
+const getDetailLabels = () => [
+  translate({id: 'home.areas.0.title', message: 'Data'}),
+  translate({id: 'home.areas.1.title', message: 'Intelligence'}),
+  translate({id: 'home.areas.2.title', message: 'Applications'}),
+];
+
 function Feature({img_url, imgWidth, imgHeight, doi, title, outlet, details}) {
   return (
     <div className={clsx('col col--4', styles.cardCol, 'reveal')}>
@@ -87,11 +124,11 @@ function Feature({img_url, imgWidth, imgHeight, doi, title, outlet, details}) {
         </h2>
         <div className={styles.paperBody}>
           <details className={styles.detailDisclosure}>
-            <summary>Research Summary</summary>
+            <summary><Translate id="home.papers.summary">Research Summary</Translate></summary>
             <ul className={styles.detailList}>
-              {details.map((item) => (
-                <li key={item.label} className={styles.detailItem}>
-                  <span className={styles.summaryKey}>{item.label}</span>
+              {details.map((item, i) => (
+                <li key={i} className={styles.detailItem}>
+                  <span className={styles.summaryKey}>{getDetailLabels()[i] || item.label}</span>
                   <span className={styles.summaryValue}>{item.content}</span>
                 </li>
               ))}
@@ -106,14 +143,44 @@ function Feature({img_url, imgWidth, imgHeight, doi, title, outlet, details}) {
 }
 
 export default function HomepageFeatures() {
+  const {i18n} = useDocusaurusContext();
+  const list = i18n.currentLocale === 'ko'
+    ? FeatureList.map((paper, i) => {
+      const ko = FEATURE_LIST_KO[i];
+      if (!ko) return paper;
+      return {
+        ...paper,
+        outlet: ko.outlet,
+        details: paper.details.map((d, j) => ({...d, content: ko.details[j] || d.content})),
+      };
+    })
+    : FeatureList;
   return (
     <section className={styles.features} id="FeaturedResearch">
       <div className="container">
-        <p className={styles.kicker}>Selected works</p>
-        <h1 className="text--center">Featured research.</h1>
-        <p className="text--center"><em>Highlights from Q1 journals — <Link to="/publications">view all publications</Link>.</em></p>
+        <p className={styles.kicker}>
+          <Translate id="home.papers.kicker">Selected works</Translate>
+        </p>
+        <h1 className="text--center">
+          <Translate id="home.papers.title">Featured research.</Translate>
+        </h1>
+        <p className="text--center">
+          <em>
+            <Translate
+              id="home.papers.subtitle"
+              values={{
+                link: (
+                  <Link to="/publications">
+                    <Translate id="home.papers.subtitle.link">view all publications</Translate>
+                  </Link>
+                ),
+              }}>
+              {'Highlights from Q1 journals — {link}.'}
+            </Translate>
+          </em>
+        </p>
         <div className="row">
-          {FeatureList.map((props, idx) => (
+          {list.map((props, idx) => (
             <Feature key={idx} {...props} />
           ))}
         </div>

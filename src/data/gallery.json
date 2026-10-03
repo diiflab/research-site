@@ -5,7 +5,12 @@
     "category": "community",
     "description": "The MDPI 2024 Top 1000 Reviewers certificate honors exceptional dedication and expertise in academic peer review, presented with sincere gratitude for invaluable contributions that uphold the quality and integrity of scholarly publishing.",
     "date": "September 2025",
-    "year": 2025
+    "year": 2025,
+    "ko": {
+      "title": "MDPI 2024 Top 1000 Reviewers 선정",
+      "description": "MDPI 2024 Top 1000 Reviewers 인증서는 학술 심사에 대한 뛰어난 헌신과 전문성을 기리는 것으로, 학술 출판의 품질과 신뢰성을 지키는 데 기여한 데 대한 깊은 감사의 뜻을 담고 있습니다.",
+      "date": "2025년 9월"
+    }
   },
   {
     "title": "AI & Sustainability Books Indexed in Scopus",
@@ -13,7 +18,12 @@
     "category": "book",
     "description": "Two edited volumes—Artificial Intelligence and Data Science for Sustainability and Achieving Sustainability in Multi-Industry Settings With AI—are now indexed in Scopus, increasing their global visibility and accessibility.",
     "date": "April 2025",
-    "year": 2025
+    "year": 2025,
+    "ko": {
+      "title": "AI·지속가능성 저서 Scopus 등재",
+      "description": "편저 두 권 — Artificial Intelligence and Data Science for Sustainability, Achieving Sustainability in Multi-Industry Settings With AI — 이 Scopus에 등재되어 전 세계적인 접근성과 가시성이 높아졌습니다.",
+      "date": "2025년 4월"
+    }
   },
   {
     "title": "Visiting Research Published in Top 0.8% SSCI Journal",
@@ -22,7 +32,12 @@
     "description": "A joint study with Universitas Tidar, Indonesia, was published in Sustainable Development, a top 0.8% SSCI journal, following collaboration through the 2023 Visiting Researcher Program.",
     "date": "January 2025",
     "year": 2025,
-    "featured": true
+    "featured": true,
+    "ko": {
+      "title": "방문 연구 성과, SSCI 상위 0.8% 저널 게재",
+      "description": "2023년 방문 연구자 프로그램을 통한 인도네시아 Universitas Tidar와의 공동 연구가 SSCI 상위 0.8% 저널인 Sustainable Development에 게재되었습니다.",
+      "date": "2025년 1월"
+    }
   },
   {
     "title": "Panel Speaker at World Scientific Forum of Indonesia (WSFI) 2023",
@@ -31,7 +46,12 @@
     "description": "Invited as a panel speaker on digital technology at WSFI 2023, sharing ongoing research projects and engaging with the global community in Bali.",
     "date": "November 2023",
     "year": 2023,
-    "featured": true
+    "featured": true,
+    "ko": {
+      "title": "World Scientific Forum of Indonesia (WSFI) 2023 패널 연사",
+      "description": "WSFI 2023에서 디지털 기술 분야 패널 연사로 초청되어 진행 중인 연구 프로젝트를 소개하고 발리에서 세계 각국의 연구자들과 교류했습니다.",
+      "date": "2023년 11월"
+    }
   },
   {
     "title": "Ahyun & Sujin Win 3rd Place Award",
@@ -40,7 +60,12 @@
     "description": "Congratulations to Ahyun and Sujin for securing 3rd place at the Intelligent Mechanism × Artificial Intelligence Joint Academic Festival.",
     "date": "September 2023",
     "year": 2023,
-    "featured": true
+    "featured": true,
+    "ko": {
+      "title": "이아현·박수진 학생 3위 수상",
+      "description": "지능기구×인공지능 공동 학술제에서 3위를 차지한 이아현, 박수진 학생에게 축하를 전합니다.",
+      "date": "2023년 9월"
+    }
   },
   {
     "title": "Featured in Oracle Academy Success Story",
@@ -48,7 +73,12 @@
     "category": "community",
     "description": "Our use of the Oracle Academy Cloud Program in teaching big data has been highlighted in an official online success story.",
     "date": "March 2023",
-    "year": 2023
+    "year": 2023,
+    "ko": {
+      "title": "Oracle Academy 성공 사례 소개",
+      "description": "빅데이터 강의에 Oracle Academy Cloud Program을 활용한 사례가 공식 온라인 성공 사례로 소개되었습니다.",
+      "date": "2023년 3월"
+    }
   },
   {
     "title": "Metaverse Business Innovation Book Released",
@@ -56,7 +86,11 @@
     "category": "book",
     "description": "A new book on metaverse-driven business models explores emerging trends, challenges, and best practices for implementation.",
     "date": "January 2023",
-    "year": 2023
+    "year": 2023,
+    "ko": {
+      "title": "메타버스 비즈니스 혁신 저서 출간",
+      "description": "메타버스 기반 비즈니스 모델에 관한 새 저서로, 새로운 동향과 과제, 그리고 도입을 위한 모범 사례를 다룹니다.",
+      "date": "2023년 1월"
+    }
   }
-
 ]

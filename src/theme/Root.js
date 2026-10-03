@@ -62,6 +62,11 @@ export default function Root({children}) {
     };
   }, []);
 
+  // Layout-column fix-up and scroll reveals both need to re-run whenever the
+  // page content changes (client-side navigation, lazy sections). They share
+  // ONE body-level MutationObserver, coalesced to a single rAF per batch of
+  // mutations — a subtree observer fires on every DOM write (the gs2027
+  // countdown ticks every second), so per-mutation work adds up fast.
   useEffect(() => {
     const adjustLayoutColumns = () => {
       const rows = document.querySelectorAll('main .row');
@@ -78,7 +83,9 @@ export default function Root({children}) {
           return;
         }
 
-        const hasToc = Boolean(row.querySelector(':scope > .col.col--2 .tableOfContents_bqdL, :scope > .col.col--3 .tableOfContents_bqdL'));
+        // Stable theme class names only — CSS-module hashes such as
+        // `tableOfContents_bqdL` change between Docusaurus releases.
+        const hasToc = Boolean(row.querySelector(':scope > .col.col--2 .table-of-contents, :scope > .col.col--3 .table-of-contents'));
 
         if (!hasToc) {
           contentCol.classList.remove('col--8', 'col--9', 'col--12');
@@ -92,17 +99,53 @@ export default function Root({children}) {
       });
     };
 
-    const rafAdjust = () => {
-      window.requestAnimationFrame(adjustLayoutColumns);
+    const revealedClass = 'reveal-visible';
+    const revealObserver = typeof IntersectionObserver === 'undefined'
+      ? null
+      : new IntersectionObserver(
+        (entries, obs) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add(revealedClass);
+              obs.unobserve(entry.target);
+            }
+          });
+        },
+        {threshold: 0.15, rootMargin: '0px 0px -8% 0px'},
+      );
+
+    const observeReveals = () => {
+      document.querySelectorAll(`.reveal:not(.${revealedClass})`).forEach((el) => {
+        if (revealObserver) {
+          revealObserver.observe(el);
+        } else {
+          el.classList.add(revealedClass);
+        }
+      });
     };
 
-    rafAdjust();
+    let frame = 0;
+    const run = () => {
+      frame = 0;
+      adjustLayoutColumns();
+      observeReveals();
+    };
+    const schedule = () => {
+      if (!frame) {
+        frame = window.requestAnimationFrame(run);
+      }
+    };
 
-    const observer = new MutationObserver(rafAdjust);
-    observer.observe(document.body, {childList: true, subtree: true});
+    run();
+    const mutationObserver = new MutationObserver(schedule);
+    mutationObserver.observe(document.body, {childList: true, subtree: true});
 
     return () => {
-      observer.disconnect();
+      mutationObserver.disconnect();
+      revealObserver?.disconnect();
+      if (frame) {
+        window.cancelAnimationFrame(frame);
+      }
     };
   }, []);
 
@@ -135,54 +178,6 @@ export default function Root({children}) {
     return () => {
       window.removeEventListener('scroll', onScroll);
       window.removeEventListener('resize', onScroll);
-    };
-  }, []);
-
-  useEffect(() => {
-    const revealedClass = 'reveal-visible';
-
-    const revealAll = () => {
-      document.querySelectorAll('.reveal').forEach((el) => el.classList.add(revealedClass));
-    };
-
-    if (typeof IntersectionObserver === 'undefined') {
-      revealAll();
-      return undefined;
-    }
-
-    const observer = new IntersectionObserver(
-      (entries, obs) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add(revealedClass);
-            obs.unobserve(entry.target);
-          }
-        });
-      },
-      {threshold: 0.15, rootMargin: '0px 0px -8% 0px'},
-    );
-
-    let scheduled = false;
-    const observeNew = () => {
-      scheduled = false;
-      document.querySelectorAll(`.reveal:not(.${revealedClass})`).forEach((el) => {
-        observer.observe(el);
-      });
-    };
-
-    observeNew();
-
-    const mutationObserver = new MutationObserver(() => {
-      if (!scheduled) {
-        scheduled = true;
-        window.requestAnimationFrame(observeNew);
-      }
-    });
-    mutationObserver.observe(document.body, {childList: true, subtree: true});
-
-    return () => {
-      observer.disconnect();
-      mutationObserver.disconnect();
     };
   }, []);
 

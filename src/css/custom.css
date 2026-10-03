@@ -1,4 +1,13 @@
 /**
+ * Hangul: Pretendard Variable (OFL), bundled from the `pretendard` package as
+ * a dynamic subset — ~90 small woff2 slices, each behind a unicode-range, so a
+ * page only downloads the slices for the Korean characters it actually shows
+ * (English pages with no Hangul download none). Pretendard's Latin is drawn
+ * from Inter, so mixed Korean/English text keeps one consistent voice.
+ */
+@import 'pretendard/dist/web/variable/pretendardvariable-dynamic-subset.css';
+
+/**
  * Self-hosted Inter (latin + latin-ext subsets only — this site's content is
  * English/Korean, and Inter has no Hangul glyphs, so cyrillic/greek/
  * vietnamese subsets Google Fonts would otherwise ship are pure dead weight).
@@ -87,8 +96,8 @@
 }
 
 :root {
-  --ifm-font-family-base: 'Inter', 'Segoe UI', Tahoma, sans-serif;
-  --ifm-heading-font-family: 'Inter', 'Segoe UI', Tahoma, sans-serif;
+  --ifm-font-family-base: 'Inter', 'Pretendard Variable', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Segoe UI', Tahoma, sans-serif;
+  --ifm-heading-font-family: 'Inter', 'Pretendard Variable', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Segoe UI', Tahoma, sans-serif;
 
   --ifm-color-primary: #0e59a9;
   --ifm-color-primary-dark: #0b4e94;
@@ -1867,4 +1876,35 @@ div[class*='announcementBar'] a {
   color: inherit;
   font-weight: 700;
   text-decoration: underline;
+}
+
+/* ---------------------------------------------------------------------------
+ * Korean locale (/ko/). Docusaurus sets <html lang="ko"> from localeConfigs.
+ * - Lead with Pretendard so Hangul and Latin share one face and one set of
+ *   metrics (Pretendard's Latin glyphs are derived from Inter).
+ * - keep-all: break Korean lines between words (eojeol), never mid-word.
+ * - Hangul is visually denser than Latin; the tight negative tracking used on
+ *   English display headlines makes syllable blocks touch, so relax it.
+ * ------------------------------------------------------------------------- */
+html[lang='ko'] {
+  --ifm-font-family-base: 'Pretendard Variable', 'Inter', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+  --ifm-heading-font-family: 'Pretendard Variable', 'Inter', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+}
+
+html[lang='ko'] body {
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+html[lang='ko'] h1,
+html[lang='ko'] h2,
+html[lang='ko'] h3 {
+  letter-spacing: -0.01em;
+}
+
+/* Eyebrow kickers use 0.2em+ letterspacing — right for Latin caps, but it
+   pulls Hangul syllables apart ("성 과"). Matches every CSS-module kicker
+   (kicker_xxxx) plus the global .page-kicker. */
+html[lang='ko'] [class*='kicker'] {
+  letter-spacing: 0.06em;
 }

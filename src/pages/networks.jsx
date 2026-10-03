@@ -1,4 +1,6 @@
 import React from 'react';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import Translate, {translate} from '@docusaurus/Translate';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
 import CollabGlobe from '@site/src/components/CollabGlobe';
@@ -15,13 +17,15 @@ function flagEmoji(code) {
 // pre-sorted by number of co-authored works (descending).
 const TOP_COUNTRIES = 10;
 
-const STATS = [
-  {value: collaborations.totals.countries, label: 'Countries'},
-  {value: collaborations.totals.institutions, label: 'Institutions'},
-  {value: collaborations.totals.resolved, label: 'Works'},
+const getStats = () => [
+  {value: collaborations.totals.countries, label: translate({id: 'networks.stat.countries', message: 'Countries'})},
+  {value: collaborations.totals.institutions, label: translate({id: 'networks.stat.institutions', message: 'Institutions'})},
+  {value: collaborations.totals.resolved, label: translate({id: 'networks.stat.works', message: 'Works'})},
 ];
 
 function CountryCard({country}) {
+  const {i18n} = useDocusaurusContext();
+  const name = (i18n.currentLocale === 'ko' && country.nameKo) || country.name;
   const shown = country.institutions.slice(0, 4);
   const more = country.institutions.length - shown.length;
   return (
@@ -30,9 +34,9 @@ function CountryCard({country}) {
         <span className={styles.countryFlag} aria-hidden="true">
           {flagEmoji(country.code)}
         </span>
-        <h3 className={styles.countryName}>{country.name}</h3>
+        <h3 className={styles.countryName}>{name}</h3>
         <span className={styles.countryWorks}>
-          {country.works} {country.works === 1 ? 'work' : 'works'}
+          {country.works} {country.works === 1 ? translate({id: 'globe.work', message: 'work'}) : translate({id: 'globe.works', message: 'works'})}
         </span>
       </div>
       <ul className={styles.institutionList}>
@@ -42,7 +46,7 @@ function CountryCard({country}) {
       </ul>
       {more > 0 && (
         <details className={styles.moreInstitutions}>
-          <summary>+{more} more</summary>
+          <summary>{translate({id: 'networks.more', message: '+{n} more'}, {n: more})}</summary>
           <ul className={styles.institutionList}>
             {country.institutions.slice(4).map((inst) => (
               <li key={inst}>{inst}</li>
@@ -57,20 +61,25 @@ function CountryCard({country}) {
 export default function Networks() {
   return (
     <Layout
-      title="Networks"
-      description="AINTLab's global collaboration network — co-author affiliations from our publications, visualized from Seoul to the world.">
+      title={translate({id: 'networks.meta.title', message: 'Networks'})}
+      description={translate({id: 'networks.meta.description', message: 'Applied INtelligence (AIN) Lab’s global collaboration network — co-author affiliations from our publications, visualized from Seoul to the world.'})}>
       {/* Wrapper classes mirror Docusaurus's MDX page layout exactly, and the
           section-with-bg-logo watermark matches every other content page. */}
       <main className="container container--fluid margin-vert--lg">
         <section className="section-with-bg-logo">
         <div className="page-shell">
           <div className="page-header">
-            <p className="page-kicker">Global network</p>
-            <h1>From Seoul to the world.</h1>
+            <p className="page-kicker"><Translate id="networks.kicker">Global network</Translate></p>
+            <h1><Translate id="networks.title">From Seoul to the world.</Translate></h1>
             <p className="page-lead">
-              Every co-author affiliation behind our <Link to="/publications">publications</Link>,
-              resolved from their DOIs and drawn live — {collaborations.totals.countries} countries,
-              one blue thread from home.
+              <Translate
+                id="networks.lead"
+                values={{
+                  publications: <Link to="/publications"><Translate id="networks.lead.publications">publications</Translate></Link>,
+                  countries: collaborations.totals.countries,
+                }}>
+                {'Every co-author affiliation behind our {publications}, resolved from their DOIs and drawn live — {countries} countries, one blue thread from home.'}
+              </Translate>
             </p>
           </div>
 
@@ -81,7 +90,7 @@ export default function Networks() {
           />
 
           <div className={styles.statRow}>
-            {STATS.map((stat) => (
+            {getStats().map((stat) => (
               <div key={stat.label} className={styles.statTile}>
                 <span className={styles.statValue}>{stat.value}</span>
                 <span className={styles.statLabel}>{stat.label}</span>
@@ -90,11 +99,12 @@ export default function Networks() {
           </div>
 
           <section className={styles.affiliations}>
-            <h2>Affiliations by country.</h2>
+            <h2><Translate id="networks.affiliations.title">Affiliations by country.</Translate></h2>
             <p className={styles.affiliationsLead}>
-              Our top {TOP_COUNTRIES} country partnerships by shared output, from{' '}
-              {collaborations.totals.resolved} DOI-resolved works. All{' '}
-              {collaborations.totals.countries} countries appear on the globe and chip strip above.
+              {translate(
+                {id: 'networks.affiliations.lead', message: 'Our top {top} country partnerships by shared output, from {works} DOI-resolved works. All {countries} countries appear on the globe and chip strip above.'},
+                {top: TOP_COUNTRIES, works: collaborations.totals.resolved, countries: collaborations.totals.countries},
+              )}
             </p>
             <div className={styles.countryGrid}>
               {collaborations.countries.slice(0, TOP_COUNTRIES).map((country) => (
@@ -102,10 +112,19 @@ export default function Networks() {
               ))}
             </div>
             <p className={styles.dataNote}>
-              <em>Affiliation data derived from publication DOIs automatically via{' '}
-              <a href="https://openalex.org" target="_blank" rel="noopener noreferrer">
-                OpenAlex
-              </a>{' '} and may content incorrect data.</em>
+              <em>
+                <Translate
+                  id="networks.dataNote"
+                  values={{
+                    openalex: (
+                      <a href="https://openalex.org" target="_blank" rel="noopener noreferrer">
+                        OpenAlex
+                      </a>
+                    ),
+                  }}>
+                  {'Affiliation data is derived automatically from publication DOIs via {openalex} and may contain errors.'}
+                </Translate>
+              </em>
             </p>
           </section>
         </div>

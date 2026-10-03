@@ -1,0 +1,54 @@
+{
+  "logo.alt": {
+    "message": "Applied INtelligence (AIN) Lab 홈",
+    "description": "The alt text of navbar logo"
+  },
+  "item.label.Our Research": {
+    "message": "연구",
+    "description": "Navbar item with label Our Research"
+  },
+  "item.label.AIN Lab": {
+    "message": "연구실",
+    "description": "Navbar item with label AIN Lab"
+  },
+  "item.label.Courses": {
+    "message": "강의",
+    "description": "Navbar item with label Courses"
+  },
+  "item.label.Contact Us": {
+    "message": "연락처",
+    "description": "Navbar item with label Contact Us"
+  },
+  "item.label.Projects": {
+    "message": "프로젝트",
+    "description": "Navbar item with label Projects"
+  },
+  "item.label.Publications": {
+    "message": "논문",
+    "description": "Navbar item with label Publications"
+  },
+  "item.label.The Team": {
+    "message": "구성원",
+    "description": "Navbar item with label The Team"
+  },
+  "item.label.Gallery": {
+    "message": "갤러리",
+    "description": "Navbar item with label Gallery"
+  },
+  "item.label.Updates": {
+    "message": "소식",
+    "description": "Navbar item with label Updates"
+  },
+  "item.label.Overview": {
+    "message": "개요",
+    "description": "Navbar item with label Overview"
+  },
+  "item.label.All Courses": {
+    "message": "전체 강의",
+    "description": "Navbar item with label All Courses"
+  },
+  "item.label.About": {
+    "message": "소개",
+    "description": "Navbar item with label About"
+  }
+}

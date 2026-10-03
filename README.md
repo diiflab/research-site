@@ -1,9 +1,12 @@
 # AIN Lab Research Site
 
-Official website of the **Applied INtelligence (AIN) Lab** at Seoul, Republic of Korea.  
-Live at **[aintlab.com](https://aintlab.com)**.
+Official website of the **Applied INtelligence (AIN) Lab** at Seoul, Republic of Korea.
 
 AIN Lab is a research group focused on artificial intelligence, machine learning, deep learning, IoT, and intelligent systems — with applications in smart manufacturing, agriculture, healthcare, and beyond.
+
+> **Updating content?** See **[MAINTENANCE.md](./MAINTENANCE.md)**: adding publications, people,
+> projects, news and courses, keeping the English and Korean versions in sync, and
+> regenerating derived data.
 
 ---
 
@@ -12,7 +15,8 @@ AIN Lab is a research group focused on artificial intelligence, machine learning
 | Layer | Technology |
 |---|---|
 | Framework | [Docusaurus 3](https://docusaurus.io/) (React) |
-| Search | [docusaurus-lunr-search](https://github.com/praveenn77/docusaurus-lunr-search) |
+| Search | [Algolia DocSearch](https://docsearch.algolia.com/) + AINBot (Algolia Ask AI) |
+| Languages | English (`/`) and Korean (`/ko/`) via Docusaurus i18n; Korean files in `i18n/ko/` |
 | Styling | CSS Modules + global custom CSS |
 | Content | MDX (Markdown + JSX) |
 | Container | Docker (multi-stage: dev + production via Nginx) |
@@ -25,7 +29,8 @@ Requires **Node.js ≥ 18**.
 
 ```bash
 npm install
-npm start        # dev server at http://localhost:3000
+npm start        # dev server at http://localhost:3000 (English)
+npm run start:ko # dev server for the Korean site (/ko/)
 ```
 
 To create a production build locally:
@@ -89,7 +94,7 @@ docusaurus.config.js
 | `/publications` | Peer-reviewed journals, conferences, and books |
 | `/updates` | Blog / research news |
 | `/alumni` | Past lab members |
-| `/contact` | Contact information and directions to Sejong University |
+| `/contact` | Contact information and directions to Kookmin University |
 | `/courses` | Courses landing page |
 | `/courses/learn` | Course catalog (own docs instance, see below) |
 | `/courses/reviews` | Student reviews |

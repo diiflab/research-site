@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import {translate} from '@docusaurus/Translate';
 import styles from './styles.module.css';
 
 function split(diff) {
@@ -10,11 +11,12 @@ function split(diff) {
   };
 }
 
-const UNITS = [
-  ['days', 'Days'],
-  ['hours', 'Hours'],
-  ['minutes', 'Minutes'],
-  ['seconds', 'Seconds'],
+// Built per render so translate() resolves against the active locale.
+const getUnits = () => [
+  ['days', translate({id: 'countdown.days', message: 'Days'})],
+  ['hours', translate({id: 'countdown.hours', message: 'Hours'})],
+  ['minutes', translate({id: 'countdown.minutes', message: 'Minutes'})],
+  ['seconds', translate({id: 'countdown.seconds', message: 'Seconds'})],
 ];
 
 function Timer({ label, parts, className = '' }) {
@@ -22,7 +24,7 @@ function Timer({ label, parts, className = '' }) {
     <div className={`${styles.countdown} ${className}`} role="timer" aria-live="off">
       <p className={styles.label}>{label}</p>
       <div className={styles.units}>
-        {UNITS.map(([key, text]) => (
+        {getUnits().map(([key, text]) => (
           <div key={key} className={styles.unit}>
             <span className={styles.value}>
               {parts ? String(parts[key]).padStart(2, '0') : '--'}
@@ -42,10 +44,10 @@ function Timer({ label, parts, className = '' }) {
 export default function Countdown({
   target,
   end,
-  label = 'Submission opens in',
-  endLabel = 'Submission is open · closes in',
-  openMessage = 'Submission is now open.',
-  closedMessage = 'Submission is closed.',
+  label = translate({id: 'countdown.opensIn', message: 'Submission opens in'}),
+  endLabel = translate({id: 'countdown.closesIn', message: 'Submission is open · closes in'}),
+  openMessage = translate({id: 'countdown.open', message: 'Submission is now open.'}),
+  closedMessage = translate({id: 'countdown.closed', message: 'Submission is closed.'}),
 }) {
   const startMs = new Date(target).getTime();
   const endMs = end ? new Date(end).getTime() : null;

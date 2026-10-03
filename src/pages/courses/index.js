@@ -1,4 +1,5 @@
 import React from 'react';
+import Translate, {translate} from '@docusaurus/Translate';
 import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import Layout from '@theme/Layout';
@@ -11,29 +12,30 @@ import styles from './index.module.css';
 // (src/data/courses/teachingStats.js).
 const stats = calculateStats();
 
-const TEACHING_STATS = [
+// Built per render so translate() resolves against the active locale.
+const getTeachingStats = () => [
   {
     value: `${stats.yearsExperience}+`,
-    label: 'Years teaching',
-    detail: 'Lecturing across universities.',
+    label: translate({id: 'courses.stats.years.label', message: 'Years teaching'}),
+    detail: translate({id: 'courses.stats.years.detail', message: 'Lecturing across universities.'}),
     to: '/courses/learn',
   },
   {
     value: `${stats.totalCourses}`,
-    label: 'Course offerings',
-    detail: 'Semester by semester, from 2019 to the present.',
+    label: translate({id: 'courses.stats.offerings.label', message: 'Course offerings'}),
+    detail: translate({id: 'courses.stats.offerings.detail', message: 'Semester by semester, from 2019 to the present.'}),
     to: '/courses/learn',
   },
   {
     value: `${stats.totalStudents}+`,
-    label: 'Students taught',
-    detail: 'Undergraduate and graduate courses.',
+    label: translate({id: 'courses.stats.students.label', message: 'Students taught'}),
+    detail: translate({id: 'courses.stats.students.detail', message: 'Undergraduate and graduate courses.'}),
     to: '/courses/learn',
   },
   {
     value: `${stats.averageEvaluation}`,
-    label: 'Average rating',
-    detail: 'Out of 5.0, from official course evaluations.',
+    label: translate({id: 'courses.stats.rating.label', message: 'Average rating'}),
+    detail: translate({id: 'courses.stats.rating.detail', message: 'Out of 5.0, from official course evaluations.'}),
     to: '/courses/reviews',
   },
 ];
@@ -41,21 +43,18 @@ const TEACHING_STATS = [
 // The three ideas the courses are built on. Content comes from the former
 // courses site's feature cards, reduced to the pillar form the research
 // homepage uses for the same job.
-const COURSE_PILLARS = [
+const getCoursePillars = () => [
   {
-    title: 'Industry-focused learning',
-    description:
-      'Curriculum built with industry practice in mind, so the tools and methods are the ones used in production.',
+    title: translate({id: 'courses.why.pillar1.title', message: 'Industry-focused learning'}),
+    description: translate({id: 'courses.why.pillar1.description', message: 'Curriculum built with industry practice in mind, so the tools and methods are the ones used in production.'}),
   },
   {
-    title: 'Project-based mastery',
-    description:
-      'Every course centres on building something real — complete applications, actual debugging, the full development cycle.',
+    title: translate({id: 'courses.why.pillar2.title', message: 'Project-based mastery'}),
+    description: translate({id: 'courses.why.pillar2.description', message: 'Every course centres on building something real — complete applications, actual debugging, the full development cycle.'}),
   },
   {
-    title: 'A progressive path',
-    description:
-      'Foundations first, then advanced work, with clear milestones so each module builds on the last.',
+    title: translate({id: 'courses.why.pillar3.title', message: 'A progressive path'}),
+    description: translate({id: 'courses.why.pillar3.description', message: 'Foundations first, then advanced work, with clear milestones so each module builds on the last.'}),
   },
 ];
 
@@ -105,21 +104,22 @@ function CoursesHero() {
         aria-hidden="true"
       />
       <div className={clsx('container', styles.heroContent)}>
-        <h1 className="hero__title">Begin your learning journey.</h1>
+        <h1 className="hero__title"><Translate id="courses.hero.title">Begin your learning journey.</Translate></h1>
         <p className="hero__subtitle">
-          Courses in programming, data, and machine learning — learn by building, and
-          grow together.
+          <Translate id="courses.hero.subtitle">
+            Courses in programming, data, and machine learning — learn by building, and grow together.
+          </Translate>
         </p>
         <div className={styles.buttons}>
           <Link className="button button--secondary" to="/courses/learn">
-            Explore courses
+            <Translate id="courses.hero.explore">Explore courses</Translate>
           </Link>
           <Link className="button white-btn" to="/courses/reviews">
-            Read student reviews
+            <Translate id="courses.hero.reviews">Read student reviews</Translate>
           </Link>
         </div>
       </div>
-      <a className={styles.scrollCue} href="#teaching-numbers" aria-label="Scroll to explore">
+      <a className={styles.scrollCue} href="#teaching-numbers" aria-label={translate({id: 'home.hero.scrollCue', message: 'Scroll to explore'})}>
         <span className={styles.scrollCueChevron} aria-hidden="true" />
       </a>
     </header>
@@ -132,12 +132,12 @@ function TeachingNumbers() {
       id="teaching-numbers"
       className={`${styles.numbersSection} section-with-bg-text bg-text--teaching`}>
       <div className="container">
-        <p className={clsx(styles.kicker, 'text--center')}>Impact</p>
-        <h1 className="text--center">By the numbers.</h1>
+        <p className={clsx(styles.kicker, 'text--center')}><Translate id="home.stats.kicker">Impact</Translate></p>
+        <h1 className="text--center"><Translate id="courses.stats.title">By the numbers.</Translate></h1>
         <div className={styles.statMetrics}>
-          {TEACHING_STATS.map((item) => (
+          {getTeachingStats().map((item, i) => (
             <Link
-              key={item.label}
+              key={i}
               to={item.to}
               className={clsx(styles.statMetric, styles.statLink, 'reveal')}>
               <div className={styles.statValue}>{item.value}</div>
@@ -147,7 +147,9 @@ function TeachingNumbers() {
           ))}
         </div>
         <p className={styles.statsFootnote}>
-          Calculated from official course evaluations and enrolment data since 2019.
+          <Translate id="courses.stats.footnote">
+            Calculated from official course evaluations and enrolment data since 2019.
+          </Translate>
         </p>
       </div>
     </section>
@@ -160,14 +162,14 @@ function WhyLearnHere() {
       id="why-learn-here"
       className={`${styles.whySection} section-with-bg-text bg-text--learning`}>
       <div className="container">
-        <p className={clsx(styles.kicker, 'text--center')}>Approach</p>
-        <h1 className="text--center">Why learn here.</h1>
+        <p className={clsx(styles.kicker, 'text--center')}><Translate id="courses.why.kicker">Approach</Translate></p>
+        <h1 className="text--center"><Translate id="courses.why.title">Why learn here.</Translate></h1>
         <p className="text--center">
-          <em>Practical, hands-on, and built to carry into real work.</em>
+          <em><Translate id="courses.why.subtitle">Practical, hands-on, and built to carry into real work.</Translate></em>
         </p>
         <div className={styles.pillarList}>
-          {COURSE_PILLARS.map((pillar) => (
-            <div key={pillar.title} className={clsx(styles.pillarItem, 'reveal')}>
+          {getCoursePillars().map((pillar, i) => (
+            <div key={i} className={clsx(styles.pillarItem, 'reveal')}>
               <h2>{pillar.title}</h2>
               <p>{pillar.description}</p>
             </div>
@@ -185,18 +187,19 @@ function StartLearning() {
       className={`${styles.ctaSection} section-with-bg-text bg-text--future`}>
       <div className="container">
         <div className={clsx(styles.ctaCard, 'reveal')}>
-          <p className={styles.kicker}>Get started</p>
-          <h1>Ready to start learning?</h1>
+          <p className={styles.kicker}><Translate id="courses.cta.kicker">Get started</Translate></p>
+          <h1><Translate id="courses.cta.title">Ready to start learning?</Translate></h1>
           <p>
-            Browse the full catalog, see what students have built, or read how the
-            courses are taught.
+            <Translate id="courses.cta.description">
+              Browse the full catalog, see what students have built, or read how the courses are taught.
+            </Translate>
           </p>
           <div className={styles.ctaActions}>
             <Link className="button button--primary button--lg" to="/courses/learn">
-              Browse the catalog
+              <Translate id="courses.cta.catalog">Browse the catalog</Translate>
             </Link>
             <Link className="button cta-secondary-btn button--lg" to="/courses/about">
-              How these courses work
+              <Translate id="courses.cta.about">How these courses work</Translate>
             </Link>
           </div>
         </div>
@@ -208,8 +211,8 @@ function StartLearning() {
 export default function CoursesHome() {
   return (
     <Layout
-      title="Courses"
-      description="Courses in programming, data, and machine learning, taught by Muhammad Syafrudin.">
+      title={translate({id: 'courses.meta.title', message: 'Courses'})}
+      description={translate({id: 'courses.meta.description', message: 'Courses in programming, data, and machine learning, taught by Muhammad Syafrudin.'})}>
       <CoursesHero />
       <main>
         <TeachingNumbers />

@@ -1,4 +1,5 @@
 import React, { useRef, useState } from 'react';
+import {translate} from '@docusaurus/Translate';
 import styles from './styles.module.css';
 
 export default function PdfViewer({
@@ -35,23 +36,23 @@ export default function PdfViewer({
           onClick={() => setHidden((v) => !v)}
           aria-expanded={!hidden}
         >
-          {hidden ? `Show ${name}` : `Hide ${name}`}
+          {hidden ? translate({id: 'pdfViewer.show', message: 'Show {name}'}, {name}) : translate({id: 'pdfViewer.hide', message: 'Hide {name}'}, {name})}
         </button>
         {!hidden && (
           <>
             <button type="button" className={styles.button} onClick={() => setExpanded((v) => !v)}>
-              {expanded ? 'Collapse' : 'Expand'}
+              {expanded ? translate({id: 'pdfViewer.collapse', message: 'Collapse'}) : translate({id: 'pdfViewer.expand', message: 'Expand'})}
             </button>
             <button type="button" className={styles.button} onClick={toggleFullscreen}>
-              Full screen
+              {translate({id: 'pdfViewer.fullscreen', message: 'Full screen'})}
             </button>
           </>
         )}
         <a className={styles.button} href={href} target="_blank" rel="noopener noreferrer">
-          Open in new tab
+          {translate({id: 'pdfViewer.newTab', message: 'Open in new tab'})}
         </a>
         <a className={`${styles.button} ${styles.primary}`} href={href} download={downloadName || true}>
-          {label ? `Download "${label}"` : 'Download PDF'}
+          {label ? translate({id: 'pdfViewer.downloadLabel', message: 'Download "{label}"'}, {label}) : translate({id: 'pdfViewer.download', message: 'Download PDF'})}
         </a>
       </div>
       {!hidden && (
@@ -62,7 +63,7 @@ export default function PdfViewer({
           >
             <iframe ref={frameRef} src={href} title={title} className={styles.frame} allowFullScreen />
           </div>
-          <p className={styles.hint}>Drag the bottom-right corner to resize the viewer.</p>
+          <p className={styles.hint}>{translate({id: 'pdfViewer.hint', message: 'Drag the bottom-right corner to resize the viewer.'})}</p>
         </>
       )}
     </div>
