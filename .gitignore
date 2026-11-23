@@ -21,3 +21,13 @@ scripts/keys.json
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+src/pages/credits.mdx
+src/data/collaborations.json
+i18n/ko/docusaurus-plugin-content-pages/credits.mdx
+src/pages/credits.mdx
+src/data/collaborations.json
+i18n/ko/docusaurus-plugin-content-pages/credits.mdx
+i18n/ko/docusaurus-plugin-content-pages/credits.mdx
+src/data/collaborations.json
+src/pages/credits.mdx
+i18n/ko/docusaurus-plugin-content-pages/credits.mdx
