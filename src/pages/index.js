@@ -303,23 +303,14 @@ function HomepageHeader() {
         </h1>
         <p className="hero__subtitle">
           <Translate id="home.hero.subtitle">
-            Not just a laboratory — a playground for applied intelligence.
+            A playground for applied intelligence.
           </Translate>
         </p>
-        <div className={styles.buttons}>
-          {/* Plain <a> for an in-page anchor: <Link> routes it through the
-              broken-anchor checker, which can't see the section's raw id. */}
-          <a className="button button--secondary" href="#lab-stats">
-            <Translate id="home.hero.explore">Explore the lab</Translate>
-          </a>
-          <Link className="button white-btn" to="/contact">
-            <Translate id="home.hero.collaborate">Collaborate with us</Translate>
-          </Link>
-        </div>
+
       </div>
       <a
         className={clsx(styles.scrollCue, introRunning && styles.heroContentHidden)}
-        href="#lab-stats"
+        href="#mission-vision"
         aria-label={translate({id: 'home.hero.scrollCue', message: 'Scroll to explore'})}
       >
         <span className={styles.scrollCueChevron} aria-hidden="true" />

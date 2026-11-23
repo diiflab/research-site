@@ -169,7 +169,7 @@ function ProjectsCatalog() {
       <section className={styles.sectionBlock}>
         <div className={styles.sectionHeader}>
           <div>
-            <p className={styles.sectionKicker}><Translate id="projects.current.kicker">Live Portfolio</Translate></p>
+            <p className={styles.sectionKicker}><Translate id="projects.current.kicker">Active</Translate></p>
             <h2><Translate id="projects.current.title">Current projects</Translate></h2>
           </div>
         </div>
