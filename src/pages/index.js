@@ -459,6 +459,7 @@ function AcademicGenealogy() {
         <section id="featured-papers">
           <FeaturedPapers/>
         </section>
+<JoinAINTLab />
 */
 
 export default function Home() {
@@ -482,7 +483,7 @@ export default function Home() {
         <section id="recent-updates">
           <RecentUpdates />
         </section>
-        <JoinAINTLab />
+        
       </main>
     </Layout>
   );
