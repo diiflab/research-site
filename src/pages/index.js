@@ -446,6 +446,21 @@ function AcademicGenealogy() {
   );
 }
 
+// <AcademicGenealogy />
+// <LabStats />
+// <WhyAINTLab />
+/*
+<section id="collaborate" className="section-with-bg-text bg-text--aintlab">
+          <CollaborateWithUs/>
+        </section>
+        <section id="partners">
+          <LogoSlider />
+        </section>
+        <section id="featured-papers">
+          <FeaturedPapers/>
+        </section>
+*/
+
 export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   return (
@@ -457,24 +472,13 @@ export default function Home() {
       })}>
       <HomepageHeader />
       <main>
-        <LabStats />
-        <AcademicGenealogy />
-        <WhyAINTLab />
         <section id="mission-vision">
           <MissionVision />
         </section>
         <section id="research-areas" className="section-with-bg-text bg-text--innovation">
           <HomepageFeatures />
         </section>
-        <section id="collaborate" className="section-with-bg-text bg-text--aintlab">
-          <CollaborateWithUs/>
-        </section>
-        <section id="partners">
-          <LogoSlider />
-        </section>
-        <section id="featured-papers">
-          <FeaturedPapers/>
-        </section>
+        
         <section id="recent-updates">
           <RecentUpdates />
         </section>
